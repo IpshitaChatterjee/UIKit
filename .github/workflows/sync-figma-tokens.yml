@@ -43,3 +43,4 @@ jobs:
           add-paths: |
             tokens/figma-tokens.json
             build/
+            index.html
