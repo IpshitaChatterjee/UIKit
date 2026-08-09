@@ -1,13 +1,14 @@
 /**
  * Pulls published styles from a Figma file and writes them to
- * tokens/figma-tokens.json, with resolved values (not just metadata).
+ * tokens/figma-tokens.json, with resolved values.
  *
- * Works on any Figma plan, including personal.
+ * Uses the main Files endpoint (GET /v1/files/:key) rather than the
+ * separate Styles endpoint, since the Files endpoint is reliable
+ * across all plan tiers with the file_content:read scope.
  *
  * Requires two env vars:
- *   FIGMA_TOKEN     -> Figma personal access token
+ *   FIGMA_TOKEN     -> Figma personal access token (file_content:read scope)
  *   FIGMA_FILE_KEY  -> the file key from your Figma file URL
- *                       (figma.com/file/<FILE_KEY>/...)
  */
 
 const TOKEN = process.env.FIGMA_TOKEN;
@@ -21,34 +22,13 @@ if (!TOKEN || !FILE_KEY) {
 const headers = { "X-Figma-Token": TOKEN };
 const BASE = "https://api.figma.com/v1";
 
-async function getStyleList() {
-  const res = await fetch(`${BASE}/files/${FILE_KEY}/styles`, { headers });
+async function getFile() {
+  const res = await fetch(`${BASE}/files/${FILE_KEY}`, { headers });
   if (!res.ok) {
-    throw new Error(`Styles API failed: ${res.status} ${res.statusText}`);
+    const body = await res.text();
+    throw new Error(`Files API failed: ${res.status} ${res.statusText} - ${body}`);
   }
-  const data = await res.json();
-  return data.meta.styles;
-}
-
-// Figma limits how many node ids you can request at once, so fetch in batches.
-async function getNodesByIds(ids) {
-  const BATCH_SIZE = 50;
-  const nodes = {};
-
-  for (let i = 0; i < ids.length; i += BATCH_SIZE) {
-    const batch = ids.slice(i, i + BATCH_SIZE);
-    const res = await fetch(
-      `${BASE}/files/${FILE_KEY}/nodes?ids=${batch.join(",")}`,
-      { headers }
-    );
-    if (!res.ok) {
-      throw new Error(`Nodes API failed: ${res.status} ${res.statusText}`);
-    }
-    const data = await res.json();
-    Object.assign(nodes, data.nodes);
-  }
-
-  return nodes;
+  return res.json();
 }
 
 function rgbaToHex({ r, g, b, a }) {
@@ -57,13 +37,28 @@ function rgbaToHex({ r, g, b, a }) {
   return a < 1 ? `${hex}${toHex(a)}` : hex;
 }
 
-function resolveValue(style, node) {
-  const doc = node?.document;
-  if (!doc) return null;
+// Walk the document tree once, mapping each styleId to the first
+// node found that applies it, so we can read the resolved value.
+function buildStyleNodeMap(node, map = {}) {
+  if (node.styles) {
+    for (const styleId of Object.values(node.styles)) {
+      if (!map[styleId]) map[styleId] = node;
+    }
+  }
+  if (node.children) {
+    for (const child of node.children) {
+      buildStyleNodeMap(child, map);
+    }
+  }
+  return map;
+}
 
-  switch (style.style_type) {
+function resolveValue(styleType, node) {
+  if (!node) return null;
+
+  switch (styleType) {
     case "FILL": {
-      const paint = (doc.fills || [])[0];
+      const paint = (node.fills || [])[0];
       if (!paint) return null;
       if (paint.type === "SOLID") {
         return rgbaToHex({ ...paint.color, a: paint.opacity ?? paint.color.a ?? 1 });
@@ -71,7 +66,7 @@ function resolveValue(style, node) {
       return { type: paint.type };
     }
     case "TEXT": {
-      const t = doc.style || {};
+      const t = node.style || {};
       return {
         fontFamily: t.fontFamily,
         fontWeight: t.fontWeight,
@@ -81,7 +76,7 @@ function resolveValue(style, node) {
       };
     }
     case "EFFECT": {
-      return (doc.effects || []).map((e) => ({
+      return (node.effects || []).map((e) => ({
         type: e.type,
         radius: e.radius,
         color: e.color ? rgbaToHex({ ...e.color, a: e.color.a ?? 1 }) : undefined,
@@ -89,7 +84,7 @@ function resolveValue(style, node) {
       }));
     }
     case "GRID": {
-      return doc.layoutGrids || [];
+      return node.layoutGrids || [];
     }
     default:
       return null;
@@ -97,28 +92,31 @@ function resolveValue(style, node) {
 }
 
 async function main() {
-  const styles = await getStyleList();
-  if (styles.length === 0) {
+  const file = await getFile();
+  const styles = file.styles || {};
+  const styleIds = Object.keys(styles);
+
+  if (styleIds.length === 0) {
     console.warn("No published styles found in this file.");
   }
 
-  const nodeIds = styles.map((s) => s.node_id);
-  const nodes = await getNodesByIds(nodeIds);
+  const styleNodeMap = buildStyleNodeMap(file.document);
 
   const tokens = {};
 
-  for (const style of styles) {
-    const bucket = style.style_type.toLowerCase();
+  for (const styleId of styleIds) {
+    const meta = styles[styleId];
+    const bucket = meta.styleType.toLowerCase();
     tokens[bucket] = tokens[bucket] || {};
-    tokens[bucket][style.name] = {
-      value: resolveValue(style, nodes[style.node_id]),
-      description: style.description || "",
+    tokens[bucket][meta.name] = {
+      value: resolveValue(meta.styleType, styleNodeMap[styleId]),
+      description: meta.description || "",
     };
   }
 
   const output = {
     _meta: {
-      source: "styles-api",
+      source: "files-api",
       fetchedAt: new Date().toISOString(),
       fileKey: FILE_KEY,
     },
@@ -132,7 +130,7 @@ async function main() {
     JSON.stringify(output, null, 2)
   );
 
-  console.log(`Wrote tokens/figma-tokens.json with ${styles.length} styles.`);
+  console.log(`Wrote tokens/figma-tokens.json with ${styleIds.length} styles.`);
 }
 
 main().catch((err) => {
