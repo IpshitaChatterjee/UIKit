@@ -1,0 +1,7 @@
+name: Sync Figma variables to tokens
+on:
+  workflow_dispatch: 
+    inputs:
+      file_key:
+        description: 'nF6XfTdKWVl1P8xvufWjNn'
+        required: true
