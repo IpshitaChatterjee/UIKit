@@ -1,0 +1,2793 @@
+{
+  "_meta": {
+    "source": "files-api",
+    "fetchedAt": "2026-08-09T20:42:51.147Z",
+    "fileKey": "nF6XfTdKWVl1P8xvufWjNn"
+  },
+  "text": {
+    "Display/XL/700": {
+      "value": {
+        "fontFamily": "Geist",
+        "fontWeight": 700,
+        "fontSize": 96,
+        "lineHeightPx": 110,
+        "letterSpacing": -0.20000000298023224
+      },
+      "description": ""
+    },
+    "Display/XL/600": {
+      "value": {
+        "fontFamily": "Geist",
+        "fontWeight": 600,
+        "fontSize": 96,
+        "lineHeightPx": 110,
+        "letterSpacing": -0.20000000298023224
+      },
+      "description": ""
+    },
+    "Display/XL/500": {
+      "value": {
+        "fontFamily": "Geist",
+        "fontWeight": 500,
+        "fontSize": 96,
+        "lineHeightPx": 110,
+        "letterSpacing": -0.20000000298023224
+      },
+      "description": ""
+    },
+    "Display/L/700": {
+      "value": {
+        "fontFamily": "Geist",
+        "fontWeight": 700,
+        "fontSize": 72,
+        "lineHeightPx": 86,
+        "letterSpacing": -1.7999999523162842
+      },
+      "description": ""
+    },
+    "Display/L/600": {
+      "value": {
+        "fontFamily": "Geist",
+        "fontWeight": 600,
+        "fontSize": 72,
+        "lineHeightPx": 86,
+        "letterSpacing": -1.7999999523162842
+      },
+      "description": ""
+    },
+    "Display/L/500": {
+      "value": {
+        "fontFamily": "Geist",
+        "fontWeight": 500,
+        "fontSize": 72,
+        "lineHeightPx": 86,
+        "letterSpacing": -1.7999999523162842
+      },
+      "description": ""
+    },
+    "Headings/H1/700": {
+      "value": {
+        "fontFamily": "Geist",
+        "fontWeight": 700,
+        "fontSize": 56,
+        "lineHeightPx": 67,
+        "letterSpacing": -1.7999999523162842
+      },
+      "description": ""
+    },
+    "Headings/H1/600": {
+      "value": {
+        "fontFamily": "Geist",
+        "fontWeight": 600,
+        "fontSize": 56,
+        "lineHeightPx": 67,
+        "letterSpacing": -1.7999999523162842
+      },
+      "description": ""
+    },
+    "Headings/H1/500": {
+      "value": {
+        "fontFamily": "Geist",
+        "fontWeight": 500,
+        "fontSize": 56,
+        "lineHeightPx": 67,
+        "letterSpacing": -1.7999999523162842
+      },
+      "description": ""
+    },
+    "Headings/H2/700": {
+      "value": {
+        "fontFamily": "Geist",
+        "fontWeight": 700,
+        "fontSize": 48,
+        "lineHeightPx": 62,
+        "letterSpacing": -1.600000023841858
+      },
+      "description": ""
+    },
+    "Headings/H2/600": {
+      "value": {
+        "fontFamily": "Geist",
+        "fontWeight": 600,
+        "fontSize": 48,
+        "lineHeightPx": 62,
+        "letterSpacing": -1.600000023841858
+      },
+      "description": ""
+    },
+    "Headings/H2/500": {
+      "value": {
+        "fontFamily": "Geist",
+        "fontWeight": 500,
+        "fontSize": 48,
+        "lineHeightPx": 62,
+        "letterSpacing": -1.600000023841858
+      },
+      "description": ""
+    },
+    "Headings/H3/700": {
+      "value": {
+        "fontFamily": "Geist",
+        "fontWeight": 700,
+        "fontSize": 36,
+        "lineHeightPx": 48,
+        "letterSpacing": -1.600000023841858
+      },
+      "description": ""
+    },
+    "Headings/H3/600": {
+      "value": {
+        "fontFamily": "Geist",
+        "fontWeight": 600,
+        "fontSize": 36,
+        "lineHeightPx": 48,
+        "letterSpacing": -1.600000023841858
+      },
+      "description": ""
+    },
+    "Headings/H3/500": {
+      "value": {
+        "fontFamily": "Geist",
+        "fontWeight": 500,
+        "fontSize": 36,
+        "lineHeightPx": 48,
+        "letterSpacing": -1.600000023841858
+      },
+      "description": ""
+    },
+    "Headings/H4/700": {
+      "value": {
+        "fontFamily": "Geist",
+        "fontWeight": 700,
+        "fontSize": 32,
+        "lineHeightPx": 45,
+        "letterSpacing": -1.2000000476837158
+      },
+      "description": ""
+    },
+    "Headings/H4/600": {
+      "value": {
+        "fontFamily": "Geist",
+        "fontWeight": 600,
+        "fontSize": 32,
+        "lineHeightPx": 45,
+        "letterSpacing": -1.2000000476837158
+      },
+      "description": ""
+    },
+    "Headings/H4/500": {
+      "value": {
+        "fontFamily": "Geist",
+        "fontWeight": 500,
+        "fontSize": 32,
+        "lineHeightPx": 45,
+        "letterSpacing": -1.2000000476837158
+      },
+      "description": ""
+    },
+    "Headings/H5/700": {
+      "value": {
+        "fontFamily": "Geist",
+        "fontWeight": 700,
+        "fontSize": 24,
+        "lineHeightPx": 34,
+        "letterSpacing": -0.800000011920929
+      },
+      "description": ""
+    },
+    "Headings/H5/600": {
+      "value": {
+        "fontFamily": "Geist",
+        "fontWeight": 600,
+        "fontSize": 24,
+        "lineHeightPx": 34,
+        "letterSpacing": -0.800000011920929
+      },
+      "description": ""
+    },
+    "Headings/H5/500": {
+      "value": {
+        "fontFamily": "Geist",
+        "fontWeight": 500,
+        "fontSize": 24,
+        "lineHeightPx": 34,
+        "letterSpacing": -0.800000011920929
+      },
+      "description": ""
+    },
+    "Headings/H6/700": {
+      "value": {
+        "fontFamily": "Geist",
+        "fontWeight": 700,
+        "fontSize": 20,
+        "lineHeightPx": 28,
+        "letterSpacing": -0.6000000238418579
+      },
+      "description": ""
+    },
+    "Headings/H6/600": {
+      "value": {
+        "fontFamily": "Geist",
+        "fontWeight": 600,
+        "fontSize": 20,
+        "lineHeightPx": 28,
+        "letterSpacing": -0.6000000238418579
+      },
+      "description": ""
+    },
+    "Headings/H6/500": {
+      "value": {
+        "fontFamily": "Geist",
+        "fontWeight": 500,
+        "fontSize": 20,
+        "lineHeightPx": 28,
+        "letterSpacing": -0.6000000238418579
+      },
+      "description": ""
+    },
+    "Body/XL/600": {
+      "value": {
+        "fontFamily": "Geist",
+        "fontWeight": 600,
+        "fontSize": 20,
+        "lineHeightPx": 28,
+        "letterSpacing": -0.5
+      },
+      "description": ""
+    },
+    "Body/XL/500": {
+      "value": {
+        "fontFamily": "Geist",
+        "fontWeight": 500,
+        "fontSize": 20,
+        "lineHeightPx": 28,
+        "letterSpacing": -0.5
+      },
+      "description": ""
+    },
+    "Body/L/600": {
+      "value": {
+        "fontFamily": "Geist",
+        "fontWeight": 600,
+        "fontSize": 18,
+        "lineHeightPx": 26,
+        "letterSpacing": 0
+      },
+      "description": ""
+    },
+    "Body/L/500": {
+      "value": {
+        "fontFamily": "Geist",
+        "fontWeight": 500,
+        "fontSize": 18,
+        "lineHeightPx": 26,
+        "letterSpacing": 0
+      },
+      "description": ""
+    },
+    "Body/M/600": {
+      "value": {
+        "fontFamily": "Geist",
+        "fontWeight": 600,
+        "fontSize": 16,
+        "lineHeightPx": 24,
+        "letterSpacing": 0
+      },
+      "description": ""
+    },
+    "Body/M/500": {
+      "value": {
+        "fontFamily": "Geist",
+        "fontWeight": 500,
+        "fontSize": 16,
+        "lineHeightPx": 24,
+        "letterSpacing": 0
+      },
+      "description": ""
+    },
+    "Body/S/600": {
+      "value": {
+        "fontFamily": "Geist",
+        "fontWeight": 600,
+        "fontSize": 14,
+        "lineHeightPx": 20,
+        "letterSpacing": 0
+      },
+      "description": ""
+    },
+    "Body/S/500": {
+      "value": {
+        "fontFamily": "Geist",
+        "fontWeight": 500,
+        "fontSize": 14,
+        "lineHeightPx": 20,
+        "letterSpacing": 0
+      },
+      "description": ""
+    },
+    "Body/XS/600": {
+      "value": {
+        "fontFamily": "Geist",
+        "fontWeight": 600,
+        "fontSize": 12,
+        "lineHeightPx": 18,
+        "letterSpacing": 0
+      },
+      "description": ""
+    },
+    "Body/XS/500": {
+      "value": {
+        "fontFamily": "Geist",
+        "fontWeight": 500,
+        "fontSize": 12,
+        "lineHeightPx": 18,
+        "letterSpacing": 0
+      },
+      "description": ""
+    },
+    "Paragraph/XL/600": {
+      "value": {
+        "fontFamily": "Geist",
+        "fontWeight": 600,
+        "fontSize": 24,
+        "lineHeightPx": 34,
+        "letterSpacing": -0.6000000238418579
+      },
+      "description": ""
+    },
+    "Paragraph/XL/500": {
+      "value": {
+        "fontFamily": "Geist",
+        "fontWeight": 500,
+        "fontSize": 24,
+        "lineHeightPx": 34,
+        "letterSpacing": -0.6000000238418579
+      },
+      "description": ""
+    },
+    "Paragraph/XL/400": {
+      "value": {
+        "fontFamily": "Geist",
+        "fontWeight": 400,
+        "fontSize": 24,
+        "lineHeightPx": 34,
+        "letterSpacing": -0.6000000238418579
+      },
+      "description": ""
+    },
+    "Paragraph/L/600": {
+      "value": {
+        "fontFamily": "Geist",
+        "fontWeight": 600,
+        "fontSize": 20,
+        "lineHeightPx": 30,
+        "letterSpacing": -0.20000000298023224
+      },
+      "description": ""
+    },
+    "Paragraph/L/500": {
+      "value": {
+        "fontFamily": "Geist",
+        "fontWeight": 500,
+        "fontSize": 20,
+        "lineHeightPx": 30,
+        "letterSpacing": -0.20000000298023224
+      },
+      "description": ""
+    },
+    "Paragraph/L/400": {
+      "value": {
+        "fontFamily": "Geist",
+        "fontWeight": 400,
+        "fontSize": 20,
+        "lineHeightPx": 30,
+        "letterSpacing": -0.20000000298023224
+      },
+      "description": ""
+    },
+    "Paragraph/M/600": {
+      "value": {
+        "fontFamily": "Geist",
+        "fontWeight": 600,
+        "fontSize": 18,
+        "lineHeightPx": 28,
+        "letterSpacing": 0
+      },
+      "description": ""
+    },
+    "Paragraph/M/500": {
+      "value": {
+        "fontFamily": "Geist",
+        "fontWeight": 500,
+        "fontSize": 18,
+        "lineHeightPx": 28,
+        "letterSpacing": 0
+      },
+      "description": ""
+    },
+    "Paragraph/M/400": {
+      "value": {
+        "fontFamily": "Geist",
+        "fontWeight": 400,
+        "fontSize": 18,
+        "lineHeightPx": 28,
+        "letterSpacing": 0
+      },
+      "description": ""
+    },
+    "Paragraph/S/600": {
+      "value": {
+        "fontFamily": "Geist",
+        "fontWeight": 600,
+        "fontSize": 16,
+        "lineHeightPx": 26,
+        "letterSpacing": 0
+      },
+      "description": ""
+    },
+    "Paragraph/S/500": {
+      "value": {
+        "fontFamily": "Geist",
+        "fontWeight": 500,
+        "fontSize": 16,
+        "lineHeightPx": 26,
+        "letterSpacing": 0
+      },
+      "description": ""
+    },
+    "Paragraph/S/400": {
+      "value": {
+        "fontFamily": "Geist",
+        "fontWeight": 400,
+        "fontSize": 16,
+        "lineHeightPx": 26,
+        "letterSpacing": 0
+      },
+      "description": ""
+    },
+    "Paragraph/XS/600": {
+      "value": {
+        "fontFamily": "Geist",
+        "fontWeight": 600,
+        "fontSize": 14,
+        "lineHeightPx": 22,
+        "letterSpacing": 0
+      },
+      "description": ""
+    },
+    "Paragraph/XS/500": {
+      "value": {
+        "fontFamily": "Geist",
+        "fontWeight": 500,
+        "fontSize": 14,
+        "lineHeightPx": 22,
+        "letterSpacing": 0
+      },
+      "description": ""
+    },
+    "Paragraph/XS/400": {
+      "value": {
+        "fontFamily": "Geist",
+        "fontWeight": 400,
+        "fontSize": 14,
+        "lineHeightPx": 22,
+        "letterSpacing": 0
+      },
+      "description": ""
+    },
+    "Control/XL/600": {
+      "value": {
+        "fontFamily": "Geist",
+        "fontWeight": 600,
+        "fontSize": 18,
+        "lineHeightPx": 24,
+        "letterSpacing": -0.5
+      },
+      "description": ""
+    },
+    "Control/XL/500": {
+      "value": {
+        "fontFamily": "Geist",
+        "fontWeight": 500,
+        "fontSize": 18,
+        "lineHeightPx": 24,
+        "letterSpacing": -0.5
+      },
+      "description": ""
+    },
+    "Control/L/600": {
+      "value": {
+        "fontFamily": "Geist",
+        "fontWeight": 600,
+        "fontSize": 16,
+        "lineHeightPx": 22,
+        "letterSpacing": -0.5
+      },
+      "description": ""
+    },
+    "Control/L/500": {
+      "value": {
+        "fontFamily": "Geist",
+        "fontWeight": 500,
+        "fontSize": 16,
+        "lineHeightPx": 22,
+        "letterSpacing": -0.5
+      },
+      "description": ""
+    },
+    "Control/M/600": {
+      "value": {
+        "fontFamily": "Geist",
+        "fontWeight": 600,
+        "fontSize": 14,
+        "lineHeightPx": 20,
+        "letterSpacing": -0.30000001192092896
+      },
+      "description": ""
+    },
+    "Control/M/500": {
+      "value": {
+        "fontFamily": "Geist",
+        "fontWeight": 500,
+        "fontSize": 14,
+        "lineHeightPx": 20,
+        "letterSpacing": -0.30000001192092896
+      },
+      "description": ""
+    },
+    "Control/S/600": {
+      "value": {
+        "fontFamily": "Geist",
+        "fontWeight": 600,
+        "fontSize": 12,
+        "lineHeightPx": 16,
+        "letterSpacing": -0.20000000298023224
+      },
+      "description": ""
+    },
+    "Control/S/500": {
+      "value": {
+        "fontFamily": "Geist",
+        "fontWeight": 500,
+        "fontSize": 12,
+        "lineHeightPx": 16,
+        "letterSpacing": -0.20000000298023224
+      },
+      "description": ""
+    },
+    "Control/XS/600": {
+      "value": {
+        "fontFamily": "Geist",
+        "fontWeight": 600,
+        "fontSize": 11,
+        "lineHeightPx": 12,
+        "letterSpacing": -0.10000000149011612
+      },
+      "description": ""
+    },
+    "Control/XS/500": {
+      "value": {
+        "fontFamily": "Geist",
+        "fontWeight": 500,
+        "fontSize": 11,
+        "lineHeightPx": 12,
+        "letterSpacing": -0.10000000149011612
+      },
+      "description": ""
+    },
+    "Overline/M/500": {
+      "value": {
+        "fontFamily": "Geist",
+        "fontWeight": 500,
+        "fontSize": 14,
+        "lineHeightPx": 20,
+        "letterSpacing": 1
+      },
+      "description": ""
+    },
+    "Overline/S/500": {
+      "value": {
+        "fontFamily": "Geist",
+        "fontWeight": 500,
+        "fontSize": 12,
+        "lineHeightPx": 18,
+        "letterSpacing": 1
+      },
+      "description": ""
+    },
+    "Overline/XS/500": {
+      "value": {
+        "fontFamily": "Geist",
+        "fontWeight": 500,
+        "fontSize": 11,
+        "lineHeightPx": 16,
+        "letterSpacing": 1
+      },
+      "description": ""
+    },
+    "Caption/M/500": {
+      "value": {
+        "fontFamily": "Geist",
+        "fontWeight": 500,
+        "fontSize": 14,
+        "lineHeightPx": 20,
+        "letterSpacing": 0
+      },
+      "description": ""
+    },
+    "Caption/XS/500": {
+      "value": {
+        "fontFamily": "Geist",
+        "fontWeight": 500,
+        "fontSize": 11,
+        "lineHeightPx": 16,
+        "letterSpacing": 0
+      },
+      "description": ""
+    },
+    "Numeric/XL/500": {
+      "value": {
+        "fontFamily": "Geist Mono",
+        "fontWeight": 500,
+        "fontSize": 32,
+        "lineHeightPx": 36,
+        "letterSpacing": -1
+      },
+      "description": ""
+    },
+    "Numeric/L/500": {
+      "value": {
+        "fontFamily": "Geist Mono",
+        "fontWeight": 500,
+        "fontSize": 24,
+        "lineHeightPx": 28,
+        "letterSpacing": 0
+      },
+      "description": ""
+    },
+    "Numeric/M/500": {
+      "value": {
+        "fontFamily": "Geist Mono",
+        "fontWeight": 500,
+        "fontSize": 18,
+        "lineHeightPx": 22,
+        "letterSpacing": 1
+      },
+      "description": ""
+    },
+    "Numeric/S/500": {
+      "value": {
+        "fontFamily": "Geist Mono",
+        "fontWeight": 500,
+        "fontSize": 14,
+        "lineHeightPx": 18,
+        "letterSpacing": 1
+      },
+      "description": ""
+    },
+    "Numeric/XS/500": {
+      "value": {
+        "fontFamily": "Geist Mono",
+        "fontWeight": 500,
+        "fontSize": 12,
+        "lineHeightPx": 16,
+        "letterSpacing": 1
+      },
+      "description": ""
+    },
+    "Code/L/500": {
+      "value": {
+        "fontFamily": "Geist Mono",
+        "fontWeight": 500,
+        "fontSize": 24,
+        "lineHeightPx": 36,
+        "letterSpacing": 0
+      },
+      "description": ""
+    },
+    "Code/M/500": {
+      "value": {
+        "fontFamily": "Geist Mono",
+        "fontWeight": 500,
+        "fontSize": 24,
+        "lineHeightPx": 36,
+        "letterSpacing": 0
+      },
+      "description": ""
+    },
+    "Code/S/500": {
+      "value": {
+        "fontFamily": "Geist Mono",
+        "fontWeight": 500,
+        "fontSize": 14,
+        "lineHeightPx": 20,
+        "letterSpacing": 0
+      },
+      "description": ""
+    },
+    "Code/XS/500": {
+      "value": {
+        "fontFamily": "Geist Mono",
+        "fontWeight": 500,
+        "fontSize": 12,
+        "lineHeightPx": 18,
+        "letterSpacing": 0
+      },
+      "description": ""
+    }
+  },
+  "effect": {
+    "Uniform blur/XS": {
+      "value": [
+        {
+          "type": "BACKGROUND_BLUR",
+          "radius": 4
+        }
+      ],
+      "description": ""
+    },
+    "Uniform blur/S": {
+      "value": [
+        {
+          "type": "BACKGROUND_BLUR",
+          "radius": 8
+        }
+      ],
+      "description": ""
+    },
+    "Uniform blur/M": {
+      "value": [
+        {
+          "type": "BACKGROUND_BLUR",
+          "radius": 12
+        }
+      ],
+      "description": ""
+    },
+    "Uniform blur/L": {
+      "value": [
+        {
+          "type": "BACKGROUND_BLUR",
+          "radius": 16
+        }
+      ],
+      "description": ""
+    },
+    "Uniform blur/XL": {
+      "value": [
+        {
+          "type": "BACKGROUND_BLUR",
+          "radius": 24
+        }
+      ],
+      "description": ""
+    },
+    "Uniform blur/2XL": {
+      "value": [
+        {
+          "type": "BACKGROUND_BLUR",
+          "radius": 40
+        }
+      ],
+      "description": ""
+    },
+    "Uniform blur/3XL": {
+      "value": [
+        {
+          "type": "BACKGROUND_BLUR",
+          "radius": 64
+        }
+      ],
+      "description": ""
+    },
+    "Progressive blur/XS": {
+      "value": [
+        {
+          "type": "BACKGROUND_BLUR",
+          "radius": 0
+        }
+      ],
+      "description": ""
+    },
+    "Progressive blur/S": {
+      "value": [
+        {
+          "type": "BACKGROUND_BLUR",
+          "radius": 0
+        }
+      ],
+      "description": ""
+    },
+    "Progressive blur/M": {
+      "value": [
+        {
+          "type": "BACKGROUND_BLUR",
+          "radius": 0
+        }
+      ],
+      "description": ""
+    },
+    "Progressive blur/L": {
+      "value": [
+        {
+          "type": "BACKGROUND_BLUR",
+          "radius": 0
+        }
+      ],
+      "description": ""
+    },
+    "Progressive blur/XL": {
+      "value": [
+        {
+          "type": "BACKGROUND_BLUR",
+          "radius": 0
+        }
+      ],
+      "description": ""
+    },
+    "Progressive blur/2XL": {
+      "value": [
+        {
+          "type": "BACKGROUND_BLUR",
+          "radius": 0
+        }
+      ],
+      "description": ""
+    },
+    "Focus-ring/Primary/0": {
+      "value": [
+        {
+          "type": "DROP_SHADOW",
+          "radius": 0,
+          "color": "#615fff",
+          "offset": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "type": "DROP_SHADOW",
+          "radius": 0,
+          "color": "#fafafa",
+          "offset": {
+            "x": 0,
+            "y": 0
+          }
+        }
+      ],
+      "description": ""
+    },
+    "Focus-ring/Primary/1": {
+      "value": [
+        {
+          "type": "DROP_SHADOW",
+          "radius": 0,
+          "color": "#615fff",
+          "offset": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "type": "DROP_SHADOW",
+          "radius": 0,
+          "color": "#fafafa",
+          "offset": {
+            "x": 0,
+            "y": 0
+          }
+        }
+      ],
+      "description": ""
+    },
+    "Focus-ring/Primary/2": {
+      "value": [
+        {
+          "type": "DROP_SHADOW",
+          "radius": 0,
+          "color": "#615fff",
+          "offset": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "type": "DROP_SHADOW",
+          "radius": 0,
+          "color": "#fafafa",
+          "offset": {
+            "x": 0,
+            "y": 0
+          }
+        }
+      ],
+      "description": ""
+    },
+    "Focus-ring/Primary/3": {
+      "value": [
+        {
+          "type": "DROP_SHADOW",
+          "radius": 0,
+          "color": "#615fff",
+          "offset": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "type": "DROP_SHADOW",
+          "radius": 0,
+          "color": "#fafafa",
+          "offset": {
+            "x": 0,
+            "y": 0
+          }
+        }
+      ],
+      "description": ""
+    },
+    "Focus-ring/Neutral/0": {
+      "value": [
+        {
+          "type": "DROP_SHADOW",
+          "radius": 0,
+          "color": "#09090b",
+          "offset": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "type": "DROP_SHADOW",
+          "radius": 0,
+          "color": "#ffffff",
+          "offset": {
+            "x": 0,
+            "y": 0
+          }
+        }
+      ],
+      "description": ""
+    },
+    "Focus-ring/Neutral/1": {
+      "value": [
+        {
+          "type": "DROP_SHADOW",
+          "radius": 0,
+          "color": "#09090b",
+          "offset": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "type": "DROP_SHADOW",
+          "radius": 0,
+          "color": "#ffffff",
+          "offset": {
+            "x": 0,
+            "y": 0
+          }
+        }
+      ],
+      "description": ""
+    },
+    "Focus-ring/Neutral/2": {
+      "value": [
+        {
+          "type": "DROP_SHADOW",
+          "radius": 0,
+          "color": "#09090b",
+          "offset": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "type": "DROP_SHADOW",
+          "radius": 0,
+          "color": "#ffffff",
+          "offset": {
+            "x": 0,
+            "y": 0
+          }
+        }
+      ],
+      "description": ""
+    },
+    "Focus-ring/Neutral/3": {
+      "value": [
+        {
+          "type": "DROP_SHADOW",
+          "radius": 0,
+          "color": "#09090b",
+          "offset": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "type": "DROP_SHADOW",
+          "radius": 0,
+          "color": "#ffffff",
+          "offset": {
+            "x": 0,
+            "y": 0
+          }
+        }
+      ],
+      "description": ""
+    },
+    "Focus-ring/Inverse/0": {
+      "value": [
+        {
+          "type": "DROP_SHADOW",
+          "radius": 0,
+          "color": "#fafafa",
+          "offset": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "type": "DROP_SHADOW",
+          "radius": 0,
+          "color": "#09090b",
+          "offset": {
+            "x": 0,
+            "y": 0
+          }
+        }
+      ],
+      "description": ""
+    },
+    "Focus-ring/Inverse/1": {
+      "value": [
+        {
+          "type": "DROP_SHADOW",
+          "radius": 0,
+          "color": "#fafafa",
+          "offset": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "type": "DROP_SHADOW",
+          "radius": 0,
+          "color": "#09090b",
+          "offset": {
+            "x": 0,
+            "y": 0
+          }
+        }
+      ],
+      "description": ""
+    },
+    "Focus-ring/Inverse/2": {
+      "value": [
+        {
+          "type": "DROP_SHADOW",
+          "radius": 0,
+          "color": "#fafafa",
+          "offset": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "type": "DROP_SHADOW",
+          "radius": 0,
+          "color": "#09090b",
+          "offset": {
+            "x": 0,
+            "y": 0
+          }
+        }
+      ],
+      "description": ""
+    },
+    "Focus-ring/Inverse/3": {
+      "value": [
+        {
+          "type": "DROP_SHADOW",
+          "radius": 0,
+          "color": "#fafafa",
+          "offset": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "type": "DROP_SHADOW",
+          "radius": 0,
+          "color": "#09090b",
+          "offset": {
+            "x": 0,
+            "y": 0
+          }
+        }
+      ],
+      "description": ""
+    },
+    "Focus-ring/Error/0": {
+      "value": [
+        {
+          "type": "DROP_SHADOW",
+          "radius": 0,
+          "color": "#e7000b",
+          "offset": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "type": "DROP_SHADOW",
+          "radius": 0,
+          "color": "#fafafa",
+          "offset": {
+            "x": 0,
+            "y": 0
+          }
+        }
+      ],
+      "description": ""
+    },
+    "Focus-ring/Error/1": {
+      "value": [
+        {
+          "type": "DROP_SHADOW",
+          "radius": 0,
+          "color": "#e7000b",
+          "offset": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "type": "DROP_SHADOW",
+          "radius": 0,
+          "color": "#fafafa",
+          "offset": {
+            "x": 0,
+            "y": 0
+          }
+        }
+      ],
+      "description": ""
+    },
+    "Focus-ring/Error/2": {
+      "value": [
+        {
+          "type": "DROP_SHADOW",
+          "radius": 0,
+          "color": "#e7000b",
+          "offset": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "type": "DROP_SHADOW",
+          "radius": 0,
+          "color": "#fafafa",
+          "offset": {
+            "x": 0,
+            "y": 0
+          }
+        }
+      ],
+      "description": ""
+    },
+    "Focus-ring/Error/3": {
+      "value": [
+        {
+          "type": "DROP_SHADOW",
+          "radius": 0,
+          "color": "#e7000b",
+          "offset": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "type": "DROP_SHADOW",
+          "radius": 0,
+          "color": "#fafafa",
+          "offset": {
+            "x": 0,
+            "y": 0
+          }
+        }
+      ],
+      "description": ""
+    },
+    "Focus-ring/Info/0": {
+      "value": [
+        {
+          "type": "DROP_SHADOW",
+          "radius": 0,
+          "color": "#2563eb",
+          "offset": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "type": "DROP_SHADOW",
+          "radius": 0,
+          "color": "#fafafa",
+          "offset": {
+            "x": 0,
+            "y": 0
+          }
+        }
+      ],
+      "description": ""
+    },
+    "Focus-ring/Info/1": {
+      "value": [
+        {
+          "type": "DROP_SHADOW",
+          "radius": 0,
+          "color": "#2563eb",
+          "offset": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "type": "DROP_SHADOW",
+          "radius": 0,
+          "color": "#fafafa",
+          "offset": {
+            "x": 0,
+            "y": 0
+          }
+        }
+      ],
+      "description": ""
+    },
+    "Focus-ring/Info/2": {
+      "value": [
+        {
+          "type": "DROP_SHADOW",
+          "radius": 0,
+          "color": "#2563eb",
+          "offset": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "type": "DROP_SHADOW",
+          "radius": 0,
+          "color": "#fafafa",
+          "offset": {
+            "x": 0,
+            "y": 0
+          }
+        }
+      ],
+      "description": ""
+    },
+    "Focus-ring/Info/3": {
+      "value": [
+        {
+          "type": "DROP_SHADOW",
+          "radius": 0,
+          "color": "#2563eb",
+          "offset": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "type": "DROP_SHADOW",
+          "radius": 0,
+          "color": "#fafafa",
+          "offset": {
+            "x": 0,
+            "y": 0
+          }
+        }
+      ],
+      "description": ""
+    },
+    "Shadow/Regular-A/2XS": {
+      "value": [
+        {
+          "type": "DROP_SHADOW",
+          "radius": 0,
+          "color": "#00000014",
+          "offset": {
+            "x": 0,
+            "y": 1
+          }
+        }
+      ],
+      "description": ""
+    },
+    "Shadow/Component/Primary/default": {
+      "value": [
+        {
+          "type": "INNER_SHADOW",
+          "radius": 0,
+          "color": "#ffffff29",
+          "offset": {
+            "x": 0,
+            "y": 2
+          }
+        },
+        {
+          "type": "INNER_SHADOW",
+          "radius": 0,
+          "color": "#615fff",
+          "offset": {
+            "x": 0,
+            "y": 0
+          }
+        }
+      ],
+      "description": ""
+    },
+    "Shadow/Component/Primary/hover": {
+      "value": [
+        {
+          "type": "DROP_SHADOW",
+          "radius": 10,
+          "color": "#432dd7",
+          "offset": {
+            "x": 0,
+            "y": 5
+          }
+        },
+        {
+          "type": "INNER_SHADOW",
+          "radius": 0,
+          "color": "#ffffff29",
+          "offset": {
+            "x": 0,
+            "y": 2
+          }
+        },
+        {
+          "type": "INNER_SHADOW",
+          "radius": 0,
+          "color": "#615fff",
+          "offset": {
+            "x": 0,
+            "y": 0
+          }
+        }
+      ],
+      "description": ""
+    },
+    "Shadow/Component/Primary/focused": {
+      "value": [
+        {
+          "type": "INNER_SHADOW",
+          "radius": 0,
+          "color": "#ffffff29",
+          "offset": {
+            "x": 0,
+            "y": 2
+          }
+        },
+        {
+          "type": "INNER_SHADOW",
+          "radius": 0,
+          "color": "#615fff",
+          "offset": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "type": "DROP_SHADOW",
+          "radius": 0,
+          "color": "#432dd7",
+          "offset": {
+            "x": 0,
+            "y": 0
+          }
+        }
+      ],
+      "description": ""
+    },
+    "Shadow/Component/Neutral/default": {
+      "value": [
+        {
+          "type": "INNER_SHADOW",
+          "radius": 0,
+          "color": "#3f3f46",
+          "offset": {
+            "x": 0,
+            "y": 2
+          }
+        },
+        {
+          "type": "INNER_SHADOW",
+          "radius": 0,
+          "color": "#27272a",
+          "offset": {
+            "x": 0,
+            "y": 0
+          }
+        }
+      ],
+      "description": ""
+    },
+    "Shadow/Component/Neutral/hover": {
+      "value": [
+        {
+          "type": "DROP_SHADOW",
+          "radius": 10,
+          "color": "#3f3f46",
+          "offset": {
+            "x": 0,
+            "y": 5
+          }
+        },
+        {
+          "type": "INNER_SHADOW",
+          "radius": 0,
+          "color": "#3f3f46",
+          "offset": {
+            "x": 0,
+            "y": 2
+          }
+        },
+        {
+          "type": "INNER_SHADOW",
+          "radius": 0,
+          "color": "#27272a",
+          "offset": {
+            "x": 0,
+            "y": 0
+          }
+        }
+      ],
+      "description": ""
+    },
+    "Shadow/Component/Neutral/focused": {
+      "value": [
+        {
+          "type": "INNER_SHADOW",
+          "radius": 0,
+          "color": "#3f3f46",
+          "offset": {
+            "x": 0,
+            "y": 1
+          }
+        },
+        {
+          "type": "INNER_SHADOW",
+          "radius": 0,
+          "color": "#27272a",
+          "offset": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "type": "DROP_SHADOW",
+          "radius": 10,
+          "color": "#3f3f46",
+          "offset": {
+            "x": 0,
+            "y": 5
+          }
+        }
+      ],
+      "description": ""
+    },
+    "Shadow/Component/Inverse/default": {
+      "value": [
+        {
+          "type": "INNER_SHADOW",
+          "radius": 0,
+          "color": "#f4f4f5",
+          "offset": {
+            "x": 0,
+            "y": 2
+          }
+        },
+        {
+          "type": "INNER_SHADOW",
+          "radius": 0,
+          "color": "#fafafa",
+          "offset": {
+            "x": 0,
+            "y": 0
+          }
+        }
+      ],
+      "description": ""
+    },
+    "Shadow/Component/Inverse/hover": {
+      "value": [
+        {
+          "type": "DROP_SHADOW",
+          "radius": 10,
+          "color": "#d4d4d8",
+          "offset": {
+            "x": 0,
+            "y": 5
+          }
+        },
+        {
+          "type": "INNER_SHADOW",
+          "radius": 0,
+          "color": "#e4e4e7",
+          "offset": {
+            "x": 0,
+            "y": 2
+          }
+        },
+        {
+          "type": "INNER_SHADOW",
+          "radius": 0,
+          "color": "#f4f4f5",
+          "offset": {
+            "x": 0,
+            "y": 0
+          }
+        }
+      ],
+      "description": ""
+    },
+    "Shadow/Component/Inverse/focused": {
+      "value": [
+        {
+          "type": "INNER_SHADOW",
+          "radius": 0,
+          "color": "#f4f4f5",
+          "offset": {
+            "x": 0,
+            "y": 2
+          }
+        },
+        {
+          "type": "INNER_SHADOW",
+          "radius": 0,
+          "color": "#fafafa",
+          "offset": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "type": "DROP_SHADOW",
+          "radius": 0,
+          "color": "#d4d4d8",
+          "offset": {
+            "x": 0,
+            "y": 0
+          }
+        }
+      ],
+      "description": ""
+    },
+    "Shadow/Component/Error/default": {
+      "value": [
+        {
+          "type": "INNER_SHADOW",
+          "radius": 0,
+          "color": "#ffffff29",
+          "offset": {
+            "x": 0,
+            "y": 2
+          }
+        },
+        {
+          "type": "INNER_SHADOW",
+          "radius": 0,
+          "color": "#e7000b",
+          "offset": {
+            "x": 0,
+            "y": 0
+          }
+        }
+      ],
+      "description": ""
+    },
+    "Shadow/Component/Error/hover": {
+      "value": [
+        {
+          "type": "DROP_SHADOW",
+          "radius": 10,
+          "color": "#c10007",
+          "offset": {
+            "x": 0,
+            "y": 5
+          }
+        },
+        {
+          "type": "INNER_SHADOW",
+          "radius": 0,
+          "color": "#ffffff29",
+          "offset": {
+            "x": 0,
+            "y": 2
+          }
+        },
+        {
+          "type": "INNER_SHADOW",
+          "radius": 0,
+          "color": "#fb2c36",
+          "offset": {
+            "x": 0,
+            "y": 0
+          }
+        }
+      ],
+      "description": ""
+    },
+    "Shadow/Component/Error/focused": {
+      "value": [
+        {
+          "type": "INNER_SHADOW",
+          "radius": 0,
+          "color": "#ffffff29",
+          "offset": {
+            "x": 0,
+            "y": 2
+          }
+        },
+        {
+          "type": "INNER_SHADOW",
+          "radius": 0,
+          "color": "#e7000b",
+          "offset": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "type": "DROP_SHADOW",
+          "radius": 0,
+          "color": "#82181a",
+          "offset": {
+            "x": 0,
+            "y": 0
+          }
+        }
+      ],
+      "description": ""
+    },
+    "Shadow/Component/Success/default": {
+      "value": [
+        {
+          "type": "INNER_SHADOW",
+          "radius": 0,
+          "color": "#ffffff29",
+          "offset": {
+            "x": 0,
+            "y": 2
+          }
+        },
+        {
+          "type": "INNER_SHADOW",
+          "radius": 0,
+          "color": "#00a63e",
+          "offset": {
+            "x": 0,
+            "y": 0
+          }
+        }
+      ],
+      "description": ""
+    },
+    "Shadow/Component/Success/hover": {
+      "value": [
+        {
+          "type": "DROP_SHADOW",
+          "radius": 10,
+          "color": "#008236",
+          "offset": {
+            "x": 0,
+            "y": 5
+          }
+        },
+        {
+          "type": "INNER_SHADOW",
+          "radius": 0,
+          "color": "#ffffff29",
+          "offset": {
+            "x": 0,
+            "y": 2
+          }
+        },
+        {
+          "type": "INNER_SHADOW",
+          "radius": 0,
+          "color": "#00c950",
+          "offset": {
+            "x": 0,
+            "y": 0
+          }
+        }
+      ],
+      "description": ""
+    },
+    "Shadow/Component/Success/focused": {
+      "value": [
+        {
+          "type": "INNER_SHADOW",
+          "radius": 0,
+          "color": "#ffffff29",
+          "offset": {
+            "x": 0,
+            "y": 2
+          }
+        },
+        {
+          "type": "INNER_SHADOW",
+          "radius": 0,
+          "color": "#00a63e",
+          "offset": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "type": "DROP_SHADOW",
+          "radius": 0,
+          "color": "#0d542b",
+          "offset": {
+            "x": 0,
+            "y": 0
+          }
+        }
+      ],
+      "description": ""
+    },
+    "Shadow/Component/Info/default": {
+      "value": [
+        {
+          "type": "INNER_SHADOW",
+          "radius": 0,
+          "color": "#ffffff29",
+          "offset": {
+            "x": 0,
+            "y": 2
+          }
+        },
+        {
+          "type": "INNER_SHADOW",
+          "radius": 0,
+          "color": "#2563eb",
+          "offset": {
+            "x": 0,
+            "y": 0
+          }
+        }
+      ],
+      "description": ""
+    },
+    "Shadow/Component/Info/hover": {
+      "value": [
+        {
+          "type": "DROP_SHADOW",
+          "radius": 10,
+          "color": "#1d4ed8",
+          "offset": {
+            "x": 0,
+            "y": 5
+          }
+        },
+        {
+          "type": "INNER_SHADOW",
+          "radius": 0,
+          "color": "#ffffff29",
+          "offset": {
+            "x": 0,
+            "y": 2
+          }
+        },
+        {
+          "type": "INNER_SHADOW",
+          "radius": 0,
+          "color": "#3b82f6",
+          "offset": {
+            "x": 0,
+            "y": 0
+          }
+        }
+      ],
+      "description": ""
+    },
+    "Shadow/Component/Info/focused": {
+      "value": [
+        {
+          "type": "INNER_SHADOW",
+          "radius": 0,
+          "color": "#ffffff29",
+          "offset": {
+            "x": 0,
+            "y": 2
+          }
+        },
+        {
+          "type": "INNER_SHADOW",
+          "radius": 0,
+          "color": "#2563eb",
+          "offset": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "type": "DROP_SHADOW",
+          "radius": 0,
+          "color": "#1e3a8a",
+          "offset": {
+            "x": 0,
+            "y": 0
+          }
+        }
+      ],
+      "description": ""
+    },
+    "Shadow/Text/2xs": {
+      "value": [
+        {
+          "type": "DROP_SHADOW",
+          "radius": 0,
+          "color": "#00000029",
+          "offset": {
+            "x": 0,
+            "y": 1
+          }
+        }
+      ],
+      "description": ""
+    },
+    "Shadow/Text/xs": {
+      "value": [
+        {
+          "type": "DROP_SHADOW",
+          "radius": 0,
+          "color": "#0000003d",
+          "offset": {
+            "x": 0,
+            "y": 1
+          }
+        }
+      ],
+      "description": ""
+    },
+    "Shadow/Text/sm": {
+      "value": [
+        {
+          "type": "DROP_SHADOW",
+          "radius": 2,
+          "color": "#00000014",
+          "offset": {
+            "x": 0,
+            "y": 2
+          }
+        },
+        {
+          "type": "DROP_SHADOW",
+          "radius": 1,
+          "color": "#00000014",
+          "offset": {
+            "x": 0,
+            "y": 1
+          }
+        },
+        {
+          "type": "DROP_SHADOW",
+          "radius": 0,
+          "color": "#00000014",
+          "offset": {
+            "x": 0,
+            "y": 1
+          }
+        }
+      ],
+      "description": ""
+    },
+    "Shadow/Text/md": {
+      "value": [
+        {
+          "type": "DROP_SHADOW",
+          "radius": 4,
+          "color": "#0000001a",
+          "offset": {
+            "x": 0,
+            "y": 2
+          }
+        },
+        {
+          "type": "DROP_SHADOW",
+          "radius": 2,
+          "color": "#0000001a",
+          "offset": {
+            "x": 0,
+            "y": 1
+          }
+        },
+        {
+          "type": "DROP_SHADOW",
+          "radius": 1,
+          "color": "#0000001a",
+          "offset": {
+            "x": 0,
+            "y": 1
+          }
+        }
+      ],
+      "description": ""
+    },
+    "Shadow/Text/l": {
+      "value": [
+        {
+          "type": "DROP_SHADOW",
+          "radius": 8,
+          "color": "#0000001a",
+          "offset": {
+            "x": 0,
+            "y": 4
+          }
+        },
+        {
+          "type": "DROP_SHADOW",
+          "radius": 2,
+          "color": "#0000001a",
+          "offset": {
+            "x": 0,
+            "y": 3
+          }
+        },
+        {
+          "type": "DROP_SHADOW",
+          "radius": 2,
+          "color": "#0000001a",
+          "offset": {
+            "x": 0,
+            "y": 1
+          }
+        }
+      ],
+      "description": ""
+    },
+    "Regular-B/Light/0": {
+      "value": [
+        {
+          "type": "DROP_SHADOW",
+          "radius": 0,
+          "color": "#00000014",
+          "offset": {
+            "x": 0,
+            "y": 0
+          }
+        }
+      ],
+      "description": ""
+    },
+    "Regular-B/Dark/0": {
+      "value": [
+        {
+          "type": "INNER_SHADOW",
+          "radius": 0,
+          "color": "#ffffff05",
+          "offset": {
+            "x": 0,
+            "y": 0
+          }
+        }
+      ],
+      "description": ""
+    },
+    "Regular-B/Light/1": {
+      "value": [
+        {
+          "type": "DROP_SHADOW",
+          "radius": 1,
+          "color": "#00000014",
+          "offset": {
+            "x": 0,
+            "y": 1
+          }
+        },
+        {
+          "type": "DROP_SHADOW",
+          "radius": 0,
+          "color": "#00000014",
+          "offset": {
+            "x": 0,
+            "y": 0
+          }
+        }
+      ],
+      "description": ""
+    },
+    "Regular-B/Light/2": {
+      "value": [
+        {
+          "type": "DROP_SHADOW",
+          "radius": 3,
+          "color": "#00000014",
+          "offset": {
+            "x": 0,
+            "y": 3
+          }
+        },
+        {
+          "type": "DROP_SHADOW",
+          "radius": 1,
+          "color": "#00000014",
+          "offset": {
+            "x": 0,
+            "y": 1
+          }
+        },
+        {
+          "type": "DROP_SHADOW",
+          "radius": 0,
+          "color": "#00000014",
+          "offset": {
+            "x": 0,
+            "y": 0
+          }
+        }
+      ],
+      "description": ""
+    },
+    "Regular-B/Light/3": {
+      "value": [
+        {
+          "type": "DROP_SHADOW",
+          "radius": 6,
+          "color": "#00000014",
+          "offset": {
+            "x": 0,
+            "y": 6
+          }
+        },
+        {
+          "type": "DROP_SHADOW",
+          "radius": 3,
+          "color": "#00000014",
+          "offset": {
+            "x": 0,
+            "y": 3
+          }
+        },
+        {
+          "type": "DROP_SHADOW",
+          "radius": 1,
+          "color": "#00000014",
+          "offset": {
+            "x": 0,
+            "y": 1
+          }
+        },
+        {
+          "type": "DROP_SHADOW",
+          "radius": 0,
+          "color": "#00000014",
+          "offset": {
+            "x": 0,
+            "y": 0
+          }
+        }
+      ],
+      "description": ""
+    },
+    "Regular-B/Light/4": {
+      "value": [
+        {
+          "type": "DROP_SHADOW",
+          "radius": 12,
+          "color": "#00000014",
+          "offset": {
+            "x": 0,
+            "y": 12
+          }
+        },
+        {
+          "type": "DROP_SHADOW",
+          "radius": 6,
+          "color": "#00000014",
+          "offset": {
+            "x": 0,
+            "y": 6
+          }
+        },
+        {
+          "type": "DROP_SHADOW",
+          "radius": 3,
+          "color": "#00000014",
+          "offset": {
+            "x": 0,
+            "y": 3
+          }
+        },
+        {
+          "type": "DROP_SHADOW",
+          "radius": 1,
+          "color": "#00000014",
+          "offset": {
+            "x": 0,
+            "y": 1
+          }
+        },
+        {
+          "type": "DROP_SHADOW",
+          "radius": 0,
+          "color": "#00000014",
+          "offset": {
+            "x": 0,
+            "y": 0
+          }
+        }
+      ],
+      "description": ""
+    },
+    "Regular-B/Light/5": {
+      "value": [
+        {
+          "type": "DROP_SHADOW",
+          "radius": 24,
+          "color": "#00000014",
+          "offset": {
+            "x": 0,
+            "y": 24
+          }
+        },
+        {
+          "type": "DROP_SHADOW",
+          "radius": 12,
+          "color": "#00000014",
+          "offset": {
+            "x": 0,
+            "y": 12
+          }
+        },
+        {
+          "type": "DROP_SHADOW",
+          "radius": 6,
+          "color": "#00000014",
+          "offset": {
+            "x": 0,
+            "y": 6
+          }
+        },
+        {
+          "type": "DROP_SHADOW",
+          "radius": 3,
+          "color": "#00000014",
+          "offset": {
+            "x": 0,
+            "y": 3
+          }
+        },
+        {
+          "type": "DROP_SHADOW",
+          "radius": 1,
+          "color": "#00000014",
+          "offset": {
+            "x": 0,
+            "y": 1
+          }
+        },
+        {
+          "type": "DROP_SHADOW",
+          "radius": 0,
+          "color": "#00000014",
+          "offset": {
+            "x": 0,
+            "y": 0
+          }
+        }
+      ],
+      "description": ""
+    },
+    "Regular-B/Light/6": {
+      "value": [
+        {
+          "type": "DROP_SHADOW",
+          "radius": 48,
+          "color": "#00000014",
+          "offset": {
+            "x": 0,
+            "y": 48
+          }
+        },
+        {
+          "type": "DROP_SHADOW",
+          "radius": 24,
+          "color": "#00000014",
+          "offset": {
+            "x": 0,
+            "y": 24
+          }
+        },
+        {
+          "type": "DROP_SHADOW",
+          "radius": 12,
+          "color": "#00000014",
+          "offset": {
+            "x": 0,
+            "y": 12
+          }
+        },
+        {
+          "type": "DROP_SHADOW",
+          "radius": 6,
+          "color": "#00000014",
+          "offset": {
+            "x": 0,
+            "y": 6
+          }
+        },
+        {
+          "type": "DROP_SHADOW",
+          "radius": 3,
+          "color": "#00000014",
+          "offset": {
+            "x": 0,
+            "y": 3
+          }
+        },
+        {
+          "type": "DROP_SHADOW",
+          "radius": 1,
+          "color": "#00000014",
+          "offset": {
+            "x": 0,
+            "y": 1
+          }
+        },
+        {
+          "type": "DROP_SHADOW",
+          "radius": 0,
+          "color": "#00000014",
+          "offset": {
+            "x": 0,
+            "y": 0
+          }
+        }
+      ],
+      "description": ""
+    },
+    "Regular-B/Dark/1": {
+      "value": [
+        {
+          "type": "DROP_SHADOW",
+          "radius": 1,
+          "color": "#00000066",
+          "offset": {
+            "x": 0,
+            "y": 1
+          }
+        },
+        {
+          "type": "INNER_SHADOW",
+          "radius": 0,
+          "color": "#ffffff05",
+          "offset": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "type": "INNER_SHADOW",
+          "radius": 0,
+          "color": "#ffffff08",
+          "offset": {
+            "x": 0,
+            "y": 1
+          }
+        }
+      ],
+      "description": ""
+    },
+    "Regular-B/Dark/2": {
+      "value": [
+        {
+          "type": "DROP_SHADOW",
+          "radius": 3,
+          "color": "#0000003d",
+          "offset": {
+            "x": 0,
+            "y": 3
+          }
+        },
+        {
+          "type": "DROP_SHADOW",
+          "radius": 1,
+          "color": "#00000029",
+          "offset": {
+            "x": 0,
+            "y": 1
+          }
+        },
+        {
+          "type": "DROP_SHADOW",
+          "radius": 0,
+          "color": "#00000014",
+          "offset": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "type": "INNER_SHADOW",
+          "radius": 0,
+          "color": "#ffffff05",
+          "offset": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "type": "INNER_SHADOW",
+          "radius": 0,
+          "color": "#ffffff0d",
+          "offset": {
+            "x": 0,
+            "y": 1
+          }
+        }
+      ],
+      "description": ""
+    },
+    "Regular-B/Dark/3": {
+      "value": [
+        {
+          "type": "DROP_SHADOW",
+          "radius": 6,
+          "color": "#00000029",
+          "offset": {
+            "x": 0,
+            "y": 6
+          }
+        },
+        {
+          "type": "DROP_SHADOW",
+          "radius": 3,
+          "color": "#00000029",
+          "offset": {
+            "x": 0,
+            "y": 3
+          }
+        },
+        {
+          "type": "DROP_SHADOW",
+          "radius": 1,
+          "color": "#00000029",
+          "offset": {
+            "x": 0,
+            "y": 1
+          }
+        },
+        {
+          "type": "DROP_SHADOW",
+          "radius": 0,
+          "color": "#00000014",
+          "offset": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "type": "INNER_SHADOW",
+          "radius": 0,
+          "color": "#ffffff05",
+          "offset": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "type": "INNER_SHADOW",
+          "radius": 0,
+          "color": "#ffffff0d",
+          "offset": {
+            "x": 0,
+            "y": 1
+          }
+        }
+      ],
+      "description": ""
+    },
+    "Regular-B/Dark/4": {
+      "value": [
+        {
+          "type": "DROP_SHADOW",
+          "radius": 12,
+          "color": "#00000029",
+          "offset": {
+            "x": 0,
+            "y": 12
+          }
+        },
+        {
+          "type": "DROP_SHADOW",
+          "radius": 6,
+          "color": "#00000029",
+          "offset": {
+            "x": 0,
+            "y": 6
+          }
+        },
+        {
+          "type": "DROP_SHADOW",
+          "radius": 3,
+          "color": "#00000029",
+          "offset": {
+            "x": 0,
+            "y": 3
+          }
+        },
+        {
+          "type": "DROP_SHADOW",
+          "radius": 1,
+          "color": "#00000029",
+          "offset": {
+            "x": 0,
+            "y": 1
+          }
+        },
+        {
+          "type": "DROP_SHADOW",
+          "radius": 0,
+          "color": "#00000014",
+          "offset": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "type": "INNER_SHADOW",
+          "radius": 0,
+          "color": "#ffffff05",
+          "offset": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "type": "INNER_SHADOW",
+          "radius": 0,
+          "color": "#ffffff0d",
+          "offset": {
+            "x": 0,
+            "y": 1
+          }
+        }
+      ],
+      "description": ""
+    },
+    "Regular-B/Dark/5": {
+      "value": [
+        {
+          "type": "DROP_SHADOW",
+          "radius": 24,
+          "color": "#00000029",
+          "offset": {
+            "x": 0,
+            "y": 24
+          }
+        },
+        {
+          "type": "DROP_SHADOW",
+          "radius": 12,
+          "color": "#00000029",
+          "offset": {
+            "x": 0,
+            "y": 12
+          }
+        },
+        {
+          "type": "DROP_SHADOW",
+          "radius": 6,
+          "color": "#00000029",
+          "offset": {
+            "x": 0,
+            "y": 6
+          }
+        },
+        {
+          "type": "DROP_SHADOW",
+          "radius": 3,
+          "color": "#00000029",
+          "offset": {
+            "x": 0,
+            "y": 3
+          }
+        },
+        {
+          "type": "DROP_SHADOW",
+          "radius": 1,
+          "color": "#00000029",
+          "offset": {
+            "x": 0,
+            "y": 1
+          }
+        },
+        {
+          "type": "DROP_SHADOW",
+          "radius": 0,
+          "color": "#00000014",
+          "offset": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "type": "INNER_SHADOW",
+          "radius": 0,
+          "color": "#ffffff05",
+          "offset": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "type": "INNER_SHADOW",
+          "radius": 0,
+          "color": "#ffffff0d",
+          "offset": {
+            "x": 0,
+            "y": 1
+          }
+        }
+      ],
+      "description": ""
+    },
+    "Regular-B/Dark/6": {
+      "value": [
+        {
+          "type": "DROP_SHADOW",
+          "radius": 48,
+          "color": "#00000029",
+          "offset": {
+            "x": 0,
+            "y": 48
+          }
+        },
+        {
+          "type": "DROP_SHADOW",
+          "radius": 24,
+          "color": "#00000029",
+          "offset": {
+            "x": 0,
+            "y": 24
+          }
+        },
+        {
+          "type": "DROP_SHADOW",
+          "radius": 12,
+          "color": "#00000029",
+          "offset": {
+            "x": 0,
+            "y": 12
+          }
+        },
+        {
+          "type": "DROP_SHADOW",
+          "radius": 6,
+          "color": "#00000029",
+          "offset": {
+            "x": 0,
+            "y": 6
+          }
+        },
+        {
+          "type": "DROP_SHADOW",
+          "radius": 3,
+          "color": "#00000029",
+          "offset": {
+            "x": 0,
+            "y": 3
+          }
+        },
+        {
+          "type": "DROP_SHADOW",
+          "radius": 1,
+          "color": "#00000029",
+          "offset": {
+            "x": 0,
+            "y": 1
+          }
+        },
+        {
+          "type": "DROP_SHADOW",
+          "radius": 0,
+          "color": "#00000014",
+          "offset": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "type": "INNER_SHADOW",
+          "radius": 0,
+          "color": "#ffffff05",
+          "offset": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "type": "INNER_SHADOW",
+          "radius": 0,
+          "color": "#ffffff0d",
+          "offset": {
+            "x": 0,
+            "y": 1
+          }
+        }
+      ],
+      "description": ""
+    }
+  },
+  "grid": {
+    "Desktop": {
+      "value": [
+        {
+          "pattern": "COLUMNS",
+          "sectionSize": 75,
+          "visible": true,
+          "color": {
+            "r": 0,
+            "g": 0,
+            "b": 0,
+            "a": 0.10000000149011612
+          },
+          "alignment": "STRETCH",
+          "gutterSize": 40,
+          "offset": 50,
+          "count": 12
+        },
+        {
+          "pattern": "ROWS",
+          "sectionSize": 12,
+          "visible": true,
+          "color": {
+            "r": 0,
+            "g": 0,
+            "b": 0,
+            "a": 0.10000000149011612
+          },
+          "alignment": "MIN",
+          "gutterSize": 12,
+          "offset": 0,
+          "count": 1000
+        }
+      ],
+      "description": ""
+    },
+    "Tablet": {
+      "value": [
+        {
+          "pattern": "COLUMNS",
+          "sectionSize": 46.08333206176758,
+          "visible": true,
+          "color": {
+            "r": 0,
+            "g": 0,
+            "b": 0,
+            "a": 0.10000000149011612
+          },
+          "alignment": "STRETCH",
+          "gutterSize": 15,
+          "offset": 25,
+          "count": 12
+        },
+        {
+          "pattern": "ROWS",
+          "sectionSize": 12,
+          "visible": true,
+          "color": {
+            "r": 0,
+            "g": 0,
+            "b": 0,
+            "a": 0.10000000149011612
+          },
+          "alignment": "MIN",
+          "gutterSize": 12,
+          "offset": 0,
+          "count": 1000
+        }
+      ],
+      "description": ""
+    },
+    "Mobile": {
+      "value": [
+        {
+          "pattern": "COLUMNS",
+          "sectionSize": 76.75,
+          "visible": true,
+          "color": {
+            "r": 0,
+            "g": 0,
+            "b": 0,
+            "a": 0.10000000149011612
+          },
+          "alignment": "STRETCH",
+          "gutterSize": 15,
+          "offset": 25,
+          "count": 4
+        },
+        {
+          "pattern": "ROWS",
+          "sectionSize": 12,
+          "visible": true,
+          "color": {
+            "r": 0,
+            "g": 0,
+            "b": 0,
+            "a": 0.10000000149011612
+          },
+          "alignment": "MIN",
+          "gutterSize": 12,
+          "offset": 0,
+          "count": 1000
+        }
+      ],
+      "description": ""
+    },
+    "Classic modular": {
+      "value": [
+        {
+          "pattern": "COLUMNS",
+          "sectionSize": 155,
+          "visible": true,
+          "color": {
+            "r": 0,
+            "g": 0,
+            "b": 0,
+            "a": 0.10000000149011612
+          },
+          "alignment": "STRETCH",
+          "gutterSize": 24,
+          "offset": 24,
+          "count": 4
+        },
+        {
+          "pattern": "ROWS",
+          "sectionSize": 169.60000610351562,
+          "visible": true,
+          "color": {
+            "r": 0,
+            "g": 0,
+            "b": 0,
+            "a": 0.10000000149011612
+          },
+          "alignment": "STRETCH",
+          "gutterSize": 24,
+          "offset": 24,
+          "count": 5
+        }
+      ],
+      "description": ""
+    }
+  }
+}
