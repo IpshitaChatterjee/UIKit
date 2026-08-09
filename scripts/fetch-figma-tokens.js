@@ -2,9 +2,6 @@
  * Pulls published styles from a Figma file and writes them to
  * tokens/figma-tokens.json, with resolved values.
  *
- * Uses the main Files endpoint (GET /v1/files/:key) rather than the
- * separate Styles endpoint, since the Files endpoint is reliable
- * across all plan tiers with the file_content:read scope.
  *
  * Requires two env vars:
  *   FIGMA_TOKEN     -> Figma personal access token (file_content:read scope)
