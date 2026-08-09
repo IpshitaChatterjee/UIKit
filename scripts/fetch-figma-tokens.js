@@ -103,15 +103,28 @@ async function main() {
   const styleNodeMap = buildStyleNodeMap(file.document);
 
   const tokens = {};
+  let skipped = 0;
 
   for (const styleId of styleIds) {
     const meta = styles[styleId];
+    const value = resolveValue(meta.styleType, styleNodeMap[styleId]);
+
+    if (value === null || value === undefined) {
+      console.warn(`Skipping "${meta.name}": no resolvable value found.`);
+      skipped++;
+      continue;
+    }
+
     const bucket = meta.styleType.toLowerCase();
     tokens[bucket] = tokens[bucket] || {};
     tokens[bucket][meta.name] = {
-      value: resolveValue(meta.styleType, styleNodeMap[styleId]),
+      value,
       description: meta.description || "",
     };
+  }
+
+  if (skipped > 0) {
+    console.warn(`Skipped ${skipped} style(s) with no resolvable value.`);
   }
 
   const output = {
