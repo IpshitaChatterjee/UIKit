@@ -29,6 +29,7 @@
     "prop-types": "latest",
     "storybook": "^10.5.7",
     "storybook-design-token": "^5.0.0",
+    "style-dictionary": "^5.5.1",
     "vite": "^8.2.0"
   }
 }
