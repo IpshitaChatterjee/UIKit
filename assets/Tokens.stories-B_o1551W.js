@@ -1,0 +1,6 @@
+import{n as e,t}from"./rolldown-runtime-DkW27tQK.js";var n=t((e=>{var t=Symbol.for(`react.transitional.element`);function n(e,n,r){var i=null;if(r!==void 0&&(i=``+r),n.key!==void 0&&(i=``+n.key),`key`in n)for(var a in r={},n)a!==`key`&&(r[a]=n[a]);else r=n;return n=r.ref,{$$typeof:t,type:e,key:i,ref:n===void 0?null:n,props:r}}e.jsx=n})),r=t(((e,t)=>{t.exports=n()})),i,a,o,s;function c(){return(c=e((()=>{i=r(),a={title:`Design Tokens`},o=()=>(0,i.jsx)(`div`,{style:{padding:`24px`,fontFamily:`sans-serif`},children:(0,i.jsx)(`p`,{children:`Design tokens live in the panel below (look for the "Design Tokens" tab).`})}),o.__docgenInfo={description:``,methods:[],displayName:`Tokens`},o.parameters={...o.parameters,docs:{...o.parameters?.docs,source:{originalSource:`() => <div style={{
+  padding: '24px',
+  fontFamily: 'sans-serif'
+}}>
+    <p>Design tokens live in the panel below (look for the "Design Tokens" tab).</p>
+  </div>`,...o.parameters?.docs?.source}}},s=[`Tokens`]})))()}c();export{o as Tokens,s as __namedExportsOrder,a as default};
