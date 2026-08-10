@@ -1,7 +1,7 @@
 {
   "_meta": {
     "source": "files-api",
-    "fetchedAt": "2026-08-09T20:42:51.147Z",
+    "fetchedAt": "2026-08-09T21:30:14.710Z",
     "fileKey": "nF6XfTdKWVl1P8xvufWjNn"
   },
   "text": {
@@ -2787,6 +2787,1848 @@
           "count": 5
         }
       ],
+      "description": ""
+    }
+  },
+  "fill": {
+    "primitives/orange/regular/50": {
+      "value": "#fff7ed",
+      "description": ""
+    },
+    "primitives/red/regular/50": {
+      "value": "#fef2f2",
+      "description": ""
+    },
+    "primitives/orange/regular/100": {
+      "value": "#ffedd4",
+      "description": ""
+    },
+    "primitives/orange/regular/200": {
+      "value": "#ffd6a7",
+      "description": ""
+    },
+    "primitives/red/regular/100": {
+      "value": "#ffe2e2",
+      "description": ""
+    },
+    "primitives/orange/regular/300": {
+      "value": "#ffb86a",
+      "description": ""
+    },
+    "primitives/orange/regular/400": {
+      "value": "#ff8904",
+      "description": ""
+    },
+    "primitives/orange/regular/500": {
+      "value": "#ff6900",
+      "description": ""
+    },
+    "primitives/orange/regular/600": {
+      "value": "#f54900",
+      "description": ""
+    },
+    "primitives/orange/regular/700": {
+      "value": "#ca3500",
+      "description": ""
+    },
+    "primitives/orange/regular/800": {
+      "value": "#9f2d00",
+      "description": ""
+    },
+    "primitives/orange/regular/900": {
+      "value": "#7e2a0c",
+      "description": ""
+    },
+    "primitives/orange/regular/950": {
+      "value": "#441306",
+      "description": ""
+    },
+    "primitives/orange/alpha/0": {
+      "value": "#ff690000",
+      "description": ""
+    },
+    "primitives/orange/alpha/08": {
+      "value": "#ff690014",
+      "description": ""
+    },
+    "primitives/orange/alpha/16": {
+      "value": "#ff690029",
+      "description": ""
+    },
+    "primitives/orange/alpha/24": {
+      "value": "#ff69003d",
+      "description": ""
+    },
+    "primitives/orange/alpha/32": {
+      "value": "#ff690052",
+      "description": ""
+    },
+    "primitives/orange/alpha/48": {
+      "value": "#ff69007a",
+      "description": ""
+    },
+    "primitives/red/regular/200": {
+      "value": "#ffc9c9",
+      "description": ""
+    },
+    "primitives/red/regular/300": {
+      "value": "#ffa2a2",
+      "description": ""
+    },
+    "primitives/red/regular/400": {
+      "value": "#ff6467",
+      "description": ""
+    },
+    "primitives/red/regular/500": {
+      "value": "#fb2c36",
+      "description": ""
+    },
+    "primitives/red/regular/600": {
+      "value": "#e7000b",
+      "description": ""
+    },
+    "primitives/red/regular/700": {
+      "value": "#c10007",
+      "description": ""
+    },
+    "primitives/red/regular/800": {
+      "value": "#9f0712",
+      "description": ""
+    },
+    "primitives/red/regular/900": {
+      "value": "#82181a",
+      "description": ""
+    },
+    "primitives/red/regular/950": {
+      "value": "#460809",
+      "description": ""
+    },
+    "primitives/red/alpha/0": {
+      "value": "#fb2c3600",
+      "description": ""
+    },
+    "primitives/red/alpha/8": {
+      "value": "#fb2c3614",
+      "description": ""
+    },
+    "primitives/red/alpha/16": {
+      "value": "#fb2c3629",
+      "description": ""
+    },
+    "primitives/red/alpha/24": {
+      "value": "#fb2c363d",
+      "description": ""
+    },
+    "primitives/red/alpha/32": {
+      "value": "#fb2c3652",
+      "description": ""
+    },
+    "primitives/red/alpha/48": {
+      "value": "#fb2c367a",
+      "description": ""
+    },
+    "primitives/amber/regular/50": {
+      "value": "#fffbeb",
+      "description": ""
+    },
+    "primitives/amber/regular/100": {
+      "value": "#fef3c6",
+      "description": ""
+    },
+    "primitives/amber/regular/200": {
+      "value": "#fee685",
+      "description": ""
+    },
+    "primitives/amber/regular/300": {
+      "value": "#ffd230",
+      "description": ""
+    },
+    "primitives/amber/regular/400": {
+      "value": "#ffb900",
+      "description": ""
+    },
+    "primitives/amber/regular/500": {
+      "value": "#fe9a00",
+      "description": ""
+    },
+    "primitives/amber/alpha/0": {
+      "value": "#fe9a0000",
+      "description": ""
+    },
+    "primitives/amber/alpha/8": {
+      "value": "#fe9a0014",
+      "description": ""
+    },
+    "primitives/amber/alpha/16": {
+      "value": "#fe9a0029",
+      "description": ""
+    },
+    "primitives/amber/alpha/24": {
+      "value": "#fe9a003d",
+      "description": ""
+    },
+    "primitives/amber/alpha/32": {
+      "value": "#fe9a0052",
+      "description": ""
+    },
+    "primitives/amber/alpha/48": {
+      "value": "#fe9a007a",
+      "description": ""
+    },
+    "primitives/amber/regular/600": {
+      "value": "#e17100",
+      "description": ""
+    },
+    "primitives/amber/regular/700": {
+      "value": "#bb4d00",
+      "description": ""
+    },
+    "primitives/amber/regular/800": {
+      "value": "#973c00",
+      "description": ""
+    },
+    "primitives/amber/regular/900": {
+      "value": "#7b3306",
+      "description": ""
+    },
+    "primitives/amber/regular/950": {
+      "value": "#461901",
+      "description": ""
+    },
+    "primitives/yellow/regular/50": {
+      "value": "#fefce8",
+      "description": ""
+    },
+    "primitives/yellow/regular/100": {
+      "value": "#fef9c2",
+      "description": ""
+    },
+    "primitives/yellow/regular/200": {
+      "value": "#fff085",
+      "description": ""
+    },
+    "primitives/yellow/regular/300": {
+      "value": "#ffdf20",
+      "description": ""
+    },
+    "primitives/yellow/regular/400": {
+      "value": "#fdc700",
+      "description": ""
+    },
+    "primitives/yellow/regular/500": {
+      "value": "#f0b100",
+      "description": ""
+    },
+    "primitives/yellow/regular/600": {
+      "value": "#d08700",
+      "description": ""
+    },
+    "primitives/yellow/regular/700": {
+      "value": "#a65f00",
+      "description": ""
+    },
+    "primitives/yellow/regular/800": {
+      "value": "#894b00",
+      "description": ""
+    },
+    "primitives/yellow/regular/900": {
+      "value": "#733e0a",
+      "description": ""
+    },
+    "primitives/yellow/regular/950": {
+      "value": "#432004",
+      "description": ""
+    },
+    "primitives/yellow/alpha/0": {
+      "value": "#f0b10000",
+      "description": ""
+    },
+    "primitives/yellow/alpha/8": {
+      "value": "#f0b10014",
+      "description": ""
+    },
+    "primitives/yellow/alpha/16": {
+      "value": "#f0b10029",
+      "description": ""
+    },
+    "primitives/yellow/alpha/24": {
+      "value": "#f0b1003d",
+      "description": ""
+    },
+    "primitives/yellow/alpha/32": {
+      "value": "#f0b10052",
+      "description": ""
+    },
+    "primitives/yellow/alpha/48": {
+      "value": "#f0b1007a",
+      "description": ""
+    },
+    "primitives/lime/regular/50": {
+      "value": "#f7fee7",
+      "description": ""
+    },
+    "primitives/lime/regular/100": {
+      "value": "#ecfcca",
+      "description": ""
+    },
+    "primitives/lime/regular/200": {
+      "value": "#d8f999",
+      "description": ""
+    },
+    "primitives/lime/regular/300": {
+      "value": "#bbf451",
+      "description": ""
+    },
+    "primitives/lime/regular/400": {
+      "value": "#9ae600",
+      "description": ""
+    },
+    "primitives/lime/regular/500": {
+      "value": "#7ccf00",
+      "description": ""
+    },
+    "primitives/lime/regular/600": {
+      "value": "#5ea500",
+      "description": ""
+    },
+    "primitives/lime/regular/700": {
+      "value": "#497d00",
+      "description": ""
+    },
+    "primitives/lime/regular/800": {
+      "value": "#3c6300",
+      "description": ""
+    },
+    "primitives/lime/regular/900": {
+      "value": "#35530e",
+      "description": ""
+    },
+    "primitives/lime/regular/950": {
+      "value": "#192e03",
+      "description": ""
+    },
+    "primitives/lime/alpha/0": {
+      "value": "#7ccf0000",
+      "description": ""
+    },
+    "primitives/lime/alpha/8": {
+      "value": "#7ccf0014",
+      "description": ""
+    },
+    "primitives/lime/alpha/16": {
+      "value": "#7ccf0029",
+      "description": ""
+    },
+    "primitives/lime/alpha/24": {
+      "value": "#7ccf003d",
+      "description": ""
+    },
+    "primitives/lime/alpha/32": {
+      "value": "#7ccf0052",
+      "description": ""
+    },
+    "primitives/lime/alpha/48": {
+      "value": "#7ccf007a",
+      "description": ""
+    },
+    "primitives/green/regular/50": {
+      "value": "#f0fdf4",
+      "description": ""
+    },
+    "primitives/green/regular/100": {
+      "value": "#dcfce7",
+      "description": ""
+    },
+    "primitives/green/regular/200": {
+      "value": "#b9f8cf",
+      "description": ""
+    },
+    "primitives/green/regular/300": {
+      "value": "#7bf1a8",
+      "description": ""
+    },
+    "primitives/green/regular/400": {
+      "value": "#05df72",
+      "description": ""
+    },
+    "primitives/green/regular/500": {
+      "value": "#00c950",
+      "description": ""
+    },
+    "primitives/green/regular/600": {
+      "value": "#00a63e",
+      "description": ""
+    },
+    "primitives/green/regular/700": {
+      "value": "#008236",
+      "description": ""
+    },
+    "primitives/green/regular/800": {
+      "value": "#016630",
+      "description": ""
+    },
+    "primitives/green/regular/900": {
+      "value": "#0d542b",
+      "description": ""
+    },
+    "primitives/green/regular/950": {
+      "value": "#032e15",
+      "description": ""
+    },
+    "primitives/green/alpha/0": {
+      "value": "#00c95000",
+      "description": ""
+    },
+    "primitives/green/alpha/8": {
+      "value": "#00c95014",
+      "description": ""
+    },
+    "primitives/green/alpha/16": {
+      "value": "#00c95029",
+      "description": ""
+    },
+    "primitives/green/alpha/24": {
+      "value": "#00c9503d",
+      "description": ""
+    },
+    "primitives/green/alpha/32": {
+      "value": "#00c95052",
+      "description": ""
+    },
+    "primitives/green/alpha/48": {
+      "value": "#00c9507a",
+      "description": ""
+    },
+    "primitives/emerald/regular/50": {
+      "value": "#ecfdf5",
+      "description": ""
+    },
+    "primitives/emerald/regular/100": {
+      "value": "#d1fae5",
+      "description": ""
+    },
+    "primitives/emerald/regular/200": {
+      "value": "#a7f3d0",
+      "description": ""
+    },
+    "primitives/emerald/regular/300": {
+      "value": "#6ee7b7",
+      "description": ""
+    },
+    "primitives/emerald/regular/400": {
+      "value": "#34d399",
+      "description": ""
+    },
+    "primitives/emerald/regular/500": {
+      "value": "#10b981",
+      "description": ""
+    },
+    "primitives/emerald/regular/600": {
+      "value": "#059669",
+      "description": ""
+    },
+    "primitives/emerald/regular/700": {
+      "value": "#047857",
+      "description": ""
+    },
+    "primitives/emerald/regular/800": {
+      "value": "#065f46",
+      "description": ""
+    },
+    "primitives/emerald/regular/900": {
+      "value": "#064e3b",
+      "description": ""
+    },
+    "primitives/emerald/regular/950": {
+      "value": "#022c22",
+      "description": ""
+    },
+    "primitives/emerald/alpha/0": {
+      "value": "#10b98100",
+      "description": ""
+    },
+    "primitives/emerald/alpha/8": {
+      "value": "#10b98114",
+      "description": ""
+    },
+    "primitives/emerald/alpha/16": {
+      "value": "#10b98129",
+      "description": ""
+    },
+    "primitives/emerald/alpha/24": {
+      "value": "#10b9813d",
+      "description": ""
+    },
+    "primitives/emerald/alpha/32": {
+      "value": "#10b98152",
+      "description": ""
+    },
+    "primitives/emerald/alpha/48": {
+      "value": "#10b9817a",
+      "description": ""
+    },
+    "primitives/teal/regular/50": {
+      "value": "#f0fdfa",
+      "description": ""
+    },
+    "primitives/teal/regular/100": {
+      "value": "#ccfbf1",
+      "description": ""
+    },
+    "primitives/teal/regular/200": {
+      "value": "#99f6e4",
+      "description": ""
+    },
+    "primitives/teal/regular/300": {
+      "value": "#5eead4",
+      "description": ""
+    },
+    "primitives/teal/regular/400": {
+      "value": "#2dd4bf",
+      "description": ""
+    },
+    "primitives/teal/regular/500": {
+      "value": "#14b8a6",
+      "description": ""
+    },
+    "primitives/teal/regular/600": {
+      "value": "#0d9488",
+      "description": ""
+    },
+    "primitives/teal/regular/700": {
+      "value": "#0f766e",
+      "description": ""
+    },
+    "primitives/teal/regular/800": {
+      "value": "#115e59",
+      "description": ""
+    },
+    "primitives/teal/regular/900": {
+      "value": "#134e4a",
+      "description": ""
+    },
+    "primitives/teal/regular/950": {
+      "value": "#042f2e",
+      "description": ""
+    },
+    "primitives/teal/alpha/0": {
+      "value": "#14b8a600",
+      "description": ""
+    },
+    "primitives/teal/alpha/8": {
+      "value": "#14b8a614",
+      "description": ""
+    },
+    "primitives/teal/alpha/16": {
+      "value": "#14b8a629",
+      "description": ""
+    },
+    "primitives/teal/alpha/24": {
+      "value": "#14b8a63d",
+      "description": ""
+    },
+    "primitives/teal/alpha/32": {
+      "value": "#14b8a652",
+      "description": ""
+    },
+    "primitives/teal/alpha/48": {
+      "value": "#14b8a67a",
+      "description": ""
+    },
+    "primitives/cyan/regular/50": {
+      "value": "#ecfeff",
+      "description": ""
+    },
+    "primitives/cyan/regular/100": {
+      "value": "#cffafe",
+      "description": ""
+    },
+    "primitives/cyan/regular/200": {
+      "value": "#a5f3fc",
+      "description": ""
+    },
+    "primitives/cyan/regular/300": {
+      "value": "#67e8f9",
+      "description": ""
+    },
+    "primitives/cyan/regular/400": {
+      "value": "#22d3ee",
+      "description": ""
+    },
+    "primitives/cyan/regular/500": {
+      "value": "#06b6d4",
+      "description": ""
+    },
+    "primitives/cyan/regular/600": {
+      "value": "#0891b2",
+      "description": ""
+    },
+    "primitives/cyan/regular/700": {
+      "value": "#0e7490",
+      "description": ""
+    },
+    "primitives/cyan/regular/800": {
+      "value": "#155e75",
+      "description": ""
+    },
+    "primitives/cyan/regular/900": {
+      "value": "#164e63",
+      "description": ""
+    },
+    "primitives/cyan/regular/950": {
+      "value": "#083344",
+      "description": ""
+    },
+    "primitives/cyan/alpha/0": {
+      "value": "#06b6d400",
+      "description": ""
+    },
+    "primitives/cyan/alpha/8": {
+      "value": "#06b6d414",
+      "description": ""
+    },
+    "primitives/cyan/alpha/16": {
+      "value": "#06b6d429",
+      "description": ""
+    },
+    "primitives/cyan/alpha/24": {
+      "value": "#06b6d43d",
+      "description": ""
+    },
+    "primitives/cyan/alpha/32": {
+      "value": "#06b6d452",
+      "description": ""
+    },
+    "primitives/cyan/alpha/48": {
+      "value": "#06b6d47a",
+      "description": ""
+    },
+    "primitives/sky/regular/50": {
+      "value": "#f0f9ff",
+      "description": ""
+    },
+    "primitives/sky/regular/100": {
+      "value": "#e0f2fe",
+      "description": ""
+    },
+    "primitives/sky/regular/200": {
+      "value": "#bae6fd",
+      "description": ""
+    },
+    "primitives/sky/regular/300": {
+      "value": "#7dd3fc",
+      "description": ""
+    },
+    "primitives/sky/regular/400": {
+      "value": "#38bdf8",
+      "description": ""
+    },
+    "primitives/sky/regular/500": {
+      "value": "#0ea5e9",
+      "description": ""
+    },
+    "primitives/sky/regular/600": {
+      "value": "#0284c7",
+      "description": ""
+    },
+    "primitives/sky/regular/700": {
+      "value": "#0369a1",
+      "description": ""
+    },
+    "primitives/sky/regular/800": {
+      "value": "#075985",
+      "description": ""
+    },
+    "primitives/sky/regular/900": {
+      "value": "#0c4a6e",
+      "description": ""
+    },
+    "primitives/sky/regular/950": {
+      "value": "#082f49",
+      "description": ""
+    },
+    "primitives/sky/alpha/0": {
+      "value": "#0ea5e900",
+      "description": ""
+    },
+    "primitives/sky/alpha/8": {
+      "value": "#0ea5e914",
+      "description": ""
+    },
+    "primitives/sky/alpha/16": {
+      "value": "#0ea5e929",
+      "description": ""
+    },
+    "primitives/sky/alpha/24": {
+      "value": "#0ea5e93d",
+      "description": ""
+    },
+    "primitives/sky/alpha/32": {
+      "value": "#0ea5e952",
+      "description": ""
+    },
+    "primitives/sky/alpha/48": {
+      "value": "#0ea5e97a",
+      "description": ""
+    },
+    "primitives/blue/regular/50": {
+      "value": "#eff6ff",
+      "description": ""
+    },
+    "primitives/blue/regular/100": {
+      "value": "#dbeafe",
+      "description": ""
+    },
+    "primitives/blue/regular/200": {
+      "value": "#bfdbfe",
+      "description": ""
+    },
+    "primitives/blue/regular/300": {
+      "value": "#93c5fd",
+      "description": ""
+    },
+    "primitives/blue/regular/400": {
+      "value": "#60a5fa",
+      "description": ""
+    },
+    "primitives/blue/regular/500": {
+      "value": "#3b82f6",
+      "description": ""
+    },
+    "primitives/blue/regular/600": {
+      "value": "#2563eb",
+      "description": ""
+    },
+    "primitives/blue/regular/700": {
+      "value": "#1d4ed8",
+      "description": ""
+    },
+    "primitives/blue/regular/800": {
+      "value": "#1e40af",
+      "description": ""
+    },
+    "primitives/blue/regular/900": {
+      "value": "#1e3a8a",
+      "description": ""
+    },
+    "primitives/blue/regular/950": {
+      "value": "#172554",
+      "description": ""
+    },
+    "primitives/blue/alpha/0": {
+      "value": "#3b82f600",
+      "description": ""
+    },
+    "primitives/blue/alpha/8": {
+      "value": "#3b82f614",
+      "description": ""
+    },
+    "primitives/blue/alpha/16": {
+      "value": "#3b82f629",
+      "description": ""
+    },
+    "primitives/blue/alpha/24": {
+      "value": "#3b82f63d",
+      "description": ""
+    },
+    "primitives/blue/alpha/32": {
+      "value": "#3b82f652",
+      "description": ""
+    },
+    "primitives/blue/alpha/48": {
+      "value": "#3b82f67a",
+      "description": ""
+    },
+    "primitives/indigo/regular/50": {
+      "value": "#eef2ff",
+      "description": ""
+    },
+    "primitives/indigo/regular/100": {
+      "value": "#e0e7ff",
+      "description": ""
+    },
+    "primitives/indigo/regular/200": {
+      "value": "#c7d2fe",
+      "description": ""
+    },
+    "primitives/indigo/regular/300": {
+      "value": "#a5b4fc",
+      "description": ""
+    },
+    "primitives/indigo/regular/400": {
+      "value": "#818cf8",
+      "description": ""
+    },
+    "primitives/indigo/regular/500": {
+      "value": "#615fff",
+      "description": ""
+    },
+    "primitives/indigo/regular/600": {
+      "value": "#4f39f6",
+      "description": ""
+    },
+    "primitives/indigo/regular/700": {
+      "value": "#432dd7",
+      "description": ""
+    },
+    "primitives/indigo/regular/800": {
+      "value": "#3730a3",
+      "description": ""
+    },
+    "primitives/indigo/regular/900": {
+      "value": "#312e81",
+      "description": ""
+    },
+    "primitives/indigo/regular/950": {
+      "value": "#1e1b4b",
+      "description": ""
+    },
+    "primitives/indigo/alpha/0": {
+      "value": "#6366f100",
+      "description": ""
+    },
+    "primitives/indigo/alpha/8": {
+      "value": "#6366f114",
+      "description": ""
+    },
+    "primitives/indigo/alpha/16": {
+      "value": "#6366f129",
+      "description": ""
+    },
+    "primitives/indigo/alpha/24": {
+      "value": "#6366f13d",
+      "description": ""
+    },
+    "primitives/indigo/alpha/32": {
+      "value": "#6366f152",
+      "description": ""
+    },
+    "primitives/indigo/alpha/48": {
+      "value": "#6366f17a",
+      "description": ""
+    },
+    "primitives/violet/regular/50": {
+      "value": "#f5f3ff",
+      "description": ""
+    },
+    "primitives/violet/regular/100": {
+      "value": "#ede9fe",
+      "description": ""
+    },
+    "primitives/violet/regular/200": {
+      "value": "#ddd6fe",
+      "description": ""
+    },
+    "primitives/violet/regular/300": {
+      "value": "#c4b5fd",
+      "description": ""
+    },
+    "primitives/violet/regular/400": {
+      "value": "#a78bfa",
+      "description": ""
+    },
+    "primitives/violet/regular/500": {
+      "value": "#8b5cf6",
+      "description": ""
+    },
+    "primitives/violet/regular/600": {
+      "value": "#7c3aed",
+      "description": ""
+    },
+    "primitives/violet/regular/700": {
+      "value": "#6d28d9",
+      "description": ""
+    },
+    "primitives/violet/regular/800": {
+      "value": "#5b21b6",
+      "description": ""
+    },
+    "primitives/violet/regular/900": {
+      "value": "#4c1d95",
+      "description": ""
+    },
+    "primitives/violet/regular/950": {
+      "value": "#2e1065",
+      "description": ""
+    },
+    "primitives/violet/alpha/0": {
+      "value": "#8b5cf600",
+      "description": ""
+    },
+    "primitives/violet/alpha/8": {
+      "value": "#8b5cf614",
+      "description": ""
+    },
+    "primitives/violet/alpha/16": {
+      "value": "#8b5cf629",
+      "description": ""
+    },
+    "primitives/violet/alpha/24": {
+      "value": "#8b5cf63d",
+      "description": ""
+    },
+    "primitives/violet/alpha/32": {
+      "value": "#8b5cf652",
+      "description": ""
+    },
+    "primitives/violet/alpha/48": {
+      "value": "#8b5cf67a",
+      "description": ""
+    },
+    "primitives/purple/regular/50": {
+      "value": "#faf5ff",
+      "description": ""
+    },
+    "primitives/purple/regular/100": {
+      "value": "#f3e8ff",
+      "description": ""
+    },
+    "primitives/purple/regular/200": {
+      "value": "#e9d5ff",
+      "description": ""
+    },
+    "primitives/purple/regular/300": {
+      "value": "#d8b4fe",
+      "description": ""
+    },
+    "primitives/purple/regular/400": {
+      "value": "#c084fc",
+      "description": ""
+    },
+    "primitives/purple/regular/500": {
+      "value": "#a855f7",
+      "description": ""
+    },
+    "primitives/purple/regular/600": {
+      "value": "#9333ea",
+      "description": ""
+    },
+    "primitives/purple/regular/700": {
+      "value": "#7e22ce",
+      "description": ""
+    },
+    "primitives/purple/regular/800": {
+      "value": "#6b21a8",
+      "description": ""
+    },
+    "primitives/purple/regular/900": {
+      "value": "#581c87",
+      "description": ""
+    },
+    "primitives/purple/regular/950": {
+      "value": "#3b0764",
+      "description": ""
+    },
+    "primitives/purple/alpha/0": {
+      "value": "#a855f700",
+      "description": ""
+    },
+    "primitives/purple/alpha/8": {
+      "value": "#a855f714",
+      "description": ""
+    },
+    "primitives/purple/alpha/16": {
+      "value": "#a855f729",
+      "description": ""
+    },
+    "primitives/purple/alpha/24": {
+      "value": "#a855f73d",
+      "description": ""
+    },
+    "primitives/purple/alpha/32": {
+      "value": "#a855f752",
+      "description": ""
+    },
+    "primitives/purple/alpha/48": {
+      "value": "#a855f77a",
+      "description": ""
+    },
+    "primitives/fuchsia/regular/50": {
+      "value": "#fdf4ff",
+      "description": ""
+    },
+    "primitives/fuchsia/regular/100": {
+      "value": "#fae8ff",
+      "description": ""
+    },
+    "primitives/fuchsia/regular/200": {
+      "value": "#f5d0fe",
+      "description": ""
+    },
+    "primitives/fuchsia/regular/300": {
+      "value": "#f0abfc",
+      "description": ""
+    },
+    "primitives/fuchsia/regular/400": {
+      "value": "#e879f9",
+      "description": ""
+    },
+    "primitives/fuchsia/regular/500": {
+      "value": "#d946ef",
+      "description": ""
+    },
+    "primitives/fuchsia/regular/600": {
+      "value": "#c026d3",
+      "description": ""
+    },
+    "primitives/fuchsia/regular/700": {
+      "value": "#a21caf",
+      "description": ""
+    },
+    "primitives/fuchsia/regular/800": {
+      "value": "#86198f",
+      "description": ""
+    },
+    "primitives/fuchsia/regular/900": {
+      "value": "#701a75",
+      "description": ""
+    },
+    "primitives/fuchsia/regular/950": {
+      "value": "#4a044e",
+      "description": ""
+    },
+    "primitives/fuchsia/alpha/0": {
+      "value": "#d946ef00",
+      "description": ""
+    },
+    "primitives/fuchsia/alpha/8": {
+      "value": "#d946ef14",
+      "description": ""
+    },
+    "primitives/fuchsia/alpha/16": {
+      "value": "#d946ef29",
+      "description": ""
+    },
+    "primitives/fuchsia/alpha/24": {
+      "value": "#d946ef3d",
+      "description": ""
+    },
+    "primitives/fuchsia/alpha/32": {
+      "value": "#d946ef52",
+      "description": ""
+    },
+    "primitives/fuchsia/alpha/48": {
+      "value": "#d946ef7a",
+      "description": ""
+    },
+    "primitives/pink/regular/50": {
+      "value": "#fdf2f8",
+      "description": ""
+    },
+    "primitives/pink/regular/100": {
+      "value": "#fce7f3",
+      "description": ""
+    },
+    "primitives/pink/regular/200": {
+      "value": "#fccee8",
+      "description": ""
+    },
+    "primitives/pink/regular/300": {
+      "value": "#fda5d5",
+      "description": ""
+    },
+    "primitives/pink/regular/400": {
+      "value": "#fb64b6",
+      "description": ""
+    },
+    "primitives/pink/regular/500": {
+      "value": "#f6339a",
+      "description": ""
+    },
+    "primitives/pink/regular/600": {
+      "value": "#e50076",
+      "description": ""
+    },
+    "primitives/pink/regular/700": {
+      "value": "#c6085c",
+      "description": ""
+    },
+    "primitives/pink/regular/800": {
+      "value": "#a3004c",
+      "description": ""
+    },
+    "primitives/pink/regular/900": {
+      "value": "#861043",
+      "description": ""
+    },
+    "primitives/pink/regular/950": {
+      "value": "#510424",
+      "description": ""
+    },
+    "primitives/pink/alpha/0": {
+      "value": "#f6339a00",
+      "description": ""
+    },
+    "primitives/pink/alpha/8": {
+      "value": "#f6339a14",
+      "description": ""
+    },
+    "primitives/pink/alpha/16": {
+      "value": "#f6339a29",
+      "description": ""
+    },
+    "primitives/pink/alpha/24": {
+      "value": "#f6339a3d",
+      "description": ""
+    },
+    "primitives/pink/alpha/32": {
+      "value": "#f6339a52",
+      "description": ""
+    },
+    "primitives/pink/alpha/48": {
+      "value": "#f6339a7a",
+      "description": ""
+    },
+    "primitives/rose/regular/50": {
+      "value": "#fff1f2",
+      "description": ""
+    },
+    "primitives/rose/regular/100": {
+      "value": "#ffe4e6",
+      "description": ""
+    },
+    "primitives/rose/regular/200": {
+      "value": "#ffccd3",
+      "description": ""
+    },
+    "primitives/rose/regular/300": {
+      "value": "#ffa1ad",
+      "description": ""
+    },
+    "primitives/rose/regular/400": {
+      "value": "#ff637e",
+      "description": ""
+    },
+    "primitives/rose/regular/500": {
+      "value": "#ff2056",
+      "description": ""
+    },
+    "primitives/rose/regular/600": {
+      "value": "#ec0857",
+      "description": ""
+    },
+    "primitives/rose/regular/700": {
+      "value": "#c70036",
+      "description": ""
+    },
+    "primitives/rose/regular/800": {
+      "value": "#a50036",
+      "description": ""
+    },
+    "primitives/rose/regular/900": {
+      "value": "#8b0836",
+      "description": ""
+    },
+    "primitives/rose/regular/950": {
+      "value": "#4d0218",
+      "description": ""
+    },
+    "primitives/rose/alpha/0": {
+      "value": "#ff205600",
+      "description": ""
+    },
+    "primitives/rose/alpha/8": {
+      "value": "#ff205614",
+      "description": ""
+    },
+    "primitives/rose/alpha/16": {
+      "value": "#ff205629",
+      "description": ""
+    },
+    "primitives/rose/alpha/24": {
+      "value": "#ff20563d",
+      "description": ""
+    },
+    "primitives/rose/alpha/32": {
+      "value": "#ff205652",
+      "description": ""
+    },
+    "primitives/rose/alpha/48": {
+      "value": "#ff20567a",
+      "description": ""
+    },
+    "primitives/slate/regular/50": {
+      "value": "#f8fafc",
+      "description": ""
+    },
+    "primitives/slate/regular/100": {
+      "value": "#f1f5f9",
+      "description": ""
+    },
+    "primitives/slate/regular/200": {
+      "value": "#e2e8f0",
+      "description": ""
+    },
+    "primitives/slate/regular/300": {
+      "value": "#cbd5e1",
+      "description": ""
+    },
+    "primitives/slate/regular/400": {
+      "value": "#94a3b8",
+      "description": ""
+    },
+    "primitives/slate/regular/500": {
+      "value": "#64748b",
+      "description": ""
+    },
+    "primitives/slate/regular/600": {
+      "value": "#475569",
+      "description": ""
+    },
+    "primitives/slate/regular/700": {
+      "value": "#334155",
+      "description": ""
+    },
+    "primitives/slate/regular/800": {
+      "value": "#1e293b",
+      "description": ""
+    },
+    "primitives/slate/regular/900": {
+      "value": "#0f172a",
+      "description": ""
+    },
+    "primitives/slate/regular/950": {
+      "value": "#020617",
+      "description": ""
+    },
+    "primitives/slate/alpha/0": {
+      "value": "#64748b00",
+      "description": ""
+    },
+    "primitives/slate/alpha/8": {
+      "value": "#64748b14",
+      "description": ""
+    },
+    "primitives/slate/alpha/16": {
+      "value": "#64748b29",
+      "description": ""
+    },
+    "primitives/slate/alpha/24": {
+      "value": "#64748b3d",
+      "description": ""
+    },
+    "primitives/slate/alpha/32": {
+      "value": "#64748b52",
+      "description": ""
+    },
+    "primitives/slate/alpha/48": {
+      "value": "#64748b7a",
+      "description": ""
+    },
+    "primitives/zinc/regular/50": {
+      "value": "#fafafa",
+      "description": ""
+    },
+    "primitives/zinc/regular/100": {
+      "value": "#f4f4f5",
+      "description": ""
+    },
+    "primitives/zinc/regular/200": {
+      "value": "#e4e4e7",
+      "description": ""
+    },
+    "primitives/zinc/regular/300": {
+      "value": "#d4d4d8",
+      "description": ""
+    },
+    "primitives/zinc/regular/400": {
+      "value": "#a1a1aa",
+      "description": ""
+    },
+    "primitives/zinc/regular/500": {
+      "value": "#71717a",
+      "description": ""
+    },
+    "primitives/zinc/regular/600": {
+      "value": "#52525b",
+      "description": ""
+    },
+    "primitives/zinc/regular/700": {
+      "value": "#3f3f46",
+      "description": ""
+    },
+    "primitives/zinc/regular/800": {
+      "value": "#27272a",
+      "description": ""
+    },
+    "primitives/zinc/regular/900": {
+      "value": "#18181b",
+      "description": ""
+    },
+    "primitives/zinc/regular/950": {
+      "value": "#09090b",
+      "description": ""
+    },
+    "primitives/zinc/alpha/0": {
+      "value": "#71717a00",
+      "description": ""
+    },
+    "primitives/zinc/alpha/8": {
+      "value": "#71717a14",
+      "description": ""
+    },
+    "primitives/zinc/alpha/16": {
+      "value": "#71717a29",
+      "description": ""
+    },
+    "primitives/zinc/alpha/24": {
+      "value": "#71717a3d",
+      "description": ""
+    },
+    "primitives/zinc/alpha/32": {
+      "value": "#71717a52",
+      "description": ""
+    },
+    "primitives/zinc/alpha/48": {
+      "value": "#71717a7a",
+      "description": ""
+    },
+    "primitives/base/regular/50": {
+      "value": "#fafaf9",
+      "description": ""
+    },
+    "primitives/base/regular/100": {
+      "value": "#f5f5f4",
+      "description": ""
+    },
+    "primitives/base/regular/200": {
+      "value": "#e7e5e4",
+      "description": ""
+    },
+    "primitives/base/regular/300": {
+      "value": "#d6d3d1",
+      "description": ""
+    },
+    "primitives/base/regular/400": {
+      "value": "#a8a29e",
+      "description": ""
+    },
+    "primitives/base/regular/500": {
+      "value": "#78716c",
+      "description": ""
+    },
+    "primitives/base/regular/600": {
+      "value": "#57534e",
+      "description": ""
+    },
+    "primitives/base/regular/700": {
+      "value": "#44403c",
+      "description": ""
+    },
+    "primitives/base/regular/800": {
+      "value": "#292524",
+      "description": ""
+    },
+    "primitives/base/regular/900": {
+      "value": "#1c1917",
+      "description": ""
+    },
+    "primitives/base/regular/950": {
+      "value": "#0c0a09",
+      "description": ""
+    },
+    "primitives/base/alpha/0": {
+      "value": "#78716c00",
+      "description": ""
+    },
+    "primitives/base/alpha/8": {
+      "value": "#78716c14",
+      "description": ""
+    },
+    "primitives/base/alpha/16": {
+      "value": "#78716c29",
+      "description": ""
+    },
+    "primitives/base/alpha/24": {
+      "value": "#78716c3d",
+      "description": ""
+    },
+    "primitives/base/alpha/32": {
+      "value": "#78716c52",
+      "description": ""
+    },
+    "primitives/base/alpha/48": {
+      "value": "#78716c7a",
+      "description": ""
+    },
+    "primitives/stone/regular/50": {
+      "value": "#fafaf9",
+      "description": ""
+    },
+    "primitives/stone/regular/100": {
+      "value": "#f5f5f4",
+      "description": ""
+    },
+    "primitives/stone/regular/200": {
+      "value": "#e7e5e4",
+      "description": ""
+    },
+    "primitives/stone/regular/300": {
+      "value": "#d6d3d1",
+      "description": ""
+    },
+    "primitives/stone/regular/400": {
+      "value": "#a8a29e",
+      "description": ""
+    },
+    "primitives/stone/regular/500": {
+      "value": "#79716b",
+      "description": ""
+    },
+    "primitives/stone/regular/600": {
+      "value": "#57534e",
+      "description": ""
+    },
+    "primitives/stone/regular/700": {
+      "value": "#44403c",
+      "description": ""
+    },
+    "primitives/stone/regular/800": {
+      "value": "#292524",
+      "description": ""
+    },
+    "primitives/stone/regular/900": {
+      "value": "#1c1917",
+      "description": ""
+    },
+    "primitives/stone/regular/950": {
+      "value": "#0c0a09",
+      "description": ""
+    },
+    "primitives/stone/alpha/0": {
+      "value": "#79716b00",
+      "description": ""
+    },
+    "primitives/stone/alpha/8": {
+      "value": "#79716b14",
+      "description": ""
+    },
+    "primitives/stone/alpha/16": {
+      "value": "#79716b29",
+      "description": ""
+    },
+    "primitives/stone/alpha/24": {
+      "value": "#79716b3d",
+      "description": ""
+    },
+    "primitives/stone/alpha/32": {
+      "value": "#79716b52",
+      "description": ""
+    },
+    "primitives/stone/alpha/48": {
+      "value": "#79716b7a",
+      "description": ""
+    },
+    "primitives/white/alpha/0": {
+      "value": "#ffffff00",
+      "description": ""
+    },
+    "primitives/white/alpha/8": {
+      "value": "#ffffff14",
+      "description": ""
+    },
+    "primitives/white/alpha/16": {
+      "value": "#ffffff29",
+      "description": ""
+    },
+    "primitives/white/alpha/24": {
+      "value": "#ffffff3d",
+      "description": ""
+    },
+    "primitives/white/alpha/32": {
+      "value": "#ffffff52",
+      "description": ""
+    },
+    "primitives/white/alpha/48": {
+      "value": "#ffffff7a",
+      "description": ""
+    },
+    "primitives/white/alpha/64": {
+      "value": "#ffffffa3",
+      "description": ""
+    },
+    "primitives/white/alpha/80": {
+      "value": "#ffffffcc",
+      "description": ""
+    },
+    "primitives/white/alpha/static": {
+      "value": "#ffffff",
+      "description": ""
+    },
+    "primitives/black/alpha/0": {
+      "value": "#00000000",
+      "description": ""
+    },
+    "primitives/black/alpha/8": {
+      "value": "#00000014",
+      "description": ""
+    },
+    "primitives/black/alpha/16": {
+      "value": "#00000029",
+      "description": ""
+    },
+    "primitives/black/alpha/24": {
+      "value": "#0000003d",
+      "description": ""
+    },
+    "primitives/black/alpha/32": {
+      "value": "#00000052",
+      "description": ""
+    },
+    "primitives/black/alpha/48": {
+      "value": "#0000007a",
+      "description": ""
+    },
+    "primitives/black/alpha/64": {
+      "value": "#000000a3",
+      "description": ""
+    },
+    "primitives/black/alpha/80": {
+      "value": "#000000cc",
+      "description": ""
+    },
+    "primitives/black/alpha/static": {
+      "value": "#000000",
+      "description": ""
+    },
+    "tokens/static white/white": {
+      "value": "#ffffff",
+      "description": ""
+    },
+    "tokens/static white/white-alpha-80": {
+      "value": "#ffffffcc",
+      "description": ""
+    },
+    "tokens/static white/white-alpha-64": {
+      "value": "#ffffffa3",
+      "description": ""
+    },
+    "tokens/static white/white-alpha-48": {
+      "value": "#ffffff7a",
+      "description": ""
+    },
+    "tokens/static white/white-alpha-24": {
+      "value": "#ffffff3d",
+      "description": ""
+    },
+    "tokens/static white/white-alpha-16": {
+      "value": "#ffffff29",
+      "description": ""
+    },
+    "tokens/static white/white-alpha-8": {
+      "value": "#ffffff14",
+      "description": ""
+    },
+    "tokens/static white/white-alpha-0": {
+      "value": "#ffffff00",
+      "description": ""
+    },
+    "tokens/static black/black": {
+      "value": "#000000",
+      "description": ""
+    },
+    "tokens/bg/static": {
+      "value": "#ffffff",
+      "description": ""
+    },
+    "tokens/static black/black-alpha-80": {
+      "value": "#000000cc",
+      "description": ""
+    },
+    "tokens/static black/black-alpha-64": {
+      "value": "#000000a3",
+      "description": ""
+    },
+    "tokens/bg/weakest": {
+      "value": "#fafafa",
+      "description": ""
+    },
+    "tokens/static black/black-alpha-48": {
+      "value": "#0000007a",
+      "description": ""
+    },
+    "tokens/bg/weak": {
+      "value": "#f4f4f5",
+      "description": ""
+    },
+    "tokens/static black/black-alpha-32": {
+      "value": "#00000052",
+      "description": ""
+    },
+    "tokens/bg/light": {
+      "value": "#e4e4e7",
+      "description": ""
+    },
+    "tokens/static black/black-alpha-24": {
+      "value": "#0000003d",
+      "description": ""
+    },
+    "tokens/bg/medium": {
+      "value": "#d4d4d8",
+      "description": ""
+    },
+    "tokens/static black/black-alpha-16": {
+      "value": "#00000029",
+      "description": ""
+    },
+    "tokens/bg/heavy": {
+      "value": "#3f3f46",
+      "description": ""
+    },
+    "tokens/static black/black-alpha-8": {
+      "value": "#00000014",
+      "description": ""
+    },
+    "tokens/bg/strong": {
+      "value": "#27272a",
+      "description": ""
+    },
+    "tokens/bg/strongest": {
+      "value": "#09090b",
+      "description": ""
+    },
+    "tokens/static black/black-alpha-0": {
+      "value": "#00000000",
+      "description": ""
+    },
+    "tokens/text/disabled": {
+      "value": "#d4d4d8",
+      "description": ""
+    },
+    "tokens/text/placeholder": {
+      "value": "#a1a1aa",
+      "description": ""
+    },
+    "tokens/text/body": {
+      "value": "#52525b",
+      "description": ""
+    },
+    "tokens/primary/primary-weakest": {
+      "value": "#eef2ff",
+      "description": ""
+    },
+    "tokens/primary/primary-weak": {
+      "value": "#e0e7ff",
+      "description": ""
+    },
+    "tokens/primary/primary-base": {
+      "value": "#615fff",
+      "description": ""
+    },
+    "tokens/primary/primary-strong": {
+      "value": "#4f39f6",
+      "description": ""
+    },
+    "tokens/primary/primary-strongest": {
+      "value": "#312e81",
+      "description": ""
+    },
+    "tokens/error/weakest": {
+      "value": "#fef2f2",
+      "description": ""
+    },
+    "tokens/error/weak": {
+      "value": "#ffe2e2",
+      "description": ""
+    },
+    "tokens/error/base": {
+      "value": "#e7000b",
+      "description": ""
+    },
+    "tokens/error/strong": {
+      "value": "#c10007",
+      "description": ""
+    },
+    "tokens/error/strongest": {
+      "value": "#82181a",
+      "description": ""
+    },
+    "tokens/success/weakest": {
+      "value": "#f0fdf4",
+      "description": ""
+    },
+    "tokens/success/weak": {
+      "value": "#dcfce7",
+      "description": ""
+    },
+    "tokens/success/base": {
+      "value": "#00a63e",
+      "description": ""
+    },
+    "tokens/success/strong": {
+      "value": "#008236",
+      "description": ""
+    },
+    "tokens/success/strongest": {
+      "value": "#0d542b",
+      "description": ""
+    },
+    "tokens/warning/weakest": {
+      "value": "#fff7ed",
+      "description": ""
+    },
+    "tokens/warning/weak": {
+      "value": "#ffedd4",
+      "description": ""
+    },
+    "tokens/warning/base": {
+      "value": "#f54900",
+      "description": ""
+    },
+    "tokens/warning/strong": {
+      "value": "#ca3500",
+      "description": ""
+    },
+    "tokens/warning/strongest": {
+      "value": "#7e2a0c",
+      "description": ""
+    },
+    "tokens/info/weakest": {
+      "value": "#eff6ff",
+      "description": ""
+    },
+    "tokens/info/weak": {
+      "value": "#dbeafe",
+      "description": ""
+    },
+    "tokens/info/base": {
+      "value": "#2563eb",
+      "description": ""
+    },
+    "tokens/info/strong": {
+      "value": "#1d4ed8",
+      "description": ""
+    },
+    "tokens/info/strongest": {
+      "value": "#1e3a8a",
+      "description": ""
+    },
+    "tokens/verified/weakest": {
+      "value": "#f0f9ff",
+      "description": ""
+    },
+    "tokens/verified/weak": {
+      "value": "#e0f2fe",
+      "description": ""
+    },
+    "tokens/verified/base": {
+      "value": "#0284c7",
+      "description": ""
+    },
+    "tokens/verified/strong": {
+      "value": "#0369a1",
+      "description": ""
+    },
+    "tokens/verified/strongest": {
+      "value": "#0c4a6e",
+      "description": ""
+    },
+    "tokens/feature/weakest": {
+      "value": "#eef2ff",
+      "description": ""
+    },
+    "tokens/feature/weak": {
+      "value": "#e0e7ff",
+      "description": ""
+    },
+    "tokens/feature/base": {
+      "value": "#4f39f6",
+      "description": ""
+    },
+    "tokens/feature/strong": {
+      "value": "#432dd7",
+      "description": ""
+    },
+    "tokens/feature/strongest": {
+      "value": "#312e81",
+      "description": ""
+    },
+    "tokens/highlighted/weakest": {
+      "value": "#fdf4ff",
+      "description": ""
+    },
+    "tokens/highlighted/weak": {
+      "value": "#fae8ff",
+      "description": ""
+    },
+    "tokens/highlighted/base": {
+      "value": "#c026d3",
+      "description": ""
+    },
+    "tokens/highlighted/strong": {
+      "value": "#a21caf",
+      "description": ""
+    },
+    "tokens/highlighted/strongest": {
+      "value": "#701a75",
+      "description": ""
+    },
+    "tokens/away/weakest": {
+      "value": "#fefce8",
+      "description": ""
+    },
+    "tokens/away/weak": {
+      "value": "#fef9c2",
+      "description": ""
+    },
+    "tokens/away/base": {
+      "value": "#d08700",
+      "description": ""
+    },
+    "tokens/away/strong": {
+      "value": "#a65f00",
+      "description": ""
+    },
+    "tokens/away/strongest": {
+      "value": "#733e0a",
+      "description": ""
+    },
+    "tokens/stable/base": {
+      "value": "#52525b",
+      "description": ""
+    },
+    "tokens/stable/strong": {
+      "value": "#3f3f46",
+      "description": ""
+    },
+    "tokens/stable/strongest": {
+      "value": "#18181b",
+      "description": ""
+    },
+    "tokens/overlay/scrim": {
+      "value": "#0000007a",
+      "description": ""
+    },
+    "tokens/overlay/scrim-strong": {
+      "value": "#000000a3",
+      "description": ""
+    },
+    "tokens/overlay/hover": {
+      "value": "#00000014",
+      "description": ""
+    },
+    "tokens/overlay/active": {
+      "value": "#00000029",
+      "description": ""
+    },
+    "tokens/overlay/hover-inverted": {
+      "value": "#ffffff14",
+      "description": ""
+    },
+    "tokens/overlay/active-inverted": {
+      "value": "#ffffff29",
+      "description": ""
+    },
+    "tokens/shadow/xs": {
+      "value": "#00000014",
+      "description": ""
+    },
+    "tokens/shadow/sm": {
+      "value": "#00000029",
+      "description": ""
+    },
+    "tokens/shadow/md": {
+      "value": "#0000003d",
       "description": ""
     }
   }
