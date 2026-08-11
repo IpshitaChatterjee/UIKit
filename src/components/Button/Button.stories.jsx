@@ -3,6 +3,7 @@ import Button from './Button';
 
 const VARIANTS = ['solid', 'outline', 'soft', 'ghost'];
 const SIZES = ['xl', 'l', 'm', 's', 'xs'];
+const SHAPES = ['rounded', 'pill'];
 const STATES = ['default', 'hover', 'pressed', 'focused', 'loading', 'disabled'];
 
 export default {
@@ -12,12 +13,14 @@ export default {
     children: 'Hello world',
     variant: 'solid',
     size: 'm',
+    shape: 'rounded',
     loading: false,
     disabled: false,
   },
   argTypes: {
     variant: { control: 'select', options: VARIANTS },
     size: { control: 'select', options: SIZES },
+    shape: { control: 'select', options: SHAPES },
     state: {
       control: 'select',
       options: ['default', 'hover', 'pressed', 'focused'],
@@ -78,9 +81,39 @@ export const AllVariants = {
   ),
 };
 
+// Renders every Shape × Size at "default" state — "rounded" comes from
+// button_default/rounded/primary (node 213:6870), "pill" from
+// button_default/pill/primary (node 241:3530). The two Figma component
+// sets are identical apart from radius, which is why Button models this
+// as one `shape` prop rather than a second component.
+export const AllShapes = {
+  render: () => (
+    <div style={{ display: 'grid', gridTemplateColumns: 'max-content repeat(2, max-content)', gap: '16px 24px', alignItems: 'center' }}>
+      <div />
+      {SHAPES.map((shape) => (
+        <div key={shape} style={{ font: '500 12px/16px sans-serif', color: '#6b6375', textTransform: 'capitalize' }}>
+          {shape}
+        </div>
+      ))}
+      {SIZES.map((size) => (
+        <>
+          <div key={`${size}-label`} style={{ font: '500 12px/16px sans-serif', color: '#6b6375' }}>
+            {size}
+          </div>
+          {SHAPES.map((shape) => (
+            <Button key={`${size}-${shape}`} shape={shape} size={size} iconLeft={<ArrowCircleLeft />} iconRight={<ArrowCircleRight />}>
+              Hello world
+            </Button>
+          ))}
+        </>
+      ))}
+    </div>
+  ),
+};
+
 // Renders every size × state combination from the Figma component set
-// (button_default/rounded/primary, node 213:6870) for the Type selected
-// via the `variant` control, so the full matrix can be checked per type.
+// (button_default/rounded/primary, node 213:6870) for the Type/Shape
+// selected via controls, so the full matrix can be checked per type.
 export const AllStates = {
   render: (args) => (
     <div style={{ display: 'grid', gridTemplateColumns: 'max-content repeat(6, max-content)', gap: '16px 24px', alignItems: 'center' }}>
@@ -100,6 +133,7 @@ export const AllStates = {
               key={`${size}-${state}`}
               variant={args.variant}
               size={size}
+              shape={args.shape}
               iconLeft={<ArrowCircleLeft />}
               iconRight={<ArrowCircleRight />}
               state={state === 'default' || state === 'loading' || state === 'disabled' ? undefined : state}
@@ -119,7 +153,7 @@ export const IconOnly = {
   render: (args) => (
     <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
       {SIZES.map((size) => (
-        <Button key={size} variant={args.variant} size={size} iconLeft={<ArrowCircleRight />} aria-label="Next" />
+        <Button key={size} variant={args.variant} size={size} shape={args.shape} iconLeft={<ArrowCircleRight />} aria-label="Next" />
       ))}
     </div>
   ),

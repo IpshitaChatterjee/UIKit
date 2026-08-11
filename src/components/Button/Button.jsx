@@ -3,6 +3,7 @@ import './Button.css';
 
 const VARIANTS = ['solid', 'outline', 'soft', 'ghost'];
 const SIZES = ['xl', 'l', 'm', 's', 'xs'];
+const SHAPES = ['rounded', 'pill'];
 const FORCED_STATES = ['hover', 'pressed', 'focused'];
 
 function Spinner() {
@@ -15,13 +16,15 @@ function Spinner() {
 }
 
 /**
- * Primary button — rounded corners, all four emphasis levels.
- * Matches the "button_default/rounded/primary" component set in the
- * UI Design Kit Figma file (node 213:6870).
+ * Primary button — all four emphasis levels, in rounded or pill corners.
+ * Matches the "button_default/rounded/primary" (node 213:6870) and
+ * "button_default/pill/primary" (node 241:3530) component sets in the
+ * UI Design Kit Figma file — identical in every respect but radius.
  */
 function Button({
   variant = 'solid',
   size = 'm',
+  shape = 'rounded',
   state,
   loading = false,
   disabled = false,
@@ -38,6 +41,7 @@ function Button({
     'btn',
     `btn--${variant}`,
     `btn--${size}`,
+    `btn--${shape}`,
     isIconOnly && 'btn--icon-only',
     loading && 'btn--loading',
     state && `btn--force-${state}`,
@@ -78,6 +82,8 @@ Button.propTypes = {
   variant: PropTypes.oneOf(VARIANTS),
   /** Button scale, matches the Figma "Size" variant. */
   size: PropTypes.oneOf(SIZES),
+  /** Corner style — "rounded" (soft corners) or "pill" (fully rounded). */
+  shape: PropTypes.oneOf(SHAPES),
   /** Forces a visual state regardless of real interaction — for documentation/testing only. */
   state: PropTypes.oneOf(FORCED_STATES),
   /** Shows a spinner in place of the left icon and blocks interaction, without disabling focus/announcement. */

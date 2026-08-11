@@ -221,6 +221,13 @@
   --btn-letter-spacing: var(--text-control-xs-500-letter-spacing, -0.1px);
 }
 
+/* Shape — "rounded" is just each size's own radius (no override needed).
+   "pill" replaces it with the fully-rounded corner radius regardless of
+   size; must come after the .btn--{size} rules above to win the cascade. */
+.btn--pill {
+  --btn-radius: var(--radius-corner-rounded-full, 999px);
+}
+
 .btn--icon-only {
   padding: var(--btn-icon-only-pad);
 }
