@@ -576,6 +576,14 @@ export const EffectFocusRingInverse3 = [
   { type: "DROP_SHADOW", radius: 0, color: "#fafafa", offset: { x: 0, y: 0 } },
   { type: "DROP_SHADOW", radius: 0, color: "#09090b", offset: { x: 0, y: 0 } },
 ];
+export const EffectFocusRingSuccess2 = [
+  { type: "DROP_SHADOW", radius: 0, color: "#00a63e", offset: { x: 0, y: 0 } },
+  { type: "DROP_SHADOW", radius: 0, color: "#fafafa", offset: { x: 0, y: 0 } },
+];
+export const EffectFocusRingSuccess3 = [
+  { type: "DROP_SHADOW", radius: 0, color: "#00a63e", offset: { x: 0, y: 0 } },
+  { type: "DROP_SHADOW", radius: 0, color: "#fafafa", offset: { x: 0, y: 0 } },
+];
 export const EffectFocusRingError0 = [
   { type: "DROP_SHADOW", radius: 0, color: "#e7000b", offset: { x: 0, y: 0 } },
   { type: "DROP_SHADOW", radius: 0, color: "#fafafa", offset: { x: 0, y: 0 } },
@@ -626,7 +634,7 @@ export const EffectShadowComponentPrimaryDefault = [
   { type: "INNER_SHADOW", radius: 0, color: "#615fff", offset: { x: 0, y: 0 } },
 ];
 export const EffectShadowComponentPrimaryHover = [
-  { type: "DROP_SHADOW", radius: 10, color: "#432dd7", offset: { x: 0, y: 5 } },
+  { type: "DROP_SHADOW", radius: 10, color: "#e0e7ff", offset: { x: 0, y: 5 } },
   {
     type: "INNER_SHADOW",
     radius: 0,
@@ -643,7 +651,7 @@ export const EffectShadowComponentPrimaryFocused = [
     offset: { x: 0, y: 2 },
   },
   { type: "INNER_SHADOW", radius: 0, color: "#615fff", offset: { x: 0, y: 0 } },
-  { type: "DROP_SHADOW", radius: 0, color: "#432dd7", offset: { x: 0, y: 0 } },
+  { type: "DROP_SHADOW", radius: 0, color: "#e0e7ff", offset: { x: 0, y: 0 } },
 ];
 export const EffectShadowComponentNeutralDefault = [
   { type: "INNER_SHADOW", radius: 0, color: "#3f3f46", offset: { x: 0, y: 2 } },
@@ -664,14 +672,14 @@ export const EffectShadowComponentInverseDefault = [
   { type: "INNER_SHADOW", radius: 0, color: "#fafafa", offset: { x: 0, y: 0 } },
 ];
 export const EffectShadowComponentInverseHover = [
-  { type: "DROP_SHADOW", radius: 10, color: "#d4d4d8", offset: { x: 0, y: 5 } },
+  { type: "DROP_SHADOW", radius: 10, color: "#71717a", offset: { x: 0, y: 5 } },
   { type: "INNER_SHADOW", radius: 0, color: "#e4e4e7", offset: { x: 0, y: 2 } },
   { type: "INNER_SHADOW", radius: 0, color: "#f4f4f5", offset: { x: 0, y: 0 } },
 ];
 export const EffectShadowComponentInverseFocused = [
   { type: "INNER_SHADOW", radius: 0, color: "#f4f4f5", offset: { x: 0, y: 2 } },
   { type: "INNER_SHADOW", radius: 0, color: "#fafafa", offset: { x: 0, y: 0 } },
-  { type: "DROP_SHADOW", radius: 0, color: "#d4d4d8", offset: { x: 0, y: 0 } },
+  { type: "DROP_SHADOW", radius: 0, color: "#71717a", offset: { x: 0, y: 0 } },
 ];
 export const EffectShadowComponentErrorDefault = [
   {
@@ -680,17 +688,17 @@ export const EffectShadowComponentErrorDefault = [
     color: "#ffffff29",
     offset: { x: 0, y: 2 },
   },
-  { type: "INNER_SHADOW", radius: 0, color: "#e7000b", offset: { x: 0, y: 0 } },
+  { type: "INNER_SHADOW", radius: 0, color: "#c10007", offset: { x: 0, y: 0 } },
 ];
 export const EffectShadowComponentErrorHover = [
-  { type: "DROP_SHADOW", radius: 10, color: "#c10007", offset: { x: 0, y: 5 } },
+  { type: "DROP_SHADOW", radius: 10, color: "#ffe2e2", offset: { x: 0, y: 5 } },
   {
     type: "INNER_SHADOW",
     radius: 0,
     color: "#ffffff29",
     offset: { x: 0, y: 2 },
   },
-  { type: "INNER_SHADOW", radius: 0, color: "#fb2c36", offset: { x: 0, y: 0 } },
+  { type: "INNER_SHADOW", radius: 0, color: "#e7000b", offset: { x: 0, y: 0 } },
 ];
 export const EffectShadowComponentErrorFocused = [
   {
@@ -699,7 +707,7 @@ export const EffectShadowComponentErrorFocused = [
     color: "#ffffff29",
     offset: { x: 0, y: 2 },
   },
-  { type: "INNER_SHADOW", radius: 0, color: "#e7000b", offset: { x: 0, y: 0 } },
+  { type: "INNER_SHADOW", radius: 0, color: "#c10007", offset: { x: 0, y: 0 } },
   { type: "DROP_SHADOW", radius: 0, color: "#82181a", offset: { x: 0, y: 0 } },
 ];
 export const EffectShadowComponentSuccessDefault = [
@@ -712,7 +720,7 @@ export const EffectShadowComponentSuccessDefault = [
   { type: "INNER_SHADOW", radius: 0, color: "#00a63e", offset: { x: 0, y: 0 } },
 ];
 export const EffectShadowComponentSuccessHover = [
-  { type: "DROP_SHADOW", radius: 10, color: "#008236", offset: { x: 0, y: 5 } },
+  { type: "DROP_SHADOW", radius: 10, color: "#dcfce7", offset: { x: 0, y: 5 } },
   {
     type: "INNER_SHADOW",
     radius: 0,
@@ -741,7 +749,7 @@ export const EffectShadowComponentInfoDefault = [
   { type: "INNER_SHADOW", radius: 0, color: "#2563eb", offset: { x: 0, y: 0 } },
 ];
 export const EffectShadowComponentInfoHover = [
-  { type: "DROP_SHADOW", radius: 10, color: "#1d4ed8", offset: { x: 0, y: 5 } },
+  { type: "DROP_SHADOW", radius: 10, color: "#dbeafe", offset: { x: 0, y: 5 } },
   {
     type: "INNER_SHADOW",
     radius: 0,
