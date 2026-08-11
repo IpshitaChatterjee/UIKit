@@ -222,10 +222,14 @@
 }
 
 /* Shape — "rounded" is just each size's own radius (no override needed).
-   "pill" replaces it with the fully-rounded corner radius regardless of
-   size; must come after the .btn--{size} rules above to win the cascade. */
+   "pill"/"square" replace it regardless of size; must come after the
+   .btn--{size} rules above to win the cascade. */
 .btn--pill {
   --btn-radius: var(--radius-corner-rounded-full, 999px);
+}
+
+.btn--square {
+  --btn-radius: var(--radius-corner-rounded-none, 0px);
 }
 
 .btn--icon-only {

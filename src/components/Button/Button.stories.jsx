@@ -3,7 +3,7 @@ import Button from './Button';
 
 const VARIANTS = ['solid', 'outline', 'soft', 'ghost'];
 const SIZES = ['xl', 'l', 'm', 's', 'xs'];
-const SHAPES = ['rounded', 'pill'];
+const SHAPES = ['rounded', 'pill', 'square'];
 const STATES = ['default', 'hover', 'pressed', 'focused', 'loading', 'disabled'];
 
 export default {
@@ -88,7 +88,7 @@ export const AllVariants = {
 // as one `shape` prop rather than a second component.
 export const AllShapes = {
   render: () => (
-    <div style={{ display: 'grid', gridTemplateColumns: 'max-content repeat(2, max-content)', gap: '16px 24px', alignItems: 'center' }}>
+    <div style={{ display: 'grid', gridTemplateColumns: `max-content repeat(${SHAPES.length}, max-content)`, gap: '16px 24px', alignItems: 'center' }}>
       <div />
       {SHAPES.map((shape) => (
         <div key={shape} style={{ font: '500 12px/16px sans-serif', color: '#6b6375', textTransform: 'capitalize' }}>
