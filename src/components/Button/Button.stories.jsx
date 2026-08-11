@@ -4,6 +4,7 @@ import Button from './Button';
 const VARIANTS = ['solid', 'outline', 'soft', 'ghost'];
 const SIZES = ['xl', 'l', 'm', 's', 'xs'];
 const SHAPES = ['rounded', 'pill', 'square'];
+const COLORS = ['primary', 'neutral-solid'];
 const STATES = ['default', 'hover', 'pressed', 'focused', 'loading', 'disabled'];
 
 export default {
@@ -14,6 +15,7 @@ export default {
     variant: 'solid',
     size: 'm',
     shape: 'rounded',
+    color: 'primary',
     loading: false,
     disabled: false,
   },
@@ -21,6 +23,7 @@ export default {
     variant: { control: 'select', options: VARIANTS },
     size: { control: 'select', options: SIZES },
     shape: { control: 'select', options: SHAPES },
+    color: { control: 'select', options: COLORS },
     state: {
       control: 'select',
       options: ['default', 'hover', 'pressed', 'focused'],
@@ -56,8 +59,9 @@ export const AllSizes = {
 
 // Renders every Type × Size at "default" state so the four emphasis
 // levels (solid/outline/soft/ghost) can be compared side by side.
+// Respects the `color` control so either family can be checked here too.
 export const AllVariants = {
-  render: () => (
+  render: (args) => (
     <div style={{ display: 'grid', gridTemplateColumns: 'max-content repeat(4, max-content)', gap: '16px 24px', alignItems: 'center' }}>
       <div />
       {VARIANTS.map((variant) => (
@@ -71,7 +75,36 @@ export const AllVariants = {
             {size}
           </div>
           {VARIANTS.map((variant) => (
-            <Button key={`${size}-${variant}`} variant={variant} size={size} iconLeft={<ArrowCircleLeft />} iconRight={<ArrowCircleRight />}>
+            <Button key={`${size}-${variant}`} variant={variant} size={size} color={args.color} iconLeft={<ArrowCircleLeft />} iconRight={<ArrowCircleRight />}>
+              Hello world
+            </Button>
+          ))}
+        </>
+      ))}
+    </div>
+  ),
+};
+
+// Renders every Type × Color at "xl" so the two color families (primary,
+// neutral-solid) can be compared side by side across all four emphasis
+// levels — "neutral-solid" comes from button_default/rounded/neutral-solid
+// (node 213:6169), otherwise identical in structure to "primary".
+export const AllColors = {
+  render: () => (
+    <div style={{ display: 'grid', gridTemplateColumns: `max-content repeat(${COLORS.length}, max-content)`, gap: '16px 24px', alignItems: 'center' }}>
+      <div />
+      {COLORS.map((color) => (
+        <div key={color} style={{ font: '500 12px/16px sans-serif', color: '#6b6375', textTransform: 'capitalize' }}>
+          {color}
+        </div>
+      ))}
+      {VARIANTS.map((variant) => (
+        <>
+          <div key={`${variant}-label`} style={{ font: '500 12px/16px sans-serif', color: '#6b6375', textTransform: 'capitalize' }}>
+            {variant}
+          </div>
+          {COLORS.map((color) => (
+            <Button key={`${variant}-${color}`} variant={variant} size="xl" color={color} iconLeft={<ArrowCircleLeft />} iconRight={<ArrowCircleRight />}>
               Hello world
             </Button>
           ))}
@@ -87,7 +120,7 @@ export const AllVariants = {
 // sets are identical apart from radius, which is why Button models this
 // as one `shape` prop rather than a second component.
 export const AllShapes = {
-  render: () => (
+  render: (args) => (
     <div style={{ display: 'grid', gridTemplateColumns: `max-content repeat(${SHAPES.length}, max-content)`, gap: '16px 24px', alignItems: 'center' }}>
       <div />
       {SHAPES.map((shape) => (
@@ -101,7 +134,7 @@ export const AllShapes = {
             {size}
           </div>
           {SHAPES.map((shape) => (
-            <Button key={`${size}-${shape}`} shape={shape} size={size} iconLeft={<ArrowCircleLeft />} iconRight={<ArrowCircleRight />}>
+            <Button key={`${size}-${shape}`} shape={shape} size={size} color={args.color} iconLeft={<ArrowCircleLeft />} iconRight={<ArrowCircleRight />}>
               Hello world
             </Button>
           ))}
@@ -134,6 +167,7 @@ export const AllStates = {
               variant={args.variant}
               size={size}
               shape={args.shape}
+              color={args.color}
               iconLeft={<ArrowCircleLeft />}
               iconRight={<ArrowCircleRight />}
               state={state === 'default' || state === 'loading' || state === 'disabled' ? undefined : state}
@@ -153,7 +187,7 @@ export const IconOnly = {
   render: (args) => (
     <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
       {SIZES.map((size) => (
-        <Button key={size} variant={args.variant} size={size} shape={args.shape} iconLeft={<ArrowCircleRight />} aria-label="Next" />
+        <Button key={size} variant={args.variant} size={size} shape={args.shape} color={args.color} iconLeft={<ArrowCircleRight />} aria-label="Next" />
       ))}
     </div>
   ),

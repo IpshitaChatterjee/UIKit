@@ -4,6 +4,7 @@ import './Button.css';
 const VARIANTS = ['solid', 'outline', 'soft', 'ghost'];
 const SIZES = ['xl', 'l', 'm', 's', 'xs'];
 const SHAPES = ['rounded', 'pill', 'square'];
+const COLORS = ['primary', 'neutral-solid'];
 const FORCED_STATES = ['hover', 'pressed', 'focused'];
 
 function Spinner() {
@@ -16,16 +17,18 @@ function Spinner() {
 }
 
 /**
- * Primary button — all four emphasis levels, in rounded, pill, or square
- * corners. Matches the "button_default/rounded/primary" (node 213:6870),
- * "button_default/pill/primary" (node 241:3530) and
- * "button_default/square/primary" (node 241:4611) component sets in the
- * UI Design Kit Figma file — identical in every respect but radius.
+ * Button — all four emphasis levels, in rounded, pill, or square corners,
+ * in either the "primary" or "neutral-solid" color family. Matches the
+ * "button_default/{shape}/primary" (rounded 213:6870, pill 241:3530,
+ * square 241:4611) and "button_default/{shape}/neutral-solid" (rounded
+ * 213:6169, pill 241:5692, square 241:6773) component sets in the UI
+ * Design Kit Figma file — identical apart from radius (shape) and color.
  */
 function Button({
   variant = 'solid',
   size = 'm',
   shape = 'rounded',
+  color = 'primary',
   state,
   loading = false,
   disabled = false,
@@ -43,6 +46,7 @@ function Button({
     `btn--${variant}`,
     `btn--${size}`,
     `btn--${shape}`,
+    color !== 'primary' && `btn--${color}`,
     isIconOnly && 'btn--icon-only',
     loading && 'btn--loading',
     state && `btn--force-${state}`,
@@ -85,6 +89,8 @@ Button.propTypes = {
   size: PropTypes.oneOf(SIZES),
   /** Corner style — "rounded" (soft corners), "pill" (fully rounded), or "square" (no rounding). */
   shape: PropTypes.oneOf(SHAPES),
+  /** Color family, matches the Figma component set — "primary" (purple) or "neutral-solid" (near-black/gray). */
+  color: PropTypes.oneOf(COLORS),
   /** Forces a visual state regardless of real interaction — for documentation/testing only. */
   state: PropTypes.oneOf(FORCED_STATES),
   /** Shows a spinner in place of the left icon and blocks interaction, without disabling focus/announcement. */

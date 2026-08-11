@@ -70,13 +70,6 @@
   text-shadow: none;
 }
 
-.btn--solid:disabled {
-  background: var(--color-tokens-bg-weak, #f4f4f5);
-  color: var(--color-tokens-text-disabled, #d4d4d8);
-  box-shadow: none;
-  text-shadow: none;
-}
-
 /* Type=outline — 1px border, adds 2px to the box vs. the other types (matches Figma) */
 .btn--outline {
   background: var(--color-tokens-bg-static, #fff);
@@ -99,13 +92,6 @@
   box-shadow:
     0 0 0 3px var(--color-tokens-bg-weakest, #fafafa),
     0 0 0 6px var(--color-tokens-primary-primary-base, #615fff);
-}
-
-.btn--outline:disabled {
-  background: var(--color-tokens-bg-static, #fff);
-  color: var(--color-tokens-text-disabled, #d4d4d8);
-  /* Figma's stroke/medium isn't in the token pipeline yet; same hex as text/disabled */
-  border-color: var(--color-tokens-text-disabled, #d4d4d8);
 }
 
 /* Type=soft — tinted background, no border */
@@ -131,11 +117,6 @@
     0 0 0 6px var(--color-tokens-primary-primary-base, #615fff);
 }
 
-.btn--soft:disabled {
-  background: var(--color-tokens-bg-weak, #f4f4f5);
-  color: var(--color-tokens-text-disabled, #d4d4d8);
-}
-
 /* Type=ghost — transparent until interacted with */
 .btn--ghost {
   background: var(--color-tokens-bg-static, #fff);
@@ -156,6 +137,142 @@
   box-shadow:
     0 0 0 3px var(--color-tokens-bg-weakest, #fafafa),
     0 0 0 6px var(--color-tokens-primary-primary-base, #615fff);
+}
+
+/* Color=neutral-solid — second color family from "button_default/{shape}/
+   neutral-solid" (rounded 213:6169, pill 241:5692, square 241:6773).
+   Disabled styling is identical to primary's (bg-weak/bg-static +
+   text-disabled don't vary by color) so those rules above are reused
+   as-is; only default/hover/focused need color-specific overrides here.
+   Uses the shadows/interactive/neutral/* and focus-ring/colors/neutral/*
+   token families Figma defines specifically for shadow/ring colors
+   (separate from color-tokens since Figma effects can't reference
+   color variables directly), which are already dark-mode paired. */
+.btn--neutral-solid.btn--solid {
+  background: var(--color-tokens-bg-strong, #27272a);
+  color: var(--color-tokens-text-static, #fff);
+  box-shadow:
+    inset 0 0 0 1px var(--effects-shadows-interactive-neutral-base, #27272a),
+    inset 0 2px 0 0 var(--effects-shadows-interactive-neutral-inner, #3f3f46);
+}
+
+.btn--neutral-solid.btn--solid:not(:disabled):hover,
+.btn--neutral-solid.btn--solid:not(:disabled):active,
+.btn--neutral-solid.btn--solid.btn--force-hover,
+.btn--neutral-solid.btn--solid.btn--force-pressed {
+  background: var(--color-tokens-bg-strong, #27272a);
+  box-shadow:
+    0 5px 10px -5px var(--effects-shadows-interactive-neutral-drop, #3f3f46),
+    inset 0 0 0 1px var(--effects-shadows-interactive-neutral-base, #27272a),
+    inset 0 2px 0 0 var(--effects-shadows-interactive-neutral-inner, #3f3f46);
+}
+
+.btn--neutral-solid.btn--solid:not(:disabled):focus-visible,
+.btn--neutral-solid.btn--solid.btn--force-focused {
+  outline: none;
+  background: var(--color-tokens-bg-strong, #27272a);
+  box-shadow:
+    0 5px 10px -5px var(--effects-shadows-interactive-neutral-drop, #3f3f46),
+    inset 0 0 0 1px var(--effects-shadows-interactive-neutral-base, #27272a),
+    inset 0 1px 0 1px var(--effects-shadows-interactive-neutral-inner, #3f3f46);
+}
+
+.btn--neutral-solid.btn--solid.btn--loading {
+  background: var(--color-tokens-bg-strong, #27272a);
+  box-shadow: none;
+  text-shadow: none;
+}
+
+.btn--neutral-solid.btn--outline {
+  background: var(--color-tokens-bg-static, #fff);
+  color: var(--color-tokens-text-strongest, #09090b);
+  border: 1px solid var(--color-tokens-bg-strong, #27272a);
+}
+
+.btn--neutral-solid.btn--outline:not(:disabled):hover,
+.btn--neutral-solid.btn--outline:not(:disabled):active,
+.btn--neutral-solid.btn--outline.btn--force-hover,
+.btn--neutral-solid.btn--outline.btn--force-pressed,
+.btn--neutral-solid.btn--outline.btn--loading {
+  background: var(--color-tokens-bg-weak, #f4f4f5);
+}
+
+.btn--neutral-solid.btn--outline:not(:disabled):focus-visible,
+.btn--neutral-solid.btn--outline.btn--force-focused {
+  outline: none;
+  background: var(--color-tokens-bg-weak, #f4f4f5);
+  box-shadow:
+    0 0 0 var(--effects-focus-ring-3-offset-spread, 3px) var(--effects-focus-ring-colors-neutral-color-inner, #fff),
+    0 0 0 var(--effects-focus-ring-3-ring-spread, 6px) var(--effects-focus-ring-colors-neutral-color-outer, #09090b);
+}
+
+.btn--neutral-solid.btn--soft {
+  background: var(--color-tokens-bg-weakest, #fafafa);
+  color: var(--color-tokens-text-strongest, #09090b);
+}
+
+.btn--neutral-solid.btn--soft:not(:disabled):hover,
+.btn--neutral-solid.btn--soft:not(:disabled):active,
+.btn--neutral-solid.btn--soft.btn--force-hover,
+.btn--neutral-solid.btn--soft.btn--force-pressed,
+.btn--neutral-solid.btn--soft.btn--loading {
+  background: var(--color-tokens-bg-weak, #f4f4f5);
+}
+
+.btn--neutral-solid.btn--soft:not(:disabled):focus-visible,
+.btn--neutral-solid.btn--soft.btn--force-focused {
+  outline: none;
+  background: var(--color-tokens-bg-weak, #f4f4f5);
+  box-shadow:
+    0 0 0 var(--effects-focus-ring-3-offset-spread, 3px) var(--effects-focus-ring-colors-neutral-color-inner, #fff),
+    0 0 0 var(--effects-focus-ring-3-ring-spread, 6px) var(--effects-focus-ring-colors-neutral-color-outer, #09090b);
+}
+
+.btn--neutral-solid.btn--ghost {
+  background: var(--color-tokens-bg-static, #fff);
+  color: var(--color-tokens-text-strongest, #09090b);
+}
+
+.btn--neutral-solid.btn--ghost:not(:disabled):hover,
+.btn--neutral-solid.btn--ghost:not(:disabled):active,
+.btn--neutral-solid.btn--ghost.btn--force-hover,
+.btn--neutral-solid.btn--ghost.btn--force-pressed {
+  background: var(--color-tokens-bg-weak, #f4f4f5);
+}
+
+.btn--neutral-solid.btn--ghost:not(:disabled):focus-visible,
+.btn--neutral-solid.btn--ghost.btn--force-focused {
+  outline: none;
+  background: var(--color-tokens-bg-static, #fff);
+  box-shadow:
+    0 0 0 var(--effects-focus-ring-3-offset-spread, 3px) var(--effects-focus-ring-colors-neutral-color-inner, #fff),
+    0 0 0 var(--effects-focus-ring-3-ring-spread, 6px) var(--effects-focus-ring-colors-neutral-color-outer, #09090b);
+}
+
+/* Disabled — identical across every color family (bg-weak/bg-static +
+   text-disabled don't vary by color), so one shared rule per type covers
+   both "primary" and "neutral-solid". Must come after every `.btn--
+   {color}.btn--{variant}` block above: a plain `.btn--solid:disabled`
+   and a two-class `.btn--neutral-solid.btn--solid` selector have equal
+   specificity, so without this ordering the neutral-solid default rule
+   would win the tie and disabled buttons would render as if enabled. */
+.btn--solid:disabled {
+  background: var(--color-tokens-bg-weak, #f4f4f5);
+  color: var(--color-tokens-text-disabled, #d4d4d8);
+  box-shadow: none;
+  text-shadow: none;
+}
+
+.btn--outline:disabled {
+  background: var(--color-tokens-bg-static, #fff);
+  color: var(--color-tokens-text-disabled, #d4d4d8);
+  /* Figma's stroke/medium isn't in the token pipeline yet; same hex as text/disabled */
+  border-color: var(--color-tokens-text-disabled, #d4d4d8);
+}
+
+.btn--soft:disabled {
+  background: var(--color-tokens-bg-weak, #f4f4f5);
+  color: var(--color-tokens-text-disabled, #d4d4d8);
 }
 
 .btn--ghost:disabled {
