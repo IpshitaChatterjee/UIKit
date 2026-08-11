@@ -1,10 +1,13 @@
 /**
- * Pulls published styles from a Figma file and writes them to
- * tokens/figma-tokens.json, with resolved values.
- *
+ * Pulls published styles AND every local variable collection from a Figma
+ * file and writes them to tokens/figma-tokens.json, with resolved values.
  *
  * Requires two env vars:
- *   FIGMA_TOKEN     -> Figma personal access token (file_content:read scope)
+ *   FIGMA_TOKEN     -> Figma personal access token
+ *                      (file_content:read scope for styles;
+ *                       file_variables:read scope for variables — the
+ *                       Variables API additionally needs an Enterprise
+ *                       Figma plan, see getLocalVariables() below)
  *   FIGMA_FILE_KEY  -> the file key from your Figma file URL
  */
 
@@ -37,7 +40,7 @@ async function getLocalVariables() {
   const res = await fetch(`${BASE}/files/${FILE_KEY}/variables/local`, { headers });
   if (!res.ok) {
     if (res.status === 403) {
-      console.warn("Variables API returned 403 (needs an Enterprise-plan token) — skipping spacing/radius variables.");
+      console.warn("Variables API returned 403 (needs an Enterprise-plan token) — skipping all variable collections.");
       return null;
     }
     const body = await res.text();
@@ -46,35 +49,105 @@ async function getLocalVariables() {
   return res.json();
 }
 
-// Variable collections are named after what they hold (e.g.
-// "L3-Component" for the spacing scale, "Responsive" for the radius
-// scale). Route each FLOAT variable into a token bucket by matching
-// its own name prefix, same idea as the fill/primitives split below.
-function bucketForVariableName(name) {
-  if (/^l3-component\//i.test(name)) return "spacing";
-  if (/^responsive\/rounded-/i.test(name)) return "radius";
-  return "variables-other";
+// The base spacing scale and the semantic L1/L2/L3 tokens live in two
+// separate Figma collections ("base-spacing-scale" and "spacing-tokens")
+// but read as one logical "spacing" bucket — everything else buckets by
+// its own (slugified) collection name, so a brand-new collection someone
+// adds in Figma tomorrow shows up automatically without a code change.
+const BUCKET_NAME_OVERRIDES = {
+  "base-spacing-scale": "spacing",
+  "spacing-tokens": "spacing",
+};
+
+function slugify(name) {
+  return name
+    .toLowerCase()
+    .replace(/^_+/, "")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+}
+
+function bucketForCollection(collectionName) {
+  return BUCKET_NAME_OVERRIDES[collectionName] || slugify(collectionName);
+}
+
+// Variables can reference another variable instead of holding a literal
+// value (VARIABLE_ALIAS) — follow the chain to the concrete raw value,
+// same as get_variable_defs' resolveAliases option does. Mode ids are
+// scoped per collection, so if the alias target is in the *same*
+// collection as the source (has a value for this exact modeId), use that
+// mode — e.g. Responsive/rounded-s's Tablet value aliases to a different
+// primitive than its Desktop value does, both within the "radius"
+// collection. Only fall back to the target's own default mode when the
+// alias crosses into a different collection that doesn't share this
+// mode id at all (e.g. a Light/Dark color aliasing a single-mode
+// primitive).
+function resolveVariableValueForMode(variables, variable, modeId, depth = 0) {
+  if (depth > 10) return undefined;
+  const raw = variable.valuesByMode?.[modeId];
+  if (raw && typeof raw === "object" && raw.type === "VARIABLE_ALIAS") {
+    const target = variables[raw.id];
+    if (!target) return undefined;
+    const targetModeId = target.valuesByMode && modeId in target.valuesByMode ? modeId : target.__defaultModeId;
+    return resolveVariableValueForMode(variables, target, targetModeId, depth + 1);
+  }
+  return raw;
+}
+
+// Converts a resolved raw value into the JS shape this repo's
+// tokens.json expects: a hex string for COLOR, {x1,y1,x2,y2} for EASING,
+// otherwise the raw value untouched.
+function finalizeValue(resolvedType, raw) {
+  if (raw === undefined || raw === null) return undefined;
+  if (resolvedType === "COLOR" && typeof raw === "object") {
+    return rgbaToHex({ r: raw.r, g: raw.g, b: raw.b, a: raw.a ?? 1 });
+  }
+  if (resolvedType === "EASING" && raw && typeof raw === "object") {
+    const bez = raw.easingFunctionCubicBezier;
+    if (bez) return { x1: bez.x1, y1: bez.y1, x2: bez.x2, y2: bez.y2 };
+    return undefined;
+  }
+  return raw;
 }
 
 function collectVariableTokens(variablesResponse, tokens) {
   if (!variablesResponse) return;
 
   const { variables, variableCollections } = variablesResponse.meta || {};
-  if (!variables) return;
+  if (!variables || !variableCollections) return;
+
+  // Stash each variable's collection default mode on itself so alias
+  // resolution (which jumps between variables/collections) can look it
+  // up without threading extra params through every call.
+  for (const variable of Object.values(variables)) {
+    const collection = variableCollections[variable.variableCollectionId];
+    variable.__defaultModeId = collection?.defaultModeId;
+  }
 
   for (const variable of Object.values(variables)) {
-    if (variable.resolvedType !== "FLOAT") continue;
+    const collection = variableCollections[variable.variableCollectionId];
+    if (!collection) continue;
 
-    const collection = variableCollections?.[variable.variableCollectionId];
-    const value = variable.valuesByMode?.[collection?.defaultModeId];
-    if (typeof value !== "number") continue;
-
-    const bucket = bucketForVariableName(variable.name);
+    const bucket = bucketForCollection(collection.name);
     tokens[bucket] = tokens[bucket] || {};
-    tokens[bucket][variable.name] = {
-      value,
-      description: variable.description || "",
-    };
+
+    const modes = collection.modes || [];
+    if (modes.length <= 1) {
+      const modeId = modes[0]?.modeId ?? collection.defaultModeId;
+      const raw = resolveVariableValueForMode(variables, variable, modeId);
+      const value = finalizeValue(variable.resolvedType, raw);
+      if (value === undefined) continue;
+      tokens[bucket][variable.name] = { value, description: variable.description || "" };
+    } else {
+      const byMode = {};
+      for (const mode of modes) {
+        const raw = resolveVariableValueForMode(variables, variable, mode.modeId);
+        const value = finalizeValue(variable.resolvedType, raw);
+        if (value !== undefined) byMode[mode.name] = value;
+      }
+      if (Object.keys(byMode).length === 0) continue;
+      tokens[bucket][variable.name] = { value: byMode, description: variable.description || "" };
+    }
   }
 }
 
@@ -176,12 +249,14 @@ async function main() {
   }
 
   const variablesResponse = await getLocalVariables();
+  const variableBucketsBefore = new Set(Object.keys(tokens));
   collectVariableTokens(variablesResponse, tokens);
+  const variableBucketCount = Object.keys(tokens).filter((k) => !variableBucketsBefore.has(k)).length;
 
   const output = {
     _meta: {
       source: variablesResponse
-        ? "files-api (styles) + variables-api (spacing/radius)"
+        ? `files-api (styles) + variables-api (${variableBucketCount} variable collection buckets)`
         : "files-api (styles only — variables API unavailable)",
       fetchedAt: new Date().toISOString(),
       fileKey: FILE_KEY,

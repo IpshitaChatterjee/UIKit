@@ -1,9 +1,9 @@
 {
   "_meta": {
     "source": "files-api (fill/text/effect/grid) + variables-api (spacing/radius)",
-    "fetchedAt": "2026-08-11T17:15:00.000Z",
+    "fetchedAt": "2026-08-11T18:10:00.000Z",
     "fileKey": "nF6XfTdKWVl1P8xvufWjNn",
-    "note": "spacing/radius backfilled manually from live Figma variables via MCP (Desktop Bridge) since the Variables REST API needs a token this environment does not have; scripts/fetch-figma-tokens.js now fetches them automatically on the next sync. spacing now includes the full base-spacing-scale primitives plus the L1-Layout/L2-Section/L3-Component semantic layers, each with Desktop/Tablet/Phone mode values where the collection defines them."
+    "note": "spacing/radius/color-tokens/effects/motion-primitives/animation-tokens were backfilled manually from live Figma variables via MCP (Desktop Bridge) since the Variables REST API needs a token this environment does not have. scripts/fetch-figma-tokens.js now walks every variable collection generically so the daily sync captures these (and any new ones) automatically. The `typography` collection (297 vars across Display/Heading/Body/Paragraph/etc, plus 60 `_typography-primitives`) was NOT backfilled here \u2014 nothing in this codebase consumes it yet (Button uses the older Styles-API `text` bucket), and hand-transcribing 357 variables with no current consumer was judged not worth the error risk. It will still be picked up automatically by the next real sync."
   },
   "text": {
     "Display/XL/700": {
@@ -4902,21 +4902,1302 @@
     }
   },
   "radius": {
+    "Corner/rounded-none": {
+      "value": {
+        "Desktop": 0,
+        "Tablet": 0,
+        "Mobile": 0
+      },
+      "description": ""
+    },
+    "Corner/rounded-xs": {
+      "value": {
+        "Desktop": 2,
+        "Tablet": 2,
+        "Mobile": 2
+      },
+      "description": ""
+    },
+    "Corner/rounded-s": {
+      "value": {
+        "Desktop": 4,
+        "Tablet": 4,
+        "Mobile": 4
+      },
+      "description": ""
+    },
+    "Corner/rounded-m": {
+      "value": {
+        "Desktop": 6,
+        "Tablet": 6,
+        "Mobile": 6
+      },
+      "description": ""
+    },
+    "Corner/rounded-l": {
+      "value": {
+        "Desktop": 8,
+        "Tablet": 8,
+        "Mobile": 8
+      },
+      "description": ""
+    },
+    "Corner/rounded-xl": {
+      "value": {
+        "Desktop": 12,
+        "Tablet": 12,
+        "Mobile": 12
+      },
+      "description": ""
+    },
+    "Corner/rounded-2xl": {
+      "value": {
+        "Desktop": 16,
+        "Tablet": 16,
+        "Mobile": 16
+      },
+      "description": ""
+    },
+    "Corner/rounded-3xl": {
+      "value": {
+        "Desktop": 24,
+        "Tablet": 24,
+        "Mobile": 24
+      },
+      "description": ""
+    },
+    "Corner/rounded-4xl": {
+      "value": {
+        "Desktop": 32,
+        "Tablet": 32,
+        "Mobile": 32
+      },
+      "description": ""
+    },
+    "Corner/rounded-5xl": {
+      "value": {
+        "Desktop": 48,
+        "Tablet": 48,
+        "Mobile": 48
+      },
+      "description": ""
+    },
+    "Corner/rounded-full": {
+      "value": {
+        "Desktop": 999,
+        "Tablet": 999,
+        "Mobile": 999
+      },
+      "description": ""
+    },
+    "Responsive/rounded-none": {
+      "value": {
+        "Desktop": 0,
+        "Tablet": 0,
+        "Mobile": 0
+      },
+      "description": ""
+    },
     "Responsive/rounded-s": {
-      "value": 4,
+      "value": {
+        "Desktop": 4,
+        "Tablet": 2,
+        "Mobile": 2
+      },
       "description": ""
     },
     "Responsive/rounded-m": {
-      "value": 6,
+      "value": {
+        "Desktop": 6,
+        "Tablet": 4,
+        "Mobile": 4
+      },
       "description": ""
     },
     "Responsive/rounded-l": {
-      "value": 8,
+      "value": {
+        "Desktop": 8,
+        "Tablet": 6,
+        "Mobile": 6
+      },
       "description": ""
     },
     "Responsive/rounded-xl": {
-      "value": 12,
+      "value": {
+        "Desktop": 12,
+        "Tablet": 8,
+        "Mobile": 8
+      },
       "description": ""
+    },
+    "Responsive/rounded-2xl": {
+      "value": {
+        "Desktop": 16,
+        "Tablet": 12,
+        "Mobile": 12
+      },
+      "description": ""
+    },
+    "Responsive/rounded-3xl": {
+      "value": {
+        "Desktop": 24,
+        "Tablet": 16,
+        "Mobile": 12
+      },
+      "description": ""
+    },
+    "Responsive/rounded-4xl": {
+      "value": {
+        "Desktop": 32,
+        "Tablet": 24,
+        "Mobile": 16
+      },
+      "description": ""
+    },
+    "Responsive/rounded-5xl": {
+      "value": {
+        "Desktop": 48,
+        "Tablet": 32,
+        "Mobile": 24
+      },
+      "description": ""
+    },
+    "Responsive/rounded-full": {
+      "value": {
+        "Desktop": 999,
+        "Tablet": 999,
+        "Mobile": 999
+      },
+      "description": ""
+    }
+  },
+  "color-tokens": {
+    "static white/white": {
+      "value": {
+        "Light": "#FFFFFF",
+        "Dark": "#FFFFFF"
+      },
+      "description": ""
+    },
+    "static white/white-alpha-80": {
+      "value": {
+        "Light": "#FFFFFFCC",
+        "Dark": "#FFFFFFCC"
+      },
+      "description": ""
+    },
+    "static white/white-alpha-64": {
+      "value": {
+        "Light": "#FFFFFFA3",
+        "Dark": "#FFFFFFA3"
+      },
+      "description": ""
+    },
+    "static white/white-alpha-48": {
+      "value": {
+        "Light": "#FFFFFF7A",
+        "Dark": "#FFFFFF7A"
+      },
+      "description": ""
+    },
+    "static white/white-alpha-32": {
+      "value": {
+        "Light": "#FFFFFF52",
+        "Dark": "#FFFFFF52"
+      },
+      "description": ""
+    },
+    "static white/white-alpha-24": {
+      "value": {
+        "Light": "#FFFFFF3D",
+        "Dark": "#FFFFFF3D"
+      },
+      "description": ""
+    },
+    "static white/white-alpha-16": {
+      "value": {
+        "Light": "#FFFFFF29",
+        "Dark": "#FFFFFF29"
+      },
+      "description": ""
+    },
+    "static white/white-alpha-8": {
+      "value": {
+        "Light": "#FFFFFF14",
+        "Dark": "#FFFFFF14"
+      },
+      "description": ""
+    },
+    "static white/white-alpha-0": {
+      "value": {
+        "Light": "#FFFFFF00",
+        "Dark": "#FFFFFF00"
+      },
+      "description": ""
+    },
+    "static black/black": {
+      "value": {
+        "Light": "#000000",
+        "Dark": "#000000"
+      },
+      "description": ""
+    },
+    "static black/black-alpha-80": {
+      "value": {
+        "Light": "#000000CC",
+        "Dark": "#000000CC"
+      },
+      "description": ""
+    },
+    "static black/black-alpha-64": {
+      "value": {
+        "Light": "#000000A3",
+        "Dark": "#000000A3"
+      },
+      "description": ""
+    },
+    "static black/black-alpha-48": {
+      "value": {
+        "Light": "#0000007A",
+        "Dark": "#0000007A"
+      },
+      "description": ""
+    },
+    "static black/black-alpha-32": {
+      "value": {
+        "Light": "#00000052",
+        "Dark": "#00000052"
+      },
+      "description": ""
+    },
+    "static black/black-alpha-24": {
+      "value": {
+        "Light": "#0000003D",
+        "Dark": "#0000003D"
+      },
+      "description": ""
+    },
+    "static black/black-alpha-16": {
+      "value": {
+        "Light": "#00000029",
+        "Dark": "#00000029"
+      },
+      "description": ""
+    },
+    "static black/black-alpha-8": {
+      "value": {
+        "Light": "#00000014",
+        "Dark": "#00000014"
+      },
+      "description": ""
+    },
+    "static black/black-alpha-0": {
+      "value": {
+        "Light": "#00000000",
+        "Dark": "#00000000"
+      },
+      "description": ""
+    },
+    "bg/static": {
+      "value": {
+        "Light": "#FFFFFF",
+        "Dark": "#000000"
+      },
+      "description": ""
+    },
+    "bg/weakest": {
+      "value": {
+        "Light": "#FAFAFA",
+        "Dark": "#18181B"
+      },
+      "description": ""
+    },
+    "bg/weak": {
+      "value": {
+        "Light": "#F4F4F5",
+        "Dark": "#27272A"
+      },
+      "description": ""
+    },
+    "bg/light": {
+      "value": {
+        "Light": "#E4E4E7",
+        "Dark": "#3F3F46"
+      },
+      "description": ""
+    },
+    "bg/medium": {
+      "value": {
+        "Light": "#D4D4D8",
+        "Dark": "#71717A"
+      },
+      "description": ""
+    },
+    "bg/heavy": {
+      "value": {
+        "Light": "#3F3F46",
+        "Dark": "#D4D4D8"
+      },
+      "description": ""
+    },
+    "bg/strong": {
+      "value": {
+        "Light": "#27272A",
+        "Dark": "#E4E4E7"
+      },
+      "description": ""
+    },
+    "bg/strongest": {
+      "value": {
+        "Light": "#09090B",
+        "Dark": "#FAFAFA"
+      },
+      "description": ""
+    },
+    "text/static": {
+      "value": {
+        "Light": "#FFFFFF",
+        "Dark": "#000000"
+      },
+      "description": ""
+    },
+    "text/disabled": {
+      "value": {
+        "Light": "#D4D4D8",
+        "Dark": "#52525B"
+      },
+      "description": ""
+    },
+    "text/placeholder": {
+      "value": {
+        "Light": "#A1A1AA",
+        "Dark": "#71717A"
+      },
+      "description": ""
+    },
+    "text/body": {
+      "value": {
+        "Light": "#52525B",
+        "Dark": "#D4D4D8"
+      },
+      "description": ""
+    },
+    "text/strongest": {
+      "value": {
+        "Light": "#09090B",
+        "Dark": "#FAFAFA"
+      },
+      "description": ""
+    },
+    "icon/static": {
+      "value": {
+        "Light": "#FFFFFF",
+        "Dark": "#000000"
+      },
+      "description": ""
+    },
+    "icon/disabled": {
+      "value": {
+        "Light": "#D4D4D8",
+        "Dark": "#52525B"
+      },
+      "description": ""
+    },
+    "icon/placeholder": {
+      "value": {
+        "Light": "#A1A1AA",
+        "Dark": "#71717A"
+      },
+      "description": ""
+    },
+    "icon/body": {
+      "value": {
+        "Light": "#52525B",
+        "Dark": "#D4D4D8"
+      },
+      "description": ""
+    },
+    "icon/strongest": {
+      "value": {
+        "Light": "#09090B",
+        "Dark": "#FAFAFA"
+      },
+      "description": ""
+    },
+    "stroke/static": {
+      "value": {
+        "Light": "#FFFFFF",
+        "Dark": "#000000"
+      },
+      "description": ""
+    },
+    "stroke/weakest": {
+      "value": {
+        "Light": "#FAFAFA",
+        "Dark": "#18181B"
+      },
+      "description": ""
+    },
+    "stroke/weak": {
+      "value": {
+        "Light": "#F4F4F5",
+        "Dark": "#27272A"
+      },
+      "description": ""
+    },
+    "stroke/light": {
+      "value": {
+        "Light": "#E4E4E7",
+        "Dark": "#3F3F46"
+      },
+      "description": ""
+    },
+    "stroke/medium": {
+      "value": {
+        "Light": "#D4D4D8",
+        "Dark": "#71717A"
+      },
+      "description": ""
+    },
+    "stroke/heavy": {
+      "value": {
+        "Light": "#3F3F46",
+        "Dark": "#D4D4D8"
+      },
+      "description": ""
+    },
+    "stroke/strong": {
+      "value": {
+        "Light": "#27272A",
+        "Dark": "#E4E4E7"
+      },
+      "description": ""
+    },
+    "stroke/strongest": {
+      "value": {
+        "Light": "#09090B",
+        "Dark": "#FAFAFA"
+      },
+      "description": ""
+    },
+    "primary/primary-weakest": {
+      "value": {
+        "Light": "#EEF2FF",
+        "Dark": "#6366F129"
+      },
+      "description": ""
+    },
+    "primary/primary-weak": {
+      "value": {
+        "Light": "#E0E7FF",
+        "Dark": "#6366F13D"
+      },
+      "description": ""
+    },
+    "primary/primary-base": {
+      "value": {
+        "Light": "#615FFF",
+        "Dark": "#615FFF"
+      },
+      "description": ""
+    },
+    "primary/primary-strong": {
+      "value": {
+        "Light": "#4F39F6",
+        "Dark": "#818CF8"
+      },
+      "description": ""
+    },
+    "primary/primary-strongest": {
+      "value": {
+        "Light": "#312E81",
+        "Dark": "#C7D2FE"
+      },
+      "description": ""
+    },
+    "error/weakest": {
+      "value": {
+        "Light": "#FEF2F2",
+        "Dark": "#FB2C3629"
+      },
+      "description": ""
+    },
+    "error/weak": {
+      "value": {
+        "Light": "#FFE2E2",
+        "Dark": "#FB2C363D"
+      },
+      "description": ""
+    },
+    "error/base": {
+      "value": {
+        "Light": "#E7000B",
+        "Dark": "#FB2C36"
+      },
+      "description": ""
+    },
+    "error/strong": {
+      "value": {
+        "Light": "#C10007",
+        "Dark": "#FF6467"
+      },
+      "description": ""
+    },
+    "error/strongest": {
+      "value": {
+        "Light": "#82181A",
+        "Dark": "#FFC9C9"
+      },
+      "description": ""
+    },
+    "success/weakest": {
+      "value": {
+        "Light": "#F0FDF4",
+        "Dark": "#00C95029"
+      },
+      "description": ""
+    },
+    "success/weak": {
+      "value": {
+        "Light": "#DCFCE7",
+        "Dark": "#00C9503D"
+      },
+      "description": ""
+    },
+    "success/base": {
+      "value": {
+        "Light": "#00A63E",
+        "Dark": "#00C950"
+      },
+      "description": ""
+    },
+    "success/strong": {
+      "value": {
+        "Light": "#008236",
+        "Dark": "#05DF72"
+      },
+      "description": ""
+    },
+    "success/strongest": {
+      "value": {
+        "Light": "#0D542B",
+        "Dark": "#B9F8CF"
+      },
+      "description": ""
+    },
+    "warning/weakest": {
+      "value": {
+        "Light": "#FFF7ED",
+        "Dark": "#FF690029"
+      },
+      "description": ""
+    },
+    "warning/weak": {
+      "value": {
+        "Light": "#FFEDD4",
+        "Dark": "#FF69003D"
+      },
+      "description": ""
+    },
+    "warning/base": {
+      "value": {
+        "Light": "#F54900",
+        "Dark": "#FF6900"
+      },
+      "description": ""
+    },
+    "warning/strong": {
+      "value": {
+        "Light": "#CA3500",
+        "Dark": "#FF8904"
+      },
+      "description": ""
+    },
+    "warning/strongest": {
+      "value": {
+        "Light": "#7E2A0C",
+        "Dark": "#FFD6A7"
+      },
+      "description": ""
+    },
+    "info/weakest": {
+      "value": {
+        "Light": "#EFF6FF",
+        "Dark": "#3B82F629"
+      },
+      "description": ""
+    },
+    "info/weak": {
+      "value": {
+        "Light": "#DBEAFE",
+        "Dark": "#3B82F63D"
+      },
+      "description": ""
+    },
+    "info/base": {
+      "value": {
+        "Light": "#2563EB",
+        "Dark": "#3B82F6"
+      },
+      "description": ""
+    },
+    "info/strong": {
+      "value": {
+        "Light": "#1D4ED8",
+        "Dark": "#60A5FA"
+      },
+      "description": ""
+    },
+    "info/strongest": {
+      "value": {
+        "Light": "#1E3A8A",
+        "Dark": "#BFDBFE"
+      },
+      "description": ""
+    },
+    "feature/weakest": {
+      "value": {
+        "Light": "#EEF2FF",
+        "Dark": "#6366F129"
+      },
+      "description": ""
+    },
+    "feature/weak": {
+      "value": {
+        "Light": "#E0E7FF",
+        "Dark": "#6366F13D"
+      },
+      "description": ""
+    },
+    "feature/base": {
+      "value": {
+        "Light": "#4F39F6",
+        "Dark": "#615FFF"
+      },
+      "description": ""
+    },
+    "feature/strong": {
+      "value": {
+        "Light": "#432DD7",
+        "Dark": "#818CF8"
+      },
+      "description": ""
+    },
+    "feature/strongest": {
+      "value": {
+        "Light": "#312E81",
+        "Dark": "#C7D2FE"
+      },
+      "description": ""
+    },
+    "verified/weakest": {
+      "value": {
+        "Light": "#F0F9FF",
+        "Dark": "#0EA5E929"
+      },
+      "description": ""
+    },
+    "verified/weak": {
+      "value": {
+        "Light": "#E0F2FE",
+        "Dark": "#0EA5E93D"
+      },
+      "description": ""
+    },
+    "verified/base": {
+      "value": {
+        "Light": "#0284C7",
+        "Dark": "#0EA5E9"
+      },
+      "description": ""
+    },
+    "verified/strong": {
+      "value": {
+        "Light": "#0369A1",
+        "Dark": "#38BDF8"
+      },
+      "description": ""
+    },
+    "verified/strongest": {
+      "value": {
+        "Light": "#0C4A6E",
+        "Dark": "#BAE6FD"
+      },
+      "description": ""
+    },
+    "highlighted/weakest": {
+      "value": {
+        "Light": "#FDF4FF",
+        "Dark": "#D946EF29"
+      },
+      "description": ""
+    },
+    "highlighted/weak": {
+      "value": {
+        "Light": "#FAE8FF",
+        "Dark": "#D946EF3D"
+      },
+      "description": ""
+    },
+    "highlighted/base": {
+      "value": {
+        "Light": "#C026D3",
+        "Dark": "#D946EF"
+      },
+      "description": ""
+    },
+    "highlighted/strong": {
+      "value": {
+        "Light": "#A21CAF",
+        "Dark": "#E879F9"
+      },
+      "description": ""
+    },
+    "highlighted/strongest": {
+      "value": {
+        "Light": "#701A75",
+        "Dark": "#F5D0FE"
+      },
+      "description": ""
+    },
+    "away/weakest": {
+      "value": {
+        "Light": "#FEFCE8",
+        "Dark": "#F0B10029"
+      },
+      "description": ""
+    },
+    "away/weak": {
+      "value": {
+        "Light": "#FEF9C2",
+        "Dark": "#F0B1003D"
+      },
+      "description": ""
+    },
+    "away/base": {
+      "value": {
+        "Light": "#D08700",
+        "Dark": "#F0B100"
+      },
+      "description": ""
+    },
+    "away/strong": {
+      "value": {
+        "Light": "#A65F00",
+        "Dark": "#FDC700"
+      },
+      "description": ""
+    },
+    "away/strongest": {
+      "value": {
+        "Light": "#733E0A",
+        "Dark": "#FFF085"
+      },
+      "description": ""
+    },
+    "stable/weakest": {
+      "value": {
+        "Light": "#FAFAFA",
+        "Dark": "#71717A29"
+      },
+      "description": ""
+    },
+    "stable/weak": {
+      "value": {
+        "Light": "#F4F4F5",
+        "Dark": "#71717A3D"
+      },
+      "description": ""
+    },
+    "stable/base": {
+      "value": {
+        "Light": "#52525B",
+        "Dark": "#71717A"
+      },
+      "description": ""
+    },
+    "stable/strong": {
+      "value": {
+        "Light": "#3F3F46",
+        "Dark": "#A1A1AA"
+      },
+      "description": ""
+    },
+    "stable/strongest": {
+      "value": {
+        "Light": "#18181B",
+        "Dark": "#E4E4E7"
+      },
+      "description": ""
+    },
+    "overlay/scrim": {
+      "value": {
+        "Light": "#0000007A",
+        "Dark": "#FFFFFF7A"
+      },
+      "description": ""
+    },
+    "overlay/scrim-strong": {
+      "value": {
+        "Light": "#000000A3",
+        "Dark": "#FFFFFFA3"
+      },
+      "description": ""
+    },
+    "overlay/hover": {
+      "value": {
+        "Light": "#00000014",
+        "Dark": "#FFFFFF14"
+      },
+      "description": ""
+    },
+    "overlay/active": {
+      "value": {
+        "Light": "#00000029",
+        "Dark": "#FFFFFF29"
+      },
+      "description": ""
+    },
+    "overlay/hover-inverted": {
+      "value": {
+        "Light": "#FFFFFF14",
+        "Dark": "#00000014"
+      },
+      "description": ""
+    },
+    "overlay/active-inverted": {
+      "value": {
+        "Light": "#FFFFFF29",
+        "Dark": "#00000029"
+      },
+      "description": ""
+    },
+    "shadow/xs": {
+      "value": {
+        "Light": "#00000014",
+        "Dark": "#FFFFFF14"
+      },
+      "description": ""
+    },
+    "shadow/sm": {
+      "value": {
+        "Light": "#00000029",
+        "Dark": "#FFFFFF29"
+      },
+      "description": ""
+    },
+    "shadow/md": {
+      "value": {
+        "Light": "#0000003D",
+        "Dark": "#FFFFFF3D"
+      },
+      "description": ""
+    }
+  },
+  "effects": {
+    "focus-ring/colors/primary/color-inner": {
+      "value": {
+        "Light": "#FAFAFA",
+        "Dark": "#09090B"
+      },
+      "description": ""
+    },
+    "focus-ring/0/ring-spread": {
+      "value": {
+        "Light": 2,
+        "Dark": 2
+      },
+      "description": ""
+    },
+    "focus-ring/0/offset-spread": {
+      "value": {
+        "Light": 0,
+        "Dark": 0
+      },
+      "description": ""
+    },
+    "focus-ring/1/ring-spread": {
+      "value": {
+        "Light": 3,
+        "Dark": 3
+      },
+      "description": ""
+    },
+    "focus-ring/1/offset-spread": {
+      "value": {
+        "Light": 1,
+        "Dark": 1
+      },
+      "description": ""
+    },
+    "focus-ring/2/ring-spread": {
+      "value": {
+        "Light": 4,
+        "Dark": 4
+      },
+      "description": ""
+    },
+    "focus-ring/2/offset-spread": {
+      "value": {
+        "Light": 2,
+        "Dark": 2
+      },
+      "description": ""
+    },
+    "focus-ring/3/ring-spread": {
+      "value": {
+        "Light": 6,
+        "Dark": 6
+      },
+      "description": ""
+    },
+    "focus-ring/3/offset-spread": {
+      "value": {
+        "Light": 3,
+        "Dark": 3
+      },
+      "description": ""
+    },
+    "focus-ring/colors/primary/color-outer": {
+      "value": {
+        "Light": "#615FFF",
+        "Dark": "#615FFF"
+      },
+      "description": ""
+    },
+    "focus-ring/colors/neutral/color-inner": {
+      "value": {
+        "Light": "#FFFFFF",
+        "Dark": "#09090B"
+      },
+      "description": ""
+    },
+    "focus-ring/colors/neutral/color-outer": {
+      "value": {
+        "Light": "#09090B",
+        "Dark": "#E4E4E7"
+      },
+      "description": ""
+    },
+    "focus-ring/colors/inverse/color-inner": {
+      "value": {
+        "Light": "#FAFAFA",
+        "Dark": "#09090B"
+      },
+      "description": ""
+    },
+    "focus-ring/colors/inverse/color-outer": {
+      "value": {
+        "Light": "#09090B",
+        "Dark": "#FAFAFA"
+      },
+      "description": ""
+    },
+    "focus-ring/colors/success/color-inner": {
+      "value": {
+        "Light": "#FAFAFA",
+        "Dark": "#09090B"
+      },
+      "description": ""
+    },
+    "focus-ring/colors/success/color-outer": {
+      "value": {
+        "Light": "#00A63E",
+        "Dark": "#00A63E"
+      },
+      "description": ""
+    },
+    "focus-ring/colors/error/color-inner": {
+      "value": {
+        "Light": "#FAFAFA",
+        "Dark": "#09090B"
+      },
+      "description": ""
+    },
+    "focus-ring/colors/error/color-outer": {
+      "value": {
+        "Light": "#E7000B",
+        "Dark": "#C10007"
+      },
+      "description": ""
+    },
+    "focus-ring/colors/info/color-inner": {
+      "value": {
+        "Light": "#FAFAFA",
+        "Dark": "#09090B"
+      },
+      "description": ""
+    },
+    "focus-ring/colors/info/color-outer": {
+      "value": {
+        "Light": "#2563EB",
+        "Dark": "#2563EB"
+      },
+      "description": ""
+    },
+    "shadows/neutral": {
+      "value": {
+        "Light": "#00000014",
+        "Dark": "#27272A"
+      },
+      "description": ""
+    },
+    "shadows/interactive/primary/base": {
+      "value": {
+        "Light": "#615FFF",
+        "Dark": "#615FFF"
+      },
+      "description": ""
+    },
+    "shadows/interactive/primary/inner": {
+      "value": {
+        "Light": "#FFFFFF29",
+        "Dark": "#FFFFFF29"
+      },
+      "description": ""
+    },
+    "shadows/interactive/primary/hover": {
+      "value": {
+        "Light": "#4F39F6",
+        "Dark": "#4F39F6"
+      },
+      "description": ""
+    },
+    "shadows/interactive/primary/drop": {
+      "value": {
+        "Light": "#E0E7FF",
+        "Dark": "#432DD7"
+      },
+      "description": ""
+    },
+    "shadows/interactive/neutral/base": {
+      "value": {
+        "Light": "#27272A",
+        "Dark": "#E4E4E7"
+      },
+      "description": ""
+    },
+    "shadows/interactive/neutral/hover": {
+      "value": {
+        "Light": "#09090B",
+        "Dark": "#FAFAFA"
+      },
+      "description": ""
+    },
+    "shadows/interactive/neutral/drop": {
+      "value": {
+        "Light": "#3F3F46",
+        "Dark": "#3F3F46"
+      },
+      "description": ""
+    },
+    "shadows/interactive/neutral/inner": {
+      "value": {
+        "Light": "#3F3F46",
+        "Dark": "#D4D4D8"
+      },
+      "description": ""
+    },
+    "shadows/interactive/inverse/base": {
+      "value": {
+        "Light": "#FAFAFA",
+        "Dark": "#18181B"
+      },
+      "description": ""
+    },
+    "shadows/interactive/inverse/hover": {
+      "value": {
+        "Light": "#E4E4E7",
+        "Dark": "#3F3F46"
+      },
+      "description": ""
+    },
+    "shadows/interactive/inverse/drop": {
+      "value": {
+        "Light": "#71717A",
+        "Dark": "#3F3F46"
+      },
+      "description": ""
+    },
+    "shadows/interactive/inverse/inner": {
+      "value": {
+        "Light": "#F4F4F5",
+        "Dark": "#3F3F46"
+      },
+      "description": ""
+    },
+    "shadows/interactive/error/base": {
+      "value": {
+        "Light": "#C10007",
+        "Dark": "#E7000B"
+      },
+      "description": ""
+    },
+    "shadows/interactive/error/hover": {
+      "value": {
+        "Light": "#E7000B",
+        "Dark": "#FB2C36"
+      },
+      "description": ""
+    },
+    "shadows/interactive/error/drop": {
+      "value": {
+        "Light": "#FFE2E2",
+        "Dark": "#C10007"
+      },
+      "description": ""
+    },
+    "shadows/interactive/error/inner": {
+      "value": {
+        "Light": "#FFFFFF29",
+        "Dark": "#FFFFFF29"
+      },
+      "description": ""
+    },
+    "shadows/interactive/success/base": {
+      "value": {
+        "Light": "#00A63E",
+        "Dark": "#00A63E"
+      },
+      "description": ""
+    },
+    "shadows/interactive/success/inner": {
+      "value": {
+        "Light": "#FFFFFF29",
+        "Dark": "#FFFFFF29"
+      },
+      "description": ""
+    },
+    "shadows/interactive/success/hover": {
+      "value": {
+        "Light": "#00C950",
+        "Dark": "#00C950"
+      },
+      "description": ""
+    },
+    "shadows/interactive/success/drop": {
+      "value": {
+        "Light": "#DCFCE7",
+        "Dark": "#008236"
+      },
+      "description": ""
+    },
+    "shadows/interactive/info/base": {
+      "value": {
+        "Light": "#2563EB",
+        "Dark": "#2563EB"
+      },
+      "description": ""
+    },
+    "shadows/interactive/info/inner": {
+      "value": {
+        "Light": "#FFFFFF29",
+        "Dark": "#FFFFFF29"
+      },
+      "description": ""
+    },
+    "shadows/interactive/info/hover": {
+      "value": {
+        "Light": "#3B82F6",
+        "Dark": "#3B82F6"
+      },
+      "description": ""
+    },
+    "shadows/interactive/info/drop": {
+      "value": {
+        "Light": "#DBEAFE",
+        "Dark": "#1D4ED8"
+      },
+      "description": ""
+    }
+  },
+  "motion-primitives": {
+    "easing/ease-smooth": {
+      "value": {
+        "x1": 0.22,
+        "y1": 1,
+        "x2": 0.36,
+        "y2": 1
+      },
+      "description": "default, use for almost everything"
+    },
+    "easing/ease-out": {
+      "value": {
+        "x1": 0.17,
+        "y1": 1,
+        "x2": 0.32,
+        "y2": 1
+      },
+      "description": "for decorative enterances"
+    },
+    "easing/ease-spring": {
+      "value": {
+        "x1": 0.35,
+        "y1": 1.55,
+        "x2": 0.65,
+        "y2": 1
+      },
+      "description": "use for badges, pops, overshoot"
+    },
+    "easing/ease-in-out": {
+      "value": {
+        "x1": 0.66,
+        "y1": 0,
+        "x2": 0.34,
+        "y2": 1
+      },
+      "description": "symmetric moves"
+    },
+    "Timing/duration-fast": {
+      "value": 0.15,
+      "description": ""
+    },
+    "Timing/duration-normal": {
+      "value": 0.2,
+      "description": ""
+    },
+    "Timing/duration-slow": {
+      "value": 0.28,
+      "description": ""
+    }
+  },
+  "animation-tokens": {
+    "entrance-fade/opacity-start": {
+      "value": 0,
+      "description": ""
+    },
+    "entrance-fade/opacity-end": {
+      "value": 1,
+      "description": ""
+    },
+    "entrance-fade/translateY-start": {
+      "value": 6,
+      "description": ""
+    },
+    "entrance-fade/translateY-end": {
+      "value": 0,
+      "description": ""
+    },
+    "entrance-fade/blur-start": {
+      "value": 2,
+      "description": ""
+    },
+    "entrance-fade/blur-end": {
+      "value": 0,
+      "description": ""
+    },
+    "entrance-fade/easing": {
+      "value": {
+        "x1": 0.22,
+        "y1": 1,
+        "x2": 0.36,
+        "y2": 1
+      },
+      "description": "aliases to easing/ease-smooth"
+    },
+    "entrance-fade/duration": {
+      "value": 0.28,
+      "description": "aliases to Timing/duration-slow"
     }
   }
 }

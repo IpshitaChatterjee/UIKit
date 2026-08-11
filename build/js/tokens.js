@@ -1857,7 +1857,467 @@ export const SpacingL3ComponentXs = { Desktop: 8, Tablet: 8, Phone: 8 };
 export const SpacingL3Component2xs = { Desktop: 6, Tablet: 6, Phone: 6 };
 export const SpacingL3Component3xs = { Desktop: 4, Tablet: 4, Phone: 4 };
 export const SpacingL3ComponentNone = { Desktop: 0, Tablet: 0, Phone: 0 };
-export const RadiusResponsiveRoundedS = 4;
-export const RadiusResponsiveRoundedM = 6;
-export const RadiusResponsiveRoundedL = 8;
-export const RadiusResponsiveRoundedXl = 12;
+export const RadiusCornerRoundedNone = { Desktop: 0, Tablet: 0, Mobile: 0 };
+export const RadiusCornerRoundedXs = { Desktop: 2, Tablet: 2, Mobile: 2 };
+export const RadiusCornerRoundedS = { Desktop: 4, Tablet: 4, Mobile: 4 };
+export const RadiusCornerRoundedM = { Desktop: 6, Tablet: 6, Mobile: 6 };
+export const RadiusCornerRoundedL = { Desktop: 8, Tablet: 8, Mobile: 8 };
+export const RadiusCornerRoundedXl = { Desktop: 12, Tablet: 12, Mobile: 12 };
+export const RadiusCornerRounded2xl = { Desktop: 16, Tablet: 16, Mobile: 16 };
+export const RadiusCornerRounded3xl = { Desktop: 24, Tablet: 24, Mobile: 24 };
+export const RadiusCornerRounded4xl = { Desktop: 32, Tablet: 32, Mobile: 32 };
+export const RadiusCornerRounded5xl = { Desktop: 48, Tablet: 48, Mobile: 48 };
+export const RadiusCornerRoundedFull = {
+  Desktop: 999,
+  Tablet: 999,
+  Mobile: 999,
+};
+export const RadiusResponsiveRoundedNone = { Desktop: 0, Tablet: 0, Mobile: 0 };
+export const RadiusResponsiveRoundedS = { Desktop: 4, Tablet: 2, Mobile: 2 };
+export const RadiusResponsiveRoundedM = { Desktop: 6, Tablet: 4, Mobile: 4 };
+export const RadiusResponsiveRoundedL = { Desktop: 8, Tablet: 6, Mobile: 6 };
+export const RadiusResponsiveRoundedXl = { Desktop: 12, Tablet: 8, Mobile: 8 };
+export const RadiusResponsiveRounded2xl = {
+  Desktop: 16,
+  Tablet: 12,
+  Mobile: 12,
+};
+export const RadiusResponsiveRounded3xl = {
+  Desktop: 24,
+  Tablet: 16,
+  Mobile: 12,
+};
+export const RadiusResponsiveRounded4xl = {
+  Desktop: 32,
+  Tablet: 24,
+  Mobile: 16,
+};
+export const RadiusResponsiveRounded5xl = {
+  Desktop: 48,
+  Tablet: 32,
+  Mobile: 24,
+};
+export const RadiusResponsiveRoundedFull = {
+  Desktop: 999,
+  Tablet: 999,
+  Mobile: 999,
+};
+export const ColorTokensStaticWhiteWhite = {
+  Light: "#FFFFFF",
+  Dark: "#FFFFFF",
+};
+export const ColorTokensStaticWhiteWhiteAlpha80 = {
+  Light: "#FFFFFFCC",
+  Dark: "#FFFFFFCC",
+};
+export const ColorTokensStaticWhiteWhiteAlpha64 = {
+  Light: "#FFFFFFA3",
+  Dark: "#FFFFFFA3",
+};
+export const ColorTokensStaticWhiteWhiteAlpha48 = {
+  Light: "#FFFFFF7A",
+  Dark: "#FFFFFF7A",
+};
+export const ColorTokensStaticWhiteWhiteAlpha32 = {
+  Light: "#FFFFFF52",
+  Dark: "#FFFFFF52",
+};
+export const ColorTokensStaticWhiteWhiteAlpha24 = {
+  Light: "#FFFFFF3D",
+  Dark: "#FFFFFF3D",
+};
+export const ColorTokensStaticWhiteWhiteAlpha16 = {
+  Light: "#FFFFFF29",
+  Dark: "#FFFFFF29",
+};
+export const ColorTokensStaticWhiteWhiteAlpha8 = {
+  Light: "#FFFFFF14",
+  Dark: "#FFFFFF14",
+};
+export const ColorTokensStaticWhiteWhiteAlpha0 = {
+  Light: "#FFFFFF00",
+  Dark: "#FFFFFF00",
+};
+export const ColorTokensStaticBlackBlack = {
+  Light: "#000000",
+  Dark: "#000000",
+};
+export const ColorTokensStaticBlackBlackAlpha80 = {
+  Light: "#000000CC",
+  Dark: "#000000CC",
+};
+export const ColorTokensStaticBlackBlackAlpha64 = {
+  Light: "#000000A3",
+  Dark: "#000000A3",
+};
+export const ColorTokensStaticBlackBlackAlpha48 = {
+  Light: "#0000007A",
+  Dark: "#0000007A",
+};
+export const ColorTokensStaticBlackBlackAlpha32 = {
+  Light: "#00000052",
+  Dark: "#00000052",
+};
+export const ColorTokensStaticBlackBlackAlpha24 = {
+  Light: "#0000003D",
+  Dark: "#0000003D",
+};
+export const ColorTokensStaticBlackBlackAlpha16 = {
+  Light: "#00000029",
+  Dark: "#00000029",
+};
+export const ColorTokensStaticBlackBlackAlpha8 = {
+  Light: "#00000014",
+  Dark: "#00000014",
+};
+export const ColorTokensStaticBlackBlackAlpha0 = {
+  Light: "#00000000",
+  Dark: "#00000000",
+};
+export const ColorTokensBgStatic = { Light: "#FFFFFF", Dark: "#000000" };
+export const ColorTokensBgWeakest = { Light: "#FAFAFA", Dark: "#18181B" };
+export const ColorTokensBgWeak = { Light: "#F4F4F5", Dark: "#27272A" };
+export const ColorTokensBgLight = { Light: "#E4E4E7", Dark: "#3F3F46" };
+export const ColorTokensBgMedium = { Light: "#D4D4D8", Dark: "#71717A" };
+export const ColorTokensBgHeavy = { Light: "#3F3F46", Dark: "#D4D4D8" };
+export const ColorTokensBgStrong = { Light: "#27272A", Dark: "#E4E4E7" };
+export const ColorTokensBgStrongest = { Light: "#09090B", Dark: "#FAFAFA" };
+export const ColorTokensTextStatic = { Light: "#FFFFFF", Dark: "#000000" };
+export const ColorTokensTextDisabled = { Light: "#D4D4D8", Dark: "#52525B" };
+export const ColorTokensTextPlaceholder = { Light: "#A1A1AA", Dark: "#71717A" };
+export const ColorTokensTextBody = { Light: "#52525B", Dark: "#D4D4D8" };
+export const ColorTokensTextStrongest = { Light: "#09090B", Dark: "#FAFAFA" };
+export const ColorTokensIconStatic = { Light: "#FFFFFF", Dark: "#000000" };
+export const ColorTokensIconDisabled = { Light: "#D4D4D8", Dark: "#52525B" };
+export const ColorTokensIconPlaceholder = { Light: "#A1A1AA", Dark: "#71717A" };
+export const ColorTokensIconBody = { Light: "#52525B", Dark: "#D4D4D8" };
+export const ColorTokensIconStrongest = { Light: "#09090B", Dark: "#FAFAFA" };
+export const ColorTokensStrokeStatic = { Light: "#FFFFFF", Dark: "#000000" };
+export const ColorTokensStrokeWeakest = { Light: "#FAFAFA", Dark: "#18181B" };
+export const ColorTokensStrokeWeak = { Light: "#F4F4F5", Dark: "#27272A" };
+export const ColorTokensStrokeLight = { Light: "#E4E4E7", Dark: "#3F3F46" };
+export const ColorTokensStrokeMedium = { Light: "#D4D4D8", Dark: "#71717A" };
+export const ColorTokensStrokeHeavy = { Light: "#3F3F46", Dark: "#D4D4D8" };
+export const ColorTokensStrokeStrong = { Light: "#27272A", Dark: "#E4E4E7" };
+export const ColorTokensStrokeStrongest = { Light: "#09090B", Dark: "#FAFAFA" };
+export const ColorTokensPrimaryPrimaryWeakest = {
+  Light: "#EEF2FF",
+  Dark: "#6366F129",
+};
+export const ColorTokensPrimaryPrimaryWeak = {
+  Light: "#E0E7FF",
+  Dark: "#6366F13D",
+};
+export const ColorTokensPrimaryPrimaryBase = {
+  Light: "#615FFF",
+  Dark: "#615FFF",
+};
+export const ColorTokensPrimaryPrimaryStrong = {
+  Light: "#4F39F6",
+  Dark: "#818CF8",
+};
+export const ColorTokensPrimaryPrimaryStrongest = {
+  Light: "#312E81",
+  Dark: "#C7D2FE",
+};
+export const ColorTokensErrorWeakest = { Light: "#FEF2F2", Dark: "#FB2C3629" };
+export const ColorTokensErrorWeak = { Light: "#FFE2E2", Dark: "#FB2C363D" };
+export const ColorTokensErrorBase = { Light: "#E7000B", Dark: "#FB2C36" };
+export const ColorTokensErrorStrong = { Light: "#C10007", Dark: "#FF6467" };
+export const ColorTokensErrorStrongest = { Light: "#82181A", Dark: "#FFC9C9" };
+export const ColorTokensSuccessWeakest = {
+  Light: "#F0FDF4",
+  Dark: "#00C95029",
+};
+export const ColorTokensSuccessWeak = { Light: "#DCFCE7", Dark: "#00C9503D" };
+export const ColorTokensSuccessBase = { Light: "#00A63E", Dark: "#00C950" };
+export const ColorTokensSuccessStrong = { Light: "#008236", Dark: "#05DF72" };
+export const ColorTokensSuccessStrongest = {
+  Light: "#0D542B",
+  Dark: "#B9F8CF",
+};
+export const ColorTokensWarningWeakest = {
+  Light: "#FFF7ED",
+  Dark: "#FF690029",
+};
+export const ColorTokensWarningWeak = { Light: "#FFEDD4", Dark: "#FF69003D" };
+export const ColorTokensWarningBase = { Light: "#F54900", Dark: "#FF6900" };
+export const ColorTokensWarningStrong = { Light: "#CA3500", Dark: "#FF8904" };
+export const ColorTokensWarningStrongest = {
+  Light: "#7E2A0C",
+  Dark: "#FFD6A7",
+};
+export const ColorTokensInfoWeakest = { Light: "#EFF6FF", Dark: "#3B82F629" };
+export const ColorTokensInfoWeak = { Light: "#DBEAFE", Dark: "#3B82F63D" };
+export const ColorTokensInfoBase = { Light: "#2563EB", Dark: "#3B82F6" };
+export const ColorTokensInfoStrong = { Light: "#1D4ED8", Dark: "#60A5FA" };
+export const ColorTokensInfoStrongest = { Light: "#1E3A8A", Dark: "#BFDBFE" };
+export const ColorTokensFeatureWeakest = {
+  Light: "#EEF2FF",
+  Dark: "#6366F129",
+};
+export const ColorTokensFeatureWeak = { Light: "#E0E7FF", Dark: "#6366F13D" };
+export const ColorTokensFeatureBase = { Light: "#4F39F6", Dark: "#615FFF" };
+export const ColorTokensFeatureStrong = { Light: "#432DD7", Dark: "#818CF8" };
+export const ColorTokensFeatureStrongest = {
+  Light: "#312E81",
+  Dark: "#C7D2FE",
+};
+export const ColorTokensVerifiedWeakest = {
+  Light: "#F0F9FF",
+  Dark: "#0EA5E929",
+};
+export const ColorTokensVerifiedWeak = { Light: "#E0F2FE", Dark: "#0EA5E93D" };
+export const ColorTokensVerifiedBase = { Light: "#0284C7", Dark: "#0EA5E9" };
+export const ColorTokensVerifiedStrong = { Light: "#0369A1", Dark: "#38BDF8" };
+export const ColorTokensVerifiedStrongest = {
+  Light: "#0C4A6E",
+  Dark: "#BAE6FD",
+};
+export const ColorTokensHighlightedWeakest = {
+  Light: "#FDF4FF",
+  Dark: "#D946EF29",
+};
+export const ColorTokensHighlightedWeak = {
+  Light: "#FAE8FF",
+  Dark: "#D946EF3D",
+};
+export const ColorTokensHighlightedBase = { Light: "#C026D3", Dark: "#D946EF" };
+export const ColorTokensHighlightedStrong = {
+  Light: "#A21CAF",
+  Dark: "#E879F9",
+};
+export const ColorTokensHighlightedStrongest = {
+  Light: "#701A75",
+  Dark: "#F5D0FE",
+};
+export const ColorTokensAwayWeakest = { Light: "#FEFCE8", Dark: "#F0B10029" };
+export const ColorTokensAwayWeak = { Light: "#FEF9C2", Dark: "#F0B1003D" };
+export const ColorTokensAwayBase = { Light: "#D08700", Dark: "#F0B100" };
+export const ColorTokensAwayStrong = { Light: "#A65F00", Dark: "#FDC700" };
+export const ColorTokensAwayStrongest = { Light: "#733E0A", Dark: "#FFF085" };
+export const ColorTokensStableWeakest = { Light: "#FAFAFA", Dark: "#71717A29" };
+export const ColorTokensStableWeak = { Light: "#F4F4F5", Dark: "#71717A3D" };
+export const ColorTokensStableBase = { Light: "#52525B", Dark: "#71717A" };
+export const ColorTokensStableStrong = { Light: "#3F3F46", Dark: "#A1A1AA" };
+export const ColorTokensStableStrongest = { Light: "#18181B", Dark: "#E4E4E7" };
+export const ColorTokensOverlayScrim = {
+  Light: "#0000007A",
+  Dark: "#FFFFFF7A",
+};
+export const ColorTokensOverlayScrimStrong = {
+  Light: "#000000A3",
+  Dark: "#FFFFFFA3",
+};
+export const ColorTokensOverlayHover = {
+  Light: "#00000014",
+  Dark: "#FFFFFF14",
+};
+export const ColorTokensOverlayActive = {
+  Light: "#00000029",
+  Dark: "#FFFFFF29",
+};
+export const ColorTokensOverlayHoverInverted = {
+  Light: "#FFFFFF14",
+  Dark: "#00000014",
+};
+export const ColorTokensOverlayActiveInverted = {
+  Light: "#FFFFFF29",
+  Dark: "#00000029",
+};
+export const ColorTokensShadowXs = { Light: "#00000014", Dark: "#FFFFFF14" };
+export const ColorTokensShadowSm = { Light: "#00000029", Dark: "#FFFFFF29" };
+export const ColorTokensShadowMd = { Light: "#0000003D", Dark: "#FFFFFF3D" };
+export const EffectsFocusRingColorsPrimaryColorInner = {
+  Light: "#FAFAFA",
+  Dark: "#09090B",
+};
+export const EffectsFocusRing0RingSpread = { Light: 2, Dark: 2 };
+export const EffectsFocusRing0OffsetSpread = { Light: 0, Dark: 0 };
+export const EffectsFocusRing1RingSpread = { Light: 3, Dark: 3 };
+export const EffectsFocusRing1OffsetSpread = { Light: 1, Dark: 1 };
+export const EffectsFocusRing2RingSpread = { Light: 4, Dark: 4 };
+export const EffectsFocusRing2OffsetSpread = { Light: 2, Dark: 2 };
+export const EffectsFocusRing3RingSpread = { Light: 6, Dark: 6 };
+export const EffectsFocusRing3OffsetSpread = { Light: 3, Dark: 3 };
+export const EffectsFocusRingColorsPrimaryColorOuter = {
+  Light: "#615FFF",
+  Dark: "#615FFF",
+};
+export const EffectsFocusRingColorsNeutralColorInner = {
+  Light: "#FFFFFF",
+  Dark: "#09090B",
+};
+export const EffectsFocusRingColorsNeutralColorOuter = {
+  Light: "#09090B",
+  Dark: "#E4E4E7",
+};
+export const EffectsFocusRingColorsInverseColorInner = {
+  Light: "#FAFAFA",
+  Dark: "#09090B",
+};
+export const EffectsFocusRingColorsInverseColorOuter = {
+  Light: "#09090B",
+  Dark: "#FAFAFA",
+};
+export const EffectsFocusRingColorsSuccessColorInner = {
+  Light: "#FAFAFA",
+  Dark: "#09090B",
+};
+export const EffectsFocusRingColorsSuccessColorOuter = {
+  Light: "#00A63E",
+  Dark: "#00A63E",
+};
+export const EffectsFocusRingColorsErrorColorInner = {
+  Light: "#FAFAFA",
+  Dark: "#09090B",
+};
+export const EffectsFocusRingColorsErrorColorOuter = {
+  Light: "#E7000B",
+  Dark: "#C10007",
+};
+export const EffectsFocusRingColorsInfoColorInner = {
+  Light: "#FAFAFA",
+  Dark: "#09090B",
+};
+export const EffectsFocusRingColorsInfoColorOuter = {
+  Light: "#2563EB",
+  Dark: "#2563EB",
+};
+export const EffectsShadowsNeutral = { Light: "#00000014", Dark: "#27272A" };
+export const EffectsShadowsInteractivePrimaryBase = {
+  Light: "#615FFF",
+  Dark: "#615FFF",
+};
+export const EffectsShadowsInteractivePrimaryInner = {
+  Light: "#FFFFFF29",
+  Dark: "#FFFFFF29",
+};
+export const EffectsShadowsInteractivePrimaryHover = {
+  Light: "#4F39F6",
+  Dark: "#4F39F6",
+};
+export const EffectsShadowsInteractivePrimaryDrop = {
+  Light: "#E0E7FF",
+  Dark: "#432DD7",
+};
+export const EffectsShadowsInteractiveNeutralBase = {
+  Light: "#27272A",
+  Dark: "#E4E4E7",
+};
+export const EffectsShadowsInteractiveNeutralHover = {
+  Light: "#09090B",
+  Dark: "#FAFAFA",
+};
+export const EffectsShadowsInteractiveNeutralDrop = {
+  Light: "#3F3F46",
+  Dark: "#3F3F46",
+};
+export const EffectsShadowsInteractiveNeutralInner = {
+  Light: "#3F3F46",
+  Dark: "#D4D4D8",
+};
+export const EffectsShadowsInteractiveInverseBase = {
+  Light: "#FAFAFA",
+  Dark: "#18181B",
+};
+export const EffectsShadowsInteractiveInverseHover = {
+  Light: "#E4E4E7",
+  Dark: "#3F3F46",
+};
+export const EffectsShadowsInteractiveInverseDrop = {
+  Light: "#71717A",
+  Dark: "#3F3F46",
+};
+export const EffectsShadowsInteractiveInverseInner = {
+  Light: "#F4F4F5",
+  Dark: "#3F3F46",
+};
+export const EffectsShadowsInteractiveErrorBase = {
+  Light: "#C10007",
+  Dark: "#E7000B",
+};
+export const EffectsShadowsInteractiveErrorHover = {
+  Light: "#E7000B",
+  Dark: "#FB2C36",
+};
+export const EffectsShadowsInteractiveErrorDrop = {
+  Light: "#FFE2E2",
+  Dark: "#C10007",
+};
+export const EffectsShadowsInteractiveErrorInner = {
+  Light: "#FFFFFF29",
+  Dark: "#FFFFFF29",
+};
+export const EffectsShadowsInteractiveSuccessBase = {
+  Light: "#00A63E",
+  Dark: "#00A63E",
+};
+export const EffectsShadowsInteractiveSuccessInner = {
+  Light: "#FFFFFF29",
+  Dark: "#FFFFFF29",
+};
+export const EffectsShadowsInteractiveSuccessHover = {
+  Light: "#00C950",
+  Dark: "#00C950",
+};
+export const EffectsShadowsInteractiveSuccessDrop = {
+  Light: "#DCFCE7",
+  Dark: "#008236",
+};
+export const EffectsShadowsInteractiveInfoBase = {
+  Light: "#2563EB",
+  Dark: "#2563EB",
+};
+export const EffectsShadowsInteractiveInfoInner = {
+  Light: "#FFFFFF29",
+  Dark: "#FFFFFF29",
+};
+export const EffectsShadowsInteractiveInfoHover = {
+  Light: "#3B82F6",
+  Dark: "#3B82F6",
+};
+export const EffectsShadowsInteractiveInfoDrop = {
+  Light: "#DBEAFE",
+  Dark: "#1D4ED8",
+};
+export const MotionPrimitivesEasingEaseSmooth = {
+  x1: 0.22,
+  y1: 1,
+  x2: 0.36,
+  y2: 1,
+};
+export const MotionPrimitivesEasingEaseOut = {
+  x1: 0.17,
+  y1: 1,
+  x2: 0.32,
+  y2: 1,
+};
+export const MotionPrimitivesEasingEaseSpring = {
+  x1: 0.35,
+  y1: 1.55,
+  x2: 0.65,
+  y2: 1,
+};
+export const MotionPrimitivesEasingEaseInOut = {
+  x1: 0.66,
+  y1: 0,
+  x2: 0.34,
+  y2: 1,
+};
+export const MotionPrimitivesTimingDurationFast = 0.15;
+export const MotionPrimitivesTimingDurationNormal = 0.2;
+export const MotionPrimitivesTimingDurationSlow = 0.28;
+export const AnimationTokensEntranceFadeOpacityStart = 0;
+export const AnimationTokensEntranceFadeOpacityEnd = 1;
+export const AnimationTokensEntranceFadeTranslateYStart = 6;
+export const AnimationTokensEntranceFadeTranslateYEnd = 0;
+export const AnimationTokensEntranceFadeBlurStart = 2;
+export const AnimationTokensEntranceFadeBlurEnd = 0;
+export const AnimationTokensEntranceFadeEasing = {
+  x1: 0.22,
+  y1: 1,
+  x2: 0.36,
+  y2: 1,
+};
+export const AnimationTokensEntranceFadeDuration = 0.28;

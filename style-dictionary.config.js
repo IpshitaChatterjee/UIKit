@@ -12,6 +12,7 @@ const PRESENTER_BY_GROUP = {
   Colors: "Color",
   "Primitive Colors": "Color",
   Effect: "Shadow",
+  "Color-tokens": "Color",
 };
 
 // Figma organizes color styles into two layers: raw scales (like
@@ -56,18 +57,37 @@ function formatTextValue(value) {
   return `${weight} ${size}${lineHeight} "${family}"`;
 }
 
-// Spacing and radius variables come from the Figma Variables API as
-// bare numbers (e.g. 8, not "8px"), unlike fill/text/effect which
-// already resolve to CSS-ready strings.
-function formatDimensionValue(value) {
-  return typeof value === "number" ? `${value}px` : value;
+// A Figma EASING variable (motion-primitives, animation-tokens) resolves to
+// a cubic-bezier control-point object — the direct CSS equivalent.
+function isEasingValue(value) {
+  return value && typeof value === "object" && ["x1", "y1", "x2", "y2"].every((k) => typeof value[k] === "number");
+}
+
+function formatEasingValue(value) {
+  const round = (n) => Math.round(n * 1000) / 1000;
+  return `cubic-bezier(${round(value.x1)}, ${round(value.y1)}, ${round(value.x2)}, ${round(value.y2)})`;
+}
+
+// FLOAT variables from the Variables API come through as bare numbers
+// (e.g. 8, not "8px"). Most collections are px dimensions; a couple of
+// specific value families (opacity, TIMING/duration) are unitless or use
+// a different unit — everything else defaults to px.
+function formatScalarValue(value, name) {
+  if (typeof value !== "number") return value;
+  // `name` here is already kebab-transformed (e.g. "Timing/duration-fast"
+  // -> "motion-primitives-timing-duration-fast"), so match on substrings,
+  // not the original slash-delimited Figma path.
+  if (/duration/i.test(name)) return `${value}s`;
+  if (/opacity/i.test(name)) return `${value}`;
+  return `${value}px`;
 }
 
 function formatValue(token) {
   const value = token.value;
   const groupName = token.path[0] || "other";
-  if (groupName === "spacing" || groupName === "radius") return formatDimensionValue(value);
+  if (isEasingValue(value)) return formatEasingValue(value);
   if (typeof value === "string") return value;
+  if (typeof value === "number") return formatScalarValue(value, token.name);
   if (groupName === "effect") return formatShadowValue(value);
   if (groupName === "text" && typeof value === "object") return formatTextValue(value);
   // Fallback for anything else structured (like grid tokens): a
@@ -75,21 +95,44 @@ function formatValue(token) {
   return JSON.stringify(value);
 }
 
-// The spacing-tokens collection (L1-Layout/L2-Section/L3-Component) has
-// Desktop/Tablet/Phone modes with different pixel values per breakpoint —
-// this repo doesn't have a resolved-breakpoint convention to emit real
-// @media rules yet, so each mode gets its own explicit custom property
-// instead. Desktop is the unsuffixed/default name, matching how every
-// other token in this file is referenced today.
-const RESPONSIVE_MODE_SUFFIX = { Desktop: "", Tablet: "-tablet", Phone: "-phone" };
+// Multi-mode tokens (spacing/radius/typography have Desktop+Tablet+Mobile
+// or Phone; color-tokens/effects have Light+Dark) fall into one of two
+// real-world CSS mechanisms. Neither breakpoint is defined anywhere in
+// Figma itself (modes are just names, not px thresholds) — these are
+// conventional, widely-used values (matching Tailwind's md/lg-ish scale),
+// not something pulled from the design file. Adjust here if the design
+// system settles on different numbers.
+const MEDIA_QUERY_BY_KEY = {
+  dark: "@media (prefers-color-scheme: dark)",
+  tablet: "@media (max-width: 1024px)",
+  phone: "@media (max-width: 640px)",
+};
 
-function isResponsiveDimension(groupName, value) {
+// Base/default mode -> null (goes in the plain :root block, unprefixed
+// name). Everything else maps to a media bucket above. "Phone" and
+// "Mobile" are the same breakpoint under two different mode names
+// depending on which Figma collection you're looking at.
+const MODE_TO_MEDIA_KEY = {
+  Desktop: null,
+  Tablet: "tablet",
+  Mobile: "phone",
+  Phone: "phone",
+  Light: null,
+  Dark: "dark",
+};
+
+// Order matters: within a single viewport, "phone" must be declared after
+// "tablet" so it wins the cascade at narrow widths where both max-width
+// queries match (equal specificity, so source order decides).
+const MEDIA_KEY_ORDER = ["dark", "tablet", "phone"];
+
+function isMultiModeValue(value) {
   return (
-    (groupName === "spacing" || groupName === "radius") &&
     value &&
     typeof value === "object" &&
     !Array.isArray(value) &&
-    Object.keys(RESPONSIVE_MODE_SUFFIX).some((mode) => typeof value[mode] === "number")
+    !isEasingValue(value) &&
+    Object.keys(value).some((mode) => mode in MODE_TO_MEDIA_KEY)
   );
 }
 
@@ -99,42 +142,67 @@ function isResponsiveDimension(groupName, value) {
 // properties rather than the shorthand — have nothing to reference.
 // Emit each piece as its own `--{name}-{piece}` custom property
 // alongside the shorthand line, so either usage style works.
+//
+// Returns [{ name, value, mediaKey }] — mediaKey is null for the base
+// :root declaration, or one of MEDIA_QUERY_BY_KEY's keys.
 function formatDeclarations(token) {
   const value = token.value;
   const groupName = token.path[0] || "other";
 
-  if (isResponsiveDimension(groupName, value)) {
-    return Object.entries(RESPONSIVE_MODE_SUFFIX)
-      .filter(([mode]) => typeof value[mode] === "number")
-      .map(([mode, suffix]) => [`${token.name}${suffix}`, formatDimensionValue(value[mode])]);
+  if (isMultiModeValue(value)) {
+    return Object.entries(value)
+      .filter(([mode]) => mode in MODE_TO_MEDIA_KEY)
+      .map(([mode, modeValue]) => ({
+        name: token.name,
+        value: isEasingValue(modeValue) ? formatEasingValue(modeValue) : formatScalarValue(modeValue, token.name),
+        mediaKey: MODE_TO_MEDIA_KEY[mode],
+      }));
   }
 
-  const declarations = [[token.name, formatValue(token)]];
+  const declarations = [{ name: token.name, value: formatValue(token), mediaKey: null }];
 
   if (groupName === "text" && value && typeof value === "object") {
-    if (typeof value.fontSize === "number") declarations.push([`${token.name}-font-size`, `${value.fontSize}px`]);
-    if (typeof value.lineHeightPx === "number") declarations.push([`${token.name}-line-height`, `${value.lineHeightPx}px`]);
-    if (typeof value.letterSpacing === "number") declarations.push([`${token.name}-letter-spacing`, `${value.letterSpacing}px`]);
-    if (value.fontFamily) declarations.push([`${token.name}-font-family`, `"${value.fontFamily}"`]);
-    if (value.fontWeight) declarations.push([`${token.name}-font-weight`, `${value.fontWeight}`]);
+    if (typeof value.fontSize === "number") declarations.push({ name: `${token.name}-font-size`, value: `${value.fontSize}px`, mediaKey: null });
+    if (typeof value.lineHeightPx === "number") declarations.push({ name: `${token.name}-line-height`, value: `${value.lineHeightPx}px`, mediaKey: null });
+    if (typeof value.letterSpacing === "number") declarations.push({ name: `${token.name}-letter-spacing`, value: `${value.letterSpacing}px`, mediaKey: null });
+    if (value.fontFamily) declarations.push({ name: `${token.name}-font-family`, value: `"${value.fontFamily}"`, mediaKey: null });
+    if (value.fontWeight) declarations.push({ name: `${token.name}-font-weight`, value: `${value.fontWeight}`, mediaKey: null });
   }
 
   return declarations;
 }
 
+// Groups a flat declaration list into { base, dark, tablet, phone } and
+// renders each as its own :root block, base first then each @media block
+// in MEDIA_KEY_ORDER — see the ordering note on MEDIA_KEY_ORDER above.
+function renderDeclarationBlocks(declarations) {
+  const buckets = { base: [] };
+  for (const key of MEDIA_KEY_ORDER) buckets[key] = [];
+
+  for (const decl of declarations) {
+    const bucket = decl.mediaKey ? buckets[decl.mediaKey] : buckets.base;
+    bucket.push(`  --${decl.name}: ${decl.value};`);
+  }
+
+  const blocks = [`:root {\n${buckets.base.join("\n")}\n}`];
+  for (const key of MEDIA_KEY_ORDER) {
+    if (buckets[key].length === 0) continue;
+    blocks.push(`${MEDIA_QUERY_BY_KEY[key]} {\n  :root {\n${buckets[key].map((l) => `  ${l}`).join("\n")}\n  }\n}`);
+  }
+  return blocks.join("\n\n");
+}
+
 // The built-in "css/variables" format just does `${token.value}`,
 // which prints "[object Object]" for text/effect tokens since they're
-// structured, not strings. This is the same formatValue() logic as
-// the annotated storybook format below, minus the @tokens comments —
-// a plain :root block for tokens.css, the file components import.
+// structured, not strings. This is the same formatDeclarations() logic
+// as the annotated storybook format below, minus the @tokens comments —
+// a plain :root (+ @media) output for tokens.css, the file components
+// import.
 StyleDictionary.registerFormat({
   name: "css/variables-formatted",
   format: ({ dictionary }) => {
-    const declarations = dictionary.allTokens
-      .flatMap(formatDeclarations)
-      .map(([name, value]) => `  --${name}: ${value};`)
-      .join("\n");
-    return `/**\n * Do not edit directly, this file was auto-generated.\n */\n\n:root {\n${declarations}\n}\n`;
+    const declarations = dictionary.allTokens.flatMap(formatDeclarations);
+    return `/**\n * Do not edit directly, this file was auto-generated.\n */\n\n${renderDeclarationBlocks(declarations)}\n`;
   },
 });
 
@@ -153,12 +221,9 @@ StyleDictionary.registerFormat({
       .map(([category, tokens]) => {
         const presenter = PRESENTER_BY_GROUP[category];
         const presenterLine = presenter ? ` * @presenter ${presenter}\n` : "";
-        const declarations = tokens
-          .flatMap(formatDeclarations)
-          .map(([name, value]) => `  --${name}: ${value};`)
-          .join("\n");
+        const declarations = tokens.flatMap(formatDeclarations);
 
-        return `/**\n * @tokens ${category}\n${presenterLine} */\n:root {\n${declarations}\n}\n`;
+        return `/**\n * @tokens ${category}\n${presenterLine} */\n${renderDeclarationBlocks(declarations)}\n`;
       })
       .join("\n");
   },
