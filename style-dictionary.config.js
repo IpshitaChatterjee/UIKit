@@ -75,6 +75,24 @@ function formatValue(token) {
   return JSON.stringify(value);
 }
 
+// The spacing-tokens collection (L1-Layout/L2-Section/L3-Component) has
+// Desktop/Tablet/Phone modes with different pixel values per breakpoint —
+// this repo doesn't have a resolved-breakpoint convention to emit real
+// @media rules yet, so each mode gets its own explicit custom property
+// instead. Desktop is the unsuffixed/default name, matching how every
+// other token in this file is referenced today.
+const RESPONSIVE_MODE_SUFFIX = { Desktop: "", Tablet: "-tablet", Phone: "-phone" };
+
+function isResponsiveDimension(groupName, value) {
+  return (
+    (groupName === "spacing" || groupName === "radius") &&
+    value &&
+    typeof value === "object" &&
+    !Array.isArray(value) &&
+    Object.keys(RESPONSIVE_MODE_SUFFIX).some((mode) => typeof value[mode] === "number")
+  );
+}
+
 // A text token's `font:` shorthand can't carry letter-spacing (not a
 // component of that CSS shorthand), so components that need it — like
 // Button, which sets font-size/line-height/letter-spacing as separate
@@ -82,9 +100,16 @@ function formatValue(token) {
 // Emit each piece as its own `--{name}-{piece}` custom property
 // alongside the shorthand line, so either usage style works.
 function formatDeclarations(token) {
-  const declarations = [[token.name, formatValue(token)]];
   const value = token.value;
   const groupName = token.path[0] || "other";
+
+  if (isResponsiveDimension(groupName, value)) {
+    return Object.entries(RESPONSIVE_MODE_SUFFIX)
+      .filter(([mode]) => typeof value[mode] === "number")
+      .map(([mode, suffix]) => [`${token.name}${suffix}`, formatDimensionValue(value[mode])]);
+  }
+
+  const declarations = [[token.name, formatValue(token)]];
 
   if (groupName === "text" && value && typeof value === "object") {
     if (typeof value.fontSize === "number") declarations.push([`${token.name}-font-size`, `${value.fontSize}px`]);

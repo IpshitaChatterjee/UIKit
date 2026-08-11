@@ -1,9 +1,9 @@
 {
   "_meta": {
     "source": "files-api (fill/text/effect/grid) + variables-api (spacing/radius)",
-    "fetchedAt": "2026-08-11T16:50:26.866Z",
+    "fetchedAt": "2026-08-11T17:15:00.000Z",
     "fileKey": "nF6XfTdKWVl1P8xvufWjNn",
-    "note": "spacing/radius were backfilled manually from live Figma variables via MCP since the Variables REST API needs a token this environment does not have; scripts/fetch-figma-tokens.js now fetches them automatically on the next sync."
+    "note": "spacing/radius backfilled manually from live Figma variables via MCP (Desktop Bridge) since the Variables REST API needs a token this environment does not have; scripts/fetch-figma-tokens.js now fetches them automatically on the next sync. spacing now includes the full base-spacing-scale primitives plus the L1-Layout/L2-Section/L3-Component semantic layers, each with Desktop/Tablet/Phone mode values where the collection defines them."
   },
   "text": {
     "Display/XL/700": {
@@ -4680,24 +4680,224 @@
     }
   },
   "spacing": {
-    "L3-Component/3xs": {
-      "value": 4,
+    "space-32": {
+      "value": 128,
       "description": ""
     },
-    "L3-Component/2xs": {
-      "value": 6,
+    "space-24": {
+      "value": 96,
       "description": ""
     },
-    "L3-Component/xs": {
-      "value": 8,
+    "space-16": {
+      "value": 64,
       "description": ""
     },
-    "L3-Component/sm": {
+    "space-12": {
+      "value": 48,
+      "description": ""
+    },
+    "space-8": {
+      "value": 32,
+      "description": ""
+    },
+    "space-6": {
+      "value": 24,
+      "description": ""
+    },
+    "space-5": {
+      "value": 20,
+      "description": ""
+    },
+    "space-4": {
+      "value": 16,
+      "description": ""
+    },
+    "space-3": {
+      "value": 12,
+      "description": ""
+    },
+    "space-2-5": {
       "value": 10,
       "description": ""
     },
+    "space-2": {
+      "value": 8,
+      "description": ""
+    },
+    "space-1-5": {
+      "value": 6,
+      "description": ""
+    },
+    "space-1": {
+      "value": 4,
+      "description": ""
+    },
+    "space-0-5": {
+      "value": 2,
+      "description": ""
+    },
+    "space-0": {
+      "value": 0,
+      "description": ""
+    },
+    "L1-Layout/xl": {
+      "value": {
+        "Desktop": 128,
+        "Tablet": 64,
+        "Phone": 48
+      },
+      "description": ""
+    },
+    "L1-Layout/lg": {
+      "value": {
+        "Desktop": 96,
+        "Tablet": 48,
+        "Phone": 32
+      },
+      "description": ""
+    },
+    "L1-Layout/md": {
+      "value": {
+        "Desktop": 64,
+        "Tablet": 32,
+        "Phone": 16
+      },
+      "description": ""
+    },
+    "L1-Layout/sm": {
+      "value": {
+        "Desktop": 48,
+        "Tablet": 24,
+        "Phone": 12
+      },
+      "description": ""
+    },
+    "L1-Layout/xs": {
+      "value": {
+        "Desktop": 32,
+        "Tablet": 16,
+        "Phone": 8
+      },
+      "description": ""
+    },
+    "L1-Layout/none": {
+      "value": {
+        "Desktop": 0,
+        "Tablet": 0,
+        "Phone": 0
+      },
+      "description": ""
+    },
+    "L2-Section/xl": {
+      "value": {
+        "Desktop": 48,
+        "Tablet": 32,
+        "Phone": 20
+      },
+      "description": ""
+    },
+    "L2-Section/lg": {
+      "value": {
+        "Desktop": 32,
+        "Tablet": 20,
+        "Phone": 16
+      },
+      "description": ""
+    },
+    "L2-Section/md": {
+      "value": {
+        "Desktop": 24,
+        "Tablet": 16,
+        "Phone": 12
+      },
+      "description": ""
+    },
+    "L2-Section/sm": {
+      "value": {
+        "Desktop": 16,
+        "Tablet": 16,
+        "Phone": 12
+      },
+      "description": ""
+    },
+    "L2-Section/xs": {
+      "value": {
+        "Desktop": 12,
+        "Tablet": 12,
+        "Phone": 8
+      },
+      "description": ""
+    },
+    "L2-Section/none": {
+      "value": {
+        "Desktop": 0,
+        "Tablet": 0,
+        "Phone": 0
+      },
+      "description": ""
+    },
+    "L3-Component/xl": {
+      "value": {
+        "Desktop": 24,
+        "Tablet": 16,
+        "Phone": 12
+      },
+      "description": ""
+    },
+    "L3-Component/lg": {
+      "value": {
+        "Desktop": 16,
+        "Tablet": 16,
+        "Phone": 12
+      },
+      "description": ""
+    },
     "L3-Component/md": {
-      "value": 12,
+      "value": {
+        "Desktop": 12,
+        "Tablet": 12,
+        "Phone": 8
+      },
+      "description": ""
+    },
+    "L3-Component/sm": {
+      "value": {
+        "Desktop": 10,
+        "Tablet": 8,
+        "Phone": 8
+      },
+      "description": ""
+    },
+    "L3-Component/xs": {
+      "value": {
+        "Desktop": 8,
+        "Tablet": 8,
+        "Phone": 8
+      },
+      "description": ""
+    },
+    "L3-Component/2xs": {
+      "value": {
+        "Desktop": 6,
+        "Tablet": 6,
+        "Phone": 6
+      },
+      "description": ""
+    },
+    "L3-Component/3xs": {
+      "value": {
+        "Desktop": 4,
+        "Tablet": 4,
+        "Phone": 4
+      },
+      "description": ""
+    },
+    "L3-Component/none": {
+      "value": {
+        "Desktop": 0,
+        "Tablet": 0,
+        "Phone": 0
+      },
       "description": ""
     }
   },
