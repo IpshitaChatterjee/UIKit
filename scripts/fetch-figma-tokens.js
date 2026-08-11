@@ -212,6 +212,41 @@ function resolveValue(styleType, node) {
   }
 }
 
+// Figma Styles have no concept of light/dark modes — as a workaround for
+// accounts without Variables API access, dark-mode colors are published
+// as a *second*, differently-named style per token ("tokens-dark/x"
+// alongside "tokens/x") rather than a mode on the same style. Reunite
+// each pair into the {Light, Dark} shape the rest of this pipeline (and
+// style-dictionary.config.js's multi-mode formatter) already expects for
+// color-tokens/effects, instead of leaving them as two unrelated flat
+// "fill" entries. Runs before collectVariableTokens() so that real
+// Variables data (if ever available) takes precedence over this
+// Styles-based fallback for the same token name.
+function pairDarkFillStyles(tokens) {
+  const fill = tokens.fill;
+  if (!fill) return;
+
+  const darkNames = Object.keys(fill).filter((name) => name.startsWith("tokens-dark/"));
+
+  for (const darkName of darkNames) {
+    const bareName = darkName.slice("tokens-dark/".length);
+    const lightName = `tokens/${bareName}`;
+    const lightEntry = fill[lightName];
+    const darkEntry = fill[darkName];
+    if (!lightEntry || typeof lightEntry.value !== "string" || typeof darkEntry.value !== "string") continue;
+
+    const targetBucket = /^(shadows|focus-ring)\//.test(bareName) ? "effects" : "color-tokens";
+    tokens[targetBucket] = tokens[targetBucket] || {};
+    tokens[targetBucket][bareName] = {
+      value: { Light: lightEntry.value, Dark: darkEntry.value },
+      description: lightEntry.description || darkEntry.description || "",
+    };
+
+    delete fill[lightName];
+    delete fill[darkName];
+  }
+}
+
 async function main() {
   const file = await getFile();
   const styles = file.styles || {};
@@ -247,6 +282,8 @@ async function main() {
   if (skipped > 0) {
     console.warn(`Skipped ${skipped} style(s) with no resolvable value.`);
   }
+
+  pairDarkFillStyles(tokens);
 
   const variablesResponse = await getLocalVariables();
   const variableBucketsBefore = new Set(Object.keys(tokens));
