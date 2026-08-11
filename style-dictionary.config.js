@@ -37,11 +37,13 @@ function formatShadowValue(value) {
   return shadows
     .filter((s) => s && typeof s === "object")
     .map((s) => {
+      const inset = s.type === "INNER_SHADOW" ? "inset " : "";
       const x = s.offset?.x ?? 0;
       const y = s.offset?.y ?? 0;
       const blur = s.radius ?? 0;
+      const spread = s.spread ?? 0;
       const color = s.color ?? "rgba(0,0,0,0.25)";
-      return `${x}px ${y}px ${blur}px ${color}`;
+      return `${inset}${x}px ${y}px ${blur}px ${spread}px ${color}`;
     })
     .join(", ");
 }
@@ -54,9 +56,17 @@ function formatTextValue(value) {
   return `${weight} ${size}${lineHeight} "${family}"`;
 }
 
+// Spacing and radius variables come from the Figma Variables API as
+// bare numbers (e.g. 8, not "8px"), unlike fill/text/effect which
+// already resolve to CSS-ready strings.
+function formatDimensionValue(value) {
+  return typeof value === "number" ? `${value}px` : value;
+}
+
 function formatValue(token) {
   const value = token.value;
   const groupName = token.path[0] || "other";
+  if (groupName === "spacing" || groupName === "radius") return formatDimensionValue(value);
   if (typeof value === "string") return value;
   if (groupName === "effect") return formatShadowValue(value);
   if (groupName === "text" && typeof value === "object") return formatTextValue(value);
@@ -64,6 +74,44 @@ function formatValue(token) {
   // readable string rather than the default object-to-string coercion.
   return JSON.stringify(value);
 }
+
+// A text token's `font:` shorthand can't carry letter-spacing (not a
+// component of that CSS shorthand), so components that need it — like
+// Button, which sets font-size/line-height/letter-spacing as separate
+// properties rather than the shorthand — have nothing to reference.
+// Emit each piece as its own `--{name}-{piece}` custom property
+// alongside the shorthand line, so either usage style works.
+function formatDeclarations(token) {
+  const declarations = [[token.name, formatValue(token)]];
+  const value = token.value;
+  const groupName = token.path[0] || "other";
+
+  if (groupName === "text" && value && typeof value === "object") {
+    if (typeof value.fontSize === "number") declarations.push([`${token.name}-font-size`, `${value.fontSize}px`]);
+    if (typeof value.lineHeightPx === "number") declarations.push([`${token.name}-line-height`, `${value.lineHeightPx}px`]);
+    if (typeof value.letterSpacing === "number") declarations.push([`${token.name}-letter-spacing`, `${value.letterSpacing}px`]);
+    if (value.fontFamily) declarations.push([`${token.name}-font-family`, `"${value.fontFamily}"`]);
+    if (value.fontWeight) declarations.push([`${token.name}-font-weight`, `${value.fontWeight}`]);
+  }
+
+  return declarations;
+}
+
+// The built-in "css/variables" format just does `${token.value}`,
+// which prints "[object Object]" for text/effect tokens since they're
+// structured, not strings. This is the same formatValue() logic as
+// the annotated storybook format below, minus the @tokens comments —
+// a plain :root block for tokens.css, the file components import.
+StyleDictionary.registerFormat({
+  name: "css/variables-formatted",
+  format: ({ dictionary }) => {
+    const declarations = dictionary.allTokens
+      .flatMap(formatDeclarations)
+      .map(([name, value]) => `  --${name}: ${value};`)
+      .join("\n");
+    return `/**\n * Do not edit directly, this file was auto-generated.\n */\n\n:root {\n${declarations}\n}\n`;
+  },
+});
 
 StyleDictionary.registerFormat({
   name: "css/design-token-annotated",
@@ -81,7 +129,8 @@ StyleDictionary.registerFormat({
         const presenter = PRESENTER_BY_GROUP[category];
         const presenterLine = presenter ? ` * @presenter ${presenter}\n` : "";
         const declarations = tokens
-          .map((t) => `  --${t.name}: ${formatValue(t)};`)
+          .flatMap(formatDeclarations)
+          .map(([name, value]) => `  --${name}: ${value};`)
           .join("\n");
 
         return `/**\n * @tokens ${category}\n${presenterLine} */\n:root {\n${declarations}\n}\n`;
@@ -99,7 +148,7 @@ export default {
       files: [
         {
           destination: "tokens.css",
-          format: "css/variables",
+          format: "css/variables-formatted",
         },
       ],
     },

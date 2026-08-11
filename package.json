@@ -12,6 +12,7 @@
     "build-storybook": "storybook build"
   },
   "dependencies": {
+    "geist-icons": "^1.3.0",
     "react": "^19.2.8",
     "react-dom": "^19.2.8"
   },
