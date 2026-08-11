@@ -533,7 +533,7 @@
 }
 
 /**
- * @tokens Colors
+ * @tokens Primitive Colors
  * @presenter Color
  */
 :root {
@@ -912,91 +912,6 @@
   --fill-primitives-black-alpha-64: #000000a3;
   --fill-primitives-black-alpha-80: #000000cc;
   --fill-primitives-black-alpha-static: #000000;
-  --fill-tokens-static-white-white: #ffffff;
-  --fill-tokens-static-white-white-alpha-80: #ffffffcc;
-  --fill-tokens-static-white-white-alpha-64: #ffffffa3;
-  --fill-tokens-static-white-white-alpha-48: #ffffff7a;
-  --fill-tokens-static-white-white-alpha-24: #ffffff3d;
-  --fill-tokens-static-white-white-alpha-16: #ffffff29;
-  --fill-tokens-static-white-white-alpha-8: #ffffff14;
-  --fill-tokens-static-white-white-alpha-0: #ffffff00;
-  --fill-tokens-static-black-black: #000000;
-  --fill-tokens-bg-static: #ffffff;
-  --fill-tokens-static-black-black-alpha-80: #000000cc;
-  --fill-tokens-static-black-black-alpha-64: #000000a3;
-  --fill-tokens-bg-weakest: #fafafa;
-  --fill-tokens-static-black-black-alpha-48: #0000007a;
-  --fill-tokens-bg-weak: #f4f4f5;
-  --fill-tokens-static-black-black-alpha-32: #00000052;
-  --fill-tokens-bg-light: #e4e4e7;
-  --fill-tokens-static-black-black-alpha-24: #0000003d;
-  --fill-tokens-bg-medium: #d4d4d8;
-  --fill-tokens-static-black-black-alpha-16: #00000029;
-  --fill-tokens-bg-heavy: #3f3f46;
-  --fill-tokens-static-black-black-alpha-8: #00000014;
-  --fill-tokens-bg-strong: #27272a;
-  --fill-tokens-bg-strongest: #09090b;
-  --fill-tokens-static-black-black-alpha-0: #00000000;
-  --fill-tokens-text-disabled: #d4d4d8;
-  --fill-tokens-text-placeholder: #a1a1aa;
-  --fill-tokens-text-body: #52525b;
-  --fill-tokens-primary-primary-weakest: #eef2ff;
-  --fill-tokens-primary-primary-weak: #e0e7ff;
-  --fill-tokens-primary-primary-base: #615fff;
-  --fill-tokens-primary-primary-strong: #4f39f6;
-  --fill-tokens-primary-primary-strongest: #312e81;
-  --fill-tokens-error-weakest: #fef2f2;
-  --fill-tokens-error-weak: #ffe2e2;
-  --fill-tokens-error-base: #e7000b;
-  --fill-tokens-error-strong: #c10007;
-  --fill-tokens-error-strongest: #82181a;
-  --fill-tokens-success-weakest: #f0fdf4;
-  --fill-tokens-success-weak: #dcfce7;
-  --fill-tokens-success-base: #00a63e;
-  --fill-tokens-success-strong: #008236;
-  --fill-tokens-success-strongest: #0d542b;
-  --fill-tokens-warning-weakest: #fff7ed;
-  --fill-tokens-warning-weak: #ffedd4;
-  --fill-tokens-warning-base: #f54900;
-  --fill-tokens-warning-strong: #ca3500;
-  --fill-tokens-warning-strongest: #7e2a0c;
-  --fill-tokens-info-weakest: #eff6ff;
-  --fill-tokens-info-weak: #dbeafe;
-  --fill-tokens-info-base: #2563eb;
-  --fill-tokens-info-strong: #1d4ed8;
-  --fill-tokens-info-strongest: #1e3a8a;
-  --fill-tokens-verified-weakest: #f0f9ff;
-  --fill-tokens-verified-weak: #e0f2fe;
-  --fill-tokens-verified-base: #0284c7;
-  --fill-tokens-verified-strong: #0369a1;
-  --fill-tokens-verified-strongest: #0c4a6e;
-  --fill-tokens-feature-weakest: #eef2ff;
-  --fill-tokens-feature-weak: #e0e7ff;
-  --fill-tokens-feature-base: #4f39f6;
-  --fill-tokens-feature-strong: #432dd7;
-  --fill-tokens-feature-strongest: #312e81;
-  --fill-tokens-highlighted-weakest: #fdf4ff;
-  --fill-tokens-highlighted-weak: #fae8ff;
-  --fill-tokens-highlighted-base: #c026d3;
-  --fill-tokens-highlighted-strong: #a21caf;
-  --fill-tokens-highlighted-strongest: #701a75;
-  --fill-tokens-away-weakest: #fefce8;
-  --fill-tokens-away-weak: #fef9c2;
-  --fill-tokens-away-base: #d08700;
-  --fill-tokens-away-strong: #a65f00;
-  --fill-tokens-away-strongest: #733e0a;
-  --fill-tokens-stable-base: #52525b;
-  --fill-tokens-stable-strong: #3f3f46;
-  --fill-tokens-stable-strongest: #18181b;
-  --fill-tokens-overlay-scrim: #0000007a;
-  --fill-tokens-overlay-scrim-strong: #000000a3;
-  --fill-tokens-overlay-hover: #00000014;
-  --fill-tokens-overlay-active: #00000029;
-  --fill-tokens-overlay-hover-inverted: #ffffff14;
-  --fill-tokens-overlay-active-inverted: #ffffff29;
-  --fill-tokens-shadow-xs: #00000014;
-  --fill-tokens-shadow-sm: #00000029;
-  --fill-tokens-shadow-md: #0000003d;
 }
 
 /**
@@ -1170,7 +1085,7 @@
 }
 
 /**
- * @tokens Color-tokens
+ * @tokens Color-light
  * @presenter Color
  */
 :root {
@@ -1279,112 +1194,114 @@
   --color-tokens-shadow-md: #0000003D;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-tokens-static-white-white: #FFFFFF;
-    --color-tokens-static-white-white-alpha-80: #FFFFFFCC;
-    --color-tokens-static-white-white-alpha-64: #FFFFFFA3;
-    --color-tokens-static-white-white-alpha-48: #FFFFFF7A;
-    --color-tokens-static-white-white-alpha-32: #FFFFFF52;
-    --color-tokens-static-white-white-alpha-24: #FFFFFF3D;
-    --color-tokens-static-white-white-alpha-16: #FFFFFF29;
-    --color-tokens-static-white-white-alpha-8: #FFFFFF14;
-    --color-tokens-static-white-white-alpha-0: #FFFFFF00;
-    --color-tokens-static-black-black: #000000;
-    --color-tokens-static-black-black-alpha-80: #000000CC;
-    --color-tokens-static-black-black-alpha-64: #000000A3;
-    --color-tokens-static-black-black-alpha-48: #0000007A;
-    --color-tokens-static-black-black-alpha-32: #00000052;
-    --color-tokens-static-black-black-alpha-24: #0000003D;
-    --color-tokens-static-black-black-alpha-16: #00000029;
-    --color-tokens-static-black-black-alpha-8: #00000014;
-    --color-tokens-static-black-black-alpha-0: #00000000;
-    --color-tokens-bg-static: #000000;
-    --color-tokens-bg-weakest: #18181B;
-    --color-tokens-bg-weak: #27272A;
-    --color-tokens-bg-light: #3F3F46;
-    --color-tokens-bg-medium: #71717A;
-    --color-tokens-bg-heavy: #D4D4D8;
-    --color-tokens-bg-strong: #E4E4E7;
-    --color-tokens-bg-strongest: #FAFAFA;
-    --color-tokens-text-static: #000000;
-    --color-tokens-text-disabled: #52525B;
-    --color-tokens-text-placeholder: #71717A;
-    --color-tokens-text-body: #D4D4D8;
-    --color-tokens-text-strongest: #FAFAFA;
-    --color-tokens-icon-static: #000000;
-    --color-tokens-icon-disabled: #52525B;
-    --color-tokens-icon-placeholder: #71717A;
-    --color-tokens-icon-body: #D4D4D8;
-    --color-tokens-icon-strongest: #FAFAFA;
-    --color-tokens-stroke-static: #000000;
-    --color-tokens-stroke-weakest: #18181B;
-    --color-tokens-stroke-weak: #27272A;
-    --color-tokens-stroke-light: #3F3F46;
-    --color-tokens-stroke-medium: #71717A;
-    --color-tokens-stroke-heavy: #D4D4D8;
-    --color-tokens-stroke-strong: #E4E4E7;
-    --color-tokens-stroke-strongest: #FAFAFA;
-    --color-tokens-primary-primary-weakest: #6366F129;
-    --color-tokens-primary-primary-weak: #6366F13D;
-    --color-tokens-primary-primary-base: #615FFF;
-    --color-tokens-primary-primary-strong: #818CF8;
-    --color-tokens-primary-primary-strongest: #C7D2FE;
-    --color-tokens-error-weakest: #FB2C3629;
-    --color-tokens-error-weak: #FB2C363D;
-    --color-tokens-error-base: #FB2C36;
-    --color-tokens-error-strong: #FF6467;
-    --color-tokens-error-strongest: #FFC9C9;
-    --color-tokens-success-weakest: #00C95029;
-    --color-tokens-success-weak: #00C9503D;
-    --color-tokens-success-base: #00C950;
-    --color-tokens-success-strong: #05DF72;
-    --color-tokens-success-strongest: #B9F8CF;
-    --color-tokens-warning-weakest: #FF690029;
-    --color-tokens-warning-weak: #FF69003D;
-    --color-tokens-warning-base: #FF6900;
-    --color-tokens-warning-strong: #FF8904;
-    --color-tokens-warning-strongest: #FFD6A7;
-    --color-tokens-info-weakest: #3B82F629;
-    --color-tokens-info-weak: #3B82F63D;
-    --color-tokens-info-base: #3B82F6;
-    --color-tokens-info-strong: #60A5FA;
-    --color-tokens-info-strongest: #BFDBFE;
-    --color-tokens-feature-weakest: #6366F129;
-    --color-tokens-feature-weak: #6366F13D;
-    --color-tokens-feature-base: #615FFF;
-    --color-tokens-feature-strong: #818CF8;
-    --color-tokens-feature-strongest: #C7D2FE;
-    --color-tokens-verified-weakest: #0EA5E929;
-    --color-tokens-verified-weak: #0EA5E93D;
-    --color-tokens-verified-base: #0EA5E9;
-    --color-tokens-verified-strong: #38BDF8;
-    --color-tokens-verified-strongest: #BAE6FD;
-    --color-tokens-highlighted-weakest: #D946EF29;
-    --color-tokens-highlighted-weak: #D946EF3D;
-    --color-tokens-highlighted-base: #D946EF;
-    --color-tokens-highlighted-strong: #E879F9;
-    --color-tokens-highlighted-strongest: #F5D0FE;
-    --color-tokens-away-weakest: #F0B10029;
-    --color-tokens-away-weak: #F0B1003D;
-    --color-tokens-away-base: #F0B100;
-    --color-tokens-away-strong: #FDC700;
-    --color-tokens-away-strongest: #FFF085;
-    --color-tokens-stable-weakest: #71717A29;
-    --color-tokens-stable-weak: #71717A3D;
-    --color-tokens-stable-base: #71717A;
-    --color-tokens-stable-strong: #A1A1AA;
-    --color-tokens-stable-strongest: #E4E4E7;
-    --color-tokens-overlay-scrim: #FFFFFF7A;
-    --color-tokens-overlay-scrim-strong: #FFFFFFA3;
-    --color-tokens-overlay-hover: #FFFFFF14;
-    --color-tokens-overlay-active: #FFFFFF29;
-    --color-tokens-overlay-hover-inverted: #00000014;
-    --color-tokens-overlay-active-inverted: #00000029;
-    --color-tokens-shadow-xs: #FFFFFF14;
-    --color-tokens-shadow-sm: #FFFFFF29;
-    --color-tokens-shadow-md: #FFFFFF3D;
-  }
+/**
+ * @tokens Color-dark
+ * @presenter Color
+ */
+:root {
+  --color-tokens-static-white-white: #FFFFFF;
+  --color-tokens-static-white-white-alpha-80: #FFFFFFCC;
+  --color-tokens-static-white-white-alpha-64: #FFFFFFA3;
+  --color-tokens-static-white-white-alpha-48: #FFFFFF7A;
+  --color-tokens-static-white-white-alpha-32: #FFFFFF52;
+  --color-tokens-static-white-white-alpha-24: #FFFFFF3D;
+  --color-tokens-static-white-white-alpha-16: #FFFFFF29;
+  --color-tokens-static-white-white-alpha-8: #FFFFFF14;
+  --color-tokens-static-white-white-alpha-0: #FFFFFF00;
+  --color-tokens-static-black-black: #000000;
+  --color-tokens-static-black-black-alpha-80: #000000CC;
+  --color-tokens-static-black-black-alpha-64: #000000A3;
+  --color-tokens-static-black-black-alpha-48: #0000007A;
+  --color-tokens-static-black-black-alpha-32: #00000052;
+  --color-tokens-static-black-black-alpha-24: #0000003D;
+  --color-tokens-static-black-black-alpha-16: #00000029;
+  --color-tokens-static-black-black-alpha-8: #00000014;
+  --color-tokens-static-black-black-alpha-0: #00000000;
+  --color-tokens-bg-static: #000000;
+  --color-tokens-bg-weakest: #18181B;
+  --color-tokens-bg-weak: #27272A;
+  --color-tokens-bg-light: #3F3F46;
+  --color-tokens-bg-medium: #71717A;
+  --color-tokens-bg-heavy: #D4D4D8;
+  --color-tokens-bg-strong: #E4E4E7;
+  --color-tokens-bg-strongest: #FAFAFA;
+  --color-tokens-text-static: #000000;
+  --color-tokens-text-disabled: #52525B;
+  --color-tokens-text-placeholder: #71717A;
+  --color-tokens-text-body: #D4D4D8;
+  --color-tokens-text-strongest: #FAFAFA;
+  --color-tokens-icon-static: #000000;
+  --color-tokens-icon-disabled: #52525B;
+  --color-tokens-icon-placeholder: #71717A;
+  --color-tokens-icon-body: #D4D4D8;
+  --color-tokens-icon-strongest: #FAFAFA;
+  --color-tokens-stroke-static: #000000;
+  --color-tokens-stroke-weakest: #18181B;
+  --color-tokens-stroke-weak: #27272A;
+  --color-tokens-stroke-light: #3F3F46;
+  --color-tokens-stroke-medium: #71717A;
+  --color-tokens-stroke-heavy: #D4D4D8;
+  --color-tokens-stroke-strong: #E4E4E7;
+  --color-tokens-stroke-strongest: #FAFAFA;
+  --color-tokens-primary-primary-weakest: #6366F129;
+  --color-tokens-primary-primary-weak: #6366F13D;
+  --color-tokens-primary-primary-base: #615FFF;
+  --color-tokens-primary-primary-strong: #818CF8;
+  --color-tokens-primary-primary-strongest: #C7D2FE;
+  --color-tokens-error-weakest: #FB2C3629;
+  --color-tokens-error-weak: #FB2C363D;
+  --color-tokens-error-base: #FB2C36;
+  --color-tokens-error-strong: #FF6467;
+  --color-tokens-error-strongest: #FFC9C9;
+  --color-tokens-success-weakest: #00C95029;
+  --color-tokens-success-weak: #00C9503D;
+  --color-tokens-success-base: #00C950;
+  --color-tokens-success-strong: #05DF72;
+  --color-tokens-success-strongest: #B9F8CF;
+  --color-tokens-warning-weakest: #FF690029;
+  --color-tokens-warning-weak: #FF69003D;
+  --color-tokens-warning-base: #FF6900;
+  --color-tokens-warning-strong: #FF8904;
+  --color-tokens-warning-strongest: #FFD6A7;
+  --color-tokens-info-weakest: #3B82F629;
+  --color-tokens-info-weak: #3B82F63D;
+  --color-tokens-info-base: #3B82F6;
+  --color-tokens-info-strong: #60A5FA;
+  --color-tokens-info-strongest: #BFDBFE;
+  --color-tokens-feature-weakest: #6366F129;
+  --color-tokens-feature-weak: #6366F13D;
+  --color-tokens-feature-base: #615FFF;
+  --color-tokens-feature-strong: #818CF8;
+  --color-tokens-feature-strongest: #C7D2FE;
+  --color-tokens-verified-weakest: #0EA5E929;
+  --color-tokens-verified-weak: #0EA5E93D;
+  --color-tokens-verified-base: #0EA5E9;
+  --color-tokens-verified-strong: #38BDF8;
+  --color-tokens-verified-strongest: #BAE6FD;
+  --color-tokens-highlighted-weakest: #D946EF29;
+  --color-tokens-highlighted-weak: #D946EF3D;
+  --color-tokens-highlighted-base: #D946EF;
+  --color-tokens-highlighted-strong: #E879F9;
+  --color-tokens-highlighted-strongest: #F5D0FE;
+  --color-tokens-away-weakest: #F0B10029;
+  --color-tokens-away-weak: #F0B1003D;
+  --color-tokens-away-base: #F0B100;
+  --color-tokens-away-strong: #FDC700;
+  --color-tokens-away-strongest: #FFF085;
+  --color-tokens-stable-weakest: #71717A29;
+  --color-tokens-stable-weak: #71717A3D;
+  --color-tokens-stable-base: #71717A;
+  --color-tokens-stable-strong: #A1A1AA;
+  --color-tokens-stable-strongest: #E4E4E7;
+  --color-tokens-overlay-scrim: #FFFFFF7A;
+  --color-tokens-overlay-scrim-strong: #FFFFFFA3;
+  --color-tokens-overlay-hover: #FFFFFF14;
+  --color-tokens-overlay-active: #FFFFFF29;
+  --color-tokens-overlay-hover-inverted: #00000014;
+  --color-tokens-overlay-active-inverted: #00000029;
+  --color-tokens-shadow-xs: #FFFFFF14;
+  --color-tokens-shadow-sm: #FFFFFF29;
+  --color-tokens-shadow-md: #FFFFFF3D;
 }
 
 /**

@@ -36,52 +36,52 @@
 
 /* Type=solid — filled background, white label */
 .btn--solid {
-  background: var(--fill-tokens-primary-primary-base, #615fff);
-  color: var(--fill-tokens-static-white-white, #fff);
+  background: var(--color-tokens-primary-primary-base, #615fff);
+  color: var(--color-tokens-static-white-white, #fff);
   box-shadow:
-    inset 0 0 0 1px var(--fill-tokens-primary-primary-base, #615fff),
-    inset 0 2px 0 0 var(--fill-primitives-white-alpha-16, rgba(255, 255, 255, 0.16));
-  text-shadow: 0 1px 0 var(--fill-primitives-black-alpha-24, rgba(0, 0, 0, 0.24));
+    inset 0 0 0 1px var(--color-tokens-primary-primary-base, #615fff),
+    inset 0 2px 0 0 var(--color-tokens-static-white-white-alpha-16, rgba(255, 255, 255, 0.16));
+  text-shadow: 0 1px 0 var(--color-tokens-static-black-black-alpha-24, rgba(0, 0, 0, 0.24));
 }
 
 .btn--solid:not(:disabled):hover,
 .btn--solid:not(:disabled):active,
 .btn--solid.btn--force-hover,
 .btn--solid.btn--force-pressed {
-  background: var(--fill-tokens-primary-primary-strong, #4f39f6);
+  background: var(--color-tokens-primary-primary-strong, #4f39f6);
   box-shadow:
-    0 5px 10px -5px var(--fill-tokens-primary-primary-weak, #e0e7ff),
-    inset 0 0 0 1px var(--fill-tokens-primary-primary-base, #615fff),
-    inset 0 2px 0 0 var(--fill-primitives-white-alpha-16, rgba(255, 255, 255, 0.16));
+    0 5px 10px -5px var(--color-tokens-primary-primary-weak, #e0e7ff),
+    inset 0 0 0 1px var(--color-tokens-primary-primary-base, #615fff),
+    inset 0 2px 0 0 var(--color-tokens-static-white-white-alpha-16, rgba(255, 255, 255, 0.16));
 }
 
 .btn--solid:not(:disabled):focus-visible,
 .btn--solid.btn--force-focused {
   outline: none;
   box-shadow:
-    0 0 0 2px var(--fill-tokens-primary-primary-weak, #e0e7ff),
-    inset 0 0 0 1px var(--fill-tokens-primary-primary-base, #615fff),
-    inset 0 2px 0 0 var(--fill-primitives-white-alpha-16, rgba(255, 255, 255, 0.16));
+    0 0 0 2px var(--color-tokens-primary-primary-weak, #e0e7ff),
+    inset 0 0 0 1px var(--color-tokens-primary-primary-base, #615fff),
+    inset 0 2px 0 0 var(--color-tokens-static-white-white-alpha-16, rgba(255, 255, 255, 0.16));
 }
 
 .btn--solid.btn--loading {
-  background: var(--fill-tokens-primary-primary-base, #615fff);
+  background: var(--color-tokens-primary-primary-base, #615fff);
   box-shadow: none;
   text-shadow: none;
 }
 
 .btn--solid:disabled {
-  background: var(--fill-tokens-bg-weak, #f4f4f5);
-  color: var(--fill-tokens-text-disabled, #d4d4d8);
+  background: var(--color-tokens-bg-weak, #f4f4f5);
+  color: var(--color-tokens-text-disabled, #d4d4d8);
   box-shadow: none;
   text-shadow: none;
 }
 
 /* Type=outline — 1px border, adds 2px to the box vs. the other types (matches Figma) */
 .btn--outline {
-  background: var(--fill-tokens-bg-static, #fff);
-  color: var(--fill-tokens-primary-primary-strong, #4f39f6);
-  border: 1px solid var(--fill-tokens-primary-primary-strong, #4f39f6);
+  background: var(--color-tokens-bg-static, #fff);
+  color: var(--color-tokens-primary-primary-strong, #4f39f6);
+  border: 1px solid var(--color-tokens-primary-primary-strong, #4f39f6);
 }
 
 .btn--outline:not(:disabled):hover,
@@ -89,29 +89,29 @@
 .btn--outline.btn--force-hover,
 .btn--outline.btn--force-pressed,
 .btn--outline.btn--loading {
-  background: var(--fill-tokens-primary-primary-weak, #e0e7ff);
+  background: var(--color-tokens-primary-primary-weak, #e0e7ff);
 }
 
 .btn--outline:not(:disabled):focus-visible,
 .btn--outline.btn--force-focused {
   outline: none;
-  background: var(--fill-tokens-primary-primary-weak, #e0e7ff);
+  background: var(--color-tokens-primary-primary-weak, #e0e7ff);
   box-shadow:
-    0 0 0 3px var(--fill-tokens-bg-weakest, #fafafa),
-    0 0 0 6px var(--fill-tokens-primary-primary-base, #615fff);
+    0 0 0 3px var(--color-tokens-bg-weakest, #fafafa),
+    0 0 0 6px var(--color-tokens-primary-primary-base, #615fff);
 }
 
 .btn--outline:disabled {
-  background: var(--fill-tokens-bg-static, #fff);
-  color: var(--fill-tokens-text-disabled, #d4d4d8);
+  background: var(--color-tokens-bg-static, #fff);
+  color: var(--color-tokens-text-disabled, #d4d4d8);
   /* Figma's stroke/medium isn't in the token pipeline yet; same hex as text/disabled */
-  border-color: var(--fill-tokens-text-disabled, #d4d4d8);
+  border-color: var(--color-tokens-text-disabled, #d4d4d8);
 }
 
 /* Type=soft — tinted background, no border */
 .btn--soft {
-  background: var(--fill-tokens-primary-primary-weakest, #eef2ff);
-  color: var(--fill-tokens-primary-primary-strong, #4f39f6);
+  background: var(--color-tokens-primary-primary-weakest, #eef2ff);
+  color: var(--color-tokens-primary-primary-strong, #4f39f6);
 }
 
 .btn--soft:not(:disabled):hover,
@@ -119,48 +119,48 @@
 .btn--soft.btn--force-hover,
 .btn--soft.btn--force-pressed,
 .btn--soft.btn--loading {
-  background: var(--fill-tokens-primary-primary-weak, #e0e7ff);
+  background: var(--color-tokens-primary-primary-weak, #e0e7ff);
 }
 
 .btn--soft:not(:disabled):focus-visible,
 .btn--soft.btn--force-focused {
   outline: none;
-  background: var(--fill-tokens-primary-primary-weak, #e0e7ff);
+  background: var(--color-tokens-primary-primary-weak, #e0e7ff);
   box-shadow:
-    0 0 0 3px var(--fill-tokens-bg-weakest, #fafafa),
-    0 0 0 6px var(--fill-tokens-primary-primary-base, #615fff);
+    0 0 0 3px var(--color-tokens-bg-weakest, #fafafa),
+    0 0 0 6px var(--color-tokens-primary-primary-base, #615fff);
 }
 
 .btn--soft:disabled {
-  background: var(--fill-tokens-bg-weak, #f4f4f5);
-  color: var(--fill-tokens-text-disabled, #d4d4d8);
+  background: var(--color-tokens-bg-weak, #f4f4f5);
+  color: var(--color-tokens-text-disabled, #d4d4d8);
 }
 
 /* Type=ghost — transparent until interacted with */
 .btn--ghost {
-  background: var(--fill-tokens-bg-static, #fff);
-  color: var(--fill-tokens-primary-primary-strong, #4f39f6);
+  background: var(--color-tokens-bg-static, #fff);
+  color: var(--color-tokens-primary-primary-strong, #4f39f6);
 }
 
 .btn--ghost:not(:disabled):hover,
 .btn--ghost:not(:disabled):active,
 .btn--ghost.btn--force-hover,
 .btn--ghost.btn--force-pressed {
-  background: var(--fill-tokens-primary-primary-weak, #e0e7ff);
+  background: var(--color-tokens-primary-primary-weak, #e0e7ff);
 }
 
 .btn--ghost:not(:disabled):focus-visible,
 .btn--ghost.btn--force-focused {
   outline: none;
-  background: var(--fill-tokens-bg-static, #fff);
+  background: var(--color-tokens-bg-static, #fff);
   box-shadow:
-    0 0 0 3px var(--fill-tokens-bg-weakest, #fafafa),
-    0 0 0 6px var(--fill-tokens-primary-primary-base, #615fff);
+    0 0 0 3px var(--color-tokens-bg-weakest, #fafafa),
+    0 0 0 6px var(--color-tokens-primary-primary-base, #615fff);
 }
 
 .btn--ghost:disabled {
-  background: var(--fill-tokens-bg-static, #fff);
-  color: var(--fill-tokens-text-disabled, #d4d4d8);
+  background: var(--color-tokens-bg-static, #fff);
+  color: var(--color-tokens-text-disabled, #d4d4d8);
 }
 
 /* Sizes — padding, radius and type scale come from real Figma variables/text

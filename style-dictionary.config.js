@@ -9,22 +9,32 @@ import StyleDictionary from "style-dictionary";
 // no single matching presenter) gets no @presenter line at all,
 // still listed by name and value, just without a preview swatch.
 const PRESENTER_BY_GROUP = {
-  Colors: "Color",
+  "Color-light": "Color",
+  "Color-dark": "Color",
   "Primitive Colors": "Color",
   Effect: "Shadow",
-  "Color-tokens": "Color",
 };
 
 // Figma organizes color styles into two layers: raw scales (like
-// fill/primitives/orange/500) and semantic names built on top of
-// them (like fill/tokens/primary/base). We split those into two
-// separate categories so semantic tokens, the ones components
-// should actually reference, aren't buried next to the full
-// primitive scale.
-function getCategory(token) {
+// fill/primitives/orange/500) and semantic names built on top of them
+// (like fill/tokens/primary/base or the color-tokens/effects buckets).
+// Primitives get their own category since they're a different axis
+// entirely (a raw ramp, not light/dark). Every other color — regardless
+// of whether it came from the Styles pipeline (always light-only) or
+// the Variables/tokens-dark-pairing pipeline (light+dark) — is one flat
+// "Color-light" / "Color-dark" pair of categories, split by mediaKey
+// rather than by data source, so there's exactly one place to look for
+// each mode instead of a "Colors" vs "Color-tokens" split that doesn't
+// mean anything to someone browsing the panel.
+function getCategory(token, mediaKey) {
   const groupName = token.path[0] || "other";
-  if (groupName === "fill") {
-    return token.path[1] === "primitives" ? "Primitive Colors" : "Colors";
+  // The JSON only nests two levels deep ("fill" -> "primitives/orange/
+  // regular/50" as one flat key), so path[1] is the *whole* remaining
+  // slash-delimited string, not just its first segment — check the
+  // prefix, not equality.
+  if (groupName === "fill" && (token.path[1] || "").startsWith("primitives/")) return "Primitive Colors";
+  if (groupName === "fill" || groupName === "color-tokens") {
+    return mediaKey === "dark" ? "Color-dark" : "Color-light";
   }
   return groupName.charAt(0).toUpperCase() + groupName.slice(1);
 }
@@ -192,6 +202,17 @@ function renderDeclarationBlocks(declarations) {
   return blocks.join("\n\n");
 }
 
+// Used only for the annotated storybook panel's Color-light/Color-dark
+// categories: those already split light from dark by putting them in
+// separate @tokens sections, so there's no need to additionally nest
+// the dark ones in @media here the way the real tokens.css must for
+// correctness — a flat block is simpler for the addon to parse and for
+// a human to scan as a swatch list.
+function renderFlatDeclarations(declarations) {
+  const lines = declarations.map((d) => `  --${d.name}: ${d.value};`).join("\n");
+  return `:root {\n${lines}\n}`;
+}
+
 // The built-in "css/variables" format just does `${token.value}`,
 // which prints "[object Object]" for text/effect tokens since they're
 // structured, not strings. This is the same formatDeclarations() logic
@@ -206,24 +227,31 @@ StyleDictionary.registerFormat({
   },
 });
 
+const FLAT_CATEGORIES = new Set(["Color-light", "Color-dark"]);
+
 StyleDictionary.registerFormat({
   name: "css/design-token-annotated",
   format: ({ dictionary }) => {
+    // Categorized per declaration, not per token: a single color-tokens
+    // token produces both a light and a dark declaration, and those two
+    // need to land in different @tokens sections (see getCategory).
     const groups = {};
 
     dictionary.allTokens.forEach((token) => {
-      const category = getCategory(token);
-      groups[category] = groups[category] || [];
-      groups[category].push(token);
+      formatDeclarations(token).forEach((decl) => {
+        const category = getCategory(token, decl.mediaKey);
+        groups[category] = groups[category] || [];
+        groups[category].push(decl);
+      });
     });
 
     return Object.entries(groups)
-      .map(([category, tokens]) => {
+      .map(([category, declarations]) => {
         const presenter = PRESENTER_BY_GROUP[category];
         const presenterLine = presenter ? ` * @presenter ${presenter}\n` : "";
-        const declarations = tokens.flatMap(formatDeclarations);
+        const body = FLAT_CATEGORIES.has(category) ? renderFlatDeclarations(declarations) : renderDeclarationBlocks(declarations);
 
-        return `/**\n * @tokens ${category}\n${presenterLine} */\n${renderDeclarationBlocks(declarations)}\n`;
+        return `/**\n * @tokens ${category}\n${presenterLine} */\n${body}\n`;
       })
       .join("\n");
   },
