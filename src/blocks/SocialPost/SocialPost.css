@@ -1,7 +1,9 @@
 /* Colors and the l/paragraph-l/400 + heading/h3/600 type styles come from
-   Figma via tokens.css. Card padding, gap and shadow spread aren't on the
-   synced token set yet, so those stay literal, matched from "POST-18"
-   (node 4426:8720) in the Social media Figma file. */
+   Figma via tokens.css. Card padding and gap aren't on the synced token
+   set yet, so those stay literal, matched from "POST-18" (node 4426:8720)
+   in the Social media Figma file. The card's shadow is bound to effect
+   style Regular-B/Light/1 there, which matches --effect-regular-b-1
+   exactly (theme-aware, so this also gets the right dark-mode shadow). */
 @import '../../../build/css/tokens.css';
 
 .social-post {
@@ -14,9 +16,7 @@
   padding: 53px 33px;
   border-radius: var(--radius-corner-rounded-xl, 12px);
   background: var(--color-tokens-bg-weakest, #fafafa);
-  box-shadow:
-    0 8px 10px -6px var(--color-tokens-shadow-xs, rgba(0, 0, 0, 0.08)),
-    0 20px 25px -5px var(--color-tokens-shadow-xs, rgba(0, 0, 0, 0.08));
+  box-shadow: var(--effect-regular-b-1, 0px 1px 1px -0.5px rgba(0, 0, 0, 0.08), 0px 0px 0px 1px rgba(0, 0, 0, 0.08));
 }
 
 .social-post__copy {
