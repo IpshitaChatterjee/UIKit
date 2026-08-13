@@ -42,7 +42,16 @@
   letter-spacing: var(--btn-letter-spacing);
   white-space: nowrap;
   cursor: pointer;
-  transition: background-color 120ms ease, box-shadow 120ms ease, border-color 120ms ease, color 120ms ease;
+  transition: background-color 120ms ease, box-shadow 120ms ease, border-color 120ms ease, color 120ms ease,
+    scale 150ms ease-out;
+}
+
+/* Scale on press — tactile feedback, never below 0.95 per design guidance.
+   Applies to real :active and Storybook's simulated `state="pressed"`
+   alike; `.btn--static` (or `disabled`) opts out. */
+.btn:active:not(:disabled):not(.btn--static),
+.btn--force-pressed:not(:disabled):not(.btn--static) {
+  scale: 0.96;
 }
 
 .btn:disabled {

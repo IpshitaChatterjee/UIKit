@@ -66,6 +66,7 @@ function Button({
   state,
   loading = false,
   disabled = false,
+  static: isStatic = false,
   iconLeft = null,
   iconRight = null,
   children,
@@ -83,6 +84,7 @@ function Button({
     color !== 'primary' && `btn--${color}`,
     isIconOnly && 'btn--icon-only',
     loading && 'btn--loading',
+    isStatic && 'btn--static',
     state && `btn--force-${state}`,
     className,
   ]
@@ -131,6 +133,8 @@ Button.propTypes = {
   loading: PropTypes.bool,
   /** Disables the button (native `disabled` attribute). */
   disabled: PropTypes.bool,
+  /** Opts out of the press-scale tactile effect, for contexts where that motion would be distracting. */
+  static: PropTypes.bool,
   /** Icon rendered before the label, or alone when `children` is omitted. */
   iconLeft: PropTypes.node,
   /** Icon rendered after the label. Hidden while loading. */

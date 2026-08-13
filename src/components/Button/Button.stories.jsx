@@ -18,12 +18,14 @@ export default {
     color: 'primary',
     loading: false,
     disabled: false,
+    static: false,
   },
   argTypes: {
     variant: { control: 'select', options: VARIANTS },
     size: { control: 'select', options: SIZES },
     shape: { control: 'select', options: SHAPES },
     color: { control: 'select', options: COLORS },
+    static: { control: 'boolean' },
     state: {
       control: 'select',
       options: ['default', 'hover', 'pressed', 'focused'],
