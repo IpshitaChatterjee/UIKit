@@ -67,6 +67,70 @@ function formatTextValue(value) {
   return `${weight} ${size}${lineHeight} "${family}"`;
 }
 
+// Figma's Variables API supports per-mode values natively (that's how
+// color-tokens/fill get their Light/Dark pairing below, for free). Effect
+// (and text) *styles* don't — a Figma style is always a single flat value,
+// so a designer wanting a light/dark shadow has to publish two separate
+// styles ("Regular-B/Light/2", "Regular-B/Dark/2") that only agree by
+// naming convention, not by any structural link. Left alone, those come
+// through as two unrelated tokens and both land unconditionally in :root,
+// so the "dark" one always wins the cascade regardless of theme — the
+// same bug Button.css's shadow colors had before they were switched to
+// reference color-tokens/* directly instead of Figma's shadow-effect
+// variables. This preprocessor closes that gap for every affected style
+// family (not just Regular-B) by detecting the paired "Light"/"Dark" path
+// segment before token generation and re-shaping the pair into the same
+// { Light: ..., Dark: ... } structure a real multi-mode variable would
+// have, so isMultiModeValue()/formatDeclarations() below emit it through
+// the normal :root + @media(dark) + [data-theme="dark"] pipeline like
+// any other themed token — no separate mechanism to maintain.
+StyleDictionary.registerPreprocessor({
+  name: "merge-light-dark-effect-styles",
+  preprocessor: (tokens) => {
+    const effect = tokens.effect;
+    if (!effect) return tokens;
+
+    const merged = {};
+    const consumedAsPair = new Set();
+
+    for (const key of Object.keys(effect)) {
+      if (consumedAsPair.has(key)) continue;
+
+      const segments = key.split("/");
+      const modeIndex = segments.findIndex((s) => /^(light|dark)$/i.test(s));
+      if (modeIndex === -1) {
+        merged[key] = effect[key];
+        continue;
+      }
+
+      const mode = /^light$/i.test(segments[modeIndex]) ? "Light" : "Dark";
+      const otherMode = mode === "Light" ? "Dark" : "Light";
+      const baseSegments = segments.filter((_, i) => i !== modeIndex);
+      const baseKey = baseSegments.join("/");
+      const otherSegments = [...segments];
+      otherSegments[modeIndex] = otherMode;
+      const otherKey = otherSegments.join("/");
+      const otherToken = effect[otherKey];
+
+      if (!otherToken) {
+        // No matching counterpart published for the other mode — keep it
+        // standalone under its original name rather than silently
+        // dropping it or guessing a fallback.
+        merged[key] = effect[key];
+        continue;
+      }
+
+      merged[baseKey] = {
+        value: { [mode]: effect[key].value, [otherMode]: otherToken.value },
+        description: effect[key].description || otherToken.description || "",
+      };
+      consumedAsPair.add(otherKey);
+    }
+
+    return { ...tokens, effect: merged };
+  },
+});
+
 // A Figma EASING variable (motion-primitives, animation-tokens) resolves to
 // a cubic-bezier control-point object — the direct CSS equivalent.
 function isEasingValue(value) {
@@ -92,17 +156,25 @@ function formatScalarValue(value, name) {
   return `${value}px`;
 }
 
-function formatValue(token) {
-  const value = token.value;
-  const groupName = token.path[0] || "other";
+// Shared by both the single-value path (formatValue) and the per-mode
+// path (formatDeclarations' multi-mode branch below) — a multi-mode
+// effect token (e.g. Regular-B/Light+Dark, merged by the
+// merge-light-dark-effect-styles preprocessor above) still needs shadow
+// formatting per mode, not just the numeric/string handling plain
+// multi-mode tokens like spacing or color-tokens needed until now.
+function formatValueForGroup(value, groupName, name) {
   if (isEasingValue(value)) return formatEasingValue(value);
   if (typeof value === "string") return value;
-  if (typeof value === "number") return formatScalarValue(value, token.name);
+  if (typeof value === "number") return formatScalarValue(value, name);
   if (groupName === "effect") return formatShadowValue(value);
   if (groupName === "text" && typeof value === "object") return formatTextValue(value);
   // Fallback for anything else structured (like grid tokens): a
   // readable string rather than the default object-to-string coercion.
   return JSON.stringify(value);
+}
+
+function formatValue(token) {
+  return formatValueForGroup(token.value, token.path[0] || "other", token.name);
 }
 
 // Multi-mode tokens (spacing/radius/typography have Desktop+Tablet+Mobile
@@ -164,7 +236,7 @@ function formatDeclarations(token) {
       .filter(([mode]) => mode in MODE_TO_MEDIA_KEY)
       .map(([mode, modeValue]) => ({
         name: token.name,
-        value: isEasingValue(modeValue) ? formatEasingValue(modeValue) : formatScalarValue(modeValue, token.name),
+        value: formatValueForGroup(modeValue, groupName, token.name),
         mediaKey: MODE_TO_MEDIA_KEY[mode],
       }));
   }
@@ -270,6 +342,7 @@ StyleDictionary.registerFormat({
 
 export default {
   source: ["tokens/figma-tokens.json"],
+  preprocessors: ["merge-light-dark-effect-styles"],
   platforms: {
     css: {
       transformGroup: "css",

@@ -506,20 +506,35 @@
   --effect-shadow-text-sm: 0px 2px 2px 0px #00000014, 0px 1px 1px 0px #00000014, 0px 1px 0px 0px #00000014;
   --effect-shadow-text-md: 0px 2px 4px 0px #0000001a, 0px 1px 2px 0px #0000001a, 0px 1px 1px 0px #0000001a;
   --effect-shadow-text-l: 0px 4px 8px 0px #0000001a, 0px 3px 2px 0px #0000001a, 0px 1px 2px 0px #0000001a;
-  --effect-regular-b-light-0: 0px 0px 0px 1px #00000014;
-  --effect-regular-b-dark-0: inset 0px 0px 0px 1px #ffffff05;
-  --effect-regular-b-light-1: 0px 1px 1px -0.5px #00000014, 0px 0px 0px 1px #00000014;
-  --effect-regular-b-light-2: 0px 3px 3px -1.5px #00000014, 0px 1px 1px -0.5px #00000014, 0px 0px 0px 1px #00000014;
-  --effect-regular-b-light-3: 0px 6px 6px -3px #00000014, 0px 3px 3px -1.5px #00000014, 0px 1px 1px -0.5px #00000014, 0px 0px 0px 1px #00000014;
-  --effect-regular-b-light-4: 0px 12px 12px -6px #00000014, 0px 6px 6px -3px #00000014, 0px 3px 3px -1.5px #00000014, 0px 1px 1px -0.5px #00000014, 0px 0px 0px 1px #00000014;
-  --effect-regular-b-light-5: 0px 24px 24px -12px #00000014, 0px 12px 12px -6px #00000014, 0px 6px 6px -3px #00000014, 0px 3px 3px -1.5px #00000014, 0px 1px 1px -0.5px #00000014, 0px 0px 0px 1px #00000014;
-  --effect-regular-b-light-6: 0px 48px 48px -24px #00000014, 0px 24px 24px -12px #00000014, 0px 12px 12px -6px #00000014, 0px 6px 6px -3px #00000014, 0px 3px 3px -1.5px #00000014, 0px 1px 1px -0.5px #00000014, 0px 0px 0px 1px #00000014;
-  --effect-regular-b-dark-1: 0px 1px 1px -0.5px #00000066, inset 0px 0px 0px 1px #ffffff05, inset 0px 1px 0px 0px #ffffff08;
-  --effect-regular-b-dark-2: 0px 3px 3px -2px #0000003d, 0px 1px 1px -0.5px #00000029, 0px 0px 0px 1px #00000014, inset 0px 0px 0px 1px #ffffff05, inset 0px 1px 0px 0px #ffffff0d;
-  --effect-regular-b-dark-3: 0px 6px 6px -1px #00000029, 0px 3px 3px -2px #00000029, 0px 1px 1px -0.5px #00000029, 0px 0px 0px 1px #00000014, inset 0px 0px 0px 1px #ffffff05, inset 0px 1px 0px 0px #ffffff0d;
-  --effect-regular-b-dark-4: 0px 12px 12px -6px #00000029, 0px 6px 6px -1px #00000029, 0px 3px 3px -2px #00000029, 0px 1px 1px -0.5px #00000029, 0px 0px 0px 1px #00000014, inset 0px 0px 0px 1px #ffffff05, inset 0px 1px 0px 0px #ffffff0d;
-  --effect-regular-b-dark-5: 0px 24px 24px -12px #00000029, 0px 12px 12px -6px #00000029, 0px 6px 6px -1px #00000029, 0px 3px 3px -2px #00000029, 0px 1px 1px -0.5px #00000029, 0px 0px 0px 1px #00000014, inset 0px 0px 0px 1px #ffffff05, inset 0px 1px 0px 0px #ffffff0d;
-  --effect-regular-b-dark-6: 0px 48px 48px -24px #00000029, 0px 24px 24px -12px #00000029, 0px 12px 12px -6px #00000029, 0px 6px 6px -1px #00000029, 0px 3px 3px -2px #00000029, 0px 1px 1px -0.5px #00000029, 0px 0px 0px 1px #00000014, inset 0px 0px 0px 1px #ffffff05, inset 0px 1px 0px 0px #ffffff0d;
+  --effect-regular-b-0: 0px 0px 0px 1px #00000014;
+  --effect-regular-b-1: 0px 1px 1px -0.5px #00000014, 0px 0px 0px 1px #00000014;
+  --effect-regular-b-2: 0px 3px 3px -1.5px #00000014, 0px 1px 1px -0.5px #00000014, 0px 0px 0px 1px #00000014;
+  --effect-regular-b-3: 0px 6px 6px -3px #00000014, 0px 3px 3px -1.5px #00000014, 0px 1px 1px -0.5px #00000014, 0px 0px 0px 1px #00000014;
+  --effect-regular-b-4: 0px 12px 12px -6px #00000014, 0px 6px 6px -3px #00000014, 0px 3px 3px -1.5px #00000014, 0px 1px 1px -0.5px #00000014, 0px 0px 0px 1px #00000014;
+  --effect-regular-b-5: 0px 24px 24px -12px #00000014, 0px 12px 12px -6px #00000014, 0px 6px 6px -3px #00000014, 0px 3px 3px -1.5px #00000014, 0px 1px 1px -0.5px #00000014, 0px 0px 0px 1px #00000014;
+  --effect-regular-b-6: 0px 48px 48px -24px #00000014, 0px 24px 24px -12px #00000014, 0px 12px 12px -6px #00000014, 0px 6px 6px -3px #00000014, 0px 3px 3px -1.5px #00000014, 0px 1px 1px -0.5px #00000014, 0px 0px 0px 1px #00000014;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --effect-regular-b-0: inset 0px 0px 0px 1px #ffffff05;
+    --effect-regular-b-1: 0px 1px 1px -0.5px #00000066, inset 0px 0px 0px 1px #ffffff05, inset 0px 1px 0px 0px #ffffff08;
+    --effect-regular-b-2: 0px 3px 3px -2px #0000003d, 0px 1px 1px -0.5px #00000029, 0px 0px 0px 1px #00000014, inset 0px 0px 0px 1px #ffffff05, inset 0px 1px 0px 0px #ffffff0d;
+    --effect-regular-b-3: 0px 6px 6px -1px #00000029, 0px 3px 3px -2px #00000029, 0px 1px 1px -0.5px #00000029, 0px 0px 0px 1px #00000014, inset 0px 0px 0px 1px #ffffff05, inset 0px 1px 0px 0px #ffffff0d;
+    --effect-regular-b-4: 0px 12px 12px -6px #00000029, 0px 6px 6px -1px #00000029, 0px 3px 3px -2px #00000029, 0px 1px 1px -0.5px #00000029, 0px 0px 0px 1px #00000014, inset 0px 0px 0px 1px #ffffff05, inset 0px 1px 0px 0px #ffffff0d;
+    --effect-regular-b-5: 0px 24px 24px -12px #00000029, 0px 12px 12px -6px #00000029, 0px 6px 6px -1px #00000029, 0px 3px 3px -2px #00000029, 0px 1px 1px -0.5px #00000029, 0px 0px 0px 1px #00000014, inset 0px 0px 0px 1px #ffffff05, inset 0px 1px 0px 0px #ffffff0d;
+    --effect-regular-b-6: 0px 48px 48px -24px #00000029, 0px 24px 24px -12px #00000029, 0px 12px 12px -6px #00000029, 0px 6px 6px -1px #00000029, 0px 3px 3px -2px #00000029, 0px 1px 1px -0.5px #00000029, 0px 0px 0px 1px #00000014, inset 0px 0px 0px 1px #ffffff05, inset 0px 1px 0px 0px #ffffff0d;
+  }
+}
+
+:root[data-theme="dark"] {
+    --effect-regular-b-0: inset 0px 0px 0px 1px #ffffff05;
+    --effect-regular-b-1: 0px 1px 1px -0.5px #00000066, inset 0px 0px 0px 1px #ffffff05, inset 0px 1px 0px 0px #ffffff08;
+    --effect-regular-b-2: 0px 3px 3px -2px #0000003d, 0px 1px 1px -0.5px #00000029, 0px 0px 0px 1px #00000014, inset 0px 0px 0px 1px #ffffff05, inset 0px 1px 0px 0px #ffffff0d;
+    --effect-regular-b-3: 0px 6px 6px -1px #00000029, 0px 3px 3px -2px #00000029, 0px 1px 1px -0.5px #00000029, 0px 0px 0px 1px #00000014, inset 0px 0px 0px 1px #ffffff05, inset 0px 1px 0px 0px #ffffff0d;
+    --effect-regular-b-4: 0px 12px 12px -6px #00000029, 0px 6px 6px -1px #00000029, 0px 3px 3px -2px #00000029, 0px 1px 1px -0.5px #00000029, 0px 0px 0px 1px #00000014, inset 0px 0px 0px 1px #ffffff05, inset 0px 1px 0px 0px #ffffff0d;
+    --effect-regular-b-5: 0px 24px 24px -12px #00000029, 0px 12px 12px -6px #00000029, 0px 6px 6px -1px #00000029, 0px 3px 3px -2px #00000029, 0px 1px 1px -0.5px #00000029, 0px 0px 0px 1px #00000014, inset 0px 0px 0px 1px #ffffff05, inset 0px 1px 0px 0px #ffffff0d;
+    --effect-regular-b-6: 0px 48px 48px -24px #00000029, 0px 24px 24px -12px #00000029, 0px 12px 12px -6px #00000029, 0px 6px 6px -1px #00000029, 0px 3px 3px -2px #00000029, 0px 1px 1px -0.5px #00000029, 0px 0px 0px 1px #00000014, inset 0px 0px 0px 1px #ffffff05, inset 0px 1px 0px 0px #ffffff0d;
 }
 
 /**
