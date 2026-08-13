@@ -722,20 +722,14 @@
     0 0 0 var(--btn-focus-ring, 6px) var(--color-tokens-info-base, #2563eb);
 }
 
-/* Color=inverse-light / Color=inverse-solid — "button_default/{shape}/
-   inverse-light" (rounded 213:4066, pill 242:14342, square 242:16504)
-   and "button_default/{shape}/inverse-solid" (rounded 213:4767, pill
-   242:15043, square 242:17205). Pixel-identical to each other in Figma
-   today (same bg/text scale throughout), so their selectors are combined
-   instead of duplicated. "Inverse" means *opposite of the page's own
-   light/dark state* — verified against Figma's own light vs dark
-   screenshots of this exact component: solid renders near-black-on-white
-   in light mode and near-white-on-black in dark mode. bg-strongest
-   already sits at the far pole from the page's own bg-weak/weakest at
-   every mode, so pairing background:bg-strongest with color:bg-weakest
-   (rather than a literal bg-weakest/text-strongest pair, which just
-   tracks the page instead of opposing it, and text-strongest isn't a
-   synced token besides) reproduces that inversion for free. Shadow/ring
+/* Color=inverse-solid — "button_default/{shape}/inverse-solid" (rounded
+   213:4767, pill 242:15043, square 242:17205). "Inverse" means
+   *opposite of the page's own light/dark state* — verified against
+   Figma's own light vs dark screenshots of this exact component: solid
+   renders near-black-on-white in light mode and near-white-on-black in
+   dark mode. bg-strongest already sits at the far pole from the page's
+   own bg-weak/weakest at every mode, so pairing background:bg-strongest
+   with color:bg-weakest reproduces that inversion for free. Shadow/ring
    colors reuse the bg-* scale directly (see the file-level note above)
    instead of Figma's separate shadows/interactive/inverse/* and
    focus-ring/colors/inverse/* tokens — the hover/focused drop-shadow
@@ -748,16 +742,22 @@
      hover background/default text like every other color's loading
      state — so it needs its own rule rather than joining the hover
      group.
-   - "disabled" uses its own muted bg/text pairing per type instead of
-     the bg-weak/bg-static + text-disabled shared by every other color
-     (see the shared disabled block below) — a same-intensity disabled
-     state wouldn't read as dimmed against the inverted surface.
+   - "disabled" matches primary's shared bg-weak/bg-static +
+     text-disabled tokens (see the shared disabled block below) per an
+     explicit Figma update on this component, rather than the muted,
+     inverse-only treatment it used before.
+   Label/icon color for outline/ghost is one of the few spots where
+   Figma varies color by state rather than just background:
+   text-on-control (always white) at rest since the transparent button
+   sits directly on the inverse surface, text-static (flips toward
+   black in dark mode) once hover/pressed/focused move the background
+   to bg-strong/bg-strongest, a page-theme-following neutral that needs
+   an inverting label for contrast.
    Figma's focused-state ring effects also have the offset-spread (3px)
    and ring-spread (6px) swapped onto the color-inner/color-outer tokens
    here relative to every other family; kept the semantic pairing used
    everywhere else (inner at 3px, outer at 6px) since that's what
    produces a normal two-tone ring instead of an inverted one. */
-.btn--inverse-light.btn--solid,
 .btn--inverse-solid.btn--solid {
   background: var(--color-tokens-bg-strongest, #09090b);
   color: var(--color-tokens-bg-weakest, #fafafa);
@@ -766,10 +766,6 @@
     inset 0 2px 0 0 var(--color-tokens-bg-strong, #27272a);
 }
 
-.btn--inverse-light.btn--solid:not(:disabled):hover,
-.btn--inverse-light.btn--solid:not(:disabled):active,
-.btn--inverse-light.btn--solid.btn--force-hover,
-.btn--inverse-light.btn--solid.btn--force-pressed,
 .btn--inverse-solid.btn--solid:not(:disabled):hover,
 .btn--inverse-solid.btn--solid:not(:disabled):active,
 .btn--inverse-solid.btn--solid.btn--force-hover,
@@ -781,8 +777,6 @@
     inset 0 2px 0 0 var(--color-tokens-bg-strong, #27272a);
 }
 
-.btn--inverse-light.btn--solid:not(:disabled):focus-visible,
-.btn--inverse-light.btn--solid.btn--force-focused,
 .btn--inverse-solid.btn--solid:not(:disabled):focus-visible,
 .btn--inverse-solid.btn--solid.btn--force-focused {
   outline: none;
@@ -793,23 +787,12 @@
     inset 0 2px 0 0 var(--color-tokens-bg-strong, #27272a);
 }
 
-.btn--inverse-light.btn--solid.btn--loading,
 .btn--inverse-solid.btn--solid.btn--loading {
   background: var(--color-tokens-bg-strongest, #09090b);
   box-shadow: none;
   text-shadow: none;
 }
 
-.btn--inverse-light.btn--solid:disabled {
-  background: var(--color-tokens-bg-light, #e4e4e7);
-  color: var(--color-tokens-text-body, #52525b);
-  box-shadow: none;
-  text-shadow: none;
-}
-
-/* inverse-solid's disabled state uses the same tokens as primary's
-   (shared .btn--{type}:disabled rules below) rather than its own darker
-   treatment — matches Figma's binding on this component specifically. */
 .btn--inverse-solid.btn--solid:disabled {
   background: var(--color-tokens-bg-weak, #f4f4f5);
   color: var(--color-tokens-text-disabled, #d4d4d8);
@@ -817,25 +800,12 @@
   text-shadow: none;
 }
 
-/* Label/icon color for outline (and ghost, below) is one of the few
-   spots where Figma varies color by state rather than just background:
-   text/on-control (always white) at rest, text/static (flips toward
-   black in dark mode) once hovered/pressed/focused — presumably because
-   the hover/focused background (bg/strong, a page-theme-following
-   neutral) needs a label that inverts with it, while the transparent
-   resting state sits directly on the inverse surface and wants a label
-   that doesn't. */
-.btn--inverse-light.btn--outline,
 .btn--inverse-solid.btn--outline {
   background: transparent;
   color: var(--color-tokens-text-on-control, #fff);
   border: 1px solid var(--color-tokens-stroke-medium, #d4d4d8);
 }
 
-.btn--inverse-light.btn--outline:not(:disabled):hover,
-.btn--inverse-light.btn--outline:not(:disabled):active,
-.btn--inverse-light.btn--outline.btn--force-hover,
-.btn--inverse-light.btn--outline.btn--force-pressed,
 .btn--inverse-solid.btn--outline:not(:disabled):hover,
 .btn--inverse-solid.btn--outline:not(:disabled):active,
 .btn--inverse-solid.btn--outline.btn--force-hover,
@@ -844,8 +814,6 @@
   color: var(--color-tokens-text-static, #fff);
 }
 
-.btn--inverse-light.btn--outline:not(:disabled):focus-visible,
-.btn--inverse-light.btn--outline.btn--force-focused,
 .btn--inverse-solid.btn--outline:not(:disabled):focus-visible,
 .btn--inverse-solid.btn--outline.btn--force-focused {
   outline: none;
@@ -856,16 +824,9 @@
     0 0 0 var(--btn-focus-ring, 6px) var(--color-tokens-bg-strongest, #09090b);
 }
 
-.btn--inverse-light.btn--outline.btn--loading,
 .btn--inverse-solid.btn--outline.btn--loading {
   background: var(--color-tokens-bg-strongest, #09090b);
   color: var(--color-tokens-text-placeholder, #a1a1aa);
-}
-
-.btn--inverse-light.btn--outline:disabled {
-  background: var(--color-tokens-bg-strongest, #09090b);
-  color: var(--color-tokens-text-body, #52525b);
-  border-color: var(--color-tokens-stroke-heavy, #3f3f46);
 }
 
 .btn--inverse-solid.btn--outline:disabled {
@@ -874,16 +835,11 @@
   border-color: var(--color-tokens-stroke-medium, #d4d4d8);
 }
 
-.btn--inverse-light.btn--soft,
 .btn--inverse-solid.btn--soft {
   background: var(--color-tokens-bg-strong, #27272a);
   color: var(--color-tokens-text-static, #fff);
 }
 
-.btn--inverse-light.btn--soft:not(:disabled):hover,
-.btn--inverse-light.btn--soft:not(:disabled):active,
-.btn--inverse-light.btn--soft.btn--force-hover,
-.btn--inverse-light.btn--soft.btn--force-pressed,
 .btn--inverse-solid.btn--soft:not(:disabled):hover,
 .btn--inverse-solid.btn--soft:not(:disabled):active,
 .btn--inverse-solid.btn--soft.btn--force-hover,
@@ -891,8 +847,6 @@
   background: var(--color-tokens-bg-heavy, #3f3f46);
 }
 
-.btn--inverse-light.btn--soft:not(:disabled):focus-visible,
-.btn--inverse-light.btn--soft.btn--force-focused,
 .btn--inverse-solid.btn--soft:not(:disabled):focus-visible,
 .btn--inverse-solid.btn--soft.btn--force-focused {
   outline: none;
@@ -902,15 +856,9 @@
     0 0 0 var(--btn-focus-ring, 6px) var(--color-tokens-bg-strongest, #09090b);
 }
 
-.btn--inverse-light.btn--soft.btn--loading,
 .btn--inverse-solid.btn--soft.btn--loading {
   background: var(--color-tokens-bg-strong, #27272a);
   color: var(--color-tokens-text-placeholder, #a1a1aa);
-}
-
-.btn--inverse-light.btn--soft:disabled {
-  background: var(--color-tokens-bg-strong, #27272a);
-  color: var(--color-tokens-text-body, #52525b);
 }
 
 .btn--inverse-solid.btn--soft:disabled {
@@ -918,16 +866,11 @@
   color: var(--color-tokens-text-disabled, #d4d4d8);
 }
 
-.btn--inverse-light.btn--ghost,
 .btn--inverse-solid.btn--ghost {
   background: transparent;
   color: var(--color-tokens-text-on-control, #fff);
 }
 
-.btn--inverse-light.btn--ghost:not(:disabled):hover,
-.btn--inverse-light.btn--ghost:not(:disabled):active,
-.btn--inverse-light.btn--ghost.btn--force-hover,
-.btn--inverse-light.btn--ghost.btn--force-pressed,
 .btn--inverse-solid.btn--ghost:not(:disabled):hover,
 .btn--inverse-solid.btn--ghost:not(:disabled):active,
 .btn--inverse-solid.btn--ghost.btn--force-hover,
@@ -936,8 +879,6 @@
   color: var(--color-tokens-text-static, #fff);
 }
 
-.btn--inverse-light.btn--ghost:not(:disabled):focus-visible,
-.btn--inverse-light.btn--ghost.btn--force-focused,
 .btn--inverse-solid.btn--ghost:not(:disabled):focus-visible,
 .btn--inverse-solid.btn--ghost.btn--force-focused {
   outline: none;
@@ -948,15 +889,9 @@
     0 0 0 var(--btn-focus-ring, 6px) var(--color-tokens-bg-strongest, #09090b);
 }
 
-.btn--inverse-light.btn--ghost.btn--loading,
 .btn--inverse-solid.btn--ghost.btn--loading {
   background: var(--color-tokens-bg-strongest, #09090b);
   color: var(--color-tokens-text-placeholder, #a1a1aa);
-}
-
-.btn--inverse-light.btn--ghost:disabled {
-  background: var(--color-tokens-bg-strongest, #09090b);
-  color: var(--color-tokens-text-body, #52525b);
 }
 
 .btn--inverse-solid.btn--ghost:disabled {
@@ -972,9 +907,7 @@
    two-class rule above rather than falling through to these, for
    explicitness and because outline's border-color is bound to
    stroke/medium specifically (this shared rule below uses the same
-   token now that it's synced). "inverse-light" keeps its own darker
-   :disabled treatment (a light disabled state wouldn't read against
-   the dark surface it's meant for) — both inverse rules win on
+   token now that it's synced) — that two-class rule wins on
    specificity (two color classes vs. one) regardless of source order,
    same as every other override here. Must come after every
    `.btn--{color}.btn--{variant}` block above: a plain

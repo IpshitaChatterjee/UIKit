@@ -4,7 +4,7 @@ import Button from './Button';
 const VARIANTS = ['solid', 'outline', 'soft', 'ghost'];
 const SIZES = ['xl', 'l', 'm', 's', 'xs'];
 const SHAPES = ['rounded', 'pill', 'square'];
-const COLORS = ['primary', 'neutral-solid', 'neutral-light', 'danger', 'success', 'info', 'inverse-light', 'inverse-solid'];
+const COLORS = ['primary', 'neutral-solid', 'neutral-light', 'danger', 'success', 'info', 'inverse-solid'];
 const STATES = ['default', 'hover', 'pressed', 'focused', 'loading', 'disabled'];
 
 export default {
@@ -85,20 +85,21 @@ export const AllVariants = {
   ),
 };
 
-// Renders every Type × Color at "xl" so all eight color families (primary,
-// neutral-solid, neutral-light, danger, success, info, inverse-light,
-// inverse-solid) can be compared side by side across all four emphasis
-// levels — "neutral-solid" comes from button_default/rounded/neutral-solid
-// (node 213:6169), "neutral-light" from button_default/rounded/neutral-light
+// Renders every Type × Color at "xl" so all seven color families (primary,
+// neutral-solid, neutral-light, danger, success, info, inverse-solid) can
+// be compared side by side across all four emphasis levels —
+// "neutral-solid" comes from button_default/rounded/neutral-solid (node
+// 213:6169), "neutral-light" from button_default/rounded/neutral-light
 // (node 213:5468), "danger" from button_default/rounded/danger (node
 // 213:3365), "success" from button_default/rounded/success (node
-// 213:7571), "inverse-light" from button_default/rounded/inverse-light
-// (node 213:4066), "inverse-solid" from button_default/rounded/inverse-solid
-// (node 213:4767) — the last two are meant for dark/colored surfaces, so
-// their "solid" cell reads as near-invisible against this story's white
-// background; that's expected, not a bug. "info" isn't from a verified
-// Figma component set — it's the same structure as "primary" with
-// color-tokens/info/* swapped in (see Button.css).
+// 213:7571), "inverse-solid" from button_default/rounded/inverse-solid
+// (node 213:4767) — meant for a dark/colored surface, so its "solid" cell
+// reads as near-invisible against this story's white background; that's
+// expected, not a bug. "info" isn't from a verified Figma component set
+// — it's the same structure as "primary" with color-tokens/info/* swapped
+// in (see Button.css). There used to be an "inverse-light" color too
+// (pixel-identical to inverse-solid at the time) — removed from
+// Storybook; the Figma component set still exists if it's needed again.
 export const AllColors = {
   render: () => (
     <div style={{ display: 'grid', gridTemplateColumns: `max-content repeat(${COLORS.length}, max-content)`, gap: '16px 24px', alignItems: 'center' }}>
