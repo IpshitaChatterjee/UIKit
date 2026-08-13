@@ -800,10 +800,19 @@
   text-shadow: none;
 }
 
-.btn--inverse-light.btn--solid:disabled,
-.btn--inverse-solid.btn--solid:disabled {
+.btn--inverse-light.btn--solid:disabled {
   background: var(--color-tokens-bg-light, #e4e4e7);
   color: var(--color-tokens-text-body, #52525b);
+  box-shadow: none;
+  text-shadow: none;
+}
+
+/* inverse-solid's disabled state uses the same tokens as primary's
+   (shared .btn--{type}:disabled rules below) rather than its own darker
+   treatment — matches Figma's binding on this component specifically. */
+.btn--inverse-solid.btn--solid:disabled {
+  background: var(--color-tokens-bg-weak, #f4f4f5);
+  color: var(--color-tokens-text-disabled, #d4d4d8);
   box-shadow: none;
   text-shadow: none;
 }
@@ -843,11 +852,16 @@
   color: var(--color-tokens-text-placeholder, #a1a1aa);
 }
 
-.btn--inverse-light.btn--outline:disabled,
-.btn--inverse-solid.btn--outline:disabled {
+.btn--inverse-light.btn--outline:disabled {
   background: var(--color-tokens-bg-strongest, #09090b);
   color: var(--color-tokens-text-body, #52525b);
   border-color: var(--color-tokens-stroke-heavy, #3f3f46);
+}
+
+.btn--inverse-solid.btn--outline:disabled {
+  background: var(--color-tokens-bg-static, #fff);
+  color: var(--color-tokens-text-disabled, #d4d4d8);
+  border-color: var(--color-tokens-stroke-medium, #d4d4d8);
 }
 
 .btn--inverse-light.btn--soft,
@@ -884,10 +898,14 @@
   color: var(--color-tokens-text-placeholder, #a1a1aa);
 }
 
-.btn--inverse-light.btn--soft:disabled,
-.btn--inverse-solid.btn--soft:disabled {
+.btn--inverse-light.btn--soft:disabled {
   background: var(--color-tokens-bg-strong, #27272a);
   color: var(--color-tokens-text-body, #52525b);
+}
+
+.btn--inverse-solid.btn--soft:disabled {
+  background: var(--color-tokens-bg-weak, #f4f4f5);
+  color: var(--color-tokens-text-disabled, #d4d4d8);
 }
 
 .btn--inverse-light.btn--ghost,
@@ -924,21 +942,30 @@
   color: var(--color-tokens-text-placeholder, #a1a1aa);
 }
 
-.btn--inverse-light.btn--ghost:disabled,
-.btn--inverse-solid.btn--ghost:disabled {
+.btn--inverse-light.btn--ghost:disabled {
   background: var(--color-tokens-bg-strongest, #09090b);
   color: var(--color-tokens-text-body, #52525b);
+}
+
+.btn--inverse-solid.btn--ghost:disabled {
+  background: var(--color-tokens-bg-static, #fff);
+  color: var(--color-tokens-text-disabled, #d4d4d8);
 }
 
 /* Disabled — identical across every color family that sits on a light
    surface (bg-weak/bg-static + text-disabled don't vary by color), so
    one shared rule per type covers "primary", "neutral-solid",
-   "neutral-light", "danger", and "success" alike. "inverse-light" and
-   "inverse-solid" define their own :disabled rules above instead (a
-   light disabled state wouldn't read against the dark surface they're
-   meant for) — those win on specificity (two color classes vs. one)
-   regardless of source order, same as every other override here. Must
-   come after every `.btn--{color}.btn--{variant}` block above: a plain
+   "neutral-light", "danger", "success", and — per Figma — "inverse-
+   solid" alike. inverse-solid still defines its own (near-identical)
+   two-class rule above rather than falling through to these, for
+   explicitness and because outline's border-color is bound to
+   stroke/medium specifically (this shared rule below uses the same
+   token now that it's synced). "inverse-light" keeps its own darker
+   :disabled treatment (a light disabled state wouldn't read against
+   the dark surface it's meant for) — both inverse rules win on
+   specificity (two color classes vs. one) regardless of source order,
+   same as every other override here. Must come after every
+   `.btn--{color}.btn--{variant}` block above: a plain
    `.btn--solid:disabled` and a two-class `.btn--success.btn--solid`
    selector have equal specificity, so without this ordering the color
    family's default rule would win the tie and disabled buttons would
@@ -953,8 +980,7 @@
 .btn--outline:disabled {
   background: var(--color-tokens-bg-static, #fff);
   color: var(--color-tokens-text-disabled, #d4d4d8);
-  /* Figma's stroke/medium isn't in the token pipeline yet; same hex as text/disabled */
-  border-color: var(--color-tokens-text-disabled, #d4d4d8);
+  border-color: var(--color-tokens-stroke-medium, #d4d4d8);
 }
 
 .btn--soft:disabled {
