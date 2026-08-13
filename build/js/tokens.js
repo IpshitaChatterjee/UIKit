@@ -2232,24 +2232,6 @@ export const FillPrimitivesBlackAlpha48 = "#0000007a";
 export const FillPrimitivesBlackAlpha64 = "#000000a3";
 export const FillPrimitivesBlackAlpha80 = "#000000cc";
 export const FillPrimitivesBlackAlphaStatic = "#000000";
-export const FillTokensDarkStaticWhiteWhiteAlpha32 = "#ffffff52";
-export const FillTokensDarkTextStatic = "#000000";
-export const FillTokensDarkTextStrongest = "#fafafa";
-export const FillTokensDarkIconStatic = "#000000";
-export const FillTokensDarkIconDisabled = "#52525b";
-export const FillTokensDarkIconPlaceholder = "#71717a";
-export const FillTokensDarkIconBody = "#d4d4d8";
-export const FillTokensDarkIconStrongest = "#fafafa";
-export const FillTokensDarkStrokeStatic = "#000000";
-export const FillTokensDarkStrokeWeakest = "#18181b";
-export const FillTokensDarkStrokeWeak = "#27272a";
-export const FillTokensDarkStrokeLight = "#3f3f46";
-export const FillTokensDarkStrokeMedium = "#71717a";
-export const FillTokensDarkStrokeHeavy = "#d4d4d8";
-export const FillTokensDarkStrokeStrong = "#e4e4e7";
-export const FillTokensDarkStrokeStrongest = "#fafafa";
-export const FillTokensDarkStableWeakest = "#71717a29";
-export const FillTokensDarkStableWeak = "#71717a3d";
 export const FillTokensDarkFocusRingColorsPrimaryColorInner = "#09090b";
 export const FillTokensDarkFocusRingColorsPrimaryColorOuter = "#615fff";
 export const FillTokensDarkFocusRingColorsNeutralColorInner = "#09090b";
@@ -2302,6 +2284,10 @@ export const ColorTokensStaticWhiteWhiteAlpha64 = {
 export const ColorTokensStaticWhiteWhiteAlpha48 = {
   Light: "#ffffff7a",
   Dark: "#ffffff7a",
+};
+export const ColorTokensStaticWhiteWhiteAlpha32 = {
+  Light: "#ffffff52",
+  Dark: "#ffffff52",
 };
 export const ColorTokensStaticWhiteWhiteAlpha24 = {
   Light: "#ffffff3d",
@@ -2363,9 +2349,24 @@ export const ColorTokensBgMedium = { Light: "#d4d4d8", Dark: "#71717a" };
 export const ColorTokensBgHeavy = { Light: "#3f3f46", Dark: "#d4d4d8" };
 export const ColorTokensBgStrong = { Light: "#27272a", Dark: "#e4e4e7" };
 export const ColorTokensBgStrongest = { Light: "#09090b", Dark: "#fafafa" };
+export const ColorTokensTextStatic = { Light: "#ffffff", Dark: "#000000" };
 export const ColorTokensTextDisabled = { Light: "#d4d4d8", Dark: "#52525b" };
 export const ColorTokensTextPlaceholder = { Light: "#a1a1aa", Dark: "#71717a" };
 export const ColorTokensTextBody = { Light: "#52525b", Dark: "#d4d4d8" };
+export const ColorTokensTextStrongest = { Light: "#09090b", Dark: "#fafafa" };
+export const ColorTokensIconStatic = { Light: "#ffffff", Dark: "#000000" };
+export const ColorTokensIconDisabled = { Light: "#d4d4d8", Dark: "#52525b" };
+export const ColorTokensIconPlaceholder = { Light: "#a1a1aa", Dark: "#71717a" };
+export const ColorTokensIconBody = { Light: "#52525b", Dark: "#d4d4d8" };
+export const ColorTokensIconStrongest = { Light: "#09090b", Dark: "#fafafa" };
+export const ColorTokensStrokeStatic = { Light: "#ffffff", Dark: "#000000" };
+export const ColorTokensStrokeWeakest = { Light: "#fafafa", Dark: "#18181b" };
+export const ColorTokensStrokeWeak = { Light: "#f4f4f5", Dark: "#27272a" };
+export const ColorTokensStrokeLight = { Light: "#e4e4e7", Dark: "#3f3f46" };
+export const ColorTokensStrokeMedium = { Light: "#d4d4d8", Dark: "#71717a" };
+export const ColorTokensStrokeHeavy = { Light: "#3f3f46", Dark: "#d4d4d8" };
+export const ColorTokensStrokeStrong = { Light: "#27272a", Dark: "#e4e4e7" };
+export const ColorTokensStrokeStrongest = { Light: "#09090b", Dark: "#fafafa" };
 export const ColorTokensPrimaryPrimaryWeakest = {
   Light: "#eef2ff",
   Dark: "#6366f129",
@@ -2462,6 +2463,8 @@ export const ColorTokensAwayWeak = { Light: "#fef9c2", Dark: "#f0b1003d" };
 export const ColorTokensAwayBase = { Light: "#d08700", Dark: "#f0b100" };
 export const ColorTokensAwayStrong = { Light: "#a65f00", Dark: "#fdc700" };
 export const ColorTokensAwayStrongest = { Light: "#733e0a", Dark: "#fff085" };
+export const ColorTokensStableWeakest = { Light: "#fafafa", Dark: "#71717a29" };
+export const ColorTokensStableWeak = { Light: "#f4f4f5", Dark: "#71717a3d" };
 export const ColorTokensStableBase = { Light: "#52525b", Dark: "#71717a" };
 export const ColorTokensStableStrong = { Light: "#3f3f46", Dark: "#a1a1aa" };
 export const ColorTokensStableStrongest = { Light: "#18181b", Dark: "#e4e4e7" };
@@ -2492,3 +2495,5 @@ export const ColorTokensOverlayActiveInverted = {
 export const ColorTokensShadowXs = { Light: "#00000014", Dark: "#ffffff14" };
 export const ColorTokensShadowSm = { Light: "#00000029", Dark: "#ffffff29" };
 export const ColorTokensShadowMd = { Light: "#0000003d", Dark: "#ffffff3d" };
+export const ColorTokensTextOnControl = { Light: "#ffffff", Dark: "#ffffff" };
+export const ColorTokensTextStaticBlack = { Light: "#000000", Dark: "#000000" };
