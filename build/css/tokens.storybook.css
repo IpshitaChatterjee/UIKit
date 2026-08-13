@@ -472,8 +472,8 @@
   --effect-focus-ring-inverse-1: 0px 0px 0px 3px #fafafa, 0px 0px 0px 1px #09090b;
   --effect-focus-ring-inverse-2: 0px 0px 0px 4px #fafafa, 0px 0px 0px 2px #09090b;
   --effect-focus-ring-inverse-3: 0px 0px 0px 6px #fafafa, 0px 0px 0px 3px #09090b;
-  --effect-focus-ring-success-2: 0px 0px 0px 4px #00a63e, 0px 0px 0px 2px #fafafa;
-  --effect-focus-ring-success-3: 0px 0px 0px 6px #00a63e, 0px 0px 0px 3px #fafafa;
+  --effect-focus-ring-success-2: 0px 0px 0px 4px #00c950, 0px 0px 0px 2px #fafafa;
+  --effect-focus-ring-success-3: 0px 0px 0px 6px #00c950, 0px 0px 0px 3px #fafafa;
   --effect-focus-ring-error-0: 0px 0px 0px 2px #e7000b, 0px 0px 0px 0px #fafafa;
   --effect-focus-ring-error-1: 0px 0px 0px 3px #e7000b, 0px 0px 0px 1px #fafafa;
   --effect-focus-ring-error-2: 0px 0px 0px 4px #e7000b, 0px 0px 0px 2px #fafafa;
@@ -934,43 +934,6 @@
  * @presenter Color
  */
 :root {
-  --fill-tokens-dark-focus-ring-colors-primary-color-inner: #09090b;
-  --fill-tokens-dark-focus-ring-colors-primary-color-outer: #615fff;
-  --fill-tokens-dark-focus-ring-colors-neutral-color-inner: #09090b;
-  --fill-tokens-dark-focus-ring-colors-neutral-color-outer: #e4e4e7;
-  --fill-tokens-dark-focus-ring-colors-inverse-color-inner: #09090b;
-  --fill-tokens-dark-focus-ring-colors-inverse-color-outer: #fafafa;
-  --fill-tokens-dark-focus-ring-colors-success-color-inner: #09090b;
-  --fill-tokens-dark-focus-ring-colors-success-color-outer: #00a63e;
-  --fill-tokens-dark-focus-ring-colors-error-color-inner: #09090b;
-  --fill-tokens-dark-focus-ring-colors-error-color-outer: #c10007;
-  --fill-tokens-dark-focus-ring-colors-info-color-inner: #09090b;
-  --fill-tokens-dark-focus-ring-colors-info-color-outer: #2563eb;
-  --fill-tokens-dark-shadows-neutral: #27272a;
-  --fill-tokens-dark-shadows-interactive-primary-base: #615fff;
-  --fill-tokens-dark-shadows-interactive-primary-inner: #ffffff29;
-  --fill-tokens-dark-shadows-interactive-primary-hover: #4f39f6;
-  --fill-tokens-dark-shadows-interactive-primary-drop: #432dd7;
-  --fill-tokens-dark-shadows-interactive-neutral-base: #e4e4e7;
-  --fill-tokens-dark-shadows-interactive-neutral-hover: #fafafa;
-  --fill-tokens-dark-shadows-interactive-neutral-drop: #3f3f46;
-  --fill-tokens-dark-shadows-interactive-neutral-inner: #d4d4d8;
-  --fill-tokens-dark-shadows-interactive-inverse-base: #18181b;
-  --fill-tokens-dark-shadows-interactive-inverse-hover: #3f3f46;
-  --fill-tokens-dark-shadows-interactive-inverse-drop: #3f3f46;
-  --fill-tokens-dark-shadows-interactive-inverse-inner: #3f3f46;
-  --fill-tokens-dark-shadows-interactive-error-base: #e7000b;
-  --fill-tokens-dark-shadows-interactive-error-hover: #fb2c36;
-  --fill-tokens-dark-shadows-interactive-error-drop: #c10007;
-  --fill-tokens-dark-shadows-interactive-error-inner: #ffffff29;
-  --fill-tokens-dark-shadows-interactive-success-base: #00a63e;
-  --fill-tokens-dark-shadows-interactive-success-inner: #ffffff29;
-  --fill-tokens-dark-shadows-interactive-success-hover: #00c950;
-  --fill-tokens-dark-shadows-interactive-success-drop: #008236;
-  --fill-tokens-dark-shadows-interactive-info-base: #2563eb;
-  --fill-tokens-dark-shadows-interactive-info-inner: #ffffff29;
-  --fill-tokens-dark-shadows-interactive-info-hover: #3b82f6;
-  --fill-tokens-dark-shadows-interactive-info-drop: #1d4ed8;
   --color-tokens-static-white-white: #ffffff;
   --color-tokens-static-white-white-alpha-80: #ffffffcc;
   --color-tokens-static-white-white-alpha-64: #ffffffa3;
@@ -1188,4 +1151,129 @@
   --color-tokens-shadow-md: #ffffff3d;
   --color-tokens-text-on-control: #ffffff;
   --color-tokens-text-static-black: #000000;
+}
+
+/**
+ * @tokens Effects
+ */
+:root {
+  --effects-focus-ring-colors-primary-color-inner: #fafafa;
+  --effects-focus-ring-colors-primary-color-outer: #615fff;
+  --effects-focus-ring-colors-neutral-color-inner: #ffffff;
+  --effects-focus-ring-colors-neutral-color-outer: #09090b;
+  --effects-focus-ring-colors-inverse-color-inner: #fafafa;
+  --effects-focus-ring-colors-inverse-color-outer: #09090b;
+  --effects-focus-ring-colors-success-color-inner: #fafafa;
+  --effects-focus-ring-colors-success-color-outer: #00a63e;
+  --effects-focus-ring-colors-error-color-inner: #fafafa;
+  --effects-focus-ring-colors-error-color-outer: #e7000b;
+  --effects-focus-ring-colors-info-color-inner: #fafafa;
+  --effects-focus-ring-colors-info-color-outer: #2563eb;
+  --effects-shadows-neutral: #00000014;
+  --effects-shadows-interactive-primary-base: #615fff;
+  --effects-shadows-interactive-primary-inner: #ffffff29;
+  --effects-shadows-interactive-primary-hover: #4f39f6;
+  --effects-shadows-interactive-primary-drop: #e0e7ff;
+  --effects-shadows-interactive-neutral-base: #27272a;
+  --effects-shadows-interactive-neutral-hover: #09090b;
+  --effects-shadows-interactive-neutral-drop: #3f3f46;
+  --effects-shadows-interactive-neutral-inner: #3f3f46;
+  --effects-shadows-interactive-inverse-base: #fafafa;
+  --effects-shadows-interactive-inverse-hover: #e4e4e7;
+  --effects-shadows-interactive-inverse-drop: #71717a;
+  --effects-shadows-interactive-inverse-inner: #f4f4f5;
+  --effects-shadows-interactive-error-base: #c10007;
+  --effects-shadows-interactive-error-hover: #e7000b;
+  --effects-shadows-interactive-error-drop: #ffe2e2;
+  --effects-shadows-interactive-error-inner: #ffffff29;
+  --effects-shadows-interactive-success-base: #00a63e;
+  --effects-shadows-interactive-success-inner: #ffffff29;
+  --effects-shadows-interactive-success-hover: #00c950;
+  --effects-shadows-interactive-success-drop: #dcfce7;
+  --effects-shadows-interactive-info-base: #2563eb;
+  --effects-shadows-interactive-info-inner: #ffffff29;
+  --effects-shadows-interactive-info-hover: #3b82f6;
+  --effects-shadows-interactive-info-drop: #dbeafe;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --effects-focus-ring-colors-primary-color-inner: #09090b;
+    --effects-focus-ring-colors-primary-color-outer: #615fff;
+    --effects-focus-ring-colors-neutral-color-inner: #09090b;
+    --effects-focus-ring-colors-neutral-color-outer: #e4e4e7;
+    --effects-focus-ring-colors-inverse-color-inner: #09090b;
+    --effects-focus-ring-colors-inverse-color-outer: #fafafa;
+    --effects-focus-ring-colors-success-color-inner: #09090b;
+    --effects-focus-ring-colors-success-color-outer: #00a63e;
+    --effects-focus-ring-colors-error-color-inner: #09090b;
+    --effects-focus-ring-colors-error-color-outer: #c10007;
+    --effects-focus-ring-colors-info-color-inner: #09090b;
+    --effects-focus-ring-colors-info-color-outer: #2563eb;
+    --effects-shadows-neutral: #27272a;
+    --effects-shadows-interactive-primary-base: #615fff;
+    --effects-shadows-interactive-primary-inner: #ffffff29;
+    --effects-shadows-interactive-primary-hover: #4f39f6;
+    --effects-shadows-interactive-primary-drop: #432dd7;
+    --effects-shadows-interactive-neutral-base: #e4e4e7;
+    --effects-shadows-interactive-neutral-hover: #fafafa;
+    --effects-shadows-interactive-neutral-drop: #3f3f46;
+    --effects-shadows-interactive-neutral-inner: #d4d4d8;
+    --effects-shadows-interactive-inverse-base: #18181b;
+    --effects-shadows-interactive-inverse-hover: #3f3f46;
+    --effects-shadows-interactive-inverse-drop: #3f3f46;
+    --effects-shadows-interactive-inverse-inner: #3f3f46;
+    --effects-shadows-interactive-error-base: #e7000b;
+    --effects-shadows-interactive-error-hover: #fb2c36;
+    --effects-shadows-interactive-error-drop: #c10007;
+    --effects-shadows-interactive-error-inner: #ffffff29;
+    --effects-shadows-interactive-success-base: #00a63e;
+    --effects-shadows-interactive-success-inner: #ffffff29;
+    --effects-shadows-interactive-success-hover: #00c950;
+    --effects-shadows-interactive-success-drop: #008236;
+    --effects-shadows-interactive-info-base: #2563eb;
+    --effects-shadows-interactive-info-inner: #ffffff29;
+    --effects-shadows-interactive-info-hover: #3b82f6;
+    --effects-shadows-interactive-info-drop: #1d4ed8;
+  }
+}
+
+:root[data-theme="dark"] {
+    --effects-focus-ring-colors-primary-color-inner: #09090b;
+    --effects-focus-ring-colors-primary-color-outer: #615fff;
+    --effects-focus-ring-colors-neutral-color-inner: #09090b;
+    --effects-focus-ring-colors-neutral-color-outer: #e4e4e7;
+    --effects-focus-ring-colors-inverse-color-inner: #09090b;
+    --effects-focus-ring-colors-inverse-color-outer: #fafafa;
+    --effects-focus-ring-colors-success-color-inner: #09090b;
+    --effects-focus-ring-colors-success-color-outer: #00a63e;
+    --effects-focus-ring-colors-error-color-inner: #09090b;
+    --effects-focus-ring-colors-error-color-outer: #c10007;
+    --effects-focus-ring-colors-info-color-inner: #09090b;
+    --effects-focus-ring-colors-info-color-outer: #2563eb;
+    --effects-shadows-neutral: #27272a;
+    --effects-shadows-interactive-primary-base: #615fff;
+    --effects-shadows-interactive-primary-inner: #ffffff29;
+    --effects-shadows-interactive-primary-hover: #4f39f6;
+    --effects-shadows-interactive-primary-drop: #432dd7;
+    --effects-shadows-interactive-neutral-base: #e4e4e7;
+    --effects-shadows-interactive-neutral-hover: #fafafa;
+    --effects-shadows-interactive-neutral-drop: #3f3f46;
+    --effects-shadows-interactive-neutral-inner: #d4d4d8;
+    --effects-shadows-interactive-inverse-base: #18181b;
+    --effects-shadows-interactive-inverse-hover: #3f3f46;
+    --effects-shadows-interactive-inverse-drop: #3f3f46;
+    --effects-shadows-interactive-inverse-inner: #3f3f46;
+    --effects-shadows-interactive-error-base: #e7000b;
+    --effects-shadows-interactive-error-hover: #fb2c36;
+    --effects-shadows-interactive-error-drop: #c10007;
+    --effects-shadows-interactive-error-inner: #ffffff29;
+    --effects-shadows-interactive-success-base: #00a63e;
+    --effects-shadows-interactive-success-inner: #ffffff29;
+    --effects-shadows-interactive-success-hover: #00c950;
+    --effects-shadows-interactive-success-drop: #008236;
+    --effects-shadows-interactive-info-base: #2563eb;
+    --effects-shadows-interactive-info-inner: #ffffff29;
+    --effects-shadows-interactive-info-hover: #3b82f6;
+    --effects-shadows-interactive-info-drop: #1d4ed8;
 }

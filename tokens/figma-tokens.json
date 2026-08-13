@@ -1,7 +1,7 @@
 {
   "_meta": {
     "source": "files-api (styles only — variables API unavailable)",
-    "fetchedAt": "2026-08-13T13:22:40.344Z",
+    "fetchedAt": "2026-08-13T14:55:40.048Z",
     "fileKey": "nF6XfTdKWVl1P8xvufWjNn"
   },
   "text": {
@@ -1157,7 +1157,7 @@
           "type": "DROP_SHADOW",
           "radius": 0,
           "spread": 4,
-          "color": "#00a63e",
+          "color": "#00c950",
           "offset": {
             "x": 0,
             "y": 0
@@ -1182,7 +1182,7 @@
           "type": "DROP_SHADOW",
           "radius": 0,
           "spread": 6,
-          "color": "#00a63e",
+          "color": "#00c950",
           "offset": {
             "x": 0,
             "y": 0
@@ -4467,154 +4467,6 @@
     "primitives/black/alpha/static": {
       "value": "#000000",
       "description": ""
-    },
-    "tokens-dark/focus-ring/colors/primary/color-inner": {
-      "value": "#09090b",
-      "description": ""
-    },
-    "tokens-dark/focus-ring/colors/primary/color-outer": {
-      "value": "#615fff",
-      "description": ""
-    },
-    "tokens-dark/focus-ring/colors/neutral/color-inner": {
-      "value": "#09090b",
-      "description": ""
-    },
-    "tokens-dark/focus-ring/colors/neutral/color-outer": {
-      "value": "#e4e4e7",
-      "description": ""
-    },
-    "tokens-dark/focus-ring/colors/inverse/color-inner": {
-      "value": "#09090b",
-      "description": ""
-    },
-    "tokens-dark/focus-ring/colors/inverse/color-outer": {
-      "value": "#fafafa",
-      "description": ""
-    },
-    "tokens-dark/focus-ring/colors/success/color-inner": {
-      "value": "#09090b",
-      "description": ""
-    },
-    "tokens-dark/focus-ring/colors/success/color-outer": {
-      "value": "#00a63e",
-      "description": ""
-    },
-    "tokens-dark/focus-ring/colors/error/color-inner": {
-      "value": "#09090b",
-      "description": ""
-    },
-    "tokens-dark/focus-ring/colors/error/color-outer": {
-      "value": "#c10007",
-      "description": ""
-    },
-    "tokens-dark/focus-ring/colors/info/color-inner": {
-      "value": "#09090b",
-      "description": ""
-    },
-    "tokens-dark/focus-ring/colors/info/color-outer": {
-      "value": "#2563eb",
-      "description": ""
-    },
-    "tokens-dark/shadows/neutral": {
-      "value": "#27272a",
-      "description": ""
-    },
-    "tokens-dark/shadows/interactive/primary/base": {
-      "value": "#615fff",
-      "description": ""
-    },
-    "tokens-dark/shadows/interactive/primary/inner": {
-      "value": "#ffffff29",
-      "description": ""
-    },
-    "tokens-dark/shadows/interactive/primary/hover": {
-      "value": "#4f39f6",
-      "description": ""
-    },
-    "tokens-dark/shadows/interactive/primary/drop": {
-      "value": "#432dd7",
-      "description": ""
-    },
-    "tokens-dark/shadows/interactive/neutral/base": {
-      "value": "#e4e4e7",
-      "description": ""
-    },
-    "tokens-dark/shadows/interactive/neutral/hover": {
-      "value": "#fafafa",
-      "description": ""
-    },
-    "tokens-dark/shadows/interactive/neutral/drop": {
-      "value": "#3f3f46",
-      "description": ""
-    },
-    "tokens-dark/shadows/interactive/neutral/inner": {
-      "value": "#d4d4d8",
-      "description": ""
-    },
-    "tokens-dark/shadows/interactive/inverse/base": {
-      "value": "#18181b",
-      "description": ""
-    },
-    "tokens-dark/shadows/interactive/inverse/hover": {
-      "value": "#3f3f46",
-      "description": ""
-    },
-    "tokens-dark/shadows/interactive/inverse/drop": {
-      "value": "#3f3f46",
-      "description": ""
-    },
-    "tokens-dark/shadows/interactive/inverse/inner": {
-      "value": "#3f3f46",
-      "description": ""
-    },
-    "tokens-dark/shadows/interactive/error/base": {
-      "value": "#e7000b",
-      "description": ""
-    },
-    "tokens-dark/shadows/interactive/error/hover": {
-      "value": "#fb2c36",
-      "description": ""
-    },
-    "tokens-dark/shadows/interactive/error/drop": {
-      "value": "#c10007",
-      "description": ""
-    },
-    "tokens-dark/shadows/interactive/error/inner": {
-      "value": "#ffffff29",
-      "description": ""
-    },
-    "tokens-dark/shadows/interactive/success/base": {
-      "value": "#00a63e",
-      "description": ""
-    },
-    "tokens-dark/shadows/interactive/success/inner": {
-      "value": "#ffffff29",
-      "description": ""
-    },
-    "tokens-dark/shadows/interactive/success/hover": {
-      "value": "#00c950",
-      "description": ""
-    },
-    "tokens-dark/shadows/interactive/success/drop": {
-      "value": "#008236",
-      "description": ""
-    },
-    "tokens-dark/shadows/interactive/info/base": {
-      "value": "#2563eb",
-      "description": ""
-    },
-    "tokens-dark/shadows/interactive/info/inner": {
-      "value": "#ffffff29",
-      "description": ""
-    },
-    "tokens-dark/shadows/interactive/info/hover": {
-      "value": "#3b82f6",
-      "description": ""
-    },
-    "tokens-dark/shadows/interactive/info/drop": {
-      "value": "#1d4ed8",
-      "description": ""
     }
   },
   "color-tokens": {
@@ -5350,6 +5202,267 @@
       "value": {
         "Light": "#000000",
         "Dark": "#000000"
+      },
+      "description": ""
+    }
+  },
+  "effects": {
+    "focus-ring/colors/primary/color-inner": {
+      "value": {
+        "Light": "#fafafa",
+        "Dark": "#09090b"
+      },
+      "description": ""
+    },
+    "focus-ring/colors/primary/color-outer": {
+      "value": {
+        "Light": "#615fff",
+        "Dark": "#615fff"
+      },
+      "description": ""
+    },
+    "focus-ring/colors/neutral/color-inner": {
+      "value": {
+        "Light": "#ffffff",
+        "Dark": "#09090b"
+      },
+      "description": ""
+    },
+    "focus-ring/colors/neutral/color-outer": {
+      "value": {
+        "Light": "#09090b",
+        "Dark": "#e4e4e7"
+      },
+      "description": ""
+    },
+    "focus-ring/colors/inverse/color-inner": {
+      "value": {
+        "Light": "#fafafa",
+        "Dark": "#09090b"
+      },
+      "description": ""
+    },
+    "focus-ring/colors/inverse/color-outer": {
+      "value": {
+        "Light": "#09090b",
+        "Dark": "#fafafa"
+      },
+      "description": ""
+    },
+    "focus-ring/colors/success/color-inner": {
+      "value": {
+        "Light": "#fafafa",
+        "Dark": "#09090b"
+      },
+      "description": ""
+    },
+    "focus-ring/colors/success/color-outer": {
+      "value": {
+        "Light": "#00a63e",
+        "Dark": "#00a63e"
+      },
+      "description": ""
+    },
+    "focus-ring/colors/error/color-inner": {
+      "value": {
+        "Light": "#fafafa",
+        "Dark": "#09090b"
+      },
+      "description": ""
+    },
+    "focus-ring/colors/error/color-outer": {
+      "value": {
+        "Light": "#e7000b",
+        "Dark": "#c10007"
+      },
+      "description": ""
+    },
+    "focus-ring/colors/info/color-inner": {
+      "value": {
+        "Light": "#fafafa",
+        "Dark": "#09090b"
+      },
+      "description": ""
+    },
+    "focus-ring/colors/info/color-outer": {
+      "value": {
+        "Light": "#2563eb",
+        "Dark": "#2563eb"
+      },
+      "description": ""
+    },
+    "shadows/neutral": {
+      "value": {
+        "Light": "#00000014",
+        "Dark": "#27272a"
+      },
+      "description": ""
+    },
+    "shadows/interactive/primary/base": {
+      "value": {
+        "Light": "#615fff",
+        "Dark": "#615fff"
+      },
+      "description": ""
+    },
+    "shadows/interactive/primary/inner": {
+      "value": {
+        "Light": "#ffffff29",
+        "Dark": "#ffffff29"
+      },
+      "description": ""
+    },
+    "shadows/interactive/primary/hover": {
+      "value": {
+        "Light": "#4f39f6",
+        "Dark": "#4f39f6"
+      },
+      "description": ""
+    },
+    "shadows/interactive/primary/drop": {
+      "value": {
+        "Light": "#e0e7ff",
+        "Dark": "#432dd7"
+      },
+      "description": ""
+    },
+    "shadows/interactive/neutral/base": {
+      "value": {
+        "Light": "#27272a",
+        "Dark": "#e4e4e7"
+      },
+      "description": ""
+    },
+    "shadows/interactive/neutral/hover": {
+      "value": {
+        "Light": "#09090b",
+        "Dark": "#fafafa"
+      },
+      "description": ""
+    },
+    "shadows/interactive/neutral/drop": {
+      "value": {
+        "Light": "#3f3f46",
+        "Dark": "#3f3f46"
+      },
+      "description": ""
+    },
+    "shadows/interactive/neutral/inner": {
+      "value": {
+        "Light": "#3f3f46",
+        "Dark": "#d4d4d8"
+      },
+      "description": ""
+    },
+    "shadows/interactive/inverse/base": {
+      "value": {
+        "Light": "#fafafa",
+        "Dark": "#18181b"
+      },
+      "description": ""
+    },
+    "shadows/interactive/inverse/hover": {
+      "value": {
+        "Light": "#e4e4e7",
+        "Dark": "#3f3f46"
+      },
+      "description": ""
+    },
+    "shadows/interactive/inverse/drop": {
+      "value": {
+        "Light": "#71717a",
+        "Dark": "#3f3f46"
+      },
+      "description": ""
+    },
+    "shadows/interactive/inverse/inner": {
+      "value": {
+        "Light": "#f4f4f5",
+        "Dark": "#3f3f46"
+      },
+      "description": ""
+    },
+    "shadows/interactive/error/base": {
+      "value": {
+        "Light": "#c10007",
+        "Dark": "#e7000b"
+      },
+      "description": ""
+    },
+    "shadows/interactive/error/hover": {
+      "value": {
+        "Light": "#e7000b",
+        "Dark": "#fb2c36"
+      },
+      "description": ""
+    },
+    "shadows/interactive/error/drop": {
+      "value": {
+        "Light": "#ffe2e2",
+        "Dark": "#c10007"
+      },
+      "description": ""
+    },
+    "shadows/interactive/error/inner": {
+      "value": {
+        "Light": "#ffffff29",
+        "Dark": "#ffffff29"
+      },
+      "description": ""
+    },
+    "shadows/interactive/success/base": {
+      "value": {
+        "Light": "#00a63e",
+        "Dark": "#00a63e"
+      },
+      "description": ""
+    },
+    "shadows/interactive/success/inner": {
+      "value": {
+        "Light": "#ffffff29",
+        "Dark": "#ffffff29"
+      },
+      "description": ""
+    },
+    "shadows/interactive/success/hover": {
+      "value": {
+        "Light": "#00c950",
+        "Dark": "#00c950"
+      },
+      "description": ""
+    },
+    "shadows/interactive/success/drop": {
+      "value": {
+        "Light": "#dcfce7",
+        "Dark": "#008236"
+      },
+      "description": ""
+    },
+    "shadows/interactive/info/base": {
+      "value": {
+        "Light": "#2563eb",
+        "Dark": "#2563eb"
+      },
+      "description": ""
+    },
+    "shadows/interactive/info/inner": {
+      "value": {
+        "Light": "#ffffff29",
+        "Dark": "#ffffff29"
+      },
+      "description": ""
+    },
+    "shadows/interactive/info/hover": {
+      "value": {
+        "Light": "#3b82f6",
+        "Dark": "#3b82f6"
+      },
+      "description": ""
+    },
+    "shadows/interactive/info/drop": {
+      "value": {
+        "Light": "#dbeafe",
+        "Dark": "#1d4ed8"
       },
       "description": ""
     }

@@ -707,7 +707,7 @@ export const EffectFocusRingSuccess2 = [
     type: "DROP_SHADOW",
     radius: 0,
     spread: 4,
-    color: "#00a63e",
+    color: "#00c950",
     offset: { x: 0, y: 0 },
   },
   {
@@ -723,7 +723,7 @@ export const EffectFocusRingSuccess3 = [
     type: "DROP_SHADOW",
     radius: 0,
     spread: 6,
-    color: "#00a63e",
+    color: "#00c950",
     offset: { x: 0, y: 0 },
   },
   {
@@ -2232,43 +2232,6 @@ export const FillPrimitivesBlackAlpha48 = "#0000007a";
 export const FillPrimitivesBlackAlpha64 = "#000000a3";
 export const FillPrimitivesBlackAlpha80 = "#000000cc";
 export const FillPrimitivesBlackAlphaStatic = "#000000";
-export const FillTokensDarkFocusRingColorsPrimaryColorInner = "#09090b";
-export const FillTokensDarkFocusRingColorsPrimaryColorOuter = "#615fff";
-export const FillTokensDarkFocusRingColorsNeutralColorInner = "#09090b";
-export const FillTokensDarkFocusRingColorsNeutralColorOuter = "#e4e4e7";
-export const FillTokensDarkFocusRingColorsInverseColorInner = "#09090b";
-export const FillTokensDarkFocusRingColorsInverseColorOuter = "#fafafa";
-export const FillTokensDarkFocusRingColorsSuccessColorInner = "#09090b";
-export const FillTokensDarkFocusRingColorsSuccessColorOuter = "#00a63e";
-export const FillTokensDarkFocusRingColorsErrorColorInner = "#09090b";
-export const FillTokensDarkFocusRingColorsErrorColorOuter = "#c10007";
-export const FillTokensDarkFocusRingColorsInfoColorInner = "#09090b";
-export const FillTokensDarkFocusRingColorsInfoColorOuter = "#2563eb";
-export const FillTokensDarkShadowsNeutral = "#27272a";
-export const FillTokensDarkShadowsInteractivePrimaryBase = "#615fff";
-export const FillTokensDarkShadowsInteractivePrimaryInner = "#ffffff29";
-export const FillTokensDarkShadowsInteractivePrimaryHover = "#4f39f6";
-export const FillTokensDarkShadowsInteractivePrimaryDrop = "#432dd7";
-export const FillTokensDarkShadowsInteractiveNeutralBase = "#e4e4e7";
-export const FillTokensDarkShadowsInteractiveNeutralHover = "#fafafa";
-export const FillTokensDarkShadowsInteractiveNeutralDrop = "#3f3f46";
-export const FillTokensDarkShadowsInteractiveNeutralInner = "#d4d4d8";
-export const FillTokensDarkShadowsInteractiveInverseBase = "#18181b";
-export const FillTokensDarkShadowsInteractiveInverseHover = "#3f3f46";
-export const FillTokensDarkShadowsInteractiveInverseDrop = "#3f3f46";
-export const FillTokensDarkShadowsInteractiveInverseInner = "#3f3f46";
-export const FillTokensDarkShadowsInteractiveErrorBase = "#e7000b";
-export const FillTokensDarkShadowsInteractiveErrorHover = "#fb2c36";
-export const FillTokensDarkShadowsInteractiveErrorDrop = "#c10007";
-export const FillTokensDarkShadowsInteractiveErrorInner = "#ffffff29";
-export const FillTokensDarkShadowsInteractiveSuccessBase = "#00a63e";
-export const FillTokensDarkShadowsInteractiveSuccessInner = "#ffffff29";
-export const FillTokensDarkShadowsInteractiveSuccessHover = "#00c950";
-export const FillTokensDarkShadowsInteractiveSuccessDrop = "#008236";
-export const FillTokensDarkShadowsInteractiveInfoBase = "#2563eb";
-export const FillTokensDarkShadowsInteractiveInfoInner = "#ffffff29";
-export const FillTokensDarkShadowsInteractiveInfoHover = "#3b82f6";
-export const FillTokensDarkShadowsInteractiveInfoDrop = "#1d4ed8";
 export const ColorTokensStaticWhiteWhite = {
   Light: "#ffffff",
   Dark: "#ffffff",
@@ -2497,3 +2460,148 @@ export const ColorTokensShadowSm = { Light: "#00000029", Dark: "#ffffff29" };
 export const ColorTokensShadowMd = { Light: "#0000003d", Dark: "#ffffff3d" };
 export const ColorTokensTextOnControl = { Light: "#ffffff", Dark: "#ffffff" };
 export const ColorTokensTextStaticBlack = { Light: "#000000", Dark: "#000000" };
+export const EffectsFocusRingColorsPrimaryColorInner = {
+  Light: "#fafafa",
+  Dark: "#09090b",
+};
+export const EffectsFocusRingColorsPrimaryColorOuter = {
+  Light: "#615fff",
+  Dark: "#615fff",
+};
+export const EffectsFocusRingColorsNeutralColorInner = {
+  Light: "#ffffff",
+  Dark: "#09090b",
+};
+export const EffectsFocusRingColorsNeutralColorOuter = {
+  Light: "#09090b",
+  Dark: "#e4e4e7",
+};
+export const EffectsFocusRingColorsInverseColorInner = {
+  Light: "#fafafa",
+  Dark: "#09090b",
+};
+export const EffectsFocusRingColorsInverseColorOuter = {
+  Light: "#09090b",
+  Dark: "#fafafa",
+};
+export const EffectsFocusRingColorsSuccessColorInner = {
+  Light: "#fafafa",
+  Dark: "#09090b",
+};
+export const EffectsFocusRingColorsSuccessColorOuter = {
+  Light: "#00a63e",
+  Dark: "#00a63e",
+};
+export const EffectsFocusRingColorsErrorColorInner = {
+  Light: "#fafafa",
+  Dark: "#09090b",
+};
+export const EffectsFocusRingColorsErrorColorOuter = {
+  Light: "#e7000b",
+  Dark: "#c10007",
+};
+export const EffectsFocusRingColorsInfoColorInner = {
+  Light: "#fafafa",
+  Dark: "#09090b",
+};
+export const EffectsFocusRingColorsInfoColorOuter = {
+  Light: "#2563eb",
+  Dark: "#2563eb",
+};
+export const EffectsShadowsNeutral = { Light: "#00000014", Dark: "#27272a" };
+export const EffectsShadowsInteractivePrimaryBase = {
+  Light: "#615fff",
+  Dark: "#615fff",
+};
+export const EffectsShadowsInteractivePrimaryInner = {
+  Light: "#ffffff29",
+  Dark: "#ffffff29",
+};
+export const EffectsShadowsInteractivePrimaryHover = {
+  Light: "#4f39f6",
+  Dark: "#4f39f6",
+};
+export const EffectsShadowsInteractivePrimaryDrop = {
+  Light: "#e0e7ff",
+  Dark: "#432dd7",
+};
+export const EffectsShadowsInteractiveNeutralBase = {
+  Light: "#27272a",
+  Dark: "#e4e4e7",
+};
+export const EffectsShadowsInteractiveNeutralHover = {
+  Light: "#09090b",
+  Dark: "#fafafa",
+};
+export const EffectsShadowsInteractiveNeutralDrop = {
+  Light: "#3f3f46",
+  Dark: "#3f3f46",
+};
+export const EffectsShadowsInteractiveNeutralInner = {
+  Light: "#3f3f46",
+  Dark: "#d4d4d8",
+};
+export const EffectsShadowsInteractiveInverseBase = {
+  Light: "#fafafa",
+  Dark: "#18181b",
+};
+export const EffectsShadowsInteractiveInverseHover = {
+  Light: "#e4e4e7",
+  Dark: "#3f3f46",
+};
+export const EffectsShadowsInteractiveInverseDrop = {
+  Light: "#71717a",
+  Dark: "#3f3f46",
+};
+export const EffectsShadowsInteractiveInverseInner = {
+  Light: "#f4f4f5",
+  Dark: "#3f3f46",
+};
+export const EffectsShadowsInteractiveErrorBase = {
+  Light: "#c10007",
+  Dark: "#e7000b",
+};
+export const EffectsShadowsInteractiveErrorHover = {
+  Light: "#e7000b",
+  Dark: "#fb2c36",
+};
+export const EffectsShadowsInteractiveErrorDrop = {
+  Light: "#ffe2e2",
+  Dark: "#c10007",
+};
+export const EffectsShadowsInteractiveErrorInner = {
+  Light: "#ffffff29",
+  Dark: "#ffffff29",
+};
+export const EffectsShadowsInteractiveSuccessBase = {
+  Light: "#00a63e",
+  Dark: "#00a63e",
+};
+export const EffectsShadowsInteractiveSuccessInner = {
+  Light: "#ffffff29",
+  Dark: "#ffffff29",
+};
+export const EffectsShadowsInteractiveSuccessHover = {
+  Light: "#00c950",
+  Dark: "#00c950",
+};
+export const EffectsShadowsInteractiveSuccessDrop = {
+  Light: "#dcfce7",
+  Dark: "#008236",
+};
+export const EffectsShadowsInteractiveInfoBase = {
+  Light: "#2563eb",
+  Dark: "#2563eb",
+};
+export const EffectsShadowsInteractiveInfoInner = {
+  Light: "#ffffff29",
+  Dark: "#ffffff29",
+};
+export const EffectsShadowsInteractiveInfoHover = {
+  Light: "#3b82f6",
+  Dark: "#3b82f6",
+};
+export const EffectsShadowsInteractiveInfoDrop = {
+  Light: "#dbeafe",
+  Dark: "#1d4ed8",
+};
