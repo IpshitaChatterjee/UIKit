@@ -817,10 +817,18 @@
   text-shadow: none;
 }
 
+/* Label/icon color for outline (and ghost, below) is one of the few
+   spots where Figma varies color by state rather than just background:
+   text/on-control (always white) at rest, text/static (flips toward
+   black in dark mode) once hovered/pressed/focused — presumably because
+   the hover/focused background (bg/strong, a page-theme-following
+   neutral) needs a label that inverts with it, while the transparent
+   resting state sits directly on the inverse surface and wants a label
+   that doesn't. */
 .btn--inverse-light.btn--outline,
 .btn--inverse-solid.btn--outline {
   background: transparent;
-  color: var(--color-tokens-text-static, #fff);
+  color: var(--color-tokens-text-on-control, #fff);
   border: 1px solid var(--color-tokens-stroke-medium, #d4d4d8);
 }
 
@@ -833,6 +841,7 @@
 .btn--inverse-solid.btn--outline.btn--force-hover,
 .btn--inverse-solid.btn--outline.btn--force-pressed {
   background: var(--color-tokens-bg-strong, #27272a);
+  color: var(--color-tokens-text-static, #fff);
 }
 
 .btn--inverse-light.btn--outline:not(:disabled):focus-visible,
@@ -841,6 +850,7 @@
 .btn--inverse-solid.btn--outline.btn--force-focused {
   outline: none;
   background: var(--color-tokens-bg-strong, #27272a);
+  color: var(--color-tokens-text-static, #fff);
   box-shadow:
     0 0 0 var(--btn-focus-offset, 3px) var(--color-tokens-bg-weakest, #fafafa),
     0 0 0 var(--btn-focus-ring, 6px) var(--color-tokens-bg-strongest, #09090b);
@@ -911,7 +921,7 @@
 .btn--inverse-light.btn--ghost,
 .btn--inverse-solid.btn--ghost {
   background: transparent;
-  color: var(--color-tokens-text-static, #fff);
+  color: var(--color-tokens-text-on-control, #fff);
 }
 
 .btn--inverse-light.btn--ghost:not(:disabled):hover,
@@ -923,6 +933,7 @@
 .btn--inverse-solid.btn--ghost.btn--force-hover,
 .btn--inverse-solid.btn--ghost.btn--force-pressed {
   background: var(--color-tokens-bg-strong, #27272a);
+  color: var(--color-tokens-text-static, #fff);
 }
 
 .btn--inverse-light.btn--ghost:not(:disabled):focus-visible,
@@ -930,7 +941,8 @@
 .btn--inverse-solid.btn--ghost:not(:disabled):focus-visible,
 .btn--inverse-solid.btn--ghost.btn--force-focused {
   outline: none;
-  background: var(--color-tokens-bg-strong, #27272a);
+  background: var(--color-tokens-bg-strongest, #09090b);
+  color: var(--color-tokens-text-static, #fff);
   box-shadow:
     0 0 0 var(--btn-focus-offset, 3px) var(--color-tokens-bg-weakest, #fafafa),
     0 0 0 var(--btn-focus-ring, 6px) var(--color-tokens-bg-strongest, #09090b);
