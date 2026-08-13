@@ -1,10 +1,13 @@
-import { Link, Navigate, useParams } from 'react-router-dom';
+import { Navigate, useParams } from 'react-router-dom';
 import { getBlock } from '../blocks/registry.js';
+import ThemeToggle from '../components/ThemeToggle/ThemeToggle.jsx';
+import { useTheme } from '../hooks/useTheme.js';
 import './BlockView.css';
 
 function BlockView() {
   const { slug } = useParams();
   const block = getBlock(slug);
+  const [theme, toggleTheme] = useTheme();
 
   if (!block) {
     return <Navigate to="/" replace />;
@@ -14,17 +17,8 @@ function BlockView() {
 
   return (
     <div className="block-view">
-      <div className="block-view__bar">
-        <Link to="/" className="block-view__back">
-          &larr; All blocks
-        </Link>
-        <a href={block.figmaUrl} target="_blank" rel="noreferrer" className="block-view__figma">
-          View in Figma
-        </a>
-      </div>
-      <div className="block-view__stage">
-        <Block />
-      </div>
+      <Block />
+      <ThemeToggle theme={theme} onToggle={toggleTheme} />
     </div>
   );
 }

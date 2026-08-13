@@ -32,7 +32,11 @@
   width: 100%;
   font: var(--text-headings-h3-600, 600 36px/48px 'Geist');
   letter-spacing: var(--text-headings-h3-600-letter-spacing, -1.6px);
-  color: var(--color-tokens-text-strongest, #09090b);
+  /* "text/strongest" isn't synced as its own token yet; bg/strongest
+     resolves to the same near-black/near-white value in both modes
+     (it's the button's inverse-solid background), so it doubles as the
+     correct dark-mode-aware stand-in until the real token lands. */
+  color: var(--color-tokens-bg-strongest, #09090b);
 }
 
 .social-post__body {

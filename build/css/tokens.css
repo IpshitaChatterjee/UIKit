@@ -1036,7 +1036,7 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not([data-theme="light"]) {
     --color-tokens-static-white-white: #ffffff;
     --color-tokens-static-white-white-alpha-80: #ffffffcc;
     --color-tokens-static-white-white-alpha-64: #ffffffa3;
@@ -1123,4 +1123,92 @@
     --color-tokens-shadow-sm: #ffffff29;
     --color-tokens-shadow-md: #ffffff3d;
   }
+}
+
+:root[data-theme="dark"] {
+    --color-tokens-static-white-white: #ffffff;
+    --color-tokens-static-white-white-alpha-80: #ffffffcc;
+    --color-tokens-static-white-white-alpha-64: #ffffffa3;
+    --color-tokens-static-white-white-alpha-48: #ffffff7a;
+    --color-tokens-static-white-white-alpha-24: #ffffff3d;
+    --color-tokens-static-white-white-alpha-16: #ffffff29;
+    --color-tokens-static-white-white-alpha-8: #ffffff14;
+    --color-tokens-static-white-white-alpha-0: #ffffff00;
+    --color-tokens-static-black-black: #000000;
+    --color-tokens-static-black-black-alpha-80: #000000cc;
+    --color-tokens-static-black-black-alpha-64: #000000a3;
+    --color-tokens-static-black-black-alpha-48: #0000007a;
+    --color-tokens-static-black-black-alpha-32: #00000052;
+    --color-tokens-static-black-black-alpha-24: #0000003d;
+    --color-tokens-static-black-black-alpha-16: #00000029;
+    --color-tokens-static-black-black-alpha-8: #00000014;
+    --color-tokens-static-black-black-alpha-0: #00000000;
+    --color-tokens-bg-static: #000000;
+    --color-tokens-bg-weakest: #18181b;
+    --color-tokens-bg-weak: #27272a;
+    --color-tokens-bg-light: #3f3f46;
+    --color-tokens-bg-medium: #71717a;
+    --color-tokens-bg-heavy: #d4d4d8;
+    --color-tokens-bg-strong: #e4e4e7;
+    --color-tokens-bg-strongest: #fafafa;
+    --color-tokens-text-disabled: #52525b;
+    --color-tokens-text-placeholder: #71717a;
+    --color-tokens-text-body: #d4d4d8;
+    --color-tokens-primary-primary-weakest: #6366f129;
+    --color-tokens-primary-primary-weak: #6366f13d;
+    --color-tokens-primary-primary-base: #615fff;
+    --color-tokens-primary-primary-strong: #818cf8;
+    --color-tokens-primary-primary-strongest: #c7d2fe;
+    --color-tokens-error-weakest: #fb2c3629;
+    --color-tokens-error-weak: #fb2c363d;
+    --color-tokens-error-base: #fb2c36;
+    --color-tokens-error-strong: #ff6467;
+    --color-tokens-error-strongest: #ffc9c9;
+    --color-tokens-success-weakest: #00c95029;
+    --color-tokens-success-weak: #00c9503d;
+    --color-tokens-success-base: #00c950;
+    --color-tokens-success-strong: #05df72;
+    --color-tokens-success-strongest: #b9f8cf;
+    --color-tokens-warning-weakest: #ff690029;
+    --color-tokens-warning-weak: #ff69003d;
+    --color-tokens-warning-base: #ff6900;
+    --color-tokens-warning-strong: #ff8904;
+    --color-tokens-warning-strongest: #ffd6a7;
+    --color-tokens-info-weakest: #3b82f629;
+    --color-tokens-info-weak: #3b82f63d;
+    --color-tokens-info-base: #3b82f6;
+    --color-tokens-info-strong: #60a5fa;
+    --color-tokens-info-strongest: #bfdbfe;
+    --color-tokens-feature-weakest: #6366f129;
+    --color-tokens-feature-weak: #6366f13d;
+    --color-tokens-feature-base: #615fff;
+    --color-tokens-feature-strong: #818cf8;
+    --color-tokens-feature-strongest: #c7d2fe;
+    --color-tokens-verified-weakest: #0ea5e929;
+    --color-tokens-verified-weak: #0ea5e93d;
+    --color-tokens-verified-base: #0ea5e9;
+    --color-tokens-verified-strong: #38bdf8;
+    --color-tokens-verified-strongest: #bae6fd;
+    --color-tokens-highlighted-weakest: #d946ef29;
+    --color-tokens-highlighted-weak: #d946ef3d;
+    --color-tokens-highlighted-base: #d946ef;
+    --color-tokens-highlighted-strong: #e879f9;
+    --color-tokens-highlighted-strongest: #f5d0fe;
+    --color-tokens-away-weakest: #f0b10029;
+    --color-tokens-away-weak: #f0b1003d;
+    --color-tokens-away-base: #f0b100;
+    --color-tokens-away-strong: #fdc700;
+    --color-tokens-away-strongest: #fff085;
+    --color-tokens-stable-base: #71717a;
+    --color-tokens-stable-strong: #a1a1aa;
+    --color-tokens-stable-strongest: #e4e4e7;
+    --color-tokens-overlay-scrim: #ffffff7a;
+    --color-tokens-overlay-scrim-strong: #ffffffa3;
+    --color-tokens-overlay-hover: #ffffff14;
+    --color-tokens-overlay-active: #ffffff29;
+    --color-tokens-overlay-hover-inverted: #00000014;
+    --color-tokens-overlay-active-inverted: #00000029;
+    --color-tokens-shadow-xs: #ffffff14;
+    --color-tokens-shadow-sm: #ffffff29;
+    --color-tokens-shadow-md: #ffffff3d;
 }

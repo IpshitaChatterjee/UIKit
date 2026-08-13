@@ -8,6 +8,10 @@
 
 .btn {
   --btn-gap: 8px;
+  /* Left/right padding is fixed at L3-md across every size for buttons
+     with text — only icon-only buttons (--btn-icon-only-pad) still scale
+     with size, matched from Figma's "Has text=true" variants. */
+  --btn-px: var(--spacing-l3-component-md, 12px);
 
   display: inline-flex;
   align-items: center;
@@ -90,8 +94,8 @@
   outline: none;
   background: var(--color-tokens-primary-primary-weak, #e0e7ff);
   box-shadow:
-    0 0 0 3px var(--color-tokens-bg-weakest, #fafafa),
-    0 0 0 6px var(--color-tokens-primary-primary-base, #615fff);
+    0 0 0 var(--btn-focus-offset, 3px) var(--color-tokens-bg-weakest, #fafafa),
+    0 0 0 var(--btn-focus-ring, 6px) var(--color-tokens-primary-primary-base, #615fff);
 }
 
 /* Type=soft — tinted background, no border */
@@ -113,8 +117,8 @@
   outline: none;
   background: var(--color-tokens-primary-primary-weak, #e0e7ff);
   box-shadow:
-    0 0 0 3px var(--color-tokens-bg-weakest, #fafafa),
-    0 0 0 6px var(--color-tokens-primary-primary-base, #615fff);
+    0 0 0 var(--btn-focus-offset, 3px) var(--color-tokens-bg-weakest, #fafafa),
+    0 0 0 var(--btn-focus-ring, 6px) var(--color-tokens-primary-primary-base, #615fff);
 }
 
 /* Type=ghost — transparent until interacted with */
@@ -135,8 +139,8 @@
   outline: none;
   background: var(--color-tokens-bg-static, #fff);
   box-shadow:
-    0 0 0 3px var(--color-tokens-bg-weakest, #fafafa),
-    0 0 0 6px var(--color-tokens-primary-primary-base, #615fff);
+    0 0 0 var(--btn-focus-offset, 3px) var(--color-tokens-bg-weakest, #fafafa),
+    0 0 0 var(--btn-focus-ring, 6px) var(--color-tokens-primary-primary-base, #615fff);
 }
 
 /* Color=neutral-solid — second color family from "button_default/{shape}/
@@ -202,8 +206,8 @@
   outline: none;
   background: var(--color-tokens-bg-weak, #f4f4f5);
   box-shadow:
-    0 0 0 var(--effects-focus-ring-3-offset-spread, 3px) var(--effects-focus-ring-colors-neutral-color-inner, #fff),
-    0 0 0 var(--effects-focus-ring-3-ring-spread, 6px) var(--effects-focus-ring-colors-neutral-color-outer, #09090b);
+    0 0 0 var(--btn-focus-offset, 3px) var(--effects-focus-ring-colors-neutral-color-inner, #fff),
+    0 0 0 var(--btn-focus-ring, 6px) var(--effects-focus-ring-colors-neutral-color-outer, #09090b);
 }
 
 .btn--neutral-solid.btn--soft {
@@ -224,8 +228,8 @@
   outline: none;
   background: var(--color-tokens-bg-weak, #f4f4f5);
   box-shadow:
-    0 0 0 var(--effects-focus-ring-3-offset-spread, 3px) var(--effects-focus-ring-colors-neutral-color-inner, #fff),
-    0 0 0 var(--effects-focus-ring-3-ring-spread, 6px) var(--effects-focus-ring-colors-neutral-color-outer, #09090b);
+    0 0 0 var(--btn-focus-offset, 3px) var(--effects-focus-ring-colors-neutral-color-inner, #fff),
+    0 0 0 var(--btn-focus-ring, 6px) var(--effects-focus-ring-colors-neutral-color-outer, #09090b);
 }
 
 .btn--neutral-solid.btn--ghost {
@@ -245,8 +249,8 @@
   outline: none;
   background: var(--color-tokens-bg-static, #fff);
   box-shadow:
-    0 0 0 var(--effects-focus-ring-3-offset-spread, 3px) var(--effects-focus-ring-colors-neutral-color-inner, #fff),
-    0 0 0 var(--effects-focus-ring-3-ring-spread, 6px) var(--effects-focus-ring-colors-neutral-color-outer, #09090b);
+    0 0 0 var(--btn-focus-offset, 3px) var(--effects-focus-ring-colors-neutral-color-inner, #fff),
+    0 0 0 var(--btn-focus-ring, 6px) var(--effects-focus-ring-colors-neutral-color-outer, #09090b);
 }
 
 /* Color=neutral-light — third color family from "button_default/{shape}/
@@ -312,8 +316,8 @@
   outline: none;
   background: var(--color-tokens-bg-weak, #f4f4f5);
   box-shadow:
-    0 0 0 var(--effects-focus-ring-3-offset-spread, 3px) var(--effects-focus-ring-colors-neutral-color-inner, #fff),
-    0 0 0 var(--effects-focus-ring-3-ring-spread, 6px) var(--effects-focus-ring-colors-neutral-color-outer, #09090b);
+    0 0 0 var(--btn-focus-offset, 3px) var(--effects-focus-ring-colors-neutral-color-inner, #fff),
+    0 0 0 var(--btn-focus-ring, 6px) var(--effects-focus-ring-colors-neutral-color-outer, #09090b);
 }
 
 .btn--neutral-light.btn--soft {
@@ -334,8 +338,8 @@
   outline: none;
   background: var(--color-tokens-bg-weak, #f4f4f5);
   box-shadow:
-    0 0 0 var(--effects-focus-ring-3-offset-spread, 3px) var(--effects-focus-ring-colors-neutral-color-inner, #fff),
-    0 0 0 var(--effects-focus-ring-3-ring-spread, 6px) var(--effects-focus-ring-colors-neutral-color-outer, #09090b);
+    0 0 0 var(--btn-focus-offset, 3px) var(--effects-focus-ring-colors-neutral-color-inner, #fff),
+    0 0 0 var(--btn-focus-ring, 6px) var(--effects-focus-ring-colors-neutral-color-outer, #09090b);
 }
 
 .btn--neutral-light.btn--ghost {
@@ -355,8 +359,8 @@
   outline: none;
   background: var(--color-tokens-bg-static, #fff);
   box-shadow:
-    0 0 0 var(--effects-focus-ring-3-offset-spread, 3px) var(--effects-focus-ring-colors-neutral-color-inner, #fff),
-    0 0 0 var(--effects-focus-ring-3-ring-spread, 6px) var(--effects-focus-ring-colors-neutral-color-outer, #09090b);
+    0 0 0 var(--btn-focus-offset, 3px) var(--effects-focus-ring-colors-neutral-color-inner, #fff),
+    0 0 0 var(--btn-focus-ring, 6px) var(--effects-focus-ring-colors-neutral-color-outer, #09090b);
 }
 
 /* Color=danger — fourth color family from "button_default/{shape}/
@@ -424,8 +428,8 @@
   outline: none;
   background: var(--color-tokens-error-weak, #ffe2e2);
   box-shadow:
-    0 0 0 var(--effects-focus-ring-3-offset-spread, 3px) var(--effects-focus-ring-colors-error-color-inner, #fafafa),
-    0 0 0 var(--effects-focus-ring-3-ring-spread, 6px) var(--effects-focus-ring-colors-error-color-outer, #e7000b);
+    0 0 0 var(--btn-focus-offset, 3px) var(--effects-focus-ring-colors-error-color-inner, #fafafa),
+    0 0 0 var(--btn-focus-ring, 6px) var(--effects-focus-ring-colors-error-color-outer, #e7000b);
 }
 
 .btn--danger.btn--soft {
@@ -446,8 +450,8 @@
   outline: none;
   background: var(--color-tokens-error-weak, #ffe2e2);
   box-shadow:
-    0 0 0 var(--effects-focus-ring-3-offset-spread, 3px) var(--effects-focus-ring-colors-error-color-inner, #fafafa),
-    0 0 0 var(--effects-focus-ring-3-ring-spread, 6px) var(--effects-focus-ring-colors-error-color-outer, #e7000b);
+    0 0 0 var(--btn-focus-offset, 3px) var(--effects-focus-ring-colors-error-color-inner, #fafafa),
+    0 0 0 var(--btn-focus-ring, 6px) var(--effects-focus-ring-colors-error-color-outer, #e7000b);
 }
 
 .btn--danger.btn--ghost {
@@ -467,8 +471,8 @@
   outline: none;
   background: var(--color-tokens-bg-static, #fff);
   box-shadow:
-    0 0 0 var(--effects-focus-ring-3-offset-spread, 3px) var(--effects-focus-ring-colors-error-color-inner, #fafafa),
-    0 0 0 var(--effects-focus-ring-3-ring-spread, 6px) var(--effects-focus-ring-colors-error-color-outer, #e7000b);
+    0 0 0 var(--btn-focus-offset, 3px) var(--effects-focus-ring-colors-error-color-inner, #fafafa),
+    0 0 0 var(--btn-focus-ring, 6px) var(--effects-focus-ring-colors-error-color-outer, #e7000b);
 }
 
 /* Color=success — fifth color family from "button_default/{shape}/
@@ -534,8 +538,8 @@
   outline: none;
   background: var(--color-tokens-success-weak, #dcfce7);
   box-shadow:
-    0 0 0 var(--effects-focus-ring-3-offset-spread, 3px) var(--effects-focus-ring-colors-success-color-inner, #fafafa),
-    0 0 0 var(--effects-focus-ring-3-ring-spread, 6px) var(--effects-focus-ring-colors-success-color-outer, #00a63e);
+    0 0 0 var(--btn-focus-offset, 3px) var(--effects-focus-ring-colors-success-color-inner, #fafafa),
+    0 0 0 var(--btn-focus-ring, 6px) var(--effects-focus-ring-colors-success-color-outer, #00a63e);
 }
 
 .btn--success.btn--soft {
@@ -556,8 +560,8 @@
   outline: none;
   background: var(--color-tokens-success-weak, #dcfce7);
   box-shadow:
-    0 0 0 var(--effects-focus-ring-3-offset-spread, 3px) var(--effects-focus-ring-colors-success-color-inner, #fafafa),
-    0 0 0 var(--effects-focus-ring-3-ring-spread, 6px) var(--effects-focus-ring-colors-success-color-outer, #00a63e);
+    0 0 0 var(--btn-focus-offset, 3px) var(--effects-focus-ring-colors-success-color-inner, #fafafa),
+    0 0 0 var(--btn-focus-ring, 6px) var(--effects-focus-ring-colors-success-color-outer, #00a63e);
 }
 
 .btn--success.btn--ghost {
@@ -577,8 +581,8 @@
   outline: none;
   background: var(--color-tokens-bg-static, #fff);
   box-shadow:
-    0 0 0 var(--effects-focus-ring-3-offset-spread, 3px) var(--effects-focus-ring-colors-success-color-inner, #fafafa),
-    0 0 0 var(--effects-focus-ring-3-ring-spread, 6px) var(--effects-focus-ring-colors-success-color-outer, #00a63e);
+    0 0 0 var(--btn-focus-offset, 3px) var(--effects-focus-ring-colors-success-color-inner, #fafafa),
+    0 0 0 var(--btn-focus-ring, 6px) var(--effects-focus-ring-colors-success-color-outer, #00a63e);
 }
 
 /* Color=info — sixth color family, added by swapping primary/ tokens for
@@ -644,8 +648,8 @@
   outline: none;
   background: var(--color-tokens-info-weak, #dbeafe);
   box-shadow:
-    0 0 0 var(--effects-focus-ring-3-offset-spread, 3px) var(--effects-focus-ring-colors-info-color-inner, #fafafa),
-    0 0 0 var(--effects-focus-ring-3-ring-spread, 6px) var(--effects-focus-ring-colors-info-color-outer, #2563eb);
+    0 0 0 var(--btn-focus-offset, 3px) var(--effects-focus-ring-colors-info-color-inner, #fafafa),
+    0 0 0 var(--btn-focus-ring, 6px) var(--effects-focus-ring-colors-info-color-outer, #2563eb);
 }
 
 .btn--info.btn--soft {
@@ -666,8 +670,8 @@
   outline: none;
   background: var(--color-tokens-info-weak, #dbeafe);
   box-shadow:
-    0 0 0 var(--effects-focus-ring-3-offset-spread, 3px) var(--effects-focus-ring-colors-info-color-inner, #fafafa),
-    0 0 0 var(--effects-focus-ring-3-ring-spread, 6px) var(--effects-focus-ring-colors-info-color-outer, #2563eb);
+    0 0 0 var(--btn-focus-offset, 3px) var(--effects-focus-ring-colors-info-color-inner, #fafafa),
+    0 0 0 var(--btn-focus-ring, 6px) var(--effects-focus-ring-colors-info-color-outer, #2563eb);
 }
 
 .btn--info.btn--ghost {
@@ -687,8 +691,8 @@
   outline: none;
   background: var(--color-tokens-bg-static, #fff);
   box-shadow:
-    0 0 0 var(--effects-focus-ring-3-offset-spread, 3px) var(--effects-focus-ring-colors-info-color-inner, #fafafa),
-    0 0 0 var(--effects-focus-ring-3-ring-spread, 6px) var(--effects-focus-ring-colors-info-color-outer, #2563eb);
+    0 0 0 var(--btn-focus-offset, 3px) var(--effects-focus-ring-colors-info-color-inner, #fafafa),
+    0 0 0 var(--btn-focus-ring, 6px) var(--effects-focus-ring-colors-info-color-outer, #2563eb);
 }
 
 /* Color=inverse-light / Color=inverse-solid — "button_default/{shape}/
@@ -791,8 +795,8 @@
   outline: none;
   background: var(--color-tokens-bg-strong, #27272a);
   box-shadow:
-    0 0 0 3px var(--effects-focus-ring-colors-inverse-color-inner, #fafafa),
-    0 0 0 6px var(--effects-focus-ring-colors-inverse-color-outer, #09090b);
+    0 0 0 var(--btn-focus-offset, 3px) var(--effects-focus-ring-colors-inverse-color-inner, #fafafa),
+    0 0 0 var(--btn-focus-ring, 6px) var(--effects-focus-ring-colors-inverse-color-outer, #09090b);
 }
 
 .btn--inverse-light.btn--outline.btn--loading,
@@ -832,8 +836,8 @@
   outline: none;
   background: var(--color-tokens-bg-strong, #27272a);
   box-shadow:
-    0 0 0 3px var(--effects-focus-ring-colors-inverse-color-inner, #fafafa),
-    0 0 0 6px var(--effects-focus-ring-colors-inverse-color-outer, #09090b);
+    0 0 0 var(--btn-focus-offset, 3px) var(--effects-focus-ring-colors-inverse-color-inner, #fafafa),
+    0 0 0 var(--btn-focus-ring, 6px) var(--effects-focus-ring-colors-inverse-color-outer, #09090b);
 }
 
 .btn--inverse-light.btn--soft.btn--loading,
@@ -872,8 +876,8 @@
   outline: none;
   background: var(--color-tokens-bg-strong, #27272a);
   box-shadow:
-    0 0 0 3px var(--effects-focus-ring-colors-inverse-color-inner, #fafafa),
-    0 0 0 6px var(--effects-focus-ring-colors-inverse-color-outer, #09090b);
+    0 0 0 var(--btn-focus-offset, 3px) var(--effects-focus-ring-colors-inverse-color-inner, #fafafa),
+    0 0 0 var(--btn-focus-ring, 6px) var(--effects-focus-ring-colors-inverse-color-outer, #09090b);
 }
 
 .btn--inverse-light.btn--ghost.btn--loading,
@@ -927,13 +931,19 @@
 
 /* Sizes — padding, radius and type scale come from real Figma variables/text
    styles (build/css/tokens.css). Icon size has no token (icon assets don't
-   sit on the spacing scale) so it stays a literal, matched from Figma. */
+   sit on the spacing scale) so it stays a literal, matched from Figma.
+   Focus ring size also varies by size: xl uses ring level 3 (offset 3px/
+   ring 6px), every other size uses level 2 (offset 2px/ring 4px) — matched
+   from Figma's Focus-ring/{color}/{level} effect styles applied per size
+   on the outline/soft/ghost variants (solid's focused state is a flat,
+   size-invariant ring instead, not part of this level system). */
 .btn--xl {
   --btn-py: var(--spacing-l3-component-sm, 10px);
-  --btn-px: var(--spacing-l3-component-xs, 8px);
   --btn-radius: var(--radius-responsive-rounded-xl, 12px);
   --btn-icon: 20px;
   --btn-icon-only-pad: var(--spacing-l3-component-md, 12px);
+  --btn-focus-offset: var(--effects-focus-ring-3-offset-spread, 3px);
+  --btn-focus-ring: var(--effects-focus-ring-3-ring-spread, 6px);
   --btn-font-size: var(--text-control-xl-500-font-size, 18px);
   --btn-line-height: var(--text-control-xl-500-line-height, 24px);
   --btn-letter-spacing: var(--text-control-xl-500-letter-spacing, -0.5px);
@@ -941,10 +951,11 @@
 
 .btn--l {
   --btn-py: var(--spacing-l3-component-2xs, 6px);
-  --btn-px: var(--spacing-l3-component-xs, 8px);
   --btn-radius: var(--radius-responsive-rounded-l, 8px);
   --btn-icon: 18px;
   --btn-icon-only-pad: var(--spacing-l3-component-xs, 8px);
+  --btn-focus-offset: var(--effects-focus-ring-2-offset-spread, 2px);
+  --btn-focus-ring: var(--effects-focus-ring-2-ring-spread, 4px);
   --btn-font-size: var(--text-control-l-500-font-size, 16px);
   --btn-line-height: var(--text-control-l-500-line-height, 22px);
   --btn-letter-spacing: var(--text-control-l-500-letter-spacing, -0.5px);
@@ -952,10 +963,11 @@
 
 .btn--m {
   --btn-py: var(--spacing-l3-component-2xs, 6px);
-  --btn-px: var(--spacing-l3-component-xs, 8px);
   --btn-radius: var(--radius-responsive-rounded-m, 6px);
   --btn-icon: 16px;
   --btn-icon-only-pad: var(--spacing-l3-component-xs, 8px);
+  --btn-focus-offset: var(--effects-focus-ring-2-offset-spread, 2px);
+  --btn-focus-ring: var(--effects-focus-ring-2-ring-spread, 4px);
   --btn-font-size: var(--text-control-m-500-font-size, 14px);
   --btn-line-height: var(--text-control-m-500-line-height, 20px);
   --btn-letter-spacing: var(--text-control-m-500-letter-spacing, -0.3px);
@@ -963,10 +975,11 @@
 
 .btn--s {
   --btn-py: var(--spacing-l3-component-2xs, 6px);
-  --btn-px: var(--spacing-l3-component-xs, 8px);
   --btn-radius: var(--radius-responsive-rounded-s, 4px);
   --btn-icon: 14px;
   --btn-icon-only-pad: var(--spacing-l3-component-2xs, 6px);
+  --btn-focus-offset: var(--effects-focus-ring-2-offset-spread, 2px);
+  --btn-focus-ring: var(--effects-focus-ring-2-ring-spread, 4px);
   --btn-font-size: var(--text-control-s-500-font-size, 12px);
   --btn-line-height: var(--text-control-s-500-line-height, 16px);
   --btn-letter-spacing: var(--text-control-s-500-letter-spacing, -0.2px);
@@ -974,10 +987,11 @@
 
 .btn--xs {
   --btn-py: var(--spacing-l3-component-3xs, 4px);
-  --btn-px: var(--spacing-l3-component-2xs, 6px);
   --btn-radius: var(--radius-responsive-rounded-s, 4px);
   --btn-icon: 14px;
   --btn-icon-only-pad: var(--spacing-l3-component-3xs, 4px);
+  --btn-focus-offset: var(--effects-focus-ring-2-offset-spread, 2px);
+  --btn-focus-ring: var(--effects-focus-ring-2-ring-spread, 4px);
   --btn-font-size: var(--text-control-xs-500-font-size, 11px);
   --btn-line-height: var(--text-control-xs-500-line-height, 12px);
   --btn-letter-spacing: var(--text-control-xs-500-letter-spacing, -0.1px);

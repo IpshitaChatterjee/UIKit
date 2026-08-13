@@ -197,7 +197,18 @@ function renderDeclarationBlocks(declarations) {
   const blocks = [`:root {\n${buckets.base.join("\n")}\n}`];
   for (const key of MEDIA_KEY_ORDER) {
     if (buckets[key].length === 0) continue;
-    blocks.push(`${MEDIA_QUERY_BY_KEY[key]} {\n  :root {\n${buckets[key].map((l) => `  ${l}`).join("\n")}\n  }\n}`);
+    const lines = buckets[key].map((l) => `  ${l}`).join("\n");
+    if (key === "dark") {
+      // System-preference dark mode, unless a manual toggle has forced
+      // light (data-theme="light" on the root), plus a manual-toggle-to-
+      // dark override that wins regardless of system preference — same
+      // two-block contract used everywhere a runtime theme switch needs
+      // to coexist with prefers-color-scheme.
+      blocks.push(`${MEDIA_QUERY_BY_KEY[key]} {\n  :root:not([data-theme="light"]) {\n${lines}\n  }\n}`);
+      blocks.push(`:root[data-theme="dark"] {\n${lines}\n}`);
+      continue;
+    }
+    blocks.push(`${MEDIA_QUERY_BY_KEY[key]} {\n  :root {\n${lines}\n  }\n}`);
   }
   return blocks.join("\n\n");
 }

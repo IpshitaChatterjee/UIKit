@@ -1,0 +1,6 @@
+@import '../build/css/tokens.css';
+
+body {
+  background: var(--color-tokens-bg-weakest, #fff);
+  transition: background-color 150ms ease;
+}
