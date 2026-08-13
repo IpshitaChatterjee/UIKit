@@ -723,18 +723,15 @@
 }
 
 /* Color=inverse-solid — "button_default/{shape}/inverse-solid" (rounded
-   213:4767, pill 242:15043, square 242:17205). "Inverse" means
-   *opposite of the page's own light/dark state* — verified against
-   Figma's own light vs dark screenshots of this exact component: solid
-   renders near-black-on-white in light mode and near-white-on-black in
-   dark mode. bg-strongest already sits at the far pole from the page's
-   own bg-weak/weakest at every mode, so pairing background:bg-strongest
-   with color:bg-weakest reproduces that inversion for free. Shadow/ring
-   colors reuse the bg-* scale directly (see the file-level note above)
-   instead of Figma's separate shadows/interactive/inverse/* and
-   focus-ring/colors/inverse/* tokens — the hover/focused drop-shadow
-   (bg-medium) is the one approximation here, since Figma's literal
-   (#71717a) doesn't land exactly on a bg-* stop in light mode.
+   213:4767, pill 242:15043, square 242:17205). Solid's background/label
+   (bg-weakest + text-strongest) don't literally invert relative to the
+   page the way the name might suggest — bg-weakest tracks the page's
+   own near-white/near-black surface in both themes, same as it does
+   for every other color. Shadow/ring colors now use Figma's real
+   shadows/interactive/inverse/* and focus-ring/colors/inverse/*
+   tokens directly (previously approximated with bg-* substitutes,
+   before those were synced — see the file-level note above for why
+   that indirection was ever needed).
    Two real differences from every other color family here (verified
    against Figma's fills/effects, not just variable names):
    - outline/soft/ghost "loading" reverts to the *default* background
@@ -759,36 +756,36 @@
    everywhere else (inner at 3px, outer at 6px) since that's what
    produces a normal two-tone ring instead of an inverted one. */
 .btn--inverse-solid.btn--solid {
-  background: var(--color-tokens-bg-strongest, #09090b);
-  color: var(--color-tokens-bg-weakest, #fafafa);
+  background: var(--color-tokens-bg-weakest, #fafafa);
+  color: var(--color-tokens-text-strongest, #09090b);
   box-shadow:
-    inset 0 0 0 1px var(--color-tokens-bg-strongest, #09090b),
-    inset 0 2px 0 0 var(--color-tokens-bg-strong, #27272a);
+    inset 0 0 0 1px var(--effects-shadows-interactive-inverse-base, #fafafa),
+    inset 0 2px 0 0 var(--effects-shadows-interactive-inverse-inner, #f4f4f5);
 }
 
 .btn--inverse-solid.btn--solid:not(:disabled):hover,
 .btn--inverse-solid.btn--solid:not(:disabled):active,
 .btn--inverse-solid.btn--solid.btn--force-hover,
 .btn--inverse-solid.btn--solid.btn--force-pressed {
-  background: var(--color-tokens-bg-strong, #27272a);
+  background: var(--color-tokens-bg-weak, #f4f4f5);
   box-shadow:
-    0 5px 10px -5px var(--color-tokens-bg-medium, #d4d4d8),
-    inset 0 0 0 1px var(--color-tokens-bg-heavy, #3f3f46),
-    inset 0 2px 0 0 var(--color-tokens-bg-strong, #27272a);
+    0 5px 10px -5px var(--effects-shadows-interactive-inverse-drop, #71717a),
+    inset 0 0 0 1px var(--effects-shadows-interactive-inverse-inner, #f4f4f5),
+    inset 0 2px 0 0 var(--effects-shadows-interactive-inverse-hover, #e4e4e7);
 }
 
 .btn--inverse-solid.btn--solid:not(:disabled):focus-visible,
 .btn--inverse-solid.btn--solid.btn--force-focused {
   outline: none;
-  background: var(--color-tokens-bg-strongest, #09090b);
+  background: var(--color-tokens-bg-weakest, #fafafa);
   box-shadow:
-    0 0 0 2px var(--color-tokens-bg-medium, #d4d4d8),
-    inset 0 0 0 1px var(--color-tokens-bg-strongest, #09090b),
-    inset 0 2px 0 0 var(--color-tokens-bg-strong, #27272a);
+    0 0 0 2px var(--effects-shadows-interactive-inverse-drop, #71717a),
+    inset 0 0 0 1px var(--effects-shadows-interactive-inverse-base, #fafafa),
+    inset 0 2px 0 0 var(--effects-shadows-interactive-inverse-inner, #f4f4f5);
 }
 
 .btn--inverse-solid.btn--solid.btn--loading {
-  background: var(--color-tokens-bg-strongest, #09090b);
+  background: var(--color-tokens-bg-weakest, #fafafa);
   box-shadow: none;
   text-shadow: none;
 }
@@ -820,8 +817,8 @@
   background: var(--color-tokens-bg-strong, #27272a);
   color: var(--color-tokens-text-static, #fff);
   box-shadow:
-    0 0 0 var(--btn-focus-offset, 3px) var(--color-tokens-bg-weakest, #fafafa),
-    0 0 0 var(--btn-focus-ring, 6px) var(--color-tokens-bg-strongest, #09090b);
+    0 0 0 var(--btn-focus-offset, 3px) var(--effects-focus-ring-colors-inverse-color-inner, #fafafa),
+    0 0 0 var(--btn-focus-ring, 6px) var(--effects-focus-ring-colors-inverse-color-outer, #09090b);
 }
 
 .btn--inverse-solid.btn--outline.btn--loading {
@@ -852,8 +849,8 @@
   outline: none;
   background: var(--color-tokens-bg-strong, #27272a);
   box-shadow:
-    0 0 0 var(--btn-focus-offset, 3px) var(--color-tokens-bg-weakest, #fafafa),
-    0 0 0 var(--btn-focus-ring, 6px) var(--color-tokens-bg-strongest, #09090b);
+    0 0 0 var(--btn-focus-offset, 3px) var(--effects-focus-ring-colors-inverse-color-inner, #fafafa),
+    0 0 0 var(--btn-focus-ring, 6px) var(--effects-focus-ring-colors-inverse-color-outer, #09090b);
 }
 
 .btn--inverse-solid.btn--soft.btn--loading {
@@ -885,8 +882,8 @@
   background: var(--color-tokens-bg-strongest, #09090b);
   color: var(--color-tokens-text-static, #fff);
   box-shadow:
-    0 0 0 var(--btn-focus-offset, 3px) var(--color-tokens-bg-weakest, #fafafa),
-    0 0 0 var(--btn-focus-ring, 6px) var(--color-tokens-bg-strongest, #09090b);
+    0 0 0 var(--btn-focus-offset, 3px) var(--effects-focus-ring-colors-inverse-color-inner, #fafafa),
+    0 0 0 var(--btn-focus-ring, 6px) var(--effects-focus-ring-colors-inverse-color-outer, #09090b);
 }
 
 .btn--inverse-solid.btn--ghost.btn--loading {
