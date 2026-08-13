@@ -4,14 +4,21 @@
    yet — icons don't sit on the spacing scale, and the ring-size effect
    tokens are still missing "spread" data pending the next Figma sync — so
    those stay literal, matched from the "button_default/rounded/primary"
-   component set (node 213:6870) in the UI Design Kit Figma file. Shadow
-   and focus-ring *colors*, by contrast, are bound directly to the same
-   color-tokens/* variables used for fills (e.g. success/base) rather than
-   Figma's separate shadows/interactive/* and focus-ring/colors/* effect
-   variables — those never made it into tokens.css in either mode, so
-   binding to them left every shadow/ring pinned to its light-mode literal
-   even in dark mode. Reusing color-tokens/* trades a little fidelity to
-   Figma's exact shadow spec for shadows that actually track the theme. */
+   component set (node 213:6870) in the UI Design Kit Figma file.
+   Shadow and focus-ring *colors* bind to Figma's real shadows/
+   interactive/{color}/* and focus-ring/colors/{color}/* effect
+   variables (e.g. --effects-shadows-interactive-success-base) — every
+   color family in this file uses the exact composition (which color
+   sits in the ring/highlight/drop slot, and at what offset/spread)
+   verified per color against Figma's own effect definitions, not
+   assumed to be identical across colors. These briefly had to be
+   approximated with color-tokens/bg-* substitutes instead, because the
+   real effect variables' Light-mode Figma styles existed but had zero
+   consumers (a style with no node using it has no value the Files-API
+   token sync can read) — every color's shadow/ring was pinned to its
+   dark-mode literal as a result. Fixed by adding a light-mode swatch
+   per token to the sync-reference page; the --effects-* variables
+   below are the real, now-synced values. */
 @import '../../../build/css/tokens.css';
 
 .btn {
@@ -60,8 +67,8 @@
   background: var(--color-tokens-primary-primary-base, #615fff);
   color: var(--color-tokens-text-on-control, #fff);
   box-shadow:
-    inset 0 0 0 1px var(--color-tokens-primary-primary-base, #615fff),
-    inset 0 2px 0 0 var(--color-tokens-static-white-white-alpha-16, rgba(255, 255, 255, 0.16));
+    inset 0 0 0 1px var(--effects-shadows-interactive-primary-base, #615fff),
+    inset 0 2px 0 0 var(--effects-shadows-interactive-primary-inner, rgba(255, 255, 255, 0.16));
   text-shadow: 0 1px 0 var(--color-tokens-static-black-black-alpha-24, rgba(0, 0, 0, 0.24));
 }
 
@@ -71,18 +78,18 @@
 .btn--solid.btn--force-pressed {
   background: var(--color-tokens-primary-primary-strong, #4f39f6);
   box-shadow:
-    0 5px 10px -5px var(--color-tokens-primary-primary-weak, #e0e7ff),
-    inset 0 0 0 1px var(--color-tokens-primary-primary-base, #615fff),
-    inset 0 2px 0 0 var(--color-tokens-static-white-white-alpha-16, rgba(255, 255, 255, 0.16));
+    0 5px 10px -5px var(--effects-shadows-interactive-primary-drop, #e0e7ff),
+    inset 0 0 0 1px var(--effects-shadows-interactive-primary-base, #615fff),
+    inset 0 2px 0 0 var(--effects-shadows-interactive-primary-inner, rgba(255, 255, 255, 0.16));
 }
 
 .btn--solid:not(:disabled):focus-visible,
 .btn--solid.btn--force-focused {
   outline: none;
   box-shadow:
-    0 0 0 2px var(--color-tokens-primary-primary-weak, #e0e7ff),
-    inset 0 0 0 1px var(--color-tokens-primary-primary-base, #615fff),
-    inset 0 2px 0 0 var(--color-tokens-static-white-white-alpha-16, rgba(255, 255, 255, 0.16));
+    0 0 0 2px var(--effects-shadows-interactive-primary-drop, #e0e7ff),
+    inset 0 0 0 1px var(--effects-shadows-interactive-primary-base, #615fff),
+    inset 0 2px 0 0 var(--effects-shadows-interactive-primary-inner, rgba(255, 255, 255, 0.16));
 }
 
 .btn--solid.btn--loading {
@@ -111,8 +118,8 @@
   outline: none;
   background: var(--color-tokens-primary-primary-weak, #e0e7ff);
   box-shadow:
-    0 0 0 var(--btn-focus-offset, 3px) var(--color-tokens-bg-weakest, #fafafa),
-    0 0 0 var(--btn-focus-ring, 6px) var(--color-tokens-primary-primary-base, #615fff);
+    0 0 0 var(--btn-focus-offset, 3px) var(--effects-focus-ring-colors-primary-color-inner, #fafafa),
+    0 0 0 var(--btn-focus-ring, 6px) var(--effects-focus-ring-colors-primary-color-outer, #615fff);
 }
 
 /* Type=soft — tinted background, no border */
@@ -134,8 +141,8 @@
   outline: none;
   background: var(--color-tokens-primary-primary-weak, #e0e7ff);
   box-shadow:
-    0 0 0 var(--btn-focus-offset, 3px) var(--color-tokens-bg-weakest, #fafafa),
-    0 0 0 var(--btn-focus-ring, 6px) var(--color-tokens-primary-primary-base, #615fff);
+    0 0 0 var(--btn-focus-offset, 3px) var(--effects-focus-ring-colors-primary-color-inner, #fafafa),
+    0 0 0 var(--btn-focus-ring, 6px) var(--effects-focus-ring-colors-primary-color-outer, #615fff);
 }
 
 /* Type=ghost — transparent until interacted with */
@@ -156,8 +163,8 @@
   outline: none;
   background: var(--color-tokens-bg-static, #fff);
   box-shadow:
-    0 0 0 var(--btn-focus-offset, 3px) var(--color-tokens-bg-weakest, #fafafa),
-    0 0 0 var(--btn-focus-ring, 6px) var(--color-tokens-primary-primary-base, #615fff);
+    0 0 0 var(--btn-focus-offset, 3px) var(--effects-focus-ring-colors-primary-color-inner, #fafafa),
+    0 0 0 var(--btn-focus-ring, 6px) var(--effects-focus-ring-colors-primary-color-outer, #615fff);
 }
 
 /* Color=neutral-solid — second color family from "button_default/{shape}/
@@ -174,8 +181,8 @@
   background: var(--color-tokens-bg-strong, #27272a);
   color: var(--color-tokens-text-static, #fff);
   box-shadow:
-    inset 0 0 0 1px var(--color-tokens-bg-strong, #27272a),
-    inset 0 2px 0 0 var(--color-tokens-bg-heavy, #3f3f46);
+    inset 0 0 0 1px var(--effects-shadows-interactive-neutral-base, #27272a),
+    inset 0 2px 0 0 var(--effects-shadows-interactive-neutral-inner, #3f3f46);
 }
 
 .btn--neutral-solid.btn--solid:not(:disabled):hover,
@@ -184,9 +191,9 @@
 .btn--neutral-solid.btn--solid.btn--force-pressed {
   background: var(--color-tokens-bg-strong, #27272a);
   box-shadow:
-    0 5px 10px -5px var(--color-tokens-bg-heavy, #3f3f46),
-    inset 0 0 0 1px var(--color-tokens-bg-strong, #27272a),
-    inset 0 2px 0 0 var(--color-tokens-bg-heavy, #3f3f46);
+    0 5px 10px -5px var(--effects-shadows-interactive-neutral-drop, #3f3f46),
+    inset 0 0 0 1px var(--effects-shadows-interactive-neutral-base, #27272a),
+    inset 0 2px 0 0 var(--effects-shadows-interactive-neutral-inner, #3f3f46);
 }
 
 .btn--neutral-solid.btn--solid:not(:disabled):focus-visible,
@@ -194,9 +201,9 @@
   outline: none;
   background: var(--color-tokens-bg-strong, #27272a);
   box-shadow:
-    0 5px 10px -5px var(--color-tokens-bg-heavy, #3f3f46),
-    inset 0 0 0 1px var(--color-tokens-bg-strong, #27272a),
-    inset 0 1px 0 1px var(--color-tokens-bg-heavy, #3f3f46);
+    0 5px 10px -5px var(--effects-shadows-interactive-neutral-drop, #3f3f46),
+    inset 0 0 0 1px var(--effects-shadows-interactive-neutral-base, #27272a),
+    inset 0 1px 0 1px var(--effects-shadows-interactive-neutral-inner, #3f3f46);
 }
 
 .btn--neutral-solid.btn--solid.btn--loading {
@@ -224,8 +231,8 @@
   outline: none;
   background: var(--color-tokens-bg-weak, #f4f4f5);
   box-shadow:
-    0 0 0 var(--btn-focus-offset, 3px) var(--color-tokens-bg-weakest, #fafafa),
-    0 0 0 var(--btn-focus-ring, 6px) var(--color-tokens-bg-strongest, #09090b);
+    0 0 0 var(--btn-focus-offset, 3px) var(--effects-focus-ring-colors-neutral-color-inner, #ffffff),
+    0 0 0 var(--btn-focus-ring, 6px) var(--effects-focus-ring-colors-neutral-color-outer, #09090b);
 }
 
 .btn--neutral-solid.btn--soft {
@@ -258,8 +265,8 @@
   outline: none;
   background: var(--color-tokens-bg-weak, #f4f4f5);
   box-shadow:
-    0 0 0 var(--btn-focus-offset, 3px) var(--color-tokens-bg-weakest, #fafafa),
-    0 0 0 var(--btn-focus-ring, 6px) var(--color-tokens-bg-strongest, #09090b);
+    0 0 0 var(--btn-focus-offset, 3px) var(--effects-focus-ring-colors-neutral-color-inner, #ffffff),
+    0 0 0 var(--btn-focus-ring, 6px) var(--effects-focus-ring-colors-neutral-color-outer, #09090b);
 }
 
 .btn--neutral-solid.btn--ghost {
@@ -279,8 +286,8 @@
   outline: none;
   background: var(--color-tokens-bg-static, #fff);
   box-shadow:
-    0 0 0 var(--btn-focus-offset, 3px) var(--color-tokens-bg-weakest, #fafafa),
-    0 0 0 var(--btn-focus-ring, 6px) var(--color-tokens-bg-strongest, #09090b);
+    0 0 0 var(--btn-focus-offset, 3px) var(--effects-focus-ring-colors-neutral-color-inner, #ffffff),
+    0 0 0 var(--btn-focus-ring, 6px) var(--effects-focus-ring-colors-neutral-color-outer, #09090b);
 }
 
 /* Color=neutral-light — third color family from "button_default/{shape}/
@@ -295,8 +302,8 @@
   background: var(--color-tokens-bg-heavy, #3f3f46);
   color: var(--color-tokens-text-static, #fff);
   box-shadow:
-    inset 0 0 0 1px var(--color-tokens-bg-strong, #27272a),
-    inset 0 2px 0 0 var(--color-tokens-bg-heavy, #3f3f46);
+    inset 0 0 0 1px var(--effects-shadows-interactive-neutral-base, #27272a),
+    inset 0 2px 0 0 var(--effects-shadows-interactive-neutral-inner, #3f3f46);
 }
 
 .btn--neutral-light.btn--solid:not(:disabled):hover,
@@ -305,9 +312,9 @@
 .btn--neutral-light.btn--solid.btn--force-pressed {
   background: var(--color-tokens-bg-strong, #27272a);
   box-shadow:
-    0 5px 10px -5px var(--color-tokens-bg-heavy, #3f3f46),
-    inset 0 0 0 1px var(--color-tokens-bg-strong, #27272a),
-    inset 0 2px 0 0 var(--color-tokens-bg-heavy, #3f3f46);
+    0 5px 10px -5px var(--effects-shadows-interactive-neutral-drop, #3f3f46),
+    inset 0 0 0 1px var(--effects-shadows-interactive-neutral-base, #27272a),
+    inset 0 2px 0 0 var(--effects-shadows-interactive-neutral-inner, #3f3f46);
 }
 
 .btn--neutral-light.btn--solid:not(:disabled):focus-visible,
@@ -315,9 +322,9 @@
   outline: none;
   background: var(--color-tokens-bg-heavy, #3f3f46);
   box-shadow:
-    0 5px 10px -5px var(--color-tokens-bg-heavy, #3f3f46),
-    inset 0 0 0 1px var(--color-tokens-bg-strong, #27272a),
-    inset 0 1px 0 1px var(--color-tokens-bg-heavy, #3f3f46);
+    0 5px 10px -5px var(--effects-shadows-interactive-neutral-drop, #3f3f46),
+    inset 0 0 0 1px var(--effects-shadows-interactive-neutral-base, #27272a),
+    inset 0 1px 0 1px var(--effects-shadows-interactive-neutral-inner, #3f3f46);
 }
 
 .btn--neutral-light.btn--solid.btn--loading {
@@ -345,8 +352,8 @@
   outline: none;
   background: var(--color-tokens-bg-weak, #f4f4f5);
   box-shadow:
-    0 0 0 var(--btn-focus-offset, 3px) var(--color-tokens-bg-weakest, #fafafa),
-    0 0 0 var(--btn-focus-ring, 6px) var(--color-tokens-bg-strongest, #09090b);
+    0 0 0 var(--btn-focus-offset, 3px) var(--effects-focus-ring-colors-neutral-color-inner, #ffffff),
+    0 0 0 var(--btn-focus-ring, 6px) var(--effects-focus-ring-colors-neutral-color-outer, #09090b);
 }
 
 .btn--neutral-light.btn--soft {
@@ -367,8 +374,8 @@
   outline: none;
   background: var(--color-tokens-bg-weak, #f4f4f5);
   box-shadow:
-    0 0 0 var(--btn-focus-offset, 3px) var(--color-tokens-bg-weakest, #fafafa),
-    0 0 0 var(--btn-focus-ring, 6px) var(--color-tokens-bg-strongest, #09090b);
+    0 0 0 var(--btn-focus-offset, 3px) var(--effects-focus-ring-colors-neutral-color-inner, #ffffff),
+    0 0 0 var(--btn-focus-ring, 6px) var(--effects-focus-ring-colors-neutral-color-outer, #09090b);
 }
 
 .btn--neutral-light.btn--ghost {
@@ -388,8 +395,8 @@
   outline: none;
   background: var(--color-tokens-bg-static, #fff);
   box-shadow:
-    0 0 0 var(--btn-focus-offset, 3px) var(--color-tokens-bg-weakest, #fafafa),
-    0 0 0 var(--btn-focus-ring, 6px) var(--color-tokens-bg-strongest, #09090b);
+    0 0 0 var(--btn-focus-offset, 3px) var(--effects-focus-ring-colors-neutral-color-inner, #ffffff),
+    0 0 0 var(--btn-focus-ring, 6px) var(--effects-focus-ring-colors-neutral-color-outer, #09090b);
 }
 
 /* Color=danger — fourth color family from "button_default/{shape}/
@@ -406,8 +413,8 @@
   background: var(--color-tokens-error-base, #e7000b);
   color: var(--color-tokens-text-on-control, #fff);
   box-shadow:
-    inset 0 0 0 1px var(--color-tokens-error-base, #e7000b),
-    inset 0 2px 0 0 var(--color-tokens-static-white-white-alpha-16, rgba(255, 255, 255, 0.16));
+    inset 0 0 0 1px var(--effects-shadows-interactive-error-base, #c10007),
+    inset 0 2px 0 0 var(--effects-shadows-interactive-error-inner, rgba(255, 255, 255, 0.16));
 }
 
 .btn--danger.btn--solid:not(:disabled):hover,
@@ -416,9 +423,9 @@
 .btn--danger.btn--solid.btn--force-pressed {
   background: var(--color-tokens-error-strong, #c10007);
   box-shadow:
-    0 5px 10px -5px var(--color-tokens-error-weak, #ffe2e2),
-    inset 0 0 0 1px var(--color-tokens-error-base, #e7000b),
-    inset 0 2px 0 0 var(--color-tokens-static-white-white-alpha-16, rgba(255, 255, 255, 0.16));
+    0 5px 10px -5px var(--effects-shadows-interactive-error-drop, #ffe2e2),
+    inset 0 0 0 1px var(--effects-shadows-interactive-error-hover, #e7000b),
+    inset 0 2px 0 0 var(--effects-shadows-interactive-error-inner, rgba(255, 255, 255, 0.16));
 }
 
 .btn--danger.btn--solid:not(:disabled):focus-visible,
@@ -427,8 +434,8 @@
   background: var(--color-tokens-error-base, #e7000b);
   box-shadow:
     0 0 0 2px var(--color-tokens-error-strongest, #82181a),
-    inset 0 0 0 1px var(--color-tokens-error-base, #e7000b),
-    inset 0 2px 0 0 var(--color-tokens-static-white-white-alpha-16, rgba(255, 255, 255, 0.16));
+    inset 0 0 0 1px var(--effects-shadows-interactive-error-base, #c10007),
+    inset 0 2px 0 0 var(--effects-shadows-interactive-error-inner, rgba(255, 255, 255, 0.16));
 }
 
 .btn--danger.btn--solid.btn--loading {
@@ -456,8 +463,8 @@
   outline: none;
   background: var(--color-tokens-error-weak, #ffe2e2);
   box-shadow:
-    0 0 0 var(--btn-focus-offset, 3px) var(--color-tokens-bg-weakest, #fafafa),
-    0 0 0 var(--btn-focus-ring, 6px) var(--color-tokens-error-base, #e7000b);
+    0 0 0 var(--btn-focus-offset, 3px) var(--effects-focus-ring-colors-error-color-inner, #fafafa),
+    0 0 0 var(--btn-focus-ring, 6px) var(--effects-focus-ring-colors-error-color-outer, #e7000b);
 }
 
 .btn--danger.btn--soft {
@@ -478,8 +485,8 @@
   outline: none;
   background: var(--color-tokens-error-weak, #ffe2e2);
   box-shadow:
-    0 0 0 var(--btn-focus-offset, 3px) var(--color-tokens-bg-weakest, #fafafa),
-    0 0 0 var(--btn-focus-ring, 6px) var(--color-tokens-error-base, #e7000b);
+    0 0 0 var(--btn-focus-offset, 3px) var(--effects-focus-ring-colors-error-color-inner, #fafafa),
+    0 0 0 var(--btn-focus-ring, 6px) var(--effects-focus-ring-colors-error-color-outer, #e7000b);
 }
 
 .btn--danger.btn--ghost {
@@ -499,8 +506,8 @@
   outline: none;
   background: var(--color-tokens-bg-static, #fff);
   box-shadow:
-    0 0 0 var(--btn-focus-offset, 3px) var(--color-tokens-bg-weakest, #fafafa),
-    0 0 0 var(--btn-focus-ring, 6px) var(--color-tokens-error-base, #e7000b);
+    0 0 0 var(--btn-focus-offset, 3px) var(--effects-focus-ring-colors-error-color-inner, #fafafa),
+    0 0 0 var(--btn-focus-ring, 6px) var(--effects-focus-ring-colors-error-color-outer, #e7000b);
 }
 
 /* Color=success — fifth color family from "button_default/{shape}/
@@ -516,8 +523,8 @@
   background: var(--color-tokens-success-base, #00a63e);
   color: var(--color-tokens-text-on-control, #fff);
   box-shadow:
-    inset 0 0 0 1px var(--color-tokens-success-base, #00a63e),
-    inset 0 2px 0 0 var(--color-tokens-static-white-white-alpha-16, rgba(255, 255, 255, 0.16));
+    inset 0 0 0 1px var(--effects-shadows-interactive-success-base, #00a63e),
+    inset 0 2px 0 0 var(--effects-shadows-interactive-success-inner, rgba(255, 255, 255, 0.16));
 }
 
 .btn--success.btn--solid:not(:disabled):hover,
@@ -526,9 +533,9 @@
 .btn--success.btn--solid.btn--force-pressed {
   background: var(--color-tokens-success-strong, #008236);
   box-shadow:
-    0 5px 10px -5px var(--color-tokens-success-weak, #dcfce7),
-    inset 0 0 0 1px var(--color-tokens-success-base, #00a63e),
-    inset 0 2px 0 0 var(--color-tokens-static-white-white-alpha-16, rgba(255, 255, 255, 0.16));
+    0 5px 10px -5px var(--effects-shadows-interactive-success-drop, #dcfce7),
+    inset 0 0 0 1px var(--effects-shadows-interactive-success-hover, #00c950),
+    inset 0 2px 0 0 var(--effects-shadows-interactive-success-inner, rgba(255, 255, 255, 0.16));
 }
 
 .btn--success.btn--solid:not(:disabled):focus-visible,
@@ -537,8 +544,8 @@
   background: var(--color-tokens-success-base, #00a63e);
   box-shadow:
     0 0 0 2px var(--color-tokens-success-strongest, #0d542b),
-    inset 0 0 0 1px var(--color-tokens-success-base, #00a63e),
-    inset 0 2px 0 0 var(--color-tokens-static-white-white-alpha-16, rgba(255, 255, 255, 0.16));
+    inset 0 0 0 1px var(--effects-shadows-interactive-success-base, #00a63e),
+    inset 0 2px 0 0 var(--effects-shadows-interactive-success-inner, rgba(255, 255, 255, 0.16));
 }
 
 .btn--success.btn--solid.btn--loading {
@@ -566,8 +573,8 @@
   outline: none;
   background: var(--color-tokens-success-weak, #dcfce7);
   box-shadow:
-    0 0 0 var(--btn-focus-offset, 3px) var(--color-tokens-bg-weakest, #fafafa),
-    0 0 0 var(--btn-focus-ring, 6px) var(--color-tokens-success-base, #00a63e);
+    0 0 0 var(--btn-focus-offset, 3px) var(--effects-focus-ring-colors-success-color-inner, #fafafa),
+    0 0 0 var(--btn-focus-ring, 6px) var(--effects-focus-ring-colors-success-color-outer, #00a63e);
 }
 
 .btn--success.btn--soft {
@@ -588,8 +595,8 @@
   outline: none;
   background: var(--color-tokens-success-weak, #dcfce7);
   box-shadow:
-    0 0 0 var(--btn-focus-offset, 3px) var(--color-tokens-bg-weakest, #fafafa),
-    0 0 0 var(--btn-focus-ring, 6px) var(--color-tokens-success-base, #00a63e);
+    0 0 0 var(--btn-focus-offset, 3px) var(--effects-focus-ring-colors-success-color-inner, #fafafa),
+    0 0 0 var(--btn-focus-ring, 6px) var(--effects-focus-ring-colors-success-color-outer, #00a63e);
 }
 
 .btn--success.btn--ghost {
@@ -609,8 +616,8 @@
   outline: none;
   background: var(--color-tokens-bg-static, #fff);
   box-shadow:
-    0 0 0 var(--btn-focus-offset, 3px) var(--color-tokens-bg-weakest, #fafafa),
-    0 0 0 var(--btn-focus-ring, 6px) var(--color-tokens-success-base, #00a63e);
+    0 0 0 var(--btn-focus-offset, 3px) var(--effects-focus-ring-colors-success-color-inner, #fafafa),
+    0 0 0 var(--btn-focus-ring, 6px) var(--effects-focus-ring-colors-success-color-outer, #00a63e);
 }
 
 /* Color=info — sixth color family, added by swapping primary/ tokens for
@@ -625,8 +632,8 @@
   background: var(--color-tokens-info-base, #2563eb);
   color: var(--color-tokens-text-on-control, #fff);
   box-shadow:
-    inset 0 0 0 1px var(--color-tokens-info-base, #2563eb),
-    inset 0 2px 0 0 var(--color-tokens-static-white-white-alpha-16, rgba(255, 255, 255, 0.16));
+    inset 0 0 0 1px var(--effects-shadows-interactive-info-base, #2563eb),
+    inset 0 2px 0 0 var(--effects-shadows-interactive-info-inner, rgba(255, 255, 255, 0.16));
 }
 
 .btn--info.btn--solid:not(:disabled):hover,
@@ -635,9 +642,9 @@
 .btn--info.btn--solid.btn--force-pressed {
   background: var(--color-tokens-info-strong, #1d4ed8);
   box-shadow:
-    0 5px 10px -5px var(--color-tokens-info-weak, #dbeafe),
-    inset 0 0 0 1px var(--color-tokens-info-base, #2563eb),
-    inset 0 2px 0 0 var(--color-tokens-static-white-white-alpha-16, rgba(255, 255, 255, 0.16));
+    0 5px 10px -5px var(--effects-shadows-interactive-info-drop, #dbeafe),
+    inset 0 0 0 1px var(--effects-shadows-interactive-info-hover, #3b82f6),
+    inset 0 2px 0 0 var(--effects-shadows-interactive-info-inner, rgba(255, 255, 255, 0.16));
 }
 
 .btn--info.btn--solid:not(:disabled):focus-visible,
@@ -646,8 +653,8 @@
   background: var(--color-tokens-info-base, #2563eb);
   box-shadow:
     0 0 0 2px var(--color-tokens-info-strongest, #1e3a8a),
-    inset 0 0 0 1px var(--color-tokens-info-base, #2563eb),
-    inset 0 2px 0 0 var(--color-tokens-static-white-white-alpha-16, rgba(255, 255, 255, 0.16));
+    inset 0 0 0 1px var(--effects-shadows-interactive-info-base, #2563eb),
+    inset 0 2px 0 0 var(--effects-shadows-interactive-info-inner, rgba(255, 255, 255, 0.16));
 }
 
 .btn--info.btn--solid.btn--loading {
@@ -675,8 +682,8 @@
   outline: none;
   background: var(--color-tokens-info-weak, #dbeafe);
   box-shadow:
-    0 0 0 var(--btn-focus-offset, 3px) var(--color-tokens-bg-weakest, #fafafa),
-    0 0 0 var(--btn-focus-ring, 6px) var(--color-tokens-info-base, #2563eb);
+    0 0 0 var(--btn-focus-offset, 3px) var(--effects-focus-ring-colors-info-color-inner, #fafafa),
+    0 0 0 var(--btn-focus-ring, 6px) var(--effects-focus-ring-colors-info-color-outer, #2563eb);
 }
 
 .btn--info.btn--soft {
@@ -697,8 +704,8 @@
   outline: none;
   background: var(--color-tokens-info-weak, #dbeafe);
   box-shadow:
-    0 0 0 var(--btn-focus-offset, 3px) var(--color-tokens-bg-weakest, #fafafa),
-    0 0 0 var(--btn-focus-ring, 6px) var(--color-tokens-info-base, #2563eb);
+    0 0 0 var(--btn-focus-offset, 3px) var(--effects-focus-ring-colors-info-color-inner, #fafafa),
+    0 0 0 var(--btn-focus-ring, 6px) var(--effects-focus-ring-colors-info-color-outer, #2563eb);
 }
 
 .btn--info.btn--ghost {
@@ -718,8 +725,8 @@
   outline: none;
   background: var(--color-tokens-bg-static, #fff);
   box-shadow:
-    0 0 0 var(--btn-focus-offset, 3px) var(--color-tokens-bg-weakest, #fafafa),
-    0 0 0 var(--btn-focus-ring, 6px) var(--color-tokens-info-base, #2563eb);
+    0 0 0 var(--btn-focus-offset, 3px) var(--effects-focus-ring-colors-info-color-inner, #fafafa),
+    0 0 0 var(--btn-focus-ring, 6px) var(--effects-focus-ring-colors-info-color-outer, #2563eb);
 }
 
 /* Color=inverse-solid — "button_default/{shape}/inverse-solid" (rounded
