@@ -8,7 +8,7 @@ const COLORS = ['primary', 'neutral-solid', 'neutral-light', 'danger', 'success'
 const STATES = ['default', 'hover', 'pressed', 'focused', 'loading', 'disabled'];
 
 export default {
-  title: 'Button/Primary',
+  title: 'Button/Default',
   component: Button,
   args: {
     children: 'Hello world',
