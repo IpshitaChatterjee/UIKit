@@ -581,6 +581,116 @@
     0 0 0 var(--effects-focus-ring-3-ring-spread, 6px) var(--effects-focus-ring-colors-success-color-outer, #00a63e);
 }
 
+/* Color=info — sixth color family, added by swapping primary/ tokens for
+   color-tokens/info/* (not pulled from a verified "button_default/info"
+   Figma component set — mirrors the "danger"/"success" structure since
+   those are the closest existing analogues: solid's hover/pressed inner
+   ring uses info/hover (not info/base), and focused uses a flat 2px ring
+   bound directly to color-tokens/info/strongest instead of a blurred
+   drop-shadow. Hover/drop-shadow shades matched against Figma's
+   effect-shadow-component-info-hover token (#3b82f6 ring, #dbeafe drop).
+   Disabled styling is still shared with every other color (see below). */
+.btn--info.btn--solid {
+  background: var(--color-tokens-info-base, #2563eb);
+  color: var(--color-tokens-text-static, #fff);
+  box-shadow:
+    inset 0 0 0 1px var(--effects-shadows-interactive-info-base, #2563eb),
+    inset 0 2px 0 0 var(--effects-shadows-interactive-info-inner, rgba(255, 255, 255, 0.16));
+}
+
+.btn--info.btn--solid:not(:disabled):hover,
+.btn--info.btn--solid:not(:disabled):active,
+.btn--info.btn--solid.btn--force-hover,
+.btn--info.btn--solid.btn--force-pressed {
+  background: var(--color-tokens-info-strong, #1d4ed8);
+  box-shadow:
+    0 5px 10px -5px var(--effects-shadows-interactive-info-drop, #dbeafe),
+    inset 0 0 0 1px var(--effects-shadows-interactive-info-hover, #3b82f6),
+    inset 0 2px 0 0 var(--effects-shadows-interactive-info-inner, rgba(255, 255, 255, 0.16));
+}
+
+.btn--info.btn--solid:not(:disabled):focus-visible,
+.btn--info.btn--solid.btn--force-focused {
+  outline: none;
+  background: var(--color-tokens-info-base, #2563eb);
+  box-shadow:
+    0 0 0 2px var(--color-tokens-info-strongest, #1e3a8a),
+    inset 0 0 0 1px var(--effects-shadows-interactive-info-base, #2563eb),
+    inset 0 2px 0 0 var(--effects-shadows-interactive-info-inner, rgba(255, 255, 255, 0.16));
+}
+
+.btn--info.btn--solid.btn--loading {
+  background: var(--color-tokens-info-base, #2563eb);
+  box-shadow: none;
+  text-shadow: none;
+}
+
+.btn--info.btn--outline {
+  background: var(--color-tokens-bg-static, #fff);
+  color: var(--color-tokens-info-strong, #1d4ed8);
+  border: 1px solid var(--color-tokens-info-strong, #1d4ed8);
+}
+
+.btn--info.btn--outline:not(:disabled):hover,
+.btn--info.btn--outline:not(:disabled):active,
+.btn--info.btn--outline.btn--force-hover,
+.btn--info.btn--outline.btn--force-pressed,
+.btn--info.btn--outline.btn--loading {
+  background: var(--color-tokens-info-weak, #dbeafe);
+}
+
+.btn--info.btn--outline:not(:disabled):focus-visible,
+.btn--info.btn--outline.btn--force-focused {
+  outline: none;
+  background: var(--color-tokens-info-weak, #dbeafe);
+  box-shadow:
+    0 0 0 var(--effects-focus-ring-3-offset-spread, 3px) var(--effects-focus-ring-colors-info-color-inner, #fafafa),
+    0 0 0 var(--effects-focus-ring-3-ring-spread, 6px) var(--effects-focus-ring-colors-info-color-outer, #2563eb);
+}
+
+.btn--info.btn--soft {
+  background: var(--color-tokens-info-weakest, #eff6ff);
+  color: var(--color-tokens-info-strong, #1d4ed8);
+}
+
+.btn--info.btn--soft:not(:disabled):hover,
+.btn--info.btn--soft:not(:disabled):active,
+.btn--info.btn--soft.btn--force-hover,
+.btn--info.btn--soft.btn--force-pressed,
+.btn--info.btn--soft.btn--loading {
+  background: var(--color-tokens-info-weak, #dbeafe);
+}
+
+.btn--info.btn--soft:not(:disabled):focus-visible,
+.btn--info.btn--soft.btn--force-focused {
+  outline: none;
+  background: var(--color-tokens-info-weak, #dbeafe);
+  box-shadow:
+    0 0 0 var(--effects-focus-ring-3-offset-spread, 3px) var(--effects-focus-ring-colors-info-color-inner, #fafafa),
+    0 0 0 var(--effects-focus-ring-3-ring-spread, 6px) var(--effects-focus-ring-colors-info-color-outer, #2563eb);
+}
+
+.btn--info.btn--ghost {
+  background: var(--color-tokens-bg-static, #fff);
+  color: var(--color-tokens-info-strong, #1d4ed8);
+}
+
+.btn--info.btn--ghost:not(:disabled):hover,
+.btn--info.btn--ghost:not(:disabled):active,
+.btn--info.btn--ghost.btn--force-hover,
+.btn--info.btn--ghost.btn--force-pressed {
+  background: var(--color-tokens-info-weak, #dbeafe);
+}
+
+.btn--info.btn--ghost:not(:disabled):focus-visible,
+.btn--info.btn--ghost.btn--force-focused {
+  outline: none;
+  background: var(--color-tokens-bg-static, #fff);
+  box-shadow:
+    0 0 0 var(--effects-focus-ring-3-offset-spread, 3px) var(--effects-focus-ring-colors-info-color-inner, #fafafa),
+    0 0 0 var(--effects-focus-ring-3-ring-spread, 6px) var(--effects-focus-ring-colors-info-color-outer, #2563eb);
+}
+
 /* Color=inverse-light / Color=inverse-solid — "button_default/{shape}/
    inverse-light" (rounded 213:4066, pill 242:14342, square 242:16504)
    and "button_default/{shape}/inverse-solid" (rounded 213:4767, pill

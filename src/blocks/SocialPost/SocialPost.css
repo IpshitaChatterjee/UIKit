@@ -1,0 +1,50 @@
+/* Colors and the l/paragraph-l/400 + heading/h3/600 type styles come from
+   Figma via tokens.css. Card padding, gap and shadow spread aren't on the
+   synced token set yet, so those stay literal, matched from "POST-18"
+   (node 4426:8720) in the Social media Figma file. */
+@import '../../../build/css/tokens.css';
+
+.social-post {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 32px;
+  width: 100%;
+  max-width: 581px;
+  padding: 53px 33px;
+  border-radius: var(--radius-corner-rounded-xl, 12px);
+  background: var(--color-tokens-bg-weakest, #fafafa);
+  box-shadow:
+    0 8px 10px -6px var(--color-tokens-shadow-xs, rgba(0, 0, 0, 0.08)),
+    0 20px 25px -5px var(--color-tokens-shadow-xs, rgba(0, 0, 0, 0.08));
+}
+
+.social-post__copy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  width: 100%;
+}
+
+.social-post__heading {
+  margin: 0;
+  width: 100%;
+  font: var(--text-headings-h3-600, 600 36px/48px 'Geist');
+  letter-spacing: var(--text-headings-h3-600-letter-spacing, -1.6px);
+  color: var(--color-tokens-text-strongest, #09090b);
+}
+
+.social-post__body {
+  margin: 0;
+  width: 100%;
+  font: var(--text-paragraph-l-400, 400 20px/30px 'Geist');
+  letter-spacing: var(--text-paragraph-l-400-letter-spacing, -0.2px);
+  color: var(--color-tokens-text-body, #52525b);
+}
+
+.social-post__actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}

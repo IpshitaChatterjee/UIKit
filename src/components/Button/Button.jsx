@@ -4,7 +4,7 @@ import './Button.css';
 const VARIANTS = ['solid', 'outline', 'soft', 'ghost'];
 const SIZES = ['xl', 'l', 'm', 's', 'xs'];
 const SHAPES = ['rounded', 'pill', 'square'];
-const COLORS = ['primary', 'neutral-solid', 'neutral-light', 'danger', 'success', 'inverse-light', 'inverse-solid'];
+const COLORS = ['primary', 'neutral-solid', 'neutral-light', 'danger', 'success', 'info', 'inverse-light', 'inverse-solid'];
 const FORCED_STATES = ['hover', 'pressed', 'focused'];
 
 function Spinner() {
@@ -19,7 +19,11 @@ function Spinner() {
 /**
  * Button — all four emphasis levels, in rounded, pill, or square corners,
  * in the "primary", "neutral-solid", "neutral-light", "danger",
- * "success", "inverse-light", or "inverse-solid" color family. Matches
+ * "success", "info", "inverse-light", or "inverse-solid" color family.
+ * "info" isn't pulled from a verified Figma component set — it's built
+ * by swapping color-tokens/primary/* for color-tokens/info/*, following
+ * the same structural pattern as "danger"/"success" (see Button.css).
+ * The rest matches
  * the "button_default/{shape}/primary" (rounded 213:6870, pill 241:3530,
  * square 241:4611), "button_default/{shape}/neutral-solid" (rounded
  * 213:6169, pill 241:5692, square 241:6773), "button_default/{shape}/
@@ -122,7 +126,7 @@ Button.propTypes = {
   size: PropTypes.oneOf(SIZES),
   /** Corner style — "rounded" (soft corners), "pill" (fully rounded), or "square" (no rounding). */
   shape: PropTypes.oneOf(SHAPES),
-  /** Color family, matches the Figma component set — "primary" (purple), "neutral-solid" (near-black/gray), "neutral-light" (softer gray), "danger" (red), "success" (green), or "inverse-light"/"inverse-solid" (for buttons on dark/colored surfaces — currently styled identically). */
+  /** Color family, matches the Figma component set — "primary" (purple), "neutral-solid" (near-black/gray), "neutral-light" (softer gray), "danger" (red), "success" (green), "info" (blue), or "inverse-light"/"inverse-solid" (for buttons on dark/colored surfaces — currently styled identically). */
   color: PropTypes.oneOf(COLORS),
   /** Forces a visual state regardless of real interaction — for documentation/testing only. */
   state: PropTypes.oneOf(FORCED_STATES),

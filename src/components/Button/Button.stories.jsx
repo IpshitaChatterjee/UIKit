@@ -4,7 +4,7 @@ import Button from './Button';
 const VARIANTS = ['solid', 'outline', 'soft', 'ghost'];
 const SIZES = ['xl', 'l', 'm', 's', 'xs'];
 const SHAPES = ['rounded', 'pill', 'square'];
-const COLORS = ['primary', 'neutral-solid', 'neutral-light', 'danger', 'success', 'inverse-light', 'inverse-solid'];
+const COLORS = ['primary', 'neutral-solid', 'neutral-light', 'danger', 'success', 'info', 'inverse-light', 'inverse-solid'];
 const STATES = ['default', 'hover', 'pressed', 'focused', 'loading', 'disabled'];
 
 export default {
@@ -85,8 +85,8 @@ export const AllVariants = {
   ),
 };
 
-// Renders every Type × Color at "xl" so all seven color families (primary,
-// neutral-solid, neutral-light, danger, success, inverse-light,
+// Renders every Type × Color at "xl" so all eight color families (primary,
+// neutral-solid, neutral-light, danger, success, info, inverse-light,
 // inverse-solid) can be compared side by side across all four emphasis
 // levels — "neutral-solid" comes from button_default/rounded/neutral-solid
 // (node 213:6169), "neutral-light" from button_default/rounded/neutral-light
@@ -96,8 +96,9 @@ export const AllVariants = {
 // (node 213:4066), "inverse-solid" from button_default/rounded/inverse-solid
 // (node 213:4767) — the last two are meant for dark/colored surfaces, so
 // their "solid" cell reads as near-invisible against this story's white
-// background; that's expected, not a bug. Otherwise identical in
-// structure to "primary".
+// background; that's expected, not a bug. "info" isn't from a verified
+// Figma component set — it's the same structure as "primary" with
+// color-tokens/info/* swapped in (see Button.css).
 export const AllColors = {
   render: () => (
     <div style={{ display: 'grid', gridTemplateColumns: `max-content repeat(${COLORS.length}, max-content)`, gap: '16px 24px', alignItems: 'center' }}>
