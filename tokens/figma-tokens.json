@@ -1,7 +1,7 @@
 {
   "_meta": {
     "source": "files-api (styles only — variables API unavailable)",
-    "fetchedAt": "2026-08-13T13:10:07.564Z",
+    "fetchedAt": "2026-08-13T13:22:40.344Z",
     "fileKey": "nF6XfTdKWVl1P8xvufWjNn"
   },
   "text": {
@@ -4468,78 +4468,6 @@
       "value": "#000000",
       "description": ""
     },
-    "tokens-dark/static white/white-alpha-32": {
-      "value": "#ffffff52",
-      "description": ""
-    },
-    "tokens-dark/text/static": {
-      "value": "#000000",
-      "description": ""
-    },
-    "tokens-dark/text/strongest": {
-      "value": "#fafafa",
-      "description": ""
-    },
-    "tokens-dark/icon/static": {
-      "value": "#000000",
-      "description": ""
-    },
-    "tokens-dark/icon/disabled": {
-      "value": "#52525b",
-      "description": ""
-    },
-    "tokens-dark/icon/placeholder": {
-      "value": "#71717a",
-      "description": ""
-    },
-    "tokens-dark/icon/body": {
-      "value": "#d4d4d8",
-      "description": ""
-    },
-    "tokens-dark/icon/strongest": {
-      "value": "#fafafa",
-      "description": ""
-    },
-    "tokens-dark/stroke/static": {
-      "value": "#000000",
-      "description": ""
-    },
-    "tokens-dark/stroke/weakest": {
-      "value": "#18181b",
-      "description": ""
-    },
-    "tokens-dark/stroke/weak": {
-      "value": "#27272a",
-      "description": ""
-    },
-    "tokens-dark/stroke/light": {
-      "value": "#3f3f46",
-      "description": ""
-    },
-    "tokens-dark/stroke/medium": {
-      "value": "#71717a",
-      "description": ""
-    },
-    "tokens-dark/stroke/heavy": {
-      "value": "#d4d4d8",
-      "description": ""
-    },
-    "tokens-dark/stroke/strong": {
-      "value": "#e4e4e7",
-      "description": ""
-    },
-    "tokens-dark/stroke/strongest": {
-      "value": "#fafafa",
-      "description": ""
-    },
-    "tokens-dark/stable/weakest": {
-      "value": "#71717a29",
-      "description": ""
-    },
-    "tokens-dark/stable/weak": {
-      "value": "#71717a3d",
-      "description": ""
-    },
     "tokens-dark/focus-ring/colors/primary/color-inner": {
       "value": "#09090b",
       "description": ""
@@ -4718,6 +4646,13 @@
       },
       "description": ""
     },
+    "static white/white-alpha-32": {
+      "value": {
+        "Light": "#ffffff52",
+        "Dark": "#ffffff52"
+      },
+      "description": ""
+    },
     "static white/white-alpha-24": {
       "value": {
         "Light": "#ffffff3d",
@@ -4865,6 +4800,13 @@
       },
       "description": ""
     },
+    "text/static": {
+      "value": {
+        "Light": "#ffffff",
+        "Dark": "#000000"
+      },
+      "description": ""
+    },
     "text/disabled": {
       "value": {
         "Light": "#d4d4d8",
@@ -4883,6 +4825,104 @@
       "value": {
         "Light": "#52525b",
         "Dark": "#d4d4d8"
+      },
+      "description": ""
+    },
+    "text/strongest": {
+      "value": {
+        "Light": "#09090b",
+        "Dark": "#fafafa"
+      },
+      "description": ""
+    },
+    "icon/static": {
+      "value": {
+        "Light": "#ffffff",
+        "Dark": "#000000"
+      },
+      "description": ""
+    },
+    "icon/disabled": {
+      "value": {
+        "Light": "#d4d4d8",
+        "Dark": "#52525b"
+      },
+      "description": ""
+    },
+    "icon/placeholder": {
+      "value": {
+        "Light": "#a1a1aa",
+        "Dark": "#71717a"
+      },
+      "description": ""
+    },
+    "icon/body": {
+      "value": {
+        "Light": "#52525b",
+        "Dark": "#d4d4d8"
+      },
+      "description": ""
+    },
+    "icon/strongest": {
+      "value": {
+        "Light": "#09090b",
+        "Dark": "#fafafa"
+      },
+      "description": ""
+    },
+    "stroke/static": {
+      "value": {
+        "Light": "#ffffff",
+        "Dark": "#000000"
+      },
+      "description": ""
+    },
+    "stroke/weakest": {
+      "value": {
+        "Light": "#fafafa",
+        "Dark": "#18181b"
+      },
+      "description": ""
+    },
+    "stroke/weak": {
+      "value": {
+        "Light": "#f4f4f5",
+        "Dark": "#27272a"
+      },
+      "description": ""
+    },
+    "stroke/light": {
+      "value": {
+        "Light": "#e4e4e7",
+        "Dark": "#3f3f46"
+      },
+      "description": ""
+    },
+    "stroke/medium": {
+      "value": {
+        "Light": "#d4d4d8",
+        "Dark": "#71717a"
+      },
+      "description": ""
+    },
+    "stroke/heavy": {
+      "value": {
+        "Light": "#3f3f46",
+        "Dark": "#d4d4d8"
+      },
+      "description": ""
+    },
+    "stroke/strong": {
+      "value": {
+        "Light": "#27272a",
+        "Dark": "#e4e4e7"
+      },
+      "description": ""
+    },
+    "stroke/strongest": {
+      "value": {
+        "Light": "#09090b",
+        "Dark": "#fafafa"
       },
       "description": ""
     },
@@ -5201,6 +5241,20 @@
       },
       "description": ""
     },
+    "stable/weakest": {
+      "value": {
+        "Light": "#fafafa",
+        "Dark": "#71717a29"
+      },
+      "description": ""
+    },
+    "stable/weak": {
+      "value": {
+        "Light": "#f4f4f5",
+        "Dark": "#71717a3d"
+      },
+      "description": ""
+    },
     "stable/base": {
       "value": {
         "Light": "#52525b",
@@ -5282,6 +5336,20 @@
       "value": {
         "Light": "#0000003d",
         "Dark": "#ffffff3d"
+      },
+      "description": ""
+    },
+    "text/on control": {
+      "value": {
+        "Light": "#ffffff",
+        "Dark": "#ffffff"
+      },
+      "description": ""
+    },
+    "text/static-black": {
+      "value": {
+        "Light": "#000000",
+        "Dark": "#000000"
       },
       "description": ""
     }
