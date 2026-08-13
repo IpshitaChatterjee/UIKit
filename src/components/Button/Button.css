@@ -46,10 +46,19 @@
   pointer-events: none;
 }
 
-/* Type=solid — filled background, white label */
+/* Type=solid — filled background, white label. Label/icon use
+   color-tokens/text-on-control (always white, both themes) rather than
+   text-strongest or text-static (which flip toward black in dark mode)
+   — the solid background here is a vivid brand/status color that
+   doesn't invert with the page theme, so the label shouldn't either.
+   Same reasoning applies to danger/success/info's solid label below;
+   their icon layer was bound to icon/static in Figma (which does flip
+   to black in dark mode) and has been rebound to text-on-control to
+   match, since currentColor already ties the icon's color to this
+   same `color` declaration — no separate icon rule needed. */
 .btn--solid {
   background: var(--color-tokens-primary-primary-base, #615fff);
-  color: var(--color-tokens-static-white-white, #fff);
+  color: var(--color-tokens-text-on-control, #fff);
   box-shadow:
     inset 0 0 0 1px var(--color-tokens-primary-primary-base, #615fff),
     inset 0 2px 0 0 var(--color-tokens-static-white-white-alpha-16, rgba(255, 255, 255, 0.16));
@@ -395,7 +404,7 @@
    Disabled styling is still shared with every other color (see below). */
 .btn--danger.btn--solid {
   background: var(--color-tokens-error-base, #e7000b);
-  color: var(--color-tokens-text-static, #fff);
+  color: var(--color-tokens-text-on-control, #fff);
   box-shadow:
     inset 0 0 0 1px var(--color-tokens-error-base, #e7000b),
     inset 0 2px 0 0 var(--color-tokens-static-white-white-alpha-16, rgba(255, 255, 255, 0.16));
@@ -505,7 +514,7 @@
    (see below). */
 .btn--success.btn--solid {
   background: var(--color-tokens-success-base, #00a63e);
-  color: var(--color-tokens-text-static, #fff);
+  color: var(--color-tokens-text-on-control, #fff);
   box-shadow:
     inset 0 0 0 1px var(--color-tokens-success-base, #00a63e),
     inset 0 2px 0 0 var(--color-tokens-static-white-white-alpha-16, rgba(255, 255, 255, 0.16));
@@ -614,7 +623,7 @@
    Disabled styling is still shared with every other color (see below). */
 .btn--info.btn--solid {
   background: var(--color-tokens-info-base, #2563eb);
-  color: var(--color-tokens-text-static, #fff);
+  color: var(--color-tokens-text-on-control, #fff);
   box-shadow:
     inset 0 0 0 1px var(--color-tokens-info-base, #2563eb),
     inset 0 2px 0 0 var(--color-tokens-static-white-white-alpha-16, rgba(255, 255, 255, 0.16));
