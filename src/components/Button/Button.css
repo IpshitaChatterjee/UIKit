@@ -1,9 +1,17 @@
 /* Color, spacing, radius and typography all come from Figma via
-   style-dictionary (build/css/tokens.css). Icon size and shadow/focus-ring
-   geometry aren't tokenized yet — icons don't sit on the spacing scale, and
-   the effect tokens are still missing "spread" data pending the next Figma
-   sync — so those stay literal, matched from the "button_default/rounded/
-   primary" component set (node 213:6870) in the UI Design Kit Figma file. */
+   style-dictionary (build/css/tokens.css). Icon size and focus-ring
+   thickness (--btn-focus-offset/--btn-focus-ring below) aren't tokenized
+   yet — icons don't sit on the spacing scale, and the ring-size effect
+   tokens are still missing "spread" data pending the next Figma sync — so
+   those stay literal, matched from the "button_default/rounded/primary"
+   component set (node 213:6870) in the UI Design Kit Figma file. Shadow
+   and focus-ring *colors*, by contrast, are bound directly to the same
+   color-tokens/* variables used for fills (e.g. success/base) rather than
+   Figma's separate shadows/interactive/* and focus-ring/colors/* effect
+   variables — those never made it into tokens.css in either mode, so
+   binding to them left every shadow/ring pinned to its light-mode literal
+   even in dark mode. Reusing color-tokens/* trades a little fidelity to
+   Figma's exact shadow spec for shadows that actually track the theme. */
 @import '../../../build/css/tokens.css';
 
 .btn {
@@ -148,16 +156,17 @@
    Disabled styling is identical to primary's (bg-weak/bg-static +
    text-disabled don't vary by color) so those rules above are reused
    as-is; only default/hover/focused need color-specific overrides here.
-   Uses the shadows/interactive/neutral/* and focus-ring/colors/neutral/*
-   token families Figma defines specifically for shadow/ring colors
-   (separate from color-tokens since Figma effects can't reference
-   color variables directly), which are already dark-mode paired. */
+   Shadow/ring colors reuse the existing bg-* scale (bg-strong/bg-heavy/
+   bg-weakest/bg-strongest) rather than Figma's separate shadows/
+   interactive/neutral/* and focus-ring/colors/neutral/* effect
+   variables, so they track light/dark mode instead of staying pinned
+   to their light-mode value (see the file-level note above). */
 .btn--neutral-solid.btn--solid {
   background: var(--color-tokens-bg-strong, #27272a);
   color: var(--color-tokens-text-static, #fff);
   box-shadow:
-    inset 0 0 0 1px var(--effects-shadows-interactive-neutral-base, #27272a),
-    inset 0 2px 0 0 var(--effects-shadows-interactive-neutral-inner, #3f3f46);
+    inset 0 0 0 1px var(--color-tokens-bg-strong, #27272a),
+    inset 0 2px 0 0 var(--color-tokens-bg-heavy, #3f3f46);
 }
 
 .btn--neutral-solid.btn--solid:not(:disabled):hover,
@@ -166,9 +175,9 @@
 .btn--neutral-solid.btn--solid.btn--force-pressed {
   background: var(--color-tokens-bg-strong, #27272a);
   box-shadow:
-    0 5px 10px -5px var(--effects-shadows-interactive-neutral-drop, #3f3f46),
-    inset 0 0 0 1px var(--effects-shadows-interactive-neutral-base, #27272a),
-    inset 0 2px 0 0 var(--effects-shadows-interactive-neutral-inner, #3f3f46);
+    0 5px 10px -5px var(--color-tokens-bg-heavy, #3f3f46),
+    inset 0 0 0 1px var(--color-tokens-bg-strong, #27272a),
+    inset 0 2px 0 0 var(--color-tokens-bg-heavy, #3f3f46);
 }
 
 .btn--neutral-solid.btn--solid:not(:disabled):focus-visible,
@@ -176,9 +185,9 @@
   outline: none;
   background: var(--color-tokens-bg-strong, #27272a);
   box-shadow:
-    0 5px 10px -5px var(--effects-shadows-interactive-neutral-drop, #3f3f46),
-    inset 0 0 0 1px var(--effects-shadows-interactive-neutral-base, #27272a),
-    inset 0 1px 0 1px var(--effects-shadows-interactive-neutral-inner, #3f3f46);
+    0 5px 10px -5px var(--color-tokens-bg-heavy, #3f3f46),
+    inset 0 0 0 1px var(--color-tokens-bg-strong, #27272a),
+    inset 0 1px 0 1px var(--color-tokens-bg-heavy, #3f3f46);
 }
 
 .btn--neutral-solid.btn--solid.btn--loading {
@@ -206,8 +215,8 @@
   outline: none;
   background: var(--color-tokens-bg-weak, #f4f4f5);
   box-shadow:
-    0 0 0 var(--btn-focus-offset, 3px) var(--effects-focus-ring-colors-neutral-color-inner, #fff),
-    0 0 0 var(--btn-focus-ring, 6px) var(--effects-focus-ring-colors-neutral-color-outer, #09090b);
+    0 0 0 var(--btn-focus-offset, 3px) var(--color-tokens-bg-weakest, #fafafa),
+    0 0 0 var(--btn-focus-ring, 6px) var(--color-tokens-bg-strongest, #09090b);
 }
 
 .btn--neutral-solid.btn--soft {
@@ -228,8 +237,8 @@
   outline: none;
   background: var(--color-tokens-bg-weak, #f4f4f5);
   box-shadow:
-    0 0 0 var(--btn-focus-offset, 3px) var(--effects-focus-ring-colors-neutral-color-inner, #fff),
-    0 0 0 var(--btn-focus-ring, 6px) var(--effects-focus-ring-colors-neutral-color-outer, #09090b);
+    0 0 0 var(--btn-focus-offset, 3px) var(--color-tokens-bg-weakest, #fafafa),
+    0 0 0 var(--btn-focus-ring, 6px) var(--color-tokens-bg-strongest, #09090b);
 }
 
 .btn--neutral-solid.btn--ghost {
@@ -249,8 +258,8 @@
   outline: none;
   background: var(--color-tokens-bg-static, #fff);
   box-shadow:
-    0 0 0 var(--btn-focus-offset, 3px) var(--effects-focus-ring-colors-neutral-color-inner, #fff),
-    0 0 0 var(--btn-focus-ring, 6px) var(--effects-focus-ring-colors-neutral-color-outer, #09090b);
+    0 0 0 var(--btn-focus-offset, 3px) var(--color-tokens-bg-weakest, #fafafa),
+    0 0 0 var(--btn-focus-ring, 6px) var(--color-tokens-bg-strongest, #09090b);
 }
 
 /* Color=neutral-light — third color family from "button_default/{shape}/
@@ -259,15 +268,14 @@
    bg-strong alone, and outline/soft/ghost use text-body (mid-gray)
    instead of text-strongest (near-black) for their label/border color.
    Disabled styling is still shared with every other color (see below).
-   Reuses the same shadows/interactive/neutral/* and
-   focus-ring/colors/neutral/* token families as neutral-solid — Figma
-   defines one "neutral" ramp for shadow/ring colors, shared by both. */
+   Reuses the same bg-* shadow/ring mapping as neutral-solid (see the
+   comment there) — one shared neutral ramp for both. */
 .btn--neutral-light.btn--solid {
   background: var(--color-tokens-bg-heavy, #3f3f46);
   color: var(--color-tokens-text-static, #fff);
   box-shadow:
-    inset 0 0 0 1px var(--effects-shadows-interactive-neutral-base, #27272a),
-    inset 0 2px 0 0 var(--effects-shadows-interactive-neutral-inner, #3f3f46);
+    inset 0 0 0 1px var(--color-tokens-bg-strong, #27272a),
+    inset 0 2px 0 0 var(--color-tokens-bg-heavy, #3f3f46);
 }
 
 .btn--neutral-light.btn--solid:not(:disabled):hover,
@@ -276,9 +284,9 @@
 .btn--neutral-light.btn--solid.btn--force-pressed {
   background: var(--color-tokens-bg-strong, #27272a);
   box-shadow:
-    0 5px 10px -5px var(--effects-shadows-interactive-neutral-drop, #3f3f46),
-    inset 0 0 0 1px var(--effects-shadows-interactive-neutral-base, #27272a),
-    inset 0 2px 0 0 var(--effects-shadows-interactive-neutral-inner, #3f3f46);
+    0 5px 10px -5px var(--color-tokens-bg-heavy, #3f3f46),
+    inset 0 0 0 1px var(--color-tokens-bg-strong, #27272a),
+    inset 0 2px 0 0 var(--color-tokens-bg-heavy, #3f3f46);
 }
 
 .btn--neutral-light.btn--solid:not(:disabled):focus-visible,
@@ -286,9 +294,9 @@
   outline: none;
   background: var(--color-tokens-bg-heavy, #3f3f46);
   box-shadow:
-    0 5px 10px -5px var(--effects-shadows-interactive-neutral-drop, #3f3f46),
-    inset 0 0 0 1px var(--effects-shadows-interactive-neutral-base, #27272a),
-    inset 0 1px 0 1px var(--effects-shadows-interactive-neutral-inner, #3f3f46);
+    0 5px 10px -5px var(--color-tokens-bg-heavy, #3f3f46),
+    inset 0 0 0 1px var(--color-tokens-bg-strong, #27272a),
+    inset 0 1px 0 1px var(--color-tokens-bg-heavy, #3f3f46);
 }
 
 .btn--neutral-light.btn--solid.btn--loading {
@@ -316,8 +324,8 @@
   outline: none;
   background: var(--color-tokens-bg-weak, #f4f4f5);
   box-shadow:
-    0 0 0 var(--btn-focus-offset, 3px) var(--effects-focus-ring-colors-neutral-color-inner, #fff),
-    0 0 0 var(--btn-focus-ring, 6px) var(--effects-focus-ring-colors-neutral-color-outer, #09090b);
+    0 0 0 var(--btn-focus-offset, 3px) var(--color-tokens-bg-weakest, #fafafa),
+    0 0 0 var(--btn-focus-ring, 6px) var(--color-tokens-bg-strongest, #09090b);
 }
 
 .btn--neutral-light.btn--soft {
@@ -338,8 +346,8 @@
   outline: none;
   background: var(--color-tokens-bg-weak, #f4f4f5);
   box-shadow:
-    0 0 0 var(--btn-focus-offset, 3px) var(--effects-focus-ring-colors-neutral-color-inner, #fff),
-    0 0 0 var(--btn-focus-ring, 6px) var(--effects-focus-ring-colors-neutral-color-outer, #09090b);
+    0 0 0 var(--btn-focus-offset, 3px) var(--color-tokens-bg-weakest, #fafafa),
+    0 0 0 var(--btn-focus-ring, 6px) var(--color-tokens-bg-strongest, #09090b);
 }
 
 .btn--neutral-light.btn--ghost {
@@ -359,27 +367,26 @@
   outline: none;
   background: var(--color-tokens-bg-static, #fff);
   box-shadow:
-    0 0 0 var(--btn-focus-offset, 3px) var(--effects-focus-ring-colors-neutral-color-inner, #fff),
-    0 0 0 var(--btn-focus-ring, 6px) var(--effects-focus-ring-colors-neutral-color-outer, #09090b);
+    0 0 0 var(--btn-focus-offset, 3px) var(--color-tokens-bg-weakest, #fafafa),
+    0 0 0 var(--btn-focus-ring, 6px) var(--color-tokens-bg-strongest, #09090b);
 }
 
 /* Color=danger — fourth color family from "button_default/{shape}/
    danger" (rounded 213:3365, pill 242:10018, square 242:11099). Uses
-   the color-tokens/error/* ramp instead of primary/neutral, plus its
-   own shadows/interactive/error/* and focus-ring/colors/error/* token
-   families. Two things differ structurally from the other color
-   families here, matched as-is from Figma: solid's hover/pressed inner
-   ring uses error/hover (not error/base — danger has a dedicated darker
-   ring color for the pressed states) and focused replaces the soft
-   drop-shadow blur used elsewhere with a flat 2px ring bound directly
-   to color-tokens/error/strongest rather than an effects/shadows token.
+   the color-tokens/error/* ramp instead of primary/neutral for its
+   shadow/ring colors too (see the file-level note above) — solid's
+   inset ring stays at error/base across default/hover/focused, same
+   as primary's own pattern, rather than the separate "hover" shade
+   Figma's shadows/interactive/error/hover token used to supply.
+   Focused still replaces the soft drop-shadow blur used elsewhere
+   with a flat 2px ring bound directly to color-tokens/error/strongest.
    Disabled styling is still shared with every other color (see below). */
 .btn--danger.btn--solid {
   background: var(--color-tokens-error-base, #e7000b);
   color: var(--color-tokens-text-static, #fff);
   box-shadow:
-    inset 0 0 0 1px var(--effects-shadows-interactive-error-base, #c10007),
-    inset 0 2px 0 0 var(--effects-shadows-interactive-error-inner, rgba(255, 255, 255, 0.16));
+    inset 0 0 0 1px var(--color-tokens-error-base, #e7000b),
+    inset 0 2px 0 0 var(--color-tokens-static-white-white-alpha-16, rgba(255, 255, 255, 0.16));
 }
 
 .btn--danger.btn--solid:not(:disabled):hover,
@@ -388,9 +395,9 @@
 .btn--danger.btn--solid.btn--force-pressed {
   background: var(--color-tokens-error-strong, #c10007);
   box-shadow:
-    0 5px 10px -5px var(--effects-shadows-interactive-error-drop, #ffe2e2),
-    inset 0 0 0 1px var(--effects-shadows-interactive-error-hover, #e7000b),
-    inset 0 2px 0 0 var(--effects-shadows-interactive-error-inner, rgba(255, 255, 255, 0.16));
+    0 5px 10px -5px var(--color-tokens-error-weak, #ffe2e2),
+    inset 0 0 0 1px var(--color-tokens-error-base, #e7000b),
+    inset 0 2px 0 0 var(--color-tokens-static-white-white-alpha-16, rgba(255, 255, 255, 0.16));
 }
 
 .btn--danger.btn--solid:not(:disabled):focus-visible,
@@ -399,8 +406,8 @@
   background: var(--color-tokens-error-base, #e7000b);
   box-shadow:
     0 0 0 2px var(--color-tokens-error-strongest, #82181a),
-    inset 0 0 0 1px var(--effects-shadows-interactive-error-base, #c10007),
-    inset 0 2px 0 0 var(--effects-shadows-interactive-error-inner, rgba(255, 255, 255, 0.16));
+    inset 0 0 0 1px var(--color-tokens-error-base, #e7000b),
+    inset 0 2px 0 0 var(--color-tokens-static-white-white-alpha-16, rgba(255, 255, 255, 0.16));
 }
 
 .btn--danger.btn--solid.btn--loading {
@@ -428,8 +435,8 @@
   outline: none;
   background: var(--color-tokens-error-weak, #ffe2e2);
   box-shadow:
-    0 0 0 var(--btn-focus-offset, 3px) var(--effects-focus-ring-colors-error-color-inner, #fafafa),
-    0 0 0 var(--btn-focus-ring, 6px) var(--effects-focus-ring-colors-error-color-outer, #e7000b);
+    0 0 0 var(--btn-focus-offset, 3px) var(--color-tokens-bg-weakest, #fafafa),
+    0 0 0 var(--btn-focus-ring, 6px) var(--color-tokens-error-base, #e7000b);
 }
 
 .btn--danger.btn--soft {
@@ -450,8 +457,8 @@
   outline: none;
   background: var(--color-tokens-error-weak, #ffe2e2);
   box-shadow:
-    0 0 0 var(--btn-focus-offset, 3px) var(--effects-focus-ring-colors-error-color-inner, #fafafa),
-    0 0 0 var(--btn-focus-ring, 6px) var(--effects-focus-ring-colors-error-color-outer, #e7000b);
+    0 0 0 var(--btn-focus-offset, 3px) var(--color-tokens-bg-weakest, #fafafa),
+    0 0 0 var(--btn-focus-ring, 6px) var(--color-tokens-error-base, #e7000b);
 }
 
 .btn--danger.btn--ghost {
@@ -471,25 +478,25 @@
   outline: none;
   background: var(--color-tokens-bg-static, #fff);
   box-shadow:
-    0 0 0 var(--btn-focus-offset, 3px) var(--effects-focus-ring-colors-error-color-inner, #fafafa),
-    0 0 0 var(--btn-focus-ring, 6px) var(--effects-focus-ring-colors-error-color-outer, #e7000b);
+    0 0 0 var(--btn-focus-offset, 3px) var(--color-tokens-bg-weakest, #fafafa),
+    0 0 0 var(--btn-focus-ring, 6px) var(--color-tokens-error-base, #e7000b);
 }
 
 /* Color=success — fifth color family from "button_default/{shape}/
-   success" (rounded 213:7571, pill 242:12180, square 242:13261). Uses
-   the color-tokens/success/* ramp plus its own shadows/interactive/
-   success/* and focus-ring/colors/success/* token families. Mirrors
-   "danger" structurally: solid's hover/pressed inner ring uses
-   success/hover (not success/base), and focused replaces the blurred
-   drop-shadow used elsewhere with a flat 2px ring bound directly to
-   color-tokens/success/strongest. Disabled styling is still shared with
-   every other color (see below). */
+   success" (rounded 213:7571, pill 242:12180, square 242:13261). Mirrors
+   "danger" structurally, including the shadow/ring simplification (see
+   the file-level note above): solid's inset ring stays at success/base
+   across default/hover/focused instead of Figma's separate success/hover
+   shadow shade, and focused still replaces the blurred drop-shadow used
+   elsewhere with a flat 2px ring bound directly to color-tokens/success/
+   strongest. Disabled styling is still shared with every other color
+   (see below). */
 .btn--success.btn--solid {
   background: var(--color-tokens-success-base, #00a63e);
   color: var(--color-tokens-text-static, #fff);
   box-shadow:
-    inset 0 0 0 1px var(--effects-shadows-interactive-success-base, #00a63e),
-    inset 0 2px 0 0 var(--effects-shadows-interactive-success-inner, rgba(255, 255, 255, 0.16));
+    inset 0 0 0 1px var(--color-tokens-success-base, #00a63e),
+    inset 0 2px 0 0 var(--color-tokens-static-white-white-alpha-16, rgba(255, 255, 255, 0.16));
 }
 
 .btn--success.btn--solid:not(:disabled):hover,
@@ -498,9 +505,9 @@
 .btn--success.btn--solid.btn--force-pressed {
   background: var(--color-tokens-success-strong, #008236);
   box-shadow:
-    0 5px 10px -5px var(--effects-shadows-interactive-success-drop, #dcfce7),
-    inset 0 0 0 1px var(--effects-shadows-interactive-success-hover, #00c950),
-    inset 0 2px 0 0 var(--effects-shadows-interactive-success-inner, rgba(255, 255, 255, 0.16));
+    0 5px 10px -5px var(--color-tokens-success-weak, #dcfce7),
+    inset 0 0 0 1px var(--color-tokens-success-base, #00a63e),
+    inset 0 2px 0 0 var(--color-tokens-static-white-white-alpha-16, rgba(255, 255, 255, 0.16));
 }
 
 .btn--success.btn--solid:not(:disabled):focus-visible,
@@ -509,8 +516,8 @@
   background: var(--color-tokens-success-base, #00a63e);
   box-shadow:
     0 0 0 2px var(--color-tokens-success-strongest, #0d542b),
-    inset 0 0 0 1px var(--effects-shadows-interactive-success-base, #00a63e),
-    inset 0 2px 0 0 var(--effects-shadows-interactive-success-inner, rgba(255, 255, 255, 0.16));
+    inset 0 0 0 1px var(--color-tokens-success-base, #00a63e),
+    inset 0 2px 0 0 var(--color-tokens-static-white-white-alpha-16, rgba(255, 255, 255, 0.16));
 }
 
 .btn--success.btn--solid.btn--loading {
@@ -538,8 +545,8 @@
   outline: none;
   background: var(--color-tokens-success-weak, #dcfce7);
   box-shadow:
-    0 0 0 var(--btn-focus-offset, 3px) var(--effects-focus-ring-colors-success-color-inner, #fafafa),
-    0 0 0 var(--btn-focus-ring, 6px) var(--effects-focus-ring-colors-success-color-outer, #00a63e);
+    0 0 0 var(--btn-focus-offset, 3px) var(--color-tokens-bg-weakest, #fafafa),
+    0 0 0 var(--btn-focus-ring, 6px) var(--color-tokens-success-base, #00a63e);
 }
 
 .btn--success.btn--soft {
@@ -560,8 +567,8 @@
   outline: none;
   background: var(--color-tokens-success-weak, #dcfce7);
   box-shadow:
-    0 0 0 var(--btn-focus-offset, 3px) var(--effects-focus-ring-colors-success-color-inner, #fafafa),
-    0 0 0 var(--btn-focus-ring, 6px) var(--effects-focus-ring-colors-success-color-outer, #00a63e);
+    0 0 0 var(--btn-focus-offset, 3px) var(--color-tokens-bg-weakest, #fafafa),
+    0 0 0 var(--btn-focus-ring, 6px) var(--color-tokens-success-base, #00a63e);
 }
 
 .btn--success.btn--ghost {
@@ -581,25 +588,24 @@
   outline: none;
   background: var(--color-tokens-bg-static, #fff);
   box-shadow:
-    0 0 0 var(--btn-focus-offset, 3px) var(--effects-focus-ring-colors-success-color-inner, #fafafa),
-    0 0 0 var(--btn-focus-ring, 6px) var(--effects-focus-ring-colors-success-color-outer, #00a63e);
+    0 0 0 var(--btn-focus-offset, 3px) var(--color-tokens-bg-weakest, #fafafa),
+    0 0 0 var(--btn-focus-ring, 6px) var(--color-tokens-success-base, #00a63e);
 }
 
 /* Color=info — sixth color family, added by swapping primary/ tokens for
    color-tokens/info/* (not pulled from a verified "button_default/info"
-   Figma component set — mirrors the "danger"/"success" structure since
-   those are the closest existing analogues: solid's hover/pressed inner
-   ring uses info/hover (not info/base), and focused uses a flat 2px ring
-   bound directly to color-tokens/info/strongest instead of a blurred
-   drop-shadow. Hover/drop-shadow shades matched against Figma's
-   effect-shadow-component-info-hover token (#3b82f6 ring, #dbeafe drop).
+   Figma component set — mirrors the "danger"/"success" structure,
+   including the shadow/ring simplification described in the file-level
+   note above: solid's inset ring stays at info/base across default/
+   hover/focused, and focused uses a flat 2px ring bound directly to
+   color-tokens/info/strongest instead of a blurred drop-shadow.
    Disabled styling is still shared with every other color (see below). */
 .btn--info.btn--solid {
   background: var(--color-tokens-info-base, #2563eb);
   color: var(--color-tokens-text-static, #fff);
   box-shadow:
-    inset 0 0 0 1px var(--effects-shadows-interactive-info-base, #2563eb),
-    inset 0 2px 0 0 var(--effects-shadows-interactive-info-inner, rgba(255, 255, 255, 0.16));
+    inset 0 0 0 1px var(--color-tokens-info-base, #2563eb),
+    inset 0 2px 0 0 var(--color-tokens-static-white-white-alpha-16, rgba(255, 255, 255, 0.16));
 }
 
 .btn--info.btn--solid:not(:disabled):hover,
@@ -608,9 +614,9 @@
 .btn--info.btn--solid.btn--force-pressed {
   background: var(--color-tokens-info-strong, #1d4ed8);
   box-shadow:
-    0 5px 10px -5px var(--effects-shadows-interactive-info-drop, #dbeafe),
-    inset 0 0 0 1px var(--effects-shadows-interactive-info-hover, #3b82f6),
-    inset 0 2px 0 0 var(--effects-shadows-interactive-info-inner, rgba(255, 255, 255, 0.16));
+    0 5px 10px -5px var(--color-tokens-info-weak, #dbeafe),
+    inset 0 0 0 1px var(--color-tokens-info-base, #2563eb),
+    inset 0 2px 0 0 var(--color-tokens-static-white-white-alpha-16, rgba(255, 255, 255, 0.16));
 }
 
 .btn--info.btn--solid:not(:disabled):focus-visible,
@@ -619,8 +625,8 @@
   background: var(--color-tokens-info-base, #2563eb);
   box-shadow:
     0 0 0 2px var(--color-tokens-info-strongest, #1e3a8a),
-    inset 0 0 0 1px var(--effects-shadows-interactive-info-base, #2563eb),
-    inset 0 2px 0 0 var(--effects-shadows-interactive-info-inner, rgba(255, 255, 255, 0.16));
+    inset 0 0 0 1px var(--color-tokens-info-base, #2563eb),
+    inset 0 2px 0 0 var(--color-tokens-static-white-white-alpha-16, rgba(255, 255, 255, 0.16));
 }
 
 .btn--info.btn--solid.btn--loading {
@@ -648,8 +654,8 @@
   outline: none;
   background: var(--color-tokens-info-weak, #dbeafe);
   box-shadow:
-    0 0 0 var(--btn-focus-offset, 3px) var(--effects-focus-ring-colors-info-color-inner, #fafafa),
-    0 0 0 var(--btn-focus-ring, 6px) var(--effects-focus-ring-colors-info-color-outer, #2563eb);
+    0 0 0 var(--btn-focus-offset, 3px) var(--color-tokens-bg-weakest, #fafafa),
+    0 0 0 var(--btn-focus-ring, 6px) var(--color-tokens-info-base, #2563eb);
 }
 
 .btn--info.btn--soft {
@@ -670,8 +676,8 @@
   outline: none;
   background: var(--color-tokens-info-weak, #dbeafe);
   box-shadow:
-    0 0 0 var(--btn-focus-offset, 3px) var(--effects-focus-ring-colors-info-color-inner, #fafafa),
-    0 0 0 var(--btn-focus-ring, 6px) var(--effects-focus-ring-colors-info-color-outer, #2563eb);
+    0 0 0 var(--btn-focus-offset, 3px) var(--color-tokens-bg-weakest, #fafafa),
+    0 0 0 var(--btn-focus-ring, 6px) var(--color-tokens-info-base, #2563eb);
 }
 
 .btn--info.btn--ghost {
@@ -691,18 +697,29 @@
   outline: none;
   background: var(--color-tokens-bg-static, #fff);
   box-shadow:
-    0 0 0 var(--btn-focus-offset, 3px) var(--effects-focus-ring-colors-info-color-inner, #fafafa),
-    0 0 0 var(--btn-focus-ring, 6px) var(--effects-focus-ring-colors-info-color-outer, #2563eb);
+    0 0 0 var(--btn-focus-offset, 3px) var(--color-tokens-bg-weakest, #fafafa),
+    0 0 0 var(--btn-focus-ring, 6px) var(--color-tokens-info-base, #2563eb);
 }
 
 /* Color=inverse-light / Color=inverse-solid — "button_default/{shape}/
    inverse-light" (rounded 213:4066, pill 242:14342, square 242:16504)
    and "button_default/{shape}/inverse-solid" (rounded 213:4767, pill
    242:15043, square 242:17205). Pixel-identical to each other in Figma
-   today (same bg/text scale, same shadows/interactive/inverse/* and
-   focus-ring/colors/inverse/* tokens throughout), so their selectors are
-   combined instead of duplicated. Meant for buttons on a dark/colored
-   surface: solid is near-white, outline/soft/ghost are near-black.
+   today (same bg/text scale throughout), so their selectors are combined
+   instead of duplicated. "Inverse" means *opposite of the page's own
+   light/dark state* — verified against Figma's own light vs dark
+   screenshots of this exact component: solid renders near-black-on-white
+   in light mode and near-white-on-black in dark mode. bg-strongest
+   already sits at the far pole from the page's own bg-weak/weakest at
+   every mode, so pairing background:bg-strongest with color:bg-weakest
+   (rather than a literal bg-weakest/text-strongest pair, which just
+   tracks the page instead of opposing it, and text-strongest isn't a
+   synced token besides) reproduces that inversion for free. Shadow/ring
+   colors reuse the bg-* scale directly (see the file-level note above)
+   instead of Figma's separate shadows/interactive/inverse/* and
+   focus-ring/colors/inverse/* tokens — the hover/focused drop-shadow
+   (bg-medium) is the one approximation here, since Figma's literal
+   (#71717a) doesn't land exactly on a bg-* stop in light mode.
    Two real differences from every other color family here (verified
    against Figma's fills/effects, not just variable names):
    - outline/soft/ghost "loading" reverts to the *default* background
@@ -710,10 +727,10 @@
      hover background/default text like every other color's loading
      state — so it needs its own rule rather than joining the hover
      group.
-   - "disabled" uses its own darker bg/text pairing per type instead of
+   - "disabled" uses its own muted bg/text pairing per type instead of
      the bg-weak/bg-static + text-disabled shared by every other color
-     (see the shared disabled block below) — a light disabled state
-     wouldn't read against a dark surface.
+     (see the shared disabled block below) — a same-intensity disabled
+     state wouldn't read as dimmed against the inverted surface.
    Figma's focused-state ring effects also have the offset-spread (3px)
    and ring-spread (6px) swapped onto the color-inner/color-outer tokens
    here relative to every other family; kept the semantic pairing used
@@ -721,11 +738,11 @@
    produces a normal two-tone ring instead of an inverted one. */
 .btn--inverse-light.btn--solid,
 .btn--inverse-solid.btn--solid {
-  background: var(--color-tokens-bg-weakest, #fafafa);
-  color: var(--color-tokens-text-strongest, #09090b);
+  background: var(--color-tokens-bg-strongest, #09090b);
+  color: var(--color-tokens-bg-weakest, #fafafa);
   box-shadow:
-    inset 0 0 0 1px var(--effects-shadows-interactive-inverse-base, #fafafa),
-    inset 0 2px 0 0 var(--effects-shadows-interactive-inverse-inner, #f4f4f5);
+    inset 0 0 0 1px var(--color-tokens-bg-strongest, #09090b),
+    inset 0 2px 0 0 var(--color-tokens-bg-strong, #27272a);
 }
 
 .btn--inverse-light.btn--solid:not(:disabled):hover,
@@ -736,11 +753,11 @@
 .btn--inverse-solid.btn--solid:not(:disabled):active,
 .btn--inverse-solid.btn--solid.btn--force-hover,
 .btn--inverse-solid.btn--solid.btn--force-pressed {
-  background: var(--color-tokens-bg-weak, #f4f4f5);
+  background: var(--color-tokens-bg-strong, #27272a);
   box-shadow:
-    0 5px 10px -5px var(--effects-shadows-interactive-inverse-drop, #71717a),
-    inset 0 0 0 1px var(--effects-shadows-interactive-inverse-hover, #e4e4e7),
-    inset 0 2px 0 0 var(--effects-shadows-interactive-inverse-inner, #f4f4f5);
+    0 5px 10px -5px var(--color-tokens-bg-medium, #d4d4d8),
+    inset 0 0 0 1px var(--color-tokens-bg-heavy, #3f3f46),
+    inset 0 2px 0 0 var(--color-tokens-bg-strong, #27272a);
 }
 
 .btn--inverse-light.btn--solid:not(:disabled):focus-visible,
@@ -748,23 +765,23 @@
 .btn--inverse-solid.btn--solid:not(:disabled):focus-visible,
 .btn--inverse-solid.btn--solid.btn--force-focused {
   outline: none;
-  background: var(--color-tokens-bg-weakest, #fafafa);
+  background: var(--color-tokens-bg-strongest, #09090b);
   box-shadow:
-    0 0 0 2px var(--effects-shadows-interactive-inverse-drop, #71717a),
-    inset 0 0 0 1px var(--effects-shadows-interactive-inverse-base, #fafafa),
-    inset 0 2px 0 0 var(--effects-shadows-interactive-inverse-inner, #f4f4f5);
+    0 0 0 2px var(--color-tokens-bg-medium, #d4d4d8),
+    inset 0 0 0 1px var(--color-tokens-bg-strongest, #09090b),
+    inset 0 2px 0 0 var(--color-tokens-bg-strong, #27272a);
 }
 
 .btn--inverse-light.btn--solid.btn--loading,
 .btn--inverse-solid.btn--solid.btn--loading {
-  background: var(--color-tokens-bg-weakest, #fafafa);
+  background: var(--color-tokens-bg-strongest, #09090b);
   box-shadow: none;
   text-shadow: none;
 }
 
 .btn--inverse-light.btn--solid:disabled,
 .btn--inverse-solid.btn--solid:disabled {
-  background: var(--color-tokens-bg-strong, #27272a);
+  background: var(--color-tokens-bg-light, #e4e4e7);
   color: var(--color-tokens-text-body, #52525b);
   box-shadow: none;
   text-shadow: none;
@@ -795,8 +812,8 @@
   outline: none;
   background: var(--color-tokens-bg-strong, #27272a);
   box-shadow:
-    0 0 0 var(--btn-focus-offset, 3px) var(--effects-focus-ring-colors-inverse-color-inner, #fafafa),
-    0 0 0 var(--btn-focus-ring, 6px) var(--effects-focus-ring-colors-inverse-color-outer, #09090b);
+    0 0 0 var(--btn-focus-offset, 3px) var(--color-tokens-bg-weakest, #fafafa),
+    0 0 0 var(--btn-focus-ring, 6px) var(--color-tokens-bg-strongest, #09090b);
 }
 
 .btn--inverse-light.btn--outline.btn--loading,
@@ -836,8 +853,8 @@
   outline: none;
   background: var(--color-tokens-bg-strong, #27272a);
   box-shadow:
-    0 0 0 var(--btn-focus-offset, 3px) var(--effects-focus-ring-colors-inverse-color-inner, #fafafa),
-    0 0 0 var(--btn-focus-ring, 6px) var(--effects-focus-ring-colors-inverse-color-outer, #09090b);
+    0 0 0 var(--btn-focus-offset, 3px) var(--color-tokens-bg-weakest, #fafafa),
+    0 0 0 var(--btn-focus-ring, 6px) var(--color-tokens-bg-strongest, #09090b);
 }
 
 .btn--inverse-light.btn--soft.btn--loading,
@@ -876,8 +893,8 @@
   outline: none;
   background: var(--color-tokens-bg-strong, #27272a);
   box-shadow:
-    0 0 0 var(--btn-focus-offset, 3px) var(--effects-focus-ring-colors-inverse-color-inner, #fafafa),
-    0 0 0 var(--btn-focus-ring, 6px) var(--effects-focus-ring-colors-inverse-color-outer, #09090b);
+    0 0 0 var(--btn-focus-offset, 3px) var(--color-tokens-bg-weakest, #fafafa),
+    0 0 0 var(--btn-focus-ring, 6px) var(--color-tokens-bg-strongest, #09090b);
 }
 
 .btn--inverse-light.btn--ghost.btn--loading,

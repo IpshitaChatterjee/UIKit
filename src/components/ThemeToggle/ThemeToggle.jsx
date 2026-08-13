@@ -3,10 +3,9 @@ import { Moon, Sun } from 'geist-icons';
 import Button from '../Button/Button.jsx';
 
 /**
- * Matches the floating "button_default/pill/inverse-solid" icon button
- * from "POST-18" (node 4426:8720) in the Social media Figma file — shown
- * there with a sun glyph. Wired here as a real light/dark switch: the
- * icon reflects the *current* theme (sun while light, moon while dark).
+ * Uses Button's default inverse-solid pill treatment. Wired here as a
+ * real light/dark switch: the icon reflects the *current* theme (sun
+ * while light, moon while dark).
  */
 function ThemeToggle({ theme, onToggle, className = '' }) {
   const isDark = theme === 'dark';
