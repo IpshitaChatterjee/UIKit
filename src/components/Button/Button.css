@@ -84,7 +84,7 @@
 
 /* Type=outline — 1px border, adds 2px to the box vs. the other types (matches Figma) */
 .btn--outline {
-  background: var(--color-tokens-bg-static, #fff);
+  background: transparent;
   color: var(--color-tokens-primary-primary-strong, #4f39f6);
   border: 1px solid var(--color-tokens-primary-primary-strong, #4f39f6);
 }
@@ -131,7 +131,7 @@
 
 /* Type=ghost — transparent until interacted with */
 .btn--ghost {
-  background: var(--color-tokens-bg-static, #fff);
+  background: transparent;
   color: var(--color-tokens-primary-primary-strong, #4f39f6);
 }
 
