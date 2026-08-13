@@ -224,6 +224,18 @@
   color: var(--color-tokens-text-strongest, #09090b);
 }
 
+/* Figma update: the icon (and loading spinner) in this one variant is now
+   bound to bg/strong instead of following the label's text/strongest —
+   the only place in the whole file where a button's icon and label
+   colors deliberately diverge. :not(:disabled) so the shared
+   .btn--soft:disabled rule below still controls the icon while disabled
+   (Figma keeps the disabled-state icon on icon/disabled, matching every
+   other color, not bg/strong). */
+.btn--neutral-solid.btn--soft:not(:disabled) .btn__icon,
+.btn--neutral-solid.btn--soft:not(:disabled) .btn__spinner {
+  color: var(--color-tokens-bg-strong, #27272a);
+}
+
 .btn--neutral-solid.btn--soft:not(:disabled):hover,
 .btn--neutral-solid.btn--soft:not(:disabled):active,
 .btn--neutral-solid.btn--soft.btn--force-hover,
