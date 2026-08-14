@@ -32,17 +32,14 @@ const COLORS = ['primary', 'neutral', 'success', 'danger', 'warning', 'info', 'v
  * "Verified"/"Away"/"Highlight" *do* have real Figma variable collections
  * (weakest/weak/base/strong/strongest, same shape as primary/error/
  * success/warning/info: sky for verified, yellow for away, fuchsia for
- * highlight) — they just aren't in build/css/tokens.css yet, the same
- * "style/variable with zero consumers doesn't reach the Files-API token
- * sync" gap Button.css's file-level comment describes for its shadow
- * effects. So these three reference color-tokens-{verified,away,
- * highlight}-* below with literal fallbacks read directly off the Figma
- * variables (see Badge.css) rather than the fill-primitives scale, ready
- * to resolve for real once a sync consumer exists. Figma's "away" variable
- * has its own quirk, mirrored here rather than corrected: "strong" is
- * bound to the exact same yellow/regular/600 swatch as "base" (no 700
- * step used), the same kind of copy-paste mismatch Button.jsx's danger
- * color already documents.
+ * highlight — Figma names the last one "highlighted", kept as "highlight"
+ * here to match the taxonomy sheet's column label) — these three
+ * reference color-tokens-{verified,away,highlighted}-* below (see
+ * Badge.css), now confirmed synced into build/css/tokens.css. Figma's
+ * "away" variable has its own quirk, mirrored here rather than corrected:
+ * "strong" is bound to the exact same yellow/regular/600 swatch as
+ * "base" (no 700 step used), the same kind of copy-paste mismatch
+ * Button.jsx's danger color already documents.
  *
  * Badges are static labels, not controls: there's no hover/pressed/
  * focused state matrix here the way Button has one (nothing in the

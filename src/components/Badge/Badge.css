@@ -161,10 +161,10 @@
   color: var(--color-tokens-info-strong, #1d4ed8);
 }
 
-/* Color=verified — color-tokens/verified/* (real Figma variable
-   collection: weakest=sky/regular/50, weak=sky/regular/100, base=sky/
-   regular/600, strong=sky/regular/700, strongest=sky/regular/900 — not
-   yet in tokens.css, see Badge.jsx's file-level comment). */
+/* Color=verified — color-tokens/verified/* (real, now-synced Figma
+   variable collection: weakest=sky/regular/50, weak=sky/regular/100,
+   base=sky/regular/600, strong=sky/regular/700, strongest=sky/regular/
+   900). */
 .badge--verified.badge--solid {
   background: var(--color-tokens-verified-base, #0284c7);
   color: var(--color-tokens-text-on-control, #fff);
@@ -186,12 +186,11 @@
   color: var(--color-tokens-verified-strong, #0369a1);
 }
 
-/* Color=away — color-tokens/away/* (real Figma variable collection:
-   weakest=yellow/regular/50, weak=yellow/regular/100, base=yellow/
-   regular/600, strong=yellow/regular/600 too — Figma binds "strong" to
-   the same swatch as "base", not a 700 step, verified against the
-   variable's own fill rather than assumed (see Badge.jsx's file-level
-   comment) — strongest=yellow/regular/900; not yet in tokens.css). */
+/* Color=away — color-tokens/away/* (real, now-synced Figma variable
+   collection: weakest=yellow/regular/50, weak=yellow/regular/100, base=
+   yellow/regular/600, strong=yellow/regular/600 too — Figma binds
+   "strong" to the same swatch as "base", not a 700 step, confirmed by
+   tokens.css's synced value — strongest=yellow/regular/900). */
 .badge--away.badge--solid {
   background: var(--color-tokens-away-base, #d08700);
   color: var(--color-tokens-text-on-control, #fff);
@@ -213,29 +212,31 @@
   color: var(--color-tokens-away-strong, #d08700);
 }
 
-/* Color=highlight — color-tokens/highlight/* (real Figma variable
-   collection: weakest=fuchsia/regular/50, weak=fuchsia/regular/100,
-   base=fuchsia/regular/600, strong=fuchsia/regular/700, strongest=
-   fuchsia/regular/900 — not yet in tokens.css). */
+/* Color=highlight — color-tokens/highlighted/* (real, now-synced Figma
+   variable collection — named "highlighted", not "highlight"; kept the
+   prop/class as "highlight" to match the taxonomy sheet's column label
+   instead: weakest=fuchsia/regular/50, weak=fuchsia/regular/100, base=
+   fuchsia/regular/600, strong=fuchsia/regular/700, strongest=fuchsia/
+   regular/900). */
 .badge--highlight.badge--solid {
-  background: var(--color-tokens-highlight-base, #c026d3);
+  background: var(--color-tokens-highlighted-base, #c026d3);
   color: var(--color-tokens-text-on-control, #fff);
 }
 
 .badge--highlight.badge--outline {
   background: transparent;
-  color: var(--color-tokens-highlight-strong, #a21caf);
-  border: 1px solid var(--color-tokens-highlight-strong, #a21caf);
+  color: var(--color-tokens-highlighted-strong, #a21caf);
+  border: 1px solid var(--color-tokens-highlighted-strong, #a21caf);
 }
 
 .badge--highlight.badge--soft {
-  background: var(--color-tokens-highlight-weakest, #fdf4ff);
-  color: var(--color-tokens-highlight-strong, #a21caf);
+  background: var(--color-tokens-highlighted-weakest, #fdf4ff);
+  color: var(--color-tokens-highlighted-strong, #a21caf);
 }
 
 .badge--highlight.badge--ghost {
   background: transparent;
-  color: var(--color-tokens-highlight-strong, #a21caf);
+  color: var(--color-tokens-highlighted-strong, #a21caf);
 }
 
 /* Color=inverse — for a badge sitting on a dark/colored surface, mirrors
