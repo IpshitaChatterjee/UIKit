@@ -26,10 +26,13 @@ const COLORS = ['primary', 'neutral', 'success', 'danger', 'warning', 'info', 'v
  *   solid bg = {color}/strong (not /base — Badge's solid is a full step
  *   deeper than Button's own resting-state solid, since a static badge
  *   has no separate hover state to reserve /base for), outline border and
- *   outline/soft/ghost label = {color}/strong too, soft bg = {color}/
- *   weakest. "highlight" binds to Figma's "highlighted" collection (see
- *   Badge.css) — kept as "highlight" here to match the taxonomy sheet's
- *   column label instead.
+ *   outline/soft/ghost label = {color}/strong too, soft bg = {color}/weak
+ *   (originally {color}/weakest — bumped a step in a later Figma update
+ *   across every one of these eight colors, reconfirmed per color against
+ *   each component's own bound variable rather than assumed to apply
+ *   uniformly). "highlight" binds to Figma's "highlighted" collection
+ *   (see Badge.css) — kept as "highlight" here to match the taxonomy
+ *   sheet's column label instead.
  * - "neutral" (default) doesn't reuse Button's neutral-solid bg-strong/
  *   text-strongest pairing the earlier version of this file assumed:
  *   solid bg = bg/strong, soft bg = bg/weak (not bg/weakest), and every

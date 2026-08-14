@@ -64,7 +64,11 @@
    primary/strong, not primary/base — a full step deeper than Button's
    own resting-state solid, since a static badge has no separate hover
    state to reserve /base for. Every other color below follows this same
-   strong/weakest shape. */
+   strong/weak shape (soft bg was originally primary/weakest — bumped a
+   step to primary/weak in a later Figma update, confirmed against the
+   component's own bound variable; same one-step bump applies to every
+   color here except neutral/disabled, already on bg-weak, and inverse,
+   on a different scale entirely). */
 .badge--primary.badge--solid {
   background: var(--color-tokens-primary-primary-strong, #4f39f6);
   color: var(--color-tokens-text-on-control, #fff);
@@ -77,7 +81,7 @@
 }
 
 .badge--primary.badge--soft {
-  background: var(--color-tokens-primary-primary-weakest, #eef2ff);
+  background: var(--color-tokens-primary-primary-weak, #e0e7ff);
   color: var(--color-tokens-primary-primary-strong, #4f39f6);
 }
 
@@ -99,7 +103,7 @@
 }
 
 .badge--success.badge--soft {
-  background: var(--color-tokens-success-weakest, #f0fdf4);
+  background: var(--color-tokens-success-weak, #dcfce7);
   color: var(--color-tokens-success-strong, #008236);
 }
 
@@ -121,7 +125,7 @@
 }
 
 .badge--danger.badge--soft {
-  background: var(--color-tokens-error-weakest, #fef2f2);
+  background: var(--color-tokens-error-weak, #ffe2e2);
   color: var(--color-tokens-error-strong, #c10007);
 }
 
@@ -143,7 +147,7 @@
 }
 
 .badge--warning.badge--soft {
-  background: var(--color-tokens-warning-weakest, #fff7ed);
+  background: var(--color-tokens-warning-weak, #ffedd4);
   color: var(--color-tokens-warning-strong, #ca3500);
 }
 
@@ -165,7 +169,7 @@
 }
 
 .badge--info.badge--soft {
-  background: var(--color-tokens-info-weakest, #eff6ff);
+  background: var(--color-tokens-info-weak, #dbeafe);
   color: var(--color-tokens-info-strong, #1d4ed8);
 }
 
@@ -187,7 +191,7 @@
 }
 
 .badge--verified.badge--soft {
-  background: var(--color-tokens-verified-weakest, #f0f9ff);
+  background: var(--color-tokens-verified-weak, #e0f2fe);
   color: var(--color-tokens-verified-strong, #0369a1);
 }
 
@@ -213,7 +217,7 @@
 }
 
 .badge--away.badge--soft {
-  background: var(--color-tokens-away-weakest, #fefce8);
+  background: var(--color-tokens-away-weak, #fef9c2);
   color: var(--color-tokens-away-strong, #d08700);
 }
 
@@ -237,7 +241,7 @@
 }
 
 .badge--highlight.badge--soft {
-  background: var(--color-tokens-highlighted-weakest, #fdf4ff);
+  background: var(--color-tokens-highlighted-weak, #fae8ff);
   color: var(--color-tokens-highlighted-strong, #a21caf);
 }
 
