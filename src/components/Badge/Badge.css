@@ -1,0 +1,348 @@
+/* Token source and fallback-literal convention match Button.css (see the
+   comment there): color-tokens/* variables are real and synced, but
+   spacing/radius aren't tokenized yet, so those stay literal, chosen to
+   read as a compact version of Button's own scale (see Badge.jsx's
+   file-level comment for why nothing here is Figma-verified). */
+@import '../../../build/css/tokens.css';
+
+.badge {
+  --badge-gap: 4px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--badge-gap);
+  padding: var(--badge-py) var(--badge-px);
+  border: none;
+  border-radius: var(--badge-radius);
+  font-family: 'Geist', system-ui, -apple-system, sans-serif;
+  font-size: var(--badge-font-size);
+  font-weight: 500;
+  line-height: var(--badge-line-height);
+  letter-spacing: var(--badge-letter-spacing);
+  white-space: nowrap;
+  user-select: none;
+}
+
+/* Color=neutral (default) — reuses Button's neutral-solid bg- and
+   text-strongest mapping rather than a separate "neutral" token family
+   (color-tokens.css has no such family — see Button.css's neutral-solid
+   comment). */
+.badge--solid {
+  background: var(--color-tokens-bg-strong, #27272a);
+  color: var(--color-tokens-text-static, #fff);
+}
+
+.badge--outline {
+  background: transparent;
+  color: var(--color-tokens-text-strongest, #09090b);
+  border: 1px solid var(--color-tokens-bg-strong, #27272a);
+}
+
+.badge--soft {
+  background: var(--color-tokens-bg-weakest, #fafafa);
+  color: var(--color-tokens-text-strongest, #09090b);
+}
+
+.badge--ghost {
+  background: transparent;
+  color: var(--color-tokens-text-strongest, #09090b);
+}
+
+/* Color=primary — color-tokens/primary/* (same ramp Button's primary color uses). */
+.badge--primary.badge--solid {
+  background: var(--color-tokens-primary-primary-base, #615fff);
+  color: var(--color-tokens-text-on-control, #fff);
+}
+
+.badge--primary.badge--outline {
+  background: transparent;
+  color: var(--color-tokens-primary-primary-strong, #4f39f6);
+  border: 1px solid var(--color-tokens-primary-primary-strong, #4f39f6);
+}
+
+.badge--primary.badge--soft {
+  background: var(--color-tokens-primary-primary-weakest, #eef2ff);
+  color: var(--color-tokens-primary-primary-strong, #4f39f6);
+}
+
+.badge--primary.badge--ghost {
+  background: transparent;
+  color: var(--color-tokens-primary-primary-strong, #4f39f6);
+}
+
+/* Color=success — color-tokens/success/*. */
+.badge--success.badge--solid {
+  background: var(--color-tokens-success-base, #00a63e);
+  color: var(--color-tokens-text-on-control, #fff);
+}
+
+.badge--success.badge--outline {
+  background: transparent;
+  color: var(--color-tokens-success-strong, #008236);
+  border: 1px solid var(--color-tokens-success-strong, #008236);
+}
+
+.badge--success.badge--soft {
+  background: var(--color-tokens-success-weakest, #f0fdf4);
+  color: var(--color-tokens-success-strong, #008236);
+}
+
+.badge--success.badge--ghost {
+  background: transparent;
+  color: var(--color-tokens-success-strong, #008236);
+}
+
+/* Color=danger — color-tokens/error/* (Button uses the same error/* ramp for its "danger" color). */
+.badge--danger.badge--solid {
+  background: var(--color-tokens-error-base, #e7000b);
+  color: var(--color-tokens-text-on-control, #fff);
+}
+
+.badge--danger.badge--outline {
+  background: transparent;
+  color: var(--color-tokens-error-strong, #c10007);
+  border: 1px solid var(--color-tokens-error-strong, #c10007);
+}
+
+.badge--danger.badge--soft {
+  background: var(--color-tokens-error-weakest, #fef2f2);
+  color: var(--color-tokens-error-strong, #c10007);
+}
+
+.badge--danger.badge--ghost {
+  background: transparent;
+  color: var(--color-tokens-error-strong, #c10007);
+}
+
+/* Color=warning — color-tokens/warning/*. Button.css has no warning color
+   family to mirror (it stops at danger/success/info); this follows the
+   same danger/success structural pattern with warning/* tokens swapped in. */
+.badge--warning.badge--solid {
+  background: var(--color-tokens-warning-base, #f54900);
+  color: var(--color-tokens-text-on-control, #fff);
+}
+
+.badge--warning.badge--outline {
+  background: transparent;
+  color: var(--color-tokens-warning-strong, #ca3500);
+  border: 1px solid var(--color-tokens-warning-strong, #ca3500);
+}
+
+.badge--warning.badge--soft {
+  background: var(--color-tokens-warning-weakest, #fff7ed);
+  color: var(--color-tokens-warning-strong, #ca3500);
+}
+
+.badge--warning.badge--ghost {
+  background: transparent;
+  color: var(--color-tokens-warning-strong, #ca3500);
+}
+
+/* Color=info — color-tokens/info/* (same tokens Button's Figma-unverified "info" color uses). */
+.badge--info.badge--solid {
+  background: var(--color-tokens-info-base, #2563eb);
+  color: var(--color-tokens-text-on-control, #fff);
+}
+
+.badge--info.badge--outline {
+  background: transparent;
+  color: var(--color-tokens-info-strong, #1d4ed8);
+  border: 1px solid var(--color-tokens-info-strong, #1d4ed8);
+}
+
+.badge--info.badge--soft {
+  background: var(--color-tokens-info-weakest, #eff6ff);
+  color: var(--color-tokens-info-strong, #1d4ed8);
+}
+
+.badge--info.badge--ghost {
+  background: transparent;
+  color: var(--color-tokens-info-strong, #1d4ed8);
+}
+
+/* Color=verified — color-tokens/verified/* (real Figma variable
+   collection: weakest=sky/regular/50, weak=sky/regular/100, base=sky/
+   regular/600, strong=sky/regular/700, strongest=sky/regular/900 — not
+   yet in tokens.css, see Badge.jsx's file-level comment). */
+.badge--verified.badge--solid {
+  background: var(--color-tokens-verified-base, #0284c7);
+  color: var(--color-tokens-text-on-control, #fff);
+}
+
+.badge--verified.badge--outline {
+  background: transparent;
+  color: var(--color-tokens-verified-strong, #0369a1);
+  border: 1px solid var(--color-tokens-verified-strong, #0369a1);
+}
+
+.badge--verified.badge--soft {
+  background: var(--color-tokens-verified-weakest, #f0f9ff);
+  color: var(--color-tokens-verified-strong, #0369a1);
+}
+
+.badge--verified.badge--ghost {
+  background: transparent;
+  color: var(--color-tokens-verified-strong, #0369a1);
+}
+
+/* Color=away — color-tokens/away/* (real Figma variable collection:
+   weakest=yellow/regular/50, weak=yellow/regular/100, base=yellow/
+   regular/600, strong=yellow/regular/600 too — Figma binds "strong" to
+   the same swatch as "base", not a 700 step, verified against the
+   variable's own fill rather than assumed (see Badge.jsx's file-level
+   comment) — strongest=yellow/regular/900; not yet in tokens.css). */
+.badge--away.badge--solid {
+  background: var(--color-tokens-away-base, #d08700);
+  color: var(--color-tokens-text-on-control, #fff);
+}
+
+.badge--away.badge--outline {
+  background: transparent;
+  color: var(--color-tokens-away-strong, #d08700);
+  border: 1px solid var(--color-tokens-away-strong, #d08700);
+}
+
+.badge--away.badge--soft {
+  background: var(--color-tokens-away-weakest, #fefce8);
+  color: var(--color-tokens-away-strong, #d08700);
+}
+
+.badge--away.badge--ghost {
+  background: transparent;
+  color: var(--color-tokens-away-strong, #d08700);
+}
+
+/* Color=highlight — color-tokens/highlight/* (real Figma variable
+   collection: weakest=fuchsia/regular/50, weak=fuchsia/regular/100,
+   base=fuchsia/regular/600, strong=fuchsia/regular/700, strongest=
+   fuchsia/regular/900 — not yet in tokens.css). */
+.badge--highlight.badge--solid {
+  background: var(--color-tokens-highlight-base, #c026d3);
+  color: var(--color-tokens-text-on-control, #fff);
+}
+
+.badge--highlight.badge--outline {
+  background: transparent;
+  color: var(--color-tokens-highlight-strong, #a21caf);
+  border: 1px solid var(--color-tokens-highlight-strong, #a21caf);
+}
+
+.badge--highlight.badge--soft {
+  background: var(--color-tokens-highlight-weakest, #fdf4ff);
+  color: var(--color-tokens-highlight-strong, #a21caf);
+}
+
+.badge--highlight.badge--ghost {
+  background: transparent;
+  color: var(--color-tokens-highlight-strong, #a21caf);
+}
+
+/* Color=inverse — for a badge sitting on a dark/colored surface, mirrors
+   Button's inverse-solid mapping (bg-weakest/bg-strong track the page's
+   own near-white/near-black surface in both themes, same as every other
+   color — see Button.css's inverse-solid comment for why that's correct). */
+.badge--inverse.badge--solid {
+  background: var(--color-tokens-bg-weakest, #fafafa);
+  color: var(--color-tokens-text-strongest, #09090b);
+}
+
+.badge--inverse.badge--outline {
+  background: transparent;
+  color: var(--color-tokens-text-on-control, #fff);
+  border: 1px solid var(--color-tokens-stroke-medium, #d4d4d8);
+}
+
+.badge--inverse.badge--soft {
+  background: var(--color-tokens-bg-strong, #27272a);
+  color: var(--color-tokens-text-static, #fff);
+}
+
+.badge--inverse.badge--ghost {
+  background: transparent;
+  color: var(--color-tokens-text-on-control, #fff);
+}
+
+/* Color=disabled — same bg-weak/text-disabled tokens Button uses for its
+   disabled state, exposed here as a color rather than a boolean prop
+   since Badge is a static label, not an interactive control. */
+.badge--disabled.badge--solid,
+.badge--disabled.badge--soft {
+  background: var(--color-tokens-bg-weak, #f4f4f5);
+  color: var(--color-tokens-text-disabled, #d4d4d8);
+}
+
+.badge--disabled.badge--outline {
+  background: transparent;
+  color: var(--color-tokens-text-disabled, #d4d4d8);
+  border: 1px solid var(--color-tokens-stroke-medium, #d4d4d8);
+}
+
+.badge--disabled.badge--ghost {
+  background: transparent;
+  color: var(--color-tokens-text-disabled, #d4d4d8);
+}
+
+/* Sizes — padding/radius/type scale are literal (see file-level note).
+   Type scale reuses Button's real text-control tokens where a size lines
+   up (--badge-md uses text-control-s-500, --badge-sm uses
+   text-control-xs-500); "xs" sits below Button's smallest text-control
+   step, so it stays fully literal, same as Button does for its untokenized
+   icon size. */
+.badge--md {
+  --badge-py: 3px;
+  --badge-px: 8px;
+  --badge-radius: 6px;
+  --badge-icon: 12px;
+  --badge-font-size: var(--text-control-s-500-font-size, 12px);
+  --badge-line-height: var(--text-control-s-500-line-height, 16px);
+  --badge-letter-spacing: var(--text-control-s-500-letter-spacing, -0.2px);
+}
+
+.badge--sm {
+  --badge-py: 2px;
+  --badge-px: 6px;
+  --badge-radius: 5px;
+  --badge-icon: 11px;
+  --badge-font-size: var(--text-control-xs-500-font-size, 11px);
+  --badge-line-height: var(--text-control-xs-500-line-height, 12px);
+  --badge-letter-spacing: var(--text-control-xs-500-letter-spacing, -0.1px);
+}
+
+.badge--xs {
+  --badge-py: 1px;
+  --badge-px: 4px;
+  --badge-radius: 4px;
+  --badge-icon: 10px;
+  --badge-font-size: 10px;
+  --badge-line-height: 12px;
+  --badge-letter-spacing: 0;
+}
+
+/* Shape — "rounded" is each size's own radius above; "pill" replaces it
+   regardless of size, must come after the .badge--{size} rules to win
+   the cascade (same ordering rule Button.css uses for its own shapes). */
+.badge--pill {
+  --badge-radius: 999px;
+}
+
+.badge--icon-only {
+  padding: var(--badge-py);
+}
+
+.badge__icon {
+  display: inline-flex;
+  flex-shrink: 0;
+  width: var(--badge-icon);
+  height: var(--badge-icon);
+}
+
+.badge__icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.badge__label {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
