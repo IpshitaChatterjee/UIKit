@@ -1,4 +1,4 @@
-import{n as e}from"./iframe-BN_vRQOK.js";import{a as t,i as n,o as r,r as i,t as a}from"./prop-types-BOCSTrhI.js";import{a as o,n as s}from"./rolldown-runtime-DkW27tQK.js";function c({variant:e=`soft`,size:t=`m`,shape:n=`rounded`,color:r=`neutral`,iconLeft:i=null,iconRight:a=null,children:o,className:s=``,...c}){let l=!o,d=[`badge`,`badge--${e}`,`badge--${t}`,`badge--${n}`,r!==`neutral`&&`badge--${r}`,l&&`badge--icon-only`,s].filter(Boolean).join(` `);return(0,u.jsxs)(`span`,{className:d,...c,children:[i&&(0,u.jsx)(`span`,{className:`badge__icon`,"aria-hidden":`true`,children:i}),o&&(0,u.jsx)(`span`,{className:`badge__label`,children:o}),a&&(0,u.jsx)(`span`,{className:`badge__icon`,"aria-hidden":`true`,children:a})]})}var l,u,d,f,p,m;function h(){return(h=s((()=>{l=o(a(),1),u=e(),d=[`solid`,`outline`,`soft`,`ghost`],f=[`m`,`s`,`xs`],p=[`rounded`,`pill`],m=[`primary`,`neutral`,`success`,`danger`,`warning`,`info`,`verified`,`away`,`highlight`,`inverse`,`disabled`],c.propTypes={variant:l.default.oneOf(d),size:l.default.oneOf(f),shape:l.default.oneOf(p),color:l.default.oneOf(m),iconLeft:l.default.node,iconRight:l.default.node,children:l.default.node,className:l.default.string},c.__docgenInfo={description:`Badge — a static, non-interactive label in four emphasis levels
+import{n as e}from"./iframe-DzDV7GKr.js";import{a as t,i as n,o as r,r as i,t as a}from"./prop-types-Cx-deHrA.js";import{a as o,n as s}from"./rolldown-runtime-DkW27tQK.js";function c({variant:e=`soft`,size:t=`m`,shape:n=`rounded`,color:r=`neutral`,iconLeft:i=null,iconRight:a=null,children:o,className:s=``,...c}){let l=!o,d=[`badge`,`badge--${e}`,`badge--${t}`,`badge--${n}`,r!==`neutral`&&`badge--${r}`,l&&`badge--icon-only`,s].filter(Boolean).join(` `);return(0,u.jsxs)(`span`,{className:d,...c,children:[i&&(0,u.jsx)(`span`,{className:`badge__icon`,"aria-hidden":`true`,children:i}),o&&(0,u.jsx)(`span`,{className:`badge__label`,children:o}),a&&(0,u.jsx)(`span`,{className:`badge__icon`,"aria-hidden":`true`,children:a})]})}var l,u,d,f,p,m;function h(){return(h=s((()=>{l=o(a(),1),u=e(),d=[`solid`,`outline`,`soft`,`ghost`],f=[`m`,`s`,`xs`],p=[`rounded`,`pill`],m=[`primary`,`neutral`,`success`,`danger`,`warning`,`info`,`verified`,`away`,`highlight`,`inverse`,`disabled`],c.propTypes={variant:l.default.oneOf(d),size:l.default.oneOf(f),shape:l.default.oneOf(p),color:l.default.oneOf(m),iconLeft:l.default.node,iconRight:l.default.node,children:l.default.node,className:l.default.string},c.__docgenInfo={description:`Badge — a static, non-interactive label in four emphasis levels
 ("solid"/"outline"/"soft"/"ghost", matching Button's Type variant), two
 corner styles ("rounded"/"pill" — Badge has no "square" shape, unlike
 Button), three sizes ("m"/"s"/"xs"), and the "primary", "neutral",
@@ -17,10 +17,13 @@ variables, not assumed to follow the same pattern as Button:
   solid bg = {color}/strong (not /base — Badge's solid is a full step
   deeper than Button's own resting-state solid, since a static badge
   has no separate hover state to reserve /base for), outline border and
-  outline/soft/ghost label = {color}/strong too, soft bg = {color}/
-  weakest. "highlight" binds to Figma's "highlighted" collection (see
-  Badge.css) — kept as "highlight" here to match the taxonomy sheet's
-  column label instead.
+  outline/soft/ghost label = {color}/strong too, soft bg = {color}/weak
+  (originally {color}/weakest — bumped a step in a later Figma update
+  across every one of these eight colors, reconfirmed per color against
+  each component's own bound variable rather than assumed to apply
+  uniformly). "highlight" binds to Figma's "highlighted" collection
+  (see Badge.css) — kept as "highlight" here to match the taxonomy
+  sheet's column label instead.
 - "neutral" (default) doesn't reuse Button's neutral-solid bg-strong/
   text-strongest pairing the earlier version of this file assumed:
   solid bg = bg/strong, soft bg = bg/weak (not bg/weakest), and every
