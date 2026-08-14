@@ -707,7 +707,7 @@ export const EffectFocusRingSuccess2 = [
     type: "DROP_SHADOW",
     radius: 0,
     spread: 4,
-    color: "#00c950",
+    color: "#00a63e",
     offset: { x: 0, y: 0 },
   },
   {
@@ -723,7 +723,7 @@ export const EffectFocusRingSuccess3 = [
     type: "DROP_SHADOW",
     radius: 0,
     spread: 6,
-    color: "#00c950",
+    color: "#00a63e",
     offset: { x: 0, y: 0 },
   },
   {
@@ -2304,39 +2304,39 @@ export const ColorTokensStaticBlackBlackAlpha0 = {
   Light: "#00000000",
   Dark: "#00000000",
 };
-export const ColorTokensBgStatic = { Light: "#ffffff", Dark: "#000000" };
-export const ColorTokensBgWeakest = { Light: "#fafafa", Dark: "#18181b" };
-export const ColorTokensBgWeak = { Light: "#f4f4f5", Dark: "#27272a" };
-export const ColorTokensBgLight = { Light: "#e4e4e7", Dark: "#3f3f46" };
-export const ColorTokensBgMedium = { Light: "#d4d4d8", Dark: "#71717a" };
-export const ColorTokensBgHeavy = { Light: "#3f3f46", Dark: "#d4d4d8" };
-export const ColorTokensBgStrong = { Light: "#27272a", Dark: "#e4e4e7" };
-export const ColorTokensBgStrongest = { Light: "#09090b", Dark: "#fafafa" };
-export const ColorTokensTextStatic = { Light: "#ffffff", Dark: "#000000" };
-export const ColorTokensTextDisabled = { Light: "#d4d4d8", Dark: "#52525b" };
-export const ColorTokensTextPlaceholder = { Light: "#a1a1aa", Dark: "#71717a" };
-export const ColorTokensTextBody = { Light: "#52525b", Dark: "#d4d4d8" };
-export const ColorTokensTextStrongest = { Light: "#09090b", Dark: "#fafafa" };
-export const ColorTokensIconStatic = { Light: "#ffffff", Dark: "#000000" };
-export const ColorTokensIconDisabled = { Light: "#d4d4d8", Dark: "#52525b" };
-export const ColorTokensIconPlaceholder = { Light: "#a1a1aa", Dark: "#71717a" };
-export const ColorTokensIconBody = { Light: "#52525b", Dark: "#d4d4d8" };
-export const ColorTokensIconStrongest = { Light: "#09090b", Dark: "#fafafa" };
-export const ColorTokensStrokeStatic = { Light: "#ffffff", Dark: "#000000" };
-export const ColorTokensStrokeWeakest = { Light: "#fafafa", Dark: "#18181b" };
-export const ColorTokensStrokeWeak = { Light: "#f4f4f5", Dark: "#27272a" };
-export const ColorTokensStrokeLight = { Light: "#e4e4e7", Dark: "#3f3f46" };
-export const ColorTokensStrokeMedium = { Light: "#d4d4d8", Dark: "#71717a" };
-export const ColorTokensStrokeHeavy = { Light: "#3f3f46", Dark: "#d4d4d8" };
-export const ColorTokensStrokeStrong = { Light: "#27272a", Dark: "#e4e4e7" };
-export const ColorTokensStrokeStrongest = { Light: "#09090b", Dark: "#fafafa" };
+export const ColorTokensBgStatic = { Light: "#ffffff", Dark: "#ffffff" };
+export const ColorTokensBgWeakest = { Light: "#fafafa", Dark: "#fafafa" };
+export const ColorTokensBgWeak = { Light: "#f4f4f5", Dark: "#f4f4f5" };
+export const ColorTokensBgLight = { Light: "#e4e4e7", Dark: "#e4e4e7" };
+export const ColorTokensBgMedium = { Light: "#d4d4d8", Dark: "#d4d4d8" };
+export const ColorTokensBgHeavy = { Light: "#3f3f46", Dark: "#3f3f46" };
+export const ColorTokensBgStrong = { Light: "#27272a", Dark: "#27272a" };
+export const ColorTokensBgStrongest = { Light: "#09090b", Dark: "#09090b" };
+export const ColorTokensTextStatic = { Light: "#ffffff", Dark: "#ffffff" };
+export const ColorTokensTextDisabled = { Light: "#d4d4d8", Dark: "#d4d4d8" };
+export const ColorTokensTextPlaceholder = { Light: "#a1a1aa", Dark: "#a1a1aa" };
+export const ColorTokensTextBody = { Light: "#52525b", Dark: "#52525b" };
+export const ColorTokensTextStrongest = { Light: "#09090b", Dark: "#09090b" };
+export const ColorTokensIconStatic = { Light: "#ffffff", Dark: "#ffffff" };
+export const ColorTokensIconDisabled = { Light: "#d4d4d8", Dark: "#d4d4d8" };
+export const ColorTokensIconPlaceholder = { Light: "#a1a1aa", Dark: "#a1a1aa" };
+export const ColorTokensIconBody = { Light: "#52525b", Dark: "#52525b" };
+export const ColorTokensIconStrongest = { Light: "#09090b", Dark: "#09090b" };
+export const ColorTokensStrokeStatic = { Light: "#ffffff", Dark: "#ffffff" };
+export const ColorTokensStrokeWeakest = { Light: "#fafafa", Dark: "#fafafa" };
+export const ColorTokensStrokeWeak = { Light: "#f4f4f5", Dark: "#f4f4f5" };
+export const ColorTokensStrokeLight = { Light: "#e4e4e7", Dark: "#e4e4e7" };
+export const ColorTokensStrokeMedium = { Light: "#d4d4d8", Dark: "#d4d4d8" };
+export const ColorTokensStrokeHeavy = { Light: "#3f3f46", Dark: "#3f3f46" };
+export const ColorTokensStrokeStrong = { Light: "#27272a", Dark: "#27272a" };
+export const ColorTokensStrokeStrongest = { Light: "#09090b", Dark: "#09090b" };
 export const ColorTokensPrimaryPrimaryWeakest = {
   Light: "#eef2ff",
-  Dark: "#6366f129",
+  Dark: "#eef2ff",
 };
 export const ColorTokensPrimaryPrimaryWeak = {
   Light: "#e0e7ff",
-  Dark: "#6366f13d",
+  Dark: "#e0e7ff",
 };
 export const ColorTokensPrimaryPrimaryBase = {
   Light: "#615fff",
@@ -2344,125 +2344,110 @@ export const ColorTokensPrimaryPrimaryBase = {
 };
 export const ColorTokensPrimaryPrimaryStrong = {
   Light: "#4f39f6",
-  Dark: "#818cf8",
+  Dark: "#4f39f6",
 };
 export const ColorTokensPrimaryPrimaryStrongest = {
   Light: "#312e81",
-  Dark: "#c7d2fe",
+  Dark: "#312e81",
 };
-export const ColorTokensErrorWeakest = { Light: "#fef2f2", Dark: "#fb2c3629" };
-export const ColorTokensErrorWeak = { Light: "#ffe2e2", Dark: "#fb2c363d" };
-export const ColorTokensErrorBase = { Light: "#e7000b", Dark: "#fb2c36" };
-export const ColorTokensErrorStrong = { Light: "#c10007", Dark: "#ff6467" };
-export const ColorTokensErrorStrongest = { Light: "#82181a", Dark: "#ffc9c9" };
-export const ColorTokensSuccessWeakest = {
-  Light: "#f0fdf4",
-  Dark: "#00c95029",
-};
-export const ColorTokensSuccessWeak = { Light: "#dcfce7", Dark: "#00c9503d" };
-export const ColorTokensSuccessBase = { Light: "#00a63e", Dark: "#00c950" };
-export const ColorTokensSuccessStrong = { Light: "#008236", Dark: "#05df72" };
+export const ColorTokensErrorWeakest = { Light: "#fef2f2", Dark: "#fef2f2" };
+export const ColorTokensErrorWeak = { Light: "#ffe2e2", Dark: "#ffe2e2" };
+export const ColorTokensErrorBase = { Light: "#e7000b", Dark: "#e7000b" };
+export const ColorTokensErrorStrong = { Light: "#c10007", Dark: "#c10007" };
+export const ColorTokensErrorStrongest = { Light: "#82181a", Dark: "#82181a" };
+export const ColorTokensSuccessWeakest = { Light: "#f0fdf4", Dark: "#f0fdf4" };
+export const ColorTokensSuccessWeak = { Light: "#dcfce7", Dark: "#dcfce7" };
+export const ColorTokensSuccessBase = { Light: "#00a63e", Dark: "#00a63e" };
+export const ColorTokensSuccessStrong = { Light: "#008236", Dark: "#008236" };
 export const ColorTokensSuccessStrongest = {
   Light: "#0d542b",
-  Dark: "#b9f8cf",
+  Dark: "#0d542b",
 };
-export const ColorTokensWarningWeakest = {
-  Light: "#fff7ed",
-  Dark: "#ff690029",
-};
-export const ColorTokensWarningWeak = { Light: "#ffedd4", Dark: "#ff69003d" };
-export const ColorTokensWarningBase = { Light: "#f54900", Dark: "#ff6900" };
-export const ColorTokensWarningStrong = { Light: "#ca3500", Dark: "#ff8904" };
+export const ColorTokensWarningWeakest = { Light: "#fff7ed", Dark: "#fff7ed" };
+export const ColorTokensWarningWeak = { Light: "#ffedd4", Dark: "#ffedd4" };
+export const ColorTokensWarningBase = { Light: "#f54900", Dark: "#f54900" };
+export const ColorTokensWarningStrong = { Light: "#ca3500", Dark: "#ca3500" };
 export const ColorTokensWarningStrongest = {
   Light: "#7e2a0c",
-  Dark: "#ffd6a7",
+  Dark: "#7e2a0c",
 };
-export const ColorTokensInfoWeakest = { Light: "#eff6ff", Dark: "#3b82f629" };
-export const ColorTokensInfoWeak = { Light: "#dbeafe", Dark: "#3b82f63d" };
-export const ColorTokensInfoBase = { Light: "#2563eb", Dark: "#3b82f6" };
-export const ColorTokensInfoStrong = { Light: "#1d4ed8", Dark: "#60a5fa" };
-export const ColorTokensInfoStrongest = { Light: "#1e3a8a", Dark: "#bfdbfe" };
-export const ColorTokensFeatureWeakest = {
-  Light: "#eef2ff",
-  Dark: "#6366f129",
-};
-export const ColorTokensFeatureWeak = { Light: "#e0e7ff", Dark: "#6366f13d" };
-export const ColorTokensFeatureBase = { Light: "#4f39f6", Dark: "#615fff" };
-export const ColorTokensFeatureStrong = { Light: "#432dd7", Dark: "#818cf8" };
+export const ColorTokensInfoWeakest = { Light: "#eff6ff", Dark: "#eff6ff" };
+export const ColorTokensInfoWeak = { Light: "#dbeafe", Dark: "#dbeafe" };
+export const ColorTokensInfoBase = { Light: "#2563eb", Dark: "#2563eb" };
+export const ColorTokensInfoStrong = { Light: "#1d4ed8", Dark: "#1d4ed8" };
+export const ColorTokensInfoStrongest = { Light: "#1e3a8a", Dark: "#1e3a8a" };
+export const ColorTokensFeatureWeakest = { Light: "#eef2ff", Dark: "#eef2ff" };
+export const ColorTokensFeatureWeak = { Light: "#e0e7ff", Dark: "#e0e7ff" };
+export const ColorTokensFeatureBase = { Light: "#4f39f6", Dark: "#4f39f6" };
+export const ColorTokensFeatureStrong = { Light: "#432dd7", Dark: "#432dd7" };
 export const ColorTokensFeatureStrongest = {
   Light: "#312e81",
-  Dark: "#c7d2fe",
+  Dark: "#312e81",
 };
-export const ColorTokensVerifiedWeakest = {
-  Light: "#f0f9ff",
-  Dark: "#0ea5e929",
-};
-export const ColorTokensVerifiedWeak = { Light: "#e0f2fe", Dark: "#0ea5e93d" };
-export const ColorTokensVerifiedBase = { Light: "#0284c7", Dark: "#0ea5e9" };
-export const ColorTokensVerifiedStrong = { Light: "#0369a1", Dark: "#38bdf8" };
+export const ColorTokensVerifiedWeakest = { Light: "#f0f9ff", Dark: "#f0f9ff" };
+export const ColorTokensVerifiedWeak = { Light: "#e0f2fe", Dark: "#e0f2fe" };
+export const ColorTokensVerifiedBase = { Light: "#0284c7", Dark: "#0284c7" };
+export const ColorTokensVerifiedStrong = { Light: "#0369a1", Dark: "#0369a1" };
 export const ColorTokensVerifiedStrongest = {
   Light: "#0c4a6e",
-  Dark: "#bae6fd",
+  Dark: "#0c4a6e",
 };
 export const ColorTokensHighlightedWeakest = {
   Light: "#fdf4ff",
-  Dark: "#d946ef29",
+  Dark: "#fdf4ff",
 };
-export const ColorTokensHighlightedWeak = {
-  Light: "#fae8ff",
-  Dark: "#d946ef3d",
-};
-export const ColorTokensHighlightedBase = { Light: "#c026d3", Dark: "#d946ef" };
+export const ColorTokensHighlightedWeak = { Light: "#fae8ff", Dark: "#fae8ff" };
+export const ColorTokensHighlightedBase = { Light: "#c026d3", Dark: "#c026d3" };
 export const ColorTokensHighlightedStrong = {
   Light: "#a21caf",
-  Dark: "#e879f9",
+  Dark: "#a21caf",
 };
 export const ColorTokensHighlightedStrongest = {
   Light: "#701a75",
-  Dark: "#f5d0fe",
+  Dark: "#701a75",
 };
-export const ColorTokensAwayWeakest = { Light: "#fefce8", Dark: "#f0b10029" };
-export const ColorTokensAwayWeak = { Light: "#fef9c2", Dark: "#f0b1003d" };
-export const ColorTokensAwayBase = { Light: "#d08700", Dark: "#f0b100" };
-export const ColorTokensAwayStrong = { Light: "#a65f00", Dark: "#fdc700" };
-export const ColorTokensAwayStrongest = { Light: "#733e0a", Dark: "#fff085" };
-export const ColorTokensStableWeakest = { Light: "#fafafa", Dark: "#71717a29" };
-export const ColorTokensStableWeak = { Light: "#f4f4f5", Dark: "#71717a3d" };
-export const ColorTokensStableBase = { Light: "#52525b", Dark: "#71717a" };
-export const ColorTokensStableStrong = { Light: "#3f3f46", Dark: "#a1a1aa" };
-export const ColorTokensStableStrongest = { Light: "#18181b", Dark: "#e4e4e7" };
+export const ColorTokensAwayWeakest = { Light: "#fefce8", Dark: "#fefce8" };
+export const ColorTokensAwayWeak = { Light: "#fef9c2", Dark: "#fef9c2" };
+export const ColorTokensAwayBase = { Light: "#d08700", Dark: "#d08700" };
+export const ColorTokensAwayStrong = { Light: "#d08700", Dark: "#d08700" };
+export const ColorTokensAwayStrongest = { Light: "#733e0a", Dark: "#733e0a" };
+export const ColorTokensStableWeakest = { Light: "#fafafa", Dark: "#fafafa" };
+export const ColorTokensStableWeak = { Light: "#f4f4f5", Dark: "#f4f4f5" };
+export const ColorTokensStableBase = { Light: "#52525b", Dark: "#52525b" };
+export const ColorTokensStableStrong = { Light: "#3f3f46", Dark: "#3f3f46" };
+export const ColorTokensStableStrongest = { Light: "#18181b", Dark: "#18181b" };
 export const ColorTokensOverlayScrim = {
   Light: "#0000007a",
-  Dark: "#ffffff7a",
+  Dark: "#0000007a",
 };
 export const ColorTokensOverlayScrimStrong = {
   Light: "#000000a3",
-  Dark: "#ffffffa3",
+  Dark: "#000000a3",
 };
 export const ColorTokensOverlayHover = {
   Light: "#00000014",
-  Dark: "#ffffff14",
+  Dark: "#00000014",
 };
 export const ColorTokensOverlayActive = {
   Light: "#00000029",
-  Dark: "#ffffff29",
+  Dark: "#00000029",
 };
 export const ColorTokensOverlayHoverInverted = {
   Light: "#ffffff14",
-  Dark: "#00000014",
+  Dark: "#ffffff14",
 };
 export const ColorTokensOverlayActiveInverted = {
   Light: "#ffffff29",
-  Dark: "#00000029",
+  Dark: "#ffffff29",
 };
-export const ColorTokensShadowXs = { Light: "#00000014", Dark: "#ffffff14" };
-export const ColorTokensShadowSm = { Light: "#00000029", Dark: "#ffffff29" };
-export const ColorTokensShadowMd = { Light: "#0000003d", Dark: "#ffffff3d" };
+export const ColorTokensShadowXs = { Light: "#00000014", Dark: "#00000014" };
+export const ColorTokensShadowSm = { Light: "#00000029", Dark: "#00000029" };
+export const ColorTokensShadowMd = { Light: "#0000003d", Dark: "#0000003d" };
 export const ColorTokensTextOnControl = { Light: "#ffffff", Dark: "#ffffff" };
 export const ColorTokensTextStaticBlack = { Light: "#000000", Dark: "#000000" };
 export const EffectsFocusRingColorsPrimaryColorInner = {
   Light: "#fafafa",
-  Dark: "#09090b",
+  Dark: "#fafafa",
 };
 export const EffectsFocusRingColorsPrimaryColorOuter = {
   Light: "#615fff",
@@ -2470,23 +2455,23 @@ export const EffectsFocusRingColorsPrimaryColorOuter = {
 };
 export const EffectsFocusRingColorsNeutralColorInner = {
   Light: "#ffffff",
-  Dark: "#09090b",
+  Dark: "#ffffff",
 };
 export const EffectsFocusRingColorsNeutralColorOuter = {
   Light: "#09090b",
-  Dark: "#e4e4e7",
+  Dark: "#09090b",
 };
 export const EffectsFocusRingColorsInverseColorInner = {
   Light: "#fafafa",
-  Dark: "#09090b",
+  Dark: "#fafafa",
 };
 export const EffectsFocusRingColorsInverseColorOuter = {
   Light: "#09090b",
-  Dark: "#fafafa",
+  Dark: "#09090b",
 };
 export const EffectsFocusRingColorsSuccessColorInner = {
   Light: "#fafafa",
-  Dark: "#09090b",
+  Dark: "#fafafa",
 };
 export const EffectsFocusRingColorsSuccessColorOuter = {
   Light: "#00a63e",
@@ -2494,21 +2479,21 @@ export const EffectsFocusRingColorsSuccessColorOuter = {
 };
 export const EffectsFocusRingColorsErrorColorInner = {
   Light: "#fafafa",
-  Dark: "#09090b",
+  Dark: "#fafafa",
 };
 export const EffectsFocusRingColorsErrorColorOuter = {
   Light: "#e7000b",
-  Dark: "#c10007",
+  Dark: "#e7000b",
 };
 export const EffectsFocusRingColorsInfoColorInner = {
   Light: "#fafafa",
-  Dark: "#09090b",
+  Dark: "#fafafa",
 };
 export const EffectsFocusRingColorsInfoColorOuter = {
   Light: "#2563eb",
   Dark: "#2563eb",
 };
-export const EffectsShadowsNeutral = { Light: "#00000014", Dark: "#27272a" };
+export const EffectsShadowsNeutral = { Light: "#00000014", Dark: "#00000014" };
 export const EffectsShadowsInteractivePrimaryBase = {
   Light: "#615fff",
   Dark: "#615fff",
@@ -2523,15 +2508,15 @@ export const EffectsShadowsInteractivePrimaryHover = {
 };
 export const EffectsShadowsInteractivePrimaryDrop = {
   Light: "#e0e7ff",
-  Dark: "#432dd7",
+  Dark: "#e0e7ff",
 };
 export const EffectsShadowsInteractiveNeutralBase = {
   Light: "#27272a",
-  Dark: "#e4e4e7",
+  Dark: "#27272a",
 };
 export const EffectsShadowsInteractiveNeutralHover = {
   Light: "#09090b",
-  Dark: "#fafafa",
+  Dark: "#09090b",
 };
 export const EffectsShadowsInteractiveNeutralDrop = {
   Light: "#3f3f46",
@@ -2539,35 +2524,35 @@ export const EffectsShadowsInteractiveNeutralDrop = {
 };
 export const EffectsShadowsInteractiveNeutralInner = {
   Light: "#3f3f46",
-  Dark: "#d4d4d8",
+  Dark: "#3f3f46",
 };
 export const EffectsShadowsInteractiveInverseBase = {
   Light: "#fafafa",
-  Dark: "#18181b",
+  Dark: "#fafafa",
 };
 export const EffectsShadowsInteractiveInverseHover = {
   Light: "#e4e4e7",
-  Dark: "#3f3f46",
+  Dark: "#e4e4e7",
 };
 export const EffectsShadowsInteractiveInverseDrop = {
   Light: "#71717a",
-  Dark: "#3f3f46",
+  Dark: "#71717a",
 };
 export const EffectsShadowsInteractiveInverseInner = {
   Light: "#f4f4f5",
-  Dark: "#3f3f46",
+  Dark: "#f4f4f5",
 };
 export const EffectsShadowsInteractiveErrorBase = {
   Light: "#c10007",
-  Dark: "#e7000b",
+  Dark: "#c10007",
 };
 export const EffectsShadowsInteractiveErrorHover = {
   Light: "#e7000b",
-  Dark: "#fb2c36",
+  Dark: "#e7000b",
 };
 export const EffectsShadowsInteractiveErrorDrop = {
   Light: "#ffe2e2",
-  Dark: "#c10007",
+  Dark: "#ffe2e2",
 };
 export const EffectsShadowsInteractiveErrorInner = {
   Light: "#ffffff29",
@@ -2587,7 +2572,7 @@ export const EffectsShadowsInteractiveSuccessHover = {
 };
 export const EffectsShadowsInteractiveSuccessDrop = {
   Light: "#dcfce7",
-  Dark: "#008236",
+  Dark: "#dcfce7",
 };
 export const EffectsShadowsInteractiveInfoBase = {
   Light: "#2563eb",
@@ -2603,5 +2588,5 @@ export const EffectsShadowsInteractiveInfoHover = {
 };
 export const EffectsShadowsInteractiveInfoDrop = {
   Light: "#dbeafe",
-  Dark: "#1d4ed8",
+  Dark: "#dbeafe",
 };
