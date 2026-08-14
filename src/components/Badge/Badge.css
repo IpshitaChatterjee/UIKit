@@ -1,12 +1,15 @@
-/* Token source and fallback-literal convention match Button.css (see the
-   comment there): color-tokens/* variables are real and synced, but
-   spacing/radius aren't tokenized yet, so those stay literal, chosen to
-   read as a compact version of Button's own scale (see Badge.jsx's
-   file-level comment for why nothing here is Figma-verified). */
+/* Token source: color-tokens/* variables are real and synced (see
+   Badge.jsx's file-level comment for the exact Figma binding verified
+   per color). L3-Component/* spacing, Responsive/rounded-* radius, and
+   the Shadow/Text/xs drop shadow aren't tokenized into build/css/
+   tokens.css yet (same gap Button.css documents for its own untokenized
+   spacing/icon-size), so those stay literal fallbacks, named to match
+   what a future sync would call them. */
 @import '../../../build/css/tokens.css';
 
 .badge {
-  --badge-gap: 4px;
+  --badge-gap: var(--l3-component-xs, 8px);
+  --badge-radius: var(--responsive-rounded-m, 6px);
 
   display: inline-flex;
   align-items: center;
@@ -24,10 +27,18 @@
   user-select: none;
 }
 
-/* Color=neutral (default) — reuses Button's neutral-solid bg- and
-   text-strongest mapping rather than a separate "neutral" token family
-   (color-tokens.css has no such family — see Button.css's neutral-solid
-   comment). */
+/* Solid-only drop shadow — Shadow/Text/xs in Figma, bound to the same
+   static-black/black-alpha-24 token Button.css's own text-shadow uses.
+   Lives on the shared .badge--solid rule (not per color) since every
+   color's solid text gets it identically, including "disabled". */
+.badge--solid .badge__label {
+  text-shadow: 0 1px 0 var(--color-tokens-static-black-black-alpha-24, rgba(0, 0, 0, 0.24));
+}
+
+/* Color=neutral (default) — badge/rounded/neutral (node 338:27852).
+   Not the same mapping Button's neutral-solid uses: soft bg is bg/weak
+   (not bg/weakest), and every non-solid label/border is bg/strong (not
+   text-strongest — a different, though close, token). */
 .badge--solid {
   background: var(--color-tokens-bg-strong, #27272a);
   color: var(--color-tokens-text-static, #fff);
@@ -35,23 +46,27 @@
 
 .badge--outline {
   background: transparent;
-  color: var(--color-tokens-text-strongest, #09090b);
+  color: var(--color-tokens-bg-strong, #27272a);
   border: 1px solid var(--color-tokens-bg-strong, #27272a);
 }
 
 .badge--soft {
-  background: var(--color-tokens-bg-weakest, #fafafa);
-  color: var(--color-tokens-text-strongest, #09090b);
+  background: var(--color-tokens-bg-weak, #f4f4f5);
+  color: var(--color-tokens-bg-strong, #27272a);
 }
 
 .badge--ghost {
   background: transparent;
-  color: var(--color-tokens-text-strongest, #09090b);
+  color: var(--color-tokens-bg-strong, #27272a);
 }
 
-/* Color=primary — color-tokens/primary/* (same ramp Button's primary color uses). */
+/* Color=primary — badge/rounded/primary (node 335:12654). Solid uses
+   primary/strong, not primary/base — a full step deeper than Button's
+   own resting-state solid, since a static badge has no separate hover
+   state to reserve /base for. Every other color below follows this same
+   strong/weakest shape. */
 .badge--primary.badge--solid {
-  background: var(--color-tokens-primary-primary-base, #615fff);
+  background: var(--color-tokens-primary-primary-strong, #4f39f6);
   color: var(--color-tokens-text-on-control, #fff);
 }
 
@@ -71,9 +86,9 @@
   color: var(--color-tokens-primary-primary-strong, #4f39f6);
 }
 
-/* Color=success — color-tokens/success/*. */
+/* Color=success — badge/rounded/success (node 338:29306). */
 .badge--success.badge--solid {
-  background: var(--color-tokens-success-base, #00a63e);
+  background: var(--color-tokens-success-strong, #008236);
   color: var(--color-tokens-text-on-control, #fff);
 }
 
@@ -93,9 +108,9 @@
   color: var(--color-tokens-success-strong, #008236);
 }
 
-/* Color=danger — color-tokens/error/* (Button uses the same error/* ramp for its "danger" color). */
+/* Color=danger — badge/rounded/danger (node 338:29572), color-tokens/error/*. */
 .badge--danger.badge--solid {
-  background: var(--color-tokens-error-base, #e7000b);
+  background: var(--color-tokens-error-strong, #c10007);
   color: var(--color-tokens-text-on-control, #fff);
 }
 
@@ -115,11 +130,9 @@
   color: var(--color-tokens-error-strong, #c10007);
 }
 
-/* Color=warning — color-tokens/warning/*. Button.css has no warning color
-   family to mirror (it stops at danger/success/info); this follows the
-   same danger/success structural pattern with warning/* tokens swapped in. */
+/* Color=warning — badge/rounded/warning (node 338:30104). */
 .badge--warning.badge--solid {
-  background: var(--color-tokens-warning-base, #f54900);
+  background: var(--color-tokens-warning-strong, #ca3500);
   color: var(--color-tokens-text-on-control, #fff);
 }
 
@@ -139,9 +152,9 @@
   color: var(--color-tokens-warning-strong, #ca3500);
 }
 
-/* Color=info — color-tokens/info/* (same tokens Button's Figma-unverified "info" color uses). */
+/* Color=info — badge/rounded/info (node 338:29838). */
 .badge--info.badge--solid {
-  background: var(--color-tokens-info-base, #2563eb);
+  background: var(--color-tokens-info-strong, #1d4ed8);
   color: var(--color-tokens-text-on-control, #fff);
 }
 
@@ -161,12 +174,9 @@
   color: var(--color-tokens-info-strong, #1d4ed8);
 }
 
-/* Color=verified — color-tokens/verified/* (real, now-synced Figma
-   variable collection: weakest=sky/regular/50, weak=sky/regular/100,
-   base=sky/regular/600, strong=sky/regular/700, strongest=sky/regular/
-   900). */
+/* Color=verified — badge/rounded/verified (node 338:30370), color-tokens/verified/*. */
 .badge--verified.badge--solid {
-  background: var(--color-tokens-verified-base, #0284c7);
+  background: var(--color-tokens-verified-strong, #0369a1);
   color: var(--color-tokens-text-on-control, #fff);
 }
 
@@ -186,13 +196,13 @@
   color: var(--color-tokens-verified-strong, #0369a1);
 }
 
-/* Color=away — color-tokens/away/* (real, now-synced Figma variable
-   collection: weakest=yellow/regular/50, weak=yellow/regular/100, base=
-   yellow/regular/600, strong=yellow/regular/600 too — Figma binds
-   "strong" to the same swatch as "base", not a 700 step, confirmed by
-   tokens.css's synced value — strongest=yellow/regular/900). */
+/* Color=away — badge/rounded/away (node 338:30636), color-tokens/away/*.
+   Figma binds "strong" to the exact same yellow/regular/600 swatch as
+   "base" (no 700 step used) — confirmed by tokens.css's synced value,
+   the same kind of copy-paste mismatch Button.jsx's danger color
+   already documents. */
 .badge--away.badge--solid {
-  background: var(--color-tokens-away-base, #d08700);
+  background: var(--color-tokens-away-strong, #d08700);
   color: var(--color-tokens-text-on-control, #fff);
 }
 
@@ -212,14 +222,11 @@
   color: var(--color-tokens-away-strong, #d08700);
 }
 
-/* Color=highlight — color-tokens/highlighted/* (real, now-synced Figma
-   variable collection — named "highlighted", not "highlight"; kept the
-   prop/class as "highlight" to match the taxonomy sheet's column label
-   instead: weakest=fuchsia/regular/50, weak=fuchsia/regular/100, base=
-   fuchsia/regular/600, strong=fuchsia/regular/700, strongest=fuchsia/
-   regular/900). */
+/* Color=highlight — badge/rounded/highlight (node 338:31090),
+   color-tokens/highlighted/* (Figma names the collection "highlighted";
+   kept as "highlight" here to match the taxonomy sheet's column label). */
 .badge--highlight.badge--solid {
-  background: var(--color-tokens-highlighted-base, #c026d3);
+  background: var(--color-tokens-highlighted-strong, #a21caf);
   color: var(--color-tokens-text-on-control, #fff);
 }
 
@@ -239,10 +246,16 @@
   color: var(--color-tokens-highlighted-strong, #a21caf);
 }
 
-/* Color=inverse — for a badge sitting on a dark/colored surface, mirrors
-   Button's inverse-solid mapping (bg-weakest/bg-strong track the page's
-   own near-white/near-black surface in both themes, same as every other
-   color — see Button.css's inverse-solid comment for why that's correct). */
+/* Color=inverse — badge/rounded/inverse (node 338:31622), for a badge
+   sitting on a dark/colored surface. Solid matches Button's own
+   inverse-solid mapping (bg-weakest bg, text-strongest label). Soft uses
+   bg/heavy (not bg/strong) with a bg/weakest label. Outline's border is
+   text/on-control (not stroke/medium). Figma's own outline/ghost label
+   binding has a real inconsistency by size (xs/s read text/on-control,
+   m reads bg/weakest, which would go near-invisible in dark mode) —
+   normalized to text/on-control at every size here rather than
+   reproduced, the same kind of judgment call Button.jsx already makes
+   for its own focus-ring-offset Figma quirk. */
 .badge--inverse.badge--solid {
   background: var(--color-tokens-bg-weakest, #fafafa);
   color: var(--color-tokens-text-strongest, #09090b);
@@ -251,12 +264,12 @@
 .badge--inverse.badge--outline {
   background: transparent;
   color: var(--color-tokens-text-on-control, #fff);
-  border: 1px solid var(--color-tokens-stroke-medium, #d4d4d8);
+  border: 1px solid var(--color-tokens-text-on-control, #fff);
 }
 
 .badge--inverse.badge--soft {
-  background: var(--color-tokens-bg-strong, #27272a);
-  color: var(--color-tokens-text-static, #fff);
+  background: var(--color-tokens-bg-heavy, #3f3f46);
+  color: var(--color-tokens-bg-weakest, #fafafa);
 }
 
 .badge--inverse.badge--ghost {
@@ -264,69 +277,77 @@
   color: var(--color-tokens-text-on-control, #fff);
 }
 
-/* Color=disabled — same bg-weak/text-disabled tokens Button uses for its
-   disabled state, exposed here as a color rather than a boolean prop
-   since Badge is a static label, not an interactive control. */
-.badge--disabled.badge--solid,
-.badge--disabled.badge--soft {
-  background: var(--color-tokens-bg-weak, #f4f4f5);
-  color: var(--color-tokens-text-disabled, #d4d4d8);
+/* Color=disabled — badge/rounded/disabled (node 338:31356). Doesn't use
+   text-disabled at all: every non-solid label/border is bg/medium, and
+   solid keeps a *white* text/on-control label (with the shared drop
+   shadow above) rather than muting it — visually unusual for
+   "disabled", but that's what the component's own bound variable says. */
+.badge--disabled.badge--solid {
+  background: var(--color-tokens-bg-medium, #d4d4d8);
+  color: var(--color-tokens-text-on-control, #fff);
 }
 
 .badge--disabled.badge--outline {
   background: transparent;
-  color: var(--color-tokens-text-disabled, #d4d4d8);
-  border: 1px solid var(--color-tokens-stroke-medium, #d4d4d8);
+  color: var(--color-tokens-bg-medium, #d4d4d8);
+  border: 1px solid var(--color-tokens-bg-medium, #d4d4d8);
+}
+
+.badge--disabled.badge--soft {
+  background: var(--color-tokens-bg-weak, #f4f4f5);
+  color: var(--color-tokens-bg-medium, #d4d4d8);
 }
 
 .badge--disabled.badge--ghost {
   background: transparent;
-  color: var(--color-tokens-text-disabled, #d4d4d8);
+  color: var(--color-tokens-bg-medium, #d4d4d8);
 }
 
-/* Sizes — padding/radius/type scale are literal (see file-level note).
-   Type scale reuses Button's real text-control tokens where a size lines
-   up (--badge-md uses text-control-s-500, --badge-sm uses
-   text-control-xs-500); "xs" sits below Button's smallest text-control
-   step, so it stays fully literal, same as Button does for its untokenized
-   icon size. */
-.badge--md {
-  --badge-py: 3px;
-  --badge-px: 8px;
-  --badge-radius: 6px;
+/* Sizes — radius is flat 6px/999px (rounded/pill) at every size, Badge
+   doesn't scale radius by size the way Button does, so --badge-radius is
+   set once on .badge above, not per size. Padding/gap use the real
+   L3-Component/* spacing scale, type scale uses Button's own real
+   text-control-{m,s,xs}-500 tokens. */
+.badge--m {
+  --badge-py: var(--l3-component-xs, 8px);
+  --badge-px: var(--l3-component-sm, 10px);
+  --badge-icon: 16px;
+  --badge-font-size: var(--text-control-m-500-font-size, 14px);
+  --badge-line-height: var(--text-control-m-500-line-height, 20px);
+  --badge-letter-spacing: var(--text-control-m-500-letter-spacing, -0.3px);
+}
+
+.badge--s {
+  --badge-py: var(--l3-component-3xs, 4px);
+  --badge-px: var(--l3-component-xs, 8px);
   --badge-icon: 12px;
   --badge-font-size: var(--text-control-s-500-font-size, 12px);
   --badge-line-height: var(--text-control-s-500-line-height, 16px);
   --badge-letter-spacing: var(--text-control-s-500-letter-spacing, -0.2px);
 }
 
-.badge--sm {
-  --badge-py: 2px;
-  --badge-px: 6px;
-  --badge-radius: 5px;
-  --badge-icon: 11px;
+.badge--xs {
+  --badge-py: var(--l3-component-3xs, 4px);
+  --badge-px: var(--l3-component-2xs, 6px);
+  --badge-gap: var(--l3-component-3xs, 4px);
+  --badge-icon: 12px;
   --badge-font-size: var(--text-control-xs-500-font-size, 11px);
   --badge-line-height: var(--text-control-xs-500-line-height, 12px);
   --badge-letter-spacing: var(--text-control-xs-500-letter-spacing, -0.1px);
 }
 
-.badge--xs {
-  --badge-py: 1px;
-  --badge-px: 4px;
-  --badge-radius: 4px;
-  --badge-icon: 10px;
-  --badge-font-size: 10px;
-  --badge-line-height: 12px;
-  --badge-letter-spacing: 0;
-}
-
-/* Shape — "rounded" is each size's own radius above; "pill" replaces it
-   regardless of size, must come after the .badge--{size} rules to win
-   the cascade (same ordering rule Button.css uses for its own shapes). */
+/* Shape — "rounded" is --responsive-rounded-m (6px) from .badge above;
+   "pill" replaces it regardless of size (Responsive/rounded-full, 999px
+   in Figma), must come after the .badge--{size} rules to win the
+   cascade. */
 .badge--pill {
-  --badge-radius: 999px;
+  --badge-radius: var(--responsive-rounded-full, 999px);
 }
 
+/* Icon-only — Figma's Icon/Number subtypes pin a fixed/min width per
+   size and variant so digit badges read as a consistent circle; not
+   reproduced here, this still just reuses --badge-py as uniform padding,
+   an approximation rather than a pixel match. */
 .badge--icon-only {
   padding: var(--badge-py);
 }

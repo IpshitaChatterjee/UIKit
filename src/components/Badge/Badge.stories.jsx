@@ -1,8 +1,8 @@
-import { CheckCircle } from 'geist-icons';
+import { CheckCircle, ChevronCircleLeftFill, ChevronCircleRightFill } from 'geist-icons';
 import Badge from './Badge';
 
 const VARIANTS = ['solid', 'outline', 'soft', 'ghost'];
-const SIZES = ['md', 'sm', 'xs'];
+const SIZES = ['m', 's', 'xs'];
 const SHAPES = ['rounded', 'pill'];
 const COLORS = ['primary', 'neutral', 'success', 'danger', 'warning', 'info', 'verified', 'away', 'highlight', 'inverse', 'disabled'];
 
@@ -12,7 +12,7 @@ export default {
   args: {
     children: 'Badge',
     variant: 'soft',
-    size: 'md',
+    size: 'm',
     shape: 'rounded',
     color: 'neutral',
   },
@@ -24,20 +24,29 @@ export default {
   },
 };
 
-export const Playground = {};
+// Figma's badge/{shape}/{color} component set flanks the label with a
+// chevron-circle icon on both sides by default (iconL/iconR both true) —
+// mirrored here via the same iconLeft/iconRight props Button already uses.
+export const Playground = {
+  args: {
+    iconLeft: <ChevronCircleLeftFill />,
+    iconRight: <ChevronCircleRightFill />,
+  },
+};
 
 export const AllSizes = {
   render: (args) => (
     <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
       {SIZES.map((size) => (
-        <Badge key={size} {...args} size={size} />
+        <Badge key={size} {...args} size={size} iconLeft={<ChevronCircleLeftFill />} iconRight={<ChevronCircleRightFill />} />
       ))}
     </div>
   ),
 };
 
 // Renders every Type × Size at "neutral" (or the selected color) so the
-// four emphasis levels can be compared side by side.
+// four emphasis levels can be compared side by side, flanking icons and
+// all — matches Figma's own default appearance for every variant.
 export const AllVariants = {
   render: (args) => (
     <div style={{ display: 'grid', gridTemplateColumns: 'max-content repeat(4, max-content)', gap: '16px 24px', alignItems: 'center' }}>
@@ -53,7 +62,7 @@ export const AllVariants = {
             {size}
           </div>
           {VARIANTS.map((variant) => (
-            <Badge key={`${size}-${variant}`} variant={variant} size={size} shape={args.shape} color={args.color}>
+            <Badge key={`${size}-${variant}`} variant={variant} size={size} shape={args.shape} color={args.color} iconLeft={<ChevronCircleLeftFill />} iconRight={<ChevronCircleRightFill />}>
               Badge
             </Badge>
           ))}
@@ -63,11 +72,11 @@ export const AllVariants = {
   ),
 };
 
-// Renders every Type × Color at "md" so all eight color families can be
-// compared side by side across all four emphasis levels. "inverse" reads
-// as near-invisible against this story's white background on "solid" —
-// expected, same as Button's own inverse-solid story, since it's meant
-// for a dark/colored surface.
+// Renders every Type × Color at "m" so all eleven color families can be
+// compared side by side across all four emphasis levels, flanking icons
+// included. "inverse" reads as near-invisible against this story's white
+// background on "solid" — expected, same as Button's own inverse-solid
+// story, since it's meant for a dark/colored surface.
 export const AllColors = {
   render: () => (
     <div style={{ display: 'grid', gridTemplateColumns: `max-content repeat(${COLORS.length}, max-content)`, gap: '16px 24px', alignItems: 'center' }}>
@@ -83,7 +92,7 @@ export const AllColors = {
             {variant}
           </div>
           {COLORS.map((color) => (
-            <Badge key={`${variant}-${color}`} variant={variant} size="md" color={color}>
+            <Badge key={`${variant}-${color}`} variant={variant} size="m" color={color} iconLeft={<ChevronCircleLeftFill />} iconRight={<ChevronCircleRightFill />}>
               Badge
             </Badge>
           ))}
@@ -110,7 +119,7 @@ export const AllShapes = {
             {size}
           </div>
           {SHAPES.map((shape) => (
-            <Badge key={`${size}-${shape}`} shape={shape} size={size} variant={args.variant} color={args.color}>
+            <Badge key={`${size}-${shape}`} shape={shape} size={size} variant={args.variant} color={args.color} iconLeft={<ChevronCircleLeftFill />} iconRight={<ChevronCircleRightFill />}>
               Badge
             </Badge>
           ))}
