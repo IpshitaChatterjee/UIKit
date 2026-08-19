@@ -2,6 +2,18 @@
  * @tokens Text
  */
 :root {
+  --text-display-xl-500: 500 96px/110px "Geist";
+  --text-display-xl-500-font-size: 96px;
+  --text-display-xl-500-line-height: 110px;
+  --text-display-xl-500-letter-spacing: -0.20000000298023224px;
+  --text-display-xl-500-font-family: "Geist";
+  --text-display-xl-500-font-weight: 500;
+  --text-headings-h4-500: 500 32px/45px "Geist";
+  --text-headings-h4-500-font-size: 32px;
+  --text-headings-h4-500-line-height: 45px;
+  --text-headings-h4-500-letter-spacing: -1.2000000476837158px;
+  --text-headings-h4-500-font-family: "Geist";
+  --text-headings-h4-500-font-weight: 500;
   --text-display-xl-700: 700 96px/110px "Geist";
   --text-display-xl-700-font-size: 96px;
   --text-display-xl-700-line-height: 110px;
@@ -14,12 +26,6 @@
   --text-display-xl-600-letter-spacing: -0.20000000298023224px;
   --text-display-xl-600-font-family: "Geist";
   --text-display-xl-600-font-weight: 600;
-  --text-display-xl-500: 500 96px/110px "Geist";
-  --text-display-xl-500-font-size: 96px;
-  --text-display-xl-500-line-height: 110px;
-  --text-display-xl-500-letter-spacing: -0.20000000298023224px;
-  --text-display-xl-500-font-family: "Geist";
-  --text-display-xl-500-font-weight: 500;
   --text-display-l-700: 700 72px/86px "Geist";
   --text-display-l-700-font-size: 72px;
   --text-display-l-700-line-height: 86px;
@@ -104,12 +110,6 @@
   --text-headings-h4-600-letter-spacing: -1.2000000476837158px;
   --text-headings-h4-600-font-family: "Geist";
   --text-headings-h4-600-font-weight: 600;
-  --text-headings-h4-500: 500 32px/45px "Geist";
-  --text-headings-h4-500-font-size: 32px;
-  --text-headings-h4-500-line-height: 45px;
-  --text-headings-h4-500-letter-spacing: -1.2000000476837158px;
-  --text-headings-h4-500-font-family: "Geist";
-  --text-headings-h4-500-font-weight: 500;
   --text-headings-h5-700: 700 24px/34px "Geist";
   --text-headings-h5-700-font-size: 24px;
   --text-headings-h5-700-line-height: 34px;
@@ -443,115 +443,11 @@
 }
 
 /**
- * @tokens Effect
- * @presenter Shadow
- */
-:root {
-  --effect-uniform-blur-xs: 0px 0px 4px 0px rgba(0,0,0,0.25);
-  --effect-uniform-blur-s: 0px 0px 8px 0px rgba(0,0,0,0.25);
-  --effect-uniform-blur-m: 0px 0px 12px 0px rgba(0,0,0,0.25);
-  --effect-uniform-blur-l: 0px 0px 16px 0px rgba(0,0,0,0.25);
-  --effect-uniform-blur-xl: 0px 0px 24px 0px rgba(0,0,0,0.25);
-  --effect-uniform-blur-2-xl: 0px 0px 40px 0px rgba(0,0,0,0.25);
-  --effect-uniform-blur-3-xl: 0px 0px 64px 0px rgba(0,0,0,0.25);
-  --effect-progressive-blur-xs: 0px 0px 0px 0px rgba(0,0,0,0.25);
-  --effect-progressive-blur-s: 0px 0px 0px 0px rgba(0,0,0,0.25);
-  --effect-progressive-blur-m: 0px 0px 0px 0px rgba(0,0,0,0.25);
-  --effect-progressive-blur-l: 0px 0px 0px 0px rgba(0,0,0,0.25);
-  --effect-progressive-blur-xl: 0px 0px 0px 0px rgba(0,0,0,0.25);
-  --effect-progressive-blur-2-xl: 0px 0px 0px 0px rgba(0,0,0,0.25);
-  --effect-focus-ring-primary-0: 0px 0px 0px 2px #615fff, 0px 0px 0px 0px #fafafa;
-  --effect-focus-ring-primary-1: 0px 0px 0px 3px #615fff, 0px 0px 0px 1px #fafafa;
-  --effect-focus-ring-primary-2: 0px 0px 0px 4px #615fff, 0px 0px 0px 2px #fafafa;
-  --effect-focus-ring-primary-3: 0px 0px 0px 6px #615fff, 0px 0px 0px 3px #fafafa;
-  --effect-focus-ring-neutral-0: 0px 0px 0px 2px #09090b, 0px 0px 0px 0px #ffffff;
-  --effect-focus-ring-neutral-1: 0px 0px 0px 3px #09090b, 0px 0px 0px 1px #ffffff;
-  --effect-focus-ring-neutral-2: 0px 0px 0px 4px #09090b, 0px 0px 0px 2px #ffffff;
-  --effect-focus-ring-neutral-3: 0px 0px 0px 6px #09090b, 0px 0px 0px 3px #ffffff;
-  --effect-focus-ring-inverse-0: 0px 0px 0px 2px #fafafa, 0px 0px 0px 0px #09090b;
-  --effect-focus-ring-inverse-1: 0px 0px 0px 3px #fafafa, 0px 0px 0px 1px #09090b;
-  --effect-focus-ring-inverse-2: 0px 0px 0px 4px #fafafa, 0px 0px 0px 2px #09090b;
-  --effect-focus-ring-inverse-3: 0px 0px 0px 6px #fafafa, 0px 0px 0px 3px #09090b;
-  --effect-focus-ring-success-2: 0px 0px 0px 4px #00a63e, 0px 0px 0px 2px #fafafa;
-  --effect-focus-ring-success-3: 0px 0px 0px 6px #00a63e, 0px 0px 0px 3px #fafafa;
-  --effect-focus-ring-error-0: 0px 0px 0px 2px #e7000b, 0px 0px 0px 0px #fafafa;
-  --effect-focus-ring-error-1: 0px 0px 0px 3px #e7000b, 0px 0px 0px 1px #fafafa;
-  --effect-focus-ring-error-2: 0px 0px 0px 4px #e7000b, 0px 0px 0px 2px #fafafa;
-  --effect-focus-ring-error-3: 0px 0px 0px 6px #e7000b, 0px 0px 0px 3px #fafafa;
-  --effect-focus-ring-info-0: 0px 0px 0px 2px #2563eb, 0px 0px 0px 0px #fafafa;
-  --effect-focus-ring-info-1: 0px 0px 0px 3px #2563eb, 0px 0px 0px 1px #fafafa;
-  --effect-focus-ring-info-2: 0px 0px 0px 4px #2563eb, 0px 0px 0px 2px #fafafa;
-  --effect-focus-ring-info-3: 0px 0px 0px 6px #2563eb, 0px 0px 0px 3px #fafafa;
-  --effect-shadow-regular-a-2-xs: 0px 1px 0px 0px #00000014;
-  --effect-shadow-component-primary-default: inset 0px 2px 0px 0px #ffffff29, inset 0px 0px 0px 1px #615fff;
-  --effect-shadow-component-primary-hover: 0px 5px 10px -5px #e0e7ff, inset 0px 2px 0px 0px #ffffff29, inset 0px 0px 0px 1px #615fff;
-  --effect-shadow-component-primary-focused: inset 0px 2px 0px 0px #ffffff29, inset 0px 0px 0px 1px #615fff, 0px 0px 0px 2px #e0e7ff;
-  --effect-shadow-component-neutral-default: inset 0px 2px 0px 0px #3f3f46, inset 0px 0px 0px 1px #27272a;
-  --effect-shadow-component-neutral-hover: 0px 5px 10px -5px #3f3f46, inset 0px 2px 0px 0px #3f3f46, inset 0px 0px 0px 1px #27272a;
-  --effect-shadow-component-neutral-focused: inset 0px 1px 0px 1px #3f3f46, inset 0px 0px 0px 1px #27272a, 0px 5px 10px -5px #3f3f46;
-  --effect-shadow-component-inverse-default: inset 0px 2px 0px 0px #f4f4f5, inset 0px 0px 0px 1px #fafafa;
-  --effect-shadow-component-inverse-hover: 0px 5px 10px -5px #71717a, inset 0px 2px 0px 0px #e4e4e7, inset 0px 0px 0px 1px #f4f4f5;
-  --effect-shadow-component-inverse-focused: inset 0px 2px 0px 0px #f4f4f5, inset 0px 0px 0px 1px #fafafa, 0px 0px 0px 2px #71717a;
-  --effect-shadow-component-error-default: inset 0px 2px 0px 0px #ffffff29, inset 0px 0px 0px 1px #c10007;
-  --effect-shadow-component-error-hover: 0px 5px 10px -5px #ffe2e2, inset 0px 2px 0px 0px #ffffff29, inset 0px 0px 0px 1px #e7000b;
-  --effect-shadow-component-error-focused: inset 0px 2px 0px 0px #ffffff29, inset 0px 0px 0px 1px #c10007, 0px 0px 0px 2px #82181a;
-  --effect-shadow-component-success-default: inset 0px 2px 0px 0px #ffffff29, inset 0px 0px 0px 1px #00a63e;
-  --effect-shadow-component-success-hover: 0px 5px 10px -5px #dcfce7, inset 0px 2px 0px 0px #ffffff29, inset 0px 0px 0px 1px #00c950;
-  --effect-shadow-component-success-focused: inset 0px 2px 0px 0px #ffffff29, inset 0px 0px 0px 1px #00a63e, 0px 0px 0px 2px #0d542b;
-  --effect-shadow-component-info-default: inset 0px 2px 0px 0px #ffffff29, inset 0px 0px 0px 1px #2563eb;
-  --effect-shadow-component-info-hover: 0px 5px 10px -5px #dbeafe, inset 0px 2px 0px 0px #ffffff29, inset 0px 0px 0px 1px #3b82f6;
-  --effect-shadow-component-info-focused: inset 0px 2px 0px 0px #ffffff29, inset 0px 0px 0px 1px #2563eb, 0px 0px 0px 2px #1e3a8a;
-  --effect-shadow-text-2xs: 0px 1px 0px 0px #00000029;
-  --effect-shadow-text-xs: 0px 1px 0px 0px #0000003d;
-  --effect-shadow-text-sm: 0px 2px 2px 0px #00000014, 0px 1px 1px 0px #00000014, 0px 1px 0px 0px #00000014;
-  --effect-shadow-text-md: 0px 2px 4px 0px #0000001a, 0px 1px 2px 0px #0000001a, 0px 1px 1px 0px #0000001a;
-  --effect-shadow-text-l: 0px 4px 8px 0px #0000001a, 0px 3px 2px 0px #0000001a, 0px 1px 2px 0px #0000001a;
-  --effect-regular-b-0: 0px 0px 0px 1px #00000014;
-  --effect-regular-b-1: 0px 1px 1px -0.5px #00000014, 0px 0px 0px 1px #00000014;
-  --effect-regular-b-2: 0px 3px 3px -1.5px #00000014, 0px 1px 1px -0.5px #00000014, 0px 0px 0px 1px #00000014;
-  --effect-regular-b-3: 0px 6px 6px -3px #00000014, 0px 3px 3px -1.5px #00000014, 0px 1px 1px -0.5px #00000014, 0px 0px 0px 1px #00000014;
-  --effect-regular-b-4: 0px 12px 12px -6px #00000014, 0px 6px 6px -3px #00000014, 0px 3px 3px -1.5px #00000014, 0px 1px 1px -0.5px #00000014, 0px 0px 0px 1px #00000014;
-  --effect-regular-b-5: 0px 24px 24px -12px #00000014, 0px 12px 12px -6px #00000014, 0px 6px 6px -3px #00000014, 0px 3px 3px -1.5px #00000014, 0px 1px 1px -0.5px #00000014, 0px 0px 0px 1px #00000014;
-  --effect-regular-b-6: 0px 48px 48px -24px #00000014, 0px 24px 24px -12px #00000014, 0px 12px 12px -6px #00000014, 0px 6px 6px -3px #00000014, 0px 3px 3px -1.5px #00000014, 0px 1px 1px -0.5px #00000014, 0px 0px 0px 1px #00000014;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --effect-regular-b-0: inset 0px 0px 0px 1px #ffffff05;
-    --effect-regular-b-1: 0px 1px 1px -0.5px #00000066, inset 0px 0px 0px 1px #ffffff05, inset 0px 1px 0px 0px #ffffff08;
-    --effect-regular-b-2: 0px 3px 3px -2px #0000003d, 0px 1px 1px -0.5px #00000029, 0px 0px 0px 1px #00000014, inset 0px 0px 0px 1px #ffffff05, inset 0px 1px 0px 0px #ffffff0d;
-    --effect-regular-b-3: 0px 6px 6px -1px #00000029, 0px 3px 3px -2px #00000029, 0px 1px 1px -0.5px #00000029, 0px 0px 0px 1px #00000014, inset 0px 0px 0px 1px #ffffff05, inset 0px 1px 0px 0px #ffffff0d;
-    --effect-regular-b-4: 0px 12px 12px -6px #00000029, 0px 6px 6px -1px #00000029, 0px 3px 3px -2px #00000029, 0px 1px 1px -0.5px #00000029, 0px 0px 0px 1px #00000014, inset 0px 0px 0px 1px #ffffff05, inset 0px 1px 0px 0px #ffffff0d;
-    --effect-regular-b-5: 0px 24px 24px -12px #00000029, 0px 12px 12px -6px #00000029, 0px 6px 6px -1px #00000029, 0px 3px 3px -2px #00000029, 0px 1px 1px -0.5px #00000029, 0px 0px 0px 1px #00000014, inset 0px 0px 0px 1px #ffffff05, inset 0px 1px 0px 0px #ffffff0d;
-    --effect-regular-b-6: 0px 48px 48px -24px #00000029, 0px 24px 24px -12px #00000029, 0px 12px 12px -6px #00000029, 0px 6px 6px -1px #00000029, 0px 3px 3px -2px #00000029, 0px 1px 1px -0.5px #00000029, 0px 0px 0px 1px #00000014, inset 0px 0px 0px 1px #ffffff05, inset 0px 1px 0px 0px #ffffff0d;
-  }
-}
-
-:root[data-theme="dark"] {
-    --effect-regular-b-0: inset 0px 0px 0px 1px #ffffff05;
-    --effect-regular-b-1: 0px 1px 1px -0.5px #00000066, inset 0px 0px 0px 1px #ffffff05, inset 0px 1px 0px 0px #ffffff08;
-    --effect-regular-b-2: 0px 3px 3px -2px #0000003d, 0px 1px 1px -0.5px #00000029, 0px 0px 0px 1px #00000014, inset 0px 0px 0px 1px #ffffff05, inset 0px 1px 0px 0px #ffffff0d;
-    --effect-regular-b-3: 0px 6px 6px -1px #00000029, 0px 3px 3px -2px #00000029, 0px 1px 1px -0.5px #00000029, 0px 0px 0px 1px #00000014, inset 0px 0px 0px 1px #ffffff05, inset 0px 1px 0px 0px #ffffff0d;
-    --effect-regular-b-4: 0px 12px 12px -6px #00000029, 0px 6px 6px -1px #00000029, 0px 3px 3px -2px #00000029, 0px 1px 1px -0.5px #00000029, 0px 0px 0px 1px #00000014, inset 0px 0px 0px 1px #ffffff05, inset 0px 1px 0px 0px #ffffff0d;
-    --effect-regular-b-5: 0px 24px 24px -12px #00000029, 0px 12px 12px -6px #00000029, 0px 6px 6px -1px #00000029, 0px 3px 3px -2px #00000029, 0px 1px 1px -0.5px #00000029, 0px 0px 0px 1px #00000014, inset 0px 0px 0px 1px #ffffff05, inset 0px 1px 0px 0px #ffffff0d;
-    --effect-regular-b-6: 0px 48px 48px -24px #00000029, 0px 24px 24px -12px #00000029, 0px 12px 12px -6px #00000029, 0px 6px 6px -1px #00000029, 0px 3px 3px -2px #00000029, 0px 1px 1px -0.5px #00000029, 0px 0px 0px 1px #00000014, inset 0px 0px 0px 1px #ffffff05, inset 0px 1px 0px 0px #ffffff0d;
-}
-
-/**
- * @tokens Grid
- */
-:root {
-  --grid-desktop: [{"pattern":"COLUMNS","sectionSize":75,"visible":true,"color":{"r":0,"g":0,"b":0,"a":0.10000000149011612},"alignment":"STRETCH","gutterSize":40,"offset":50,"count":12},{"pattern":"ROWS","sectionSize":12,"visible":true,"color":{"r":0,"g":0,"b":0,"a":0.10000000149011612},"alignment":"MIN","gutterSize":12,"offset":0,"count":1000}];
-  --grid-tablet: [{"pattern":"COLUMNS","sectionSize":46.08333206176758,"visible":true,"color":{"r":0,"g":0,"b":0,"a":0.10000000149011612},"alignment":"STRETCH","gutterSize":15,"offset":25,"count":12},{"pattern":"ROWS","sectionSize":12,"visible":true,"color":{"r":0,"g":0,"b":0,"a":0.10000000149011612},"alignment":"MIN","gutterSize":12,"offset":0,"count":1000}];
-  --grid-mobile: [{"pattern":"COLUMNS","sectionSize":76.75,"visible":true,"color":{"r":0,"g":0,"b":0,"a":0.10000000149011612},"alignment":"STRETCH","gutterSize":15,"offset":25,"count":4},{"pattern":"ROWS","sectionSize":12,"visible":true,"color":{"r":0,"g":0,"b":0,"a":0.10000000149011612},"alignment":"MIN","gutterSize":12,"offset":0,"count":1000}];
-  --grid-classic-modular: [{"pattern":"COLUMNS","sectionSize":155,"visible":true,"color":{"r":0,"g":0,"b":0,"a":0.10000000149011612},"alignment":"STRETCH","gutterSize":24,"offset":24,"count":4},{"pattern":"ROWS","sectionSize":169.60000610351562,"visible":true,"color":{"r":0,"g":0,"b":0,"a":0.10000000149011612},"alignment":"STRETCH","gutterSize":24,"offset":24,"count":5}];
-}
-
-/**
  * @tokens Primitive Colors
  * @presenter Color
  */
 :root {
+  --fill-primitives-blue-regular-900: #1e3a8a;
   --fill-primitives-orange-regular-50: #fff7ed;
   --fill-primitives-red-regular-50: #fef2f2;
   --fill-primitives-orange-regular-100: #ffedd4;
@@ -731,7 +627,6 @@
   --fill-primitives-blue-regular-600: #2563eb;
   --fill-primitives-blue-regular-700: #1d4ed8;
   --fill-primitives-blue-regular-800: #1e40af;
-  --fill-primitives-blue-regular-900: #1e3a8a;
   --fill-primitives-blue-regular-950: #172554;
   --fill-primitives-blue-alpha-0: #3b82f600;
   --fill-primitives-blue-alpha-8: #3b82f614;
@@ -927,6 +822,113 @@
   --fill-primitives-black-alpha-64: #000000a3;
   --fill-primitives-black-alpha-80: #000000cc;
   --fill-primitives-black-alpha-static: #000000;
+}
+
+/**
+ * @tokens Effect
+ * @presenter Shadow
+ */
+:root {
+  --effect-uniform-blur-xs: 0px 0px 4px 0px rgba(0,0,0,0.25);
+  --effect-uniform-blur-s: 0px 0px 8px 0px rgba(0,0,0,0.25);
+  --effect-uniform-blur-m: 0px 0px 12px 0px rgba(0,0,0,0.25);
+  --effect-uniform-blur-l: 0px 0px 16px 0px rgba(0,0,0,0.25);
+  --effect-uniform-blur-xl: 0px 0px 24px 0px rgba(0,0,0,0.25);
+  --effect-uniform-blur-2-xl: 0px 0px 40px 0px rgba(0,0,0,0.25);
+  --effect-uniform-blur-3-xl: 0px 0px 64px 0px rgba(0,0,0,0.25);
+  --effect-progressive-blur-xs: 0px 0px 0px 0px rgba(0,0,0,0.25);
+  --effect-progressive-blur-s: 0px 0px 0px 0px rgba(0,0,0,0.25);
+  --effect-progressive-blur-m: 0px 0px 0px 0px rgba(0,0,0,0.25);
+  --effect-progressive-blur-l: 0px 0px 0px 0px rgba(0,0,0,0.25);
+  --effect-progressive-blur-xl: 0px 0px 0px 0px rgba(0,0,0,0.25);
+  --effect-progressive-blur-2-xl: 0px 0px 0px 0px rgba(0,0,0,0.25);
+  --effect-focus-ring-primary-0: 0px 0px 0px 2px #615fff, 0px 0px 0px 0px #fafafa;
+  --effect-focus-ring-primary-1: 0px 0px 0px 3px #615fff, 0px 0px 0px 1px #fafafa;
+  --effect-focus-ring-primary-2: 0px 0px 0px 4px #615fff, 0px 0px 0px 2px #fafafa;
+  --effect-focus-ring-primary-3: 0px 0px 0px 6px #615fff, 0px 0px 0px 3px #fafafa;
+  --effect-focus-ring-neutral-0: 0px 0px 0px 2px #09090b, 0px 0px 0px 0px #ffffff;
+  --effect-focus-ring-neutral-1: 0px 0px 0px 3px #09090b, 0px 0px 0px 1px #ffffff;
+  --effect-focus-ring-neutral-2: 0px 0px 0px 4px #09090b, 0px 0px 0px 2px #ffffff;
+  --effect-focus-ring-neutral-3: 0px 0px 0px 6px #09090b, 0px 0px 0px 3px #ffffff;
+  --effect-focus-ring-inverse-0: 0px 0px 0px 2px #fafafa, 0px 0px 0px 0px #09090b;
+  --effect-focus-ring-inverse-1: 0px 0px 0px 3px #fafafa, 0px 0px 0px 1px #09090b;
+  --effect-focus-ring-inverse-2: 0px 0px 0px 4px #fafafa, 0px 0px 0px 2px #09090b;
+  --effect-focus-ring-inverse-3: 0px 0px 0px 6px #fafafa, 0px 0px 0px 3px #09090b;
+  --effect-focus-ring-success-2: 0px 0px 0px 4px #00a63e, 0px 0px 0px 2px #fafafa;
+  --effect-focus-ring-success-3: 0px 0px 0px 6px #00a63e, 0px 0px 0px 3px #fafafa;
+  --effect-focus-ring-error-0: 0px 0px 0px 2px #e7000b, 0px 0px 0px 0px #fafafa;
+  --effect-focus-ring-error-1: 0px 0px 0px 3px #e7000b, 0px 0px 0px 1px #fafafa;
+  --effect-focus-ring-error-2: 0px 0px 0px 4px #e7000b, 0px 0px 0px 2px #fafafa;
+  --effect-focus-ring-error-3: 0px 0px 0px 6px #e7000b, 0px 0px 0px 3px #fafafa;
+  --effect-focus-ring-info-0: 0px 0px 0px 2px #2563eb, 0px 0px 0px 0px #fafafa;
+  --effect-focus-ring-info-1: 0px 0px 0px 3px #2563eb, 0px 0px 0px 1px #fafafa;
+  --effect-focus-ring-info-2: 0px 0px 0px 4px #2563eb, 0px 0px 0px 2px #fafafa;
+  --effect-focus-ring-info-3: 0px 0px 0px 6px #2563eb, 0px 0px 0px 3px #fafafa;
+  --effect-shadow-regular-a-2-xs: 0px 1px 0px 0px #00000014;
+  --effect-shadow-regular-a-xs: 0px 1px 2px 0px #00000014;
+  --effect-shadow-regular-a-s: 0px 1px 2px -1px #00000014, 0px 1px 3px 0px #00000014;
+  --effect-shadow-component-primary-default: inset 0px 2px 0px 0px #ffffff29, inset 0px 0px 0px 1px #615fff;
+  --effect-shadow-component-primary-hover: 0px 5px 10px -5px #e0e7ff, inset 0px 2px 0px 0px #ffffff29, inset 0px 0px 0px 1px #615fff;
+  --effect-shadow-component-primary-focused: inset 0px 2px 0px 0px #ffffff29, inset 0px 0px 0px 1px #615fff, 0px 0px 0px 2px #e0e7ff;
+  --effect-shadow-component-neutral-default: inset 0px 2px 0px 0px #3f3f46, inset 0px 0px 0px 1px #27272a;
+  --effect-shadow-component-neutral-hover: 0px 5px 10px -5px #3f3f46, inset 0px 2px 0px 0px #3f3f46, inset 0px 0px 0px 1px #27272a;
+  --effect-shadow-component-neutral-focused: inset 0px 1px 0px 1px #3f3f46, inset 0px 0px 0px 1px #27272a, 0px 5px 10px -5px #3f3f46;
+  --effect-shadow-component-inverse-default: inset 0px 2px 0px 0px #f4f4f5, inset 0px 0px 0px 1px #fafafa;
+  --effect-shadow-component-inverse-hover: 0px 5px 10px -5px #71717a, inset 0px 2px 0px 0px #e4e4e7, inset 0px 0px 0px 1px #f4f4f5;
+  --effect-shadow-component-inverse-focused: inset 0px 2px 0px 0px #f4f4f5, inset 0px 0px 0px 1px #fafafa, 0px 0px 0px 2px #71717a;
+  --effect-shadow-component-error-default: inset 0px 2px 0px 0px #ffffff29, inset 0px 0px 0px 1px #c10007;
+  --effect-shadow-component-error-hover: 0px 5px 10px -5px #ffe2e2, inset 0px 2px 0px 0px #ffffff29, inset 0px 0px 0px 1px #e7000b;
+  --effect-shadow-component-error-focused: inset 0px 2px 0px 0px #ffffff29, inset 0px 0px 0px 1px #c10007, 0px 0px 0px 2px #82181a;
+  --effect-shadow-component-success-default: inset 0px 2px 0px 0px #ffffff29, inset 0px 0px 0px 1px #00a63e;
+  --effect-shadow-component-success-hover: 0px 5px 10px -5px #dcfce7, inset 0px 2px 0px 0px #ffffff29, inset 0px 0px 0px 1px #00c950;
+  --effect-shadow-component-success-focused: inset 0px 2px 0px 0px #ffffff29, inset 0px 0px 0px 1px #00a63e, 0px 0px 0px 2px #0d542b;
+  --effect-shadow-component-info-default: inset 0px 2px 0px 0px #ffffff29, inset 0px 0px 0px 1px #2563eb;
+  --effect-shadow-component-info-hover: 0px 5px 10px -5px #dbeafe, inset 0px 2px 0px 0px #ffffff29, inset 0px 0px 0px 1px #3b82f6;
+  --effect-shadow-component-info-focused: inset 0px 2px 0px 0px #ffffff29, inset 0px 0px 0px 1px #2563eb, 0px 0px 0px 2px #1e3a8a;
+  --effect-shadow-text-2xs: 0px 1px 0px 0px #00000029;
+  --effect-shadow-text-xs: 0px 1px 0px 0px #0000003d;
+  --effect-shadow-text-sm: 0px 2px 2px 0px #00000014, 0px 1px 1px 0px #00000014, 0px 1px 0px 0px #00000014;
+  --effect-shadow-text-md: 0px 2px 4px 0px #0000001a, 0px 1px 2px 0px #0000001a, 0px 1px 1px 0px #0000001a;
+  --effect-shadow-text-l: 0px 4px 8px 0px #0000001a, 0px 3px 2px 0px #0000001a, 0px 1px 2px 0px #0000001a;
+  --effect-regular-b-0: 0px 0px 0px 1px #00000014;
+  --effect-regular-b-1: 0px 1px 1px -0.5px #00000014, 0px 0px 0px 1px #00000014;
+  --effect-regular-b-2: 0px 3px 3px -1.5px #00000014, 0px 1px 1px -0.5px #00000014, 0px 0px 0px 1px #00000014;
+  --effect-regular-b-3: 0px 6px 6px -3px #00000014, 0px 3px 3px -1.5px #00000014, 0px 1px 1px -0.5px #00000014, 0px 0px 0px 1px #00000014;
+  --effect-regular-b-4: 0px 12px 12px -6px #00000014, 0px 6px 6px -3px #00000014, 0px 3px 3px -1.5px #00000014, 0px 1px 1px -0.5px #00000014, 0px 0px 0px 1px #00000014;
+  --effect-regular-b-5: 0px 24px 24px -12px #00000014, 0px 12px 12px -6px #00000014, 0px 6px 6px -3px #00000014, 0px 3px 3px -1.5px #00000014, 0px 1px 1px -0.5px #00000014, 0px 0px 0px 1px #00000014;
+  --effect-regular-b-6: 0px 48px 48px -24px #00000014, 0px 24px 24px -12px #00000014, 0px 12px 12px -6px #00000014, 0px 6px 6px -3px #00000014, 0px 3px 3px -1.5px #00000014, 0px 1px 1px -0.5px #00000014, 0px 0px 0px 1px #00000014;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --effect-regular-b-0: inset 0px 0px 0px 1px #ffffff05;
+    --effect-regular-b-1: 0px 1px 1px -0.5px #00000066, inset 0px 0px 0px 1px #ffffff05, inset 0px 1px 0px 0px #ffffff08;
+    --effect-regular-b-2: 0px 3px 3px -2px #0000003d, 0px 1px 1px -0.5px #00000029, 0px 0px 0px 1px #00000014, inset 0px 0px 0px 1px #ffffff05, inset 0px 1px 0px 0px #ffffff0d;
+    --effect-regular-b-3: 0px 6px 6px -1px #00000029, 0px 3px 3px -2px #00000029, 0px 1px 1px -0.5px #00000029, 0px 0px 0px 1px #00000014, inset 0px 0px 0px 1px #ffffff05, inset 0px 1px 0px 0px #ffffff0d;
+    --effect-regular-b-4: 0px 12px 12px -6px #00000029, 0px 6px 6px -1px #00000029, 0px 3px 3px -2px #00000029, 0px 1px 1px -0.5px #00000029, 0px 0px 0px 1px #00000014, inset 0px 0px 0px 1px #ffffff05, inset 0px 1px 0px 0px #ffffff0d;
+    --effect-regular-b-5: 0px 24px 24px -12px #00000029, 0px 12px 12px -6px #00000029, 0px 6px 6px -1px #00000029, 0px 3px 3px -2px #00000029, 0px 1px 1px -0.5px #00000029, 0px 0px 0px 1px #00000014, inset 0px 0px 0px 1px #ffffff05, inset 0px 1px 0px 0px #ffffff0d;
+    --effect-regular-b-6: 0px 48px 48px -24px #00000029, 0px 24px 24px -12px #00000029, 0px 12px 12px -6px #00000029, 0px 6px 6px -1px #00000029, 0px 3px 3px -2px #00000029, 0px 1px 1px -0.5px #00000029, 0px 0px 0px 1px #00000014, inset 0px 0px 0px 1px #ffffff05, inset 0px 1px 0px 0px #ffffff0d;
+  }
+}
+
+:root[data-theme="dark"] {
+    --effect-regular-b-0: inset 0px 0px 0px 1px #ffffff05;
+    --effect-regular-b-1: 0px 1px 1px -0.5px #00000066, inset 0px 0px 0px 1px #ffffff05, inset 0px 1px 0px 0px #ffffff08;
+    --effect-regular-b-2: 0px 3px 3px -2px #0000003d, 0px 1px 1px -0.5px #00000029, 0px 0px 0px 1px #00000014, inset 0px 0px 0px 1px #ffffff05, inset 0px 1px 0px 0px #ffffff0d;
+    --effect-regular-b-3: 0px 6px 6px -1px #00000029, 0px 3px 3px -2px #00000029, 0px 1px 1px -0.5px #00000029, 0px 0px 0px 1px #00000014, inset 0px 0px 0px 1px #ffffff05, inset 0px 1px 0px 0px #ffffff0d;
+    --effect-regular-b-4: 0px 12px 12px -6px #00000029, 0px 6px 6px -1px #00000029, 0px 3px 3px -2px #00000029, 0px 1px 1px -0.5px #00000029, 0px 0px 0px 1px #00000014, inset 0px 0px 0px 1px #ffffff05, inset 0px 1px 0px 0px #ffffff0d;
+    --effect-regular-b-5: 0px 24px 24px -12px #00000029, 0px 12px 12px -6px #00000029, 0px 6px 6px -1px #00000029, 0px 3px 3px -2px #00000029, 0px 1px 1px -0.5px #00000029, 0px 0px 0px 1px #00000014, inset 0px 0px 0px 1px #ffffff05, inset 0px 1px 0px 0px #ffffff0d;
+    --effect-regular-b-6: 0px 48px 48px -24px #00000029, 0px 24px 24px -12px #00000029, 0px 12px 12px -6px #00000029, 0px 6px 6px -1px #00000029, 0px 3px 3px -2px #00000029, 0px 1px 1px -0.5px #00000029, 0px 0px 0px 1px #00000014, inset 0px 0px 0px 1px #ffffff05, inset 0px 1px 0px 0px #ffffff0d;
+}
+
+/**
+ * @tokens Grid
+ */
+:root {
+  --grid-desktop: [{"pattern":"COLUMNS","sectionSize":75,"visible":true,"color":{"r":0,"g":0,"b":0,"a":0.10000000149011612},"alignment":"STRETCH","gutterSize":40,"offset":50,"count":12},{"pattern":"ROWS","sectionSize":12,"visible":true,"color":{"r":0,"g":0,"b":0,"a":0.10000000149011612},"alignment":"MIN","gutterSize":12,"offset":0,"count":1000}];
+  --grid-tablet: [{"pattern":"COLUMNS","sectionSize":46.08333206176758,"visible":true,"color":{"r":0,"g":0,"b":0,"a":0.10000000149011612},"alignment":"STRETCH","gutterSize":15,"offset":25,"count":12},{"pattern":"ROWS","sectionSize":12,"visible":true,"color":{"r":0,"g":0,"b":0,"a":0.10000000149011612},"alignment":"MIN","gutterSize":12,"offset":0,"count":1000}];
+  --grid-mobile: [{"pattern":"COLUMNS","sectionSize":76.75,"visible":true,"color":{"r":0,"g":0,"b":0,"a":0.10000000149011612},"alignment":"STRETCH","gutterSize":15,"offset":25,"count":4},{"pattern":"ROWS","sectionSize":12,"visible":true,"color":{"r":0,"g":0,"b":0,"a":0.10000000149011612},"alignment":"MIN","gutterSize":12,"offset":0,"count":1000}];
+  --grid-classic-modular: [{"pattern":"COLUMNS","sectionSize":155,"visible":true,"color":{"r":0,"g":0,"b":0,"a":0.10000000149011612},"alignment":"STRETCH","gutterSize":24,"offset":24,"count":4},{"pattern":"ROWS","sectionSize":169.60000610351562,"visible":true,"color":{"r":0,"g":0,"b":0,"a":0.10000000149011612},"alignment":"STRETCH","gutterSize":24,"offset":24,"count":5}];
 }
 
 /**
