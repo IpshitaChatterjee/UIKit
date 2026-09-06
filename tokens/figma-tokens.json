@@ -1,7 +1,7 @@
 {
   "_meta": {
     "source": "files-api (styles only — variables API unavailable)",
-    "fetchedAt": "2026-08-19T06:23:28.315Z",
+    "fetchedAt": "2026-09-06T09:50:45.303Z",
     "fileKey": "nF6XfTdKWVl1P8xvufWjNn"
   },
   "text": {
@@ -22,6 +22,16 @@
         "fontSize": 32,
         "lineHeightPx": 45,
         "letterSpacing": -1.2000000476837158
+      },
+      "description": ""
+    },
+    "Headings/H3/500": {
+      "value": {
+        "fontFamily": "Geist",
+        "fontWeight": 500,
+        "fontSize": 36,
+        "lineHeightPx": 48,
+        "letterSpacing": -1.600000023841858
       },
       "description": ""
     },
@@ -149,16 +159,6 @@
       "value": {
         "fontFamily": "Geist",
         "fontWeight": 600,
-        "fontSize": 36,
-        "lineHeightPx": 48,
-        "letterSpacing": -1.600000023841858
-      },
-      "description": ""
-    },
-    "Headings/H3/500": {
-      "value": {
-        "fontFamily": "Geist",
-        "fontWeight": 500,
         "fontSize": 36,
         "lineHeightPx": 48,
         "letterSpacing": -1.600000023841858
@@ -731,6 +731,36 @@
         "fontWeight": 500,
         "fontSize": 12,
         "lineHeightPx": 18,
+        "letterSpacing": 0
+      },
+      "description": ""
+    },
+    "Subtitle": {
+      "value": {
+        "fontFamily": "Inter",
+        "fontWeight": 600,
+        "fontSize": 96,
+        "lineHeightPx": 100,
+        "letterSpacing": 0
+      },
+      "description": ""
+    },
+    "Special Headings/Display 2": {
+      "value": {
+        "fontFamily": "Inter",
+        "fontWeight": 700,
+        "fontSize": 62,
+        "lineHeightPx": 76,
+        "letterSpacing": 0
+      },
+      "description": ""
+    },
+    "Headings/H1": {
+      "value": {
+        "fontFamily": "Inter",
+        "fontWeight": 700,
+        "fontSize": 42,
+        "lineHeightPx": 54,
         "letterSpacing": 0
       },
       "description": ""
@@ -2236,6 +2266,582 @@
     "primitives/black/alpha/static": {
       "value": "#000000",
       "description": ""
+    },
+    "tokens-dark/shadow/xs": {
+      "value": "#00000014",
+      "description": ""
+    },
+    "tokens-dark/shadow/sm": {
+      "value": "#00000029",
+      "description": ""
+    },
+    "tokens-dark/shadow/md": {
+      "value": "#0000003d",
+      "description": ""
+    },
+    "Secondary Colors/Blue": {
+      "value": "#2388ff",
+      "description": ""
+    },
+    "Neutral Colors/800": {
+      "value": "#19213d",
+      "description": ""
+    },
+    "Neutral Colors/White": {
+      "value": "#ffffff",
+      "description": ""
+    },
+    "Neutral Colors/300": {
+      "value": "#ffffff",
+      "description": ""
+    },
+    "Neutral Colors/200": {
+      "value": "#f6f8fc",
+      "description": ""
+    },
+    "Payments/Visa/Blue": {
+      "value": "#1434cb",
+      "description": ""
+    },
+    "Neutral Colors/400": {
+      "value": "#ffffff",
+      "description": ""
+    },
+    "Payments/Visa/Light Mode": {
+      "value": "#e7ebfa",
+      "description": ""
+    },
+    "Dark Mode": {
+      "value": "#393652",
+      "description": ""
+    },
+    "Payments/Mastercard/Yellow": {
+      "value": "#f79e1b",
+      "description": ""
+    },
+    "Neutral Colors/Black": {
+      "value": "#000008",
+      "description": ""
+    },
+    "Payments/American Express/Blue": {
+      "value": "#006fcf",
+      "description": ""
+    },
+    "Payments/Discover/Black": {
+      "value": "#251f1f",
+      "description": ""
+    },
+    "Payments/Discover/Gradient 2": {
+      "value": {
+        "type": "GRADIENT_LINEAR"
+      },
+      "description": ""
+    },
+    "Payments/Discover/Gradient": {
+      "value": {
+        "type": "GRADIENT_LINEAR"
+      },
+      "description": ""
+    },
+    "Payments/Dinners Club/Black": {
+      "value": "#231f20",
+      "description": ""
+    },
+    "Payments/Dinners Club/Blue": {
+      "value": "#006699",
+      "description": ""
+    },
+    "Payments/Maestro (Visa)/Blue": {
+      "value": "#00a1df",
+      "description": ""
+    },
+    "Payments/Cirrus (Visa)/Blue 1": {
+      "value": "#00a2e5",
+      "description": ""
+    },
+    "Payments/Union Pay/Blue": {
+      "value": "#082f67",
+      "description": ""
+    },
+    "Payments/Union Pay/Red": {
+      "value": "#ed171f",
+      "description": ""
+    },
+    "Payments/Union Pay/Gray": {
+      "value": "#4c4948",
+      "description": ""
+    },
+    "Payments/JCB/Green": {
+      "value": {
+        "type": "GRADIENT_LINEAR"
+      },
+      "description": ""
+    },
+    "Payments/JCB/Blue": {
+      "value": {
+        "type": "GRADIENT_LINEAR"
+      },
+      "description": ""
+    },
+    "Payments/JCB/Red": {
+      "value": {
+        "type": "GRADIENT_LINEAR"
+      },
+      "description": ""
+    },
+    "Payments/Elo/Black": {
+      "value": "#231f20",
+      "description": ""
+    },
+    "Payments/Skrill/Gradient": {
+      "value": {
+        "type": "GRADIENT_LINEAR"
+      },
+      "description": ""
+    },
+    "Payments/Mercado Pago/Blue": {
+      "value": "#00bcff",
+      "description": ""
+    },
+    "Payments/Mercado Pago/Blue 2": {
+      "value": "#0a0080",
+      "description": ""
+    },
+    "Payments/Alipay +/Blue": {
+      "value": "#00b6ff",
+      "description": ""
+    },
+    "Payments/We Chat Pay/Green": {
+      "value": "#1aad1a",
+      "description": ""
+    },
+    "Payments/We Chat Pay/Gray": {
+      "value": "#4d4d4d",
+      "description": ""
+    },
+    "Payments/Paypal/Blue 2": {
+      "value": "#253b80",
+      "description": ""
+    },
+    "Payments/Paypal/Blue 1": {
+      "value": "#179bd7",
+      "description": ""
+    },
+    "Payments/G Pay/Orange": {
+      "value": "#e94235",
+      "description": ""
+    },
+    "Payments/Venmo/Blue": {
+      "value": "#008cff",
+      "description": ""
+    },
+    "Payments/Payoneer/Orange": {
+      "value": "#fe4800",
+      "description": ""
+    },
+    "Payments/Payoneer/Pink": {
+      "value": "#e248cf",
+      "description": ""
+    },
+    "Payments/Payoneer/Blue": {
+      "value": "#2490e1",
+      "description": ""
+    },
+    "Payments/Payoneer/Green": {
+      "value": "#2cd87b",
+      "description": ""
+    },
+    "Payments/Payoneer/Yellow": {
+      "value": "#fbd600",
+      "description": ""
+    },
+    "Payments/Amazon Pay/Orange": {
+      "value": "#ff9900",
+      "description": ""
+    },
+    "Payments/Amazon Pay/Black": {
+      "value": "#232f3e",
+      "description": ""
+    },
+    "Payments/Shop Pay/Purple": {
+      "value": "#5a31f4",
+      "description": ""
+    },
+    "Payments/Meta Pay/Blue": {
+      "value": "#0081fb",
+      "description": ""
+    },
+    "Payments/Meta Pay/Linear 2": {
+      "value": {
+        "type": "GRADIENT_LINEAR"
+      },
+      "description": ""
+    },
+    "Payments/Meta Pay/Linear 1": {
+      "value": {
+        "type": "GRADIENT_LINEAR"
+      },
+      "description": ""
+    },
+    "Payments/Meta Pay/Black": {
+      "value": "#1c2b33",
+      "description": ""
+    },
+    "Payments/Payconiq/Pink": {
+      "value": "#ff4785",
+      "description": ""
+    },
+    "Payments/Giropay/Linear": {
+      "value": {
+        "type": "GRADIENT_LINEAR"
+      },
+      "description": ""
+    },
+    "Payments/Giropay/Dark Blue": {
+      "value": "#1f3a6a",
+      "description": ""
+    },
+    "Payments/Affirm/Purple": {
+      "value": "#4a4af4",
+      "description": ""
+    },
+    "Payments/Affirm/Black": {
+      "value": "#101820",
+      "description": ""
+    },
+    "Payments/Klarna/Black": {
+      "value": "#0a0b09",
+      "description": ""
+    },
+    "Payments/Klarna/Pink": {
+      "value": "#ffb3c7",
+      "description": ""
+    },
+    "Payments/Paysafe/Violet": {
+      "value": "#7887e6",
+      "description": ""
+    },
+    "Payments/Paysafe/Dark": {
+      "value": "#2d2341",
+      "description": ""
+    },
+    "Payments/Authorize.Net/Green": {
+      "value": "#005c76",
+      "description": ""
+    },
+    "Payments/Adyen/Green": {
+      "value": "#0abf53",
+      "description": ""
+    },
+    "Payments/POLi/Blue": {
+      "value": "#30469d",
+      "description": ""
+    },
+    "Payments/Square/Black": {
+      "value": "#1a1a1a",
+      "description": ""
+    },
+    "Payments/Stripe/Violet": {
+      "value": "#635bff",
+      "description": ""
+    },
+    "Payments/Stax/Violet": {
+      "value": "#b93be4",
+      "description": ""
+    },
+    "Payments/Stax/Black": {
+      "value": "#1d1d1b",
+      "description": ""
+    },
+    "Payments/Payline/Color 2": {
+      "value": "#7fa9b3",
+      "description": ""
+    },
+    "Payments/Payline/Color 1": {
+      "value": "#183b56",
+      "description": ""
+    },
+    "Payments/Ripple/Blue": {
+      "value": "#008cff",
+      "description": ""
+    },
+    "Payments/TrueUSD/Blue": {
+      "value": "#1b5afe",
+      "description": ""
+    },
+    "Payments/Solana/Gradient": {
+      "value": {
+        "type": "GRADIENT_LINEAR"
+      },
+      "description": ""
+    },
+    "Payments/Litecoin/Blue": {
+      "value": "#345d9d",
+      "description": ""
+    },
+    "Payments/BNB-Binance/Orange": {
+      "value": "#f0b90b",
+      "description": ""
+    },
+    "Payments/Bitcoin/Orange": {
+      "value": "#f7931a",
+      "description": ""
+    },
+    "Payments/Bitcoin/Gray": {
+      "value": "#4d4d4d",
+      "description": ""
+    },
+    "Payments/Ethereum/Color 6": {
+      "value": "#eceff0",
+      "description": ""
+    },
+    "Payments/Ethereum/Color 1": {
+      "value": "#131313",
+      "description": ""
+    },
+    "Payments/Ethereum/Color 4": {
+      "value": "#393939",
+      "description": ""
+    },
+    "Payments/Tether/Aqua": {
+      "value": "#009393",
+      "description": ""
+    },
+    "Payments/USD Coin/Blue": {
+      "value": "#2775ca",
+      "description": ""
+    },
+    "Payments/BNB-Binance/Black": {
+      "value": "#0b0e11",
+      "description": ""
+    },
+    "Payments/Coinbase/Blue": {
+      "value": "#0052ff",
+      "description": ""
+    },
+    "Payments/Bitpay/Blue": {
+      "value": "#2a3f90",
+      "description": ""
+    },
+    "Payments/Crypto.com/Blue": {
+      "value": "#002e73",
+      "description": ""
+    },
+    "Payments/Kraken/Purple": {
+      "value": "#5741d9",
+      "description": ""
+    },
+    "Payments/Zelle/Purple": {
+      "value": "#6d1ed4",
+      "description": ""
+    },
+    "Payments/Wise/Green": {
+      "value": "#163300",
+      "description": ""
+    },
+    "Payments/Cash App/Green": {
+      "value": {
+        "type": "GRADIENT_LINEAR"
+      },
+      "description": ""
+    },
+    "Payments/Cash App/Black": {
+      "value": "#1c1d1f",
+      "description": ""
+    },
+    "Payments/Airtm/Airtm": {
+      "value": "#050505",
+      "description": ""
+    },
+    "Payments/Sofort/Dark": {
+      "value": "#2e3235",
+      "description": ""
+    },
+    "Payments/Sofort/Gray": {
+      "value": "#e5e5e0",
+      "description": ""
+    },
+    "Payments/Revolut/Black": {
+      "value": "#21262e",
+      "description": ""
+    },
+    "Payments/nu (Nubank)/Purple": {
+      "value": "#820ad1",
+      "description": ""
+    },
+    "Payments/Mercury/Black": {
+      "value": "#1e1e30",
+      "description": ""
+    },
+    "Payments/NorthOne/Color 1": {
+      "value": "#746640",
+      "description": ""
+    },
+    "Payments/NorthOne/Black": {
+      "value": "#1d2b34",
+      "description": ""
+    },
+    "Payments/Ant Group/Linear 3": {
+      "value": {
+        "type": "GRADIENT_LINEAR"
+      },
+      "description": ""
+    },
+    "Payments/Ant Group/Linear 2": {
+      "value": {
+        "type": "GRADIENT_LINEAR"
+      },
+      "description": ""
+    },
+    "Payments/Ant Group/Linear 1": {
+      "value": {
+        "type": "GRADIENT_LINEAR"
+      },
+      "description": ""
+    },
+    "Payments/Checkout.com/Dark Blue": {
+      "value": "#131140",
+      "description": ""
+    },
+    "Payments/Chime/Green": {
+      "value": "#1ec677",
+      "description": ""
+    },
+    "Payments/Bank Of America/Blue": {
+      "value": "#012169",
+      "description": ""
+    },
+    "Payments/Synchrony/Yellow": {
+      "value": "#f9c20a",
+      "description": ""
+    },
+    "Payments/U.S. Bank/Blue": {
+      "value": "#00458d",
+      "description": ""
+    },
+    "Payments/Wells Fargo/Red": {
+      "value": "#bd332b",
+      "description": ""
+    },
+    "Payments/BBVA/Blue": {
+      "value": "#004580",
+      "description": ""
+    },
+    "Payments/Fifth Third Bank/Blue": {
+      "value": "#1b459c",
+      "description": ""
+    },
+    "Payments/ICBC/Black": {
+      "value": "#201e1d",
+      "description": ""
+    },
+    "Payments/China Construction Bank/Black": {
+      "value": "#221f20",
+      "description": ""
+    },
+    "Payments/Mitsubishi UFJ/Red": {
+      "value": "#d62427",
+      "description": ""
+    },
+    "Payments/Sumitomo Mitsui/Green 2": {
+      "value": "#b6cf48",
+      "description": ""
+    },
+    "Payments/BNP Paribas/Linear 1": {
+      "value": {
+        "type": "GRADIENT_LINEAR"
+      },
+      "description": ""
+    },
+    "Payments/BNP Paribas/Linear 2": {
+      "value": {
+        "type": "GRADIENT_LINEAR"
+      },
+      "description": ""
+    },
+    "Payments/BNP Paribas/Linear 3": {
+      "value": {
+        "type": "GRADIENT_LINEAR"
+      },
+      "description": ""
+    },
+    "Payments/Santander/Red": {
+      "value": "#ea1d25",
+      "description": ""
+    },
+    "Payments/Deutsche Bank/Blue": {
+      "value": "#091698",
+      "description": ""
+    },
+    "Payments/UBS/Red": {
+      "value": "#ed1c24",
+      "description": ""
+    },
+    "Payments/ING/Orange": {
+      "value": "#ff6600",
+      "description": ""
+    },
+    "Payments/Huntington Bank/Green": {
+      "value": "#66bd29",
+      "description": ""
+    },
+    "Payments/PNC Bank/Blue": {
+      "value": "#0069aa",
+      "description": ""
+    },
+    "Payments/Barclays/Blue": {
+      "value": "#00afe9",
+      "description": ""
+    },
+    "Payments/Capital One/Blue": {
+      "value": "#013d5b",
+      "description": ""
+    },
+    "Payments/Citi/Red": {
+      "value": "#ee1c25",
+      "description": ""
+    },
+    "Payments/SEPA/Yellow": {
+      "value": "#ffbe00",
+      "description": ""
+    },
+    "Payments/SWIFT/Gray": {
+      "value": "#333d3e",
+      "description": ""
+    },
+    "Payments/Wire Transfer/Dark Turquese": {
+      "value": "#006e90",
+      "description": ""
+    },
+    "Payments/Wire Transfer/Linear": {
+      "value": {
+        "type": "GRADIENT_LINEAR"
+      },
+      "description": ""
+    },
+    "Payments/Fiserv./Orange": {
+      "value": "#ff6600",
+      "description": ""
+    },
+    "Payments/NCR/Green": {
+      "value": "#54b948",
+      "description": ""
+    },
+    "Payments/Verifone/Black": {
+      "value": "#231f20",
+      "description": ""
+    },
+    "Payments/Verifone/Blue": {
+      "value": "#00aeef",
+      "description": ""
+    },
+    "Payments/Interac/Black": {
+      "value": "#231f20",
+      "description": ""
+    },
+    "White": {
+      "value": "#ffffff",
+      "description": ""
     }
   },
   "effect": {
@@ -2479,13 +3085,13 @@
       ],
       "description": ""
     },
-    "Focus-ring/Neutral/1": {
+    "Focus-ring/Neutral-light/1": {
       "value": [
         {
           "type": "DROP_SHADOW",
           "radius": 0,
           "spread": 3,
-          "color": "#09090b",
+          "color": "#d4d4d8",
           "offset": {
             "x": 0,
             "y": 0
@@ -2504,13 +3110,13 @@
       ],
       "description": ""
     },
-    "Focus-ring/Neutral/2": {
+    "Focus-ring/Neutral-light/2": {
       "value": [
         {
           "type": "DROP_SHADOW",
           "radius": 0,
           "spread": 4,
-          "color": "#09090b",
+          "color": "#d4d4d8",
           "offset": {
             "x": 0,
             "y": 0
@@ -2529,13 +3135,13 @@
       ],
       "description": ""
     },
-    "Focus-ring/Neutral/3": {
+    "Focus-ring/Neutral-light/3": {
       "value": [
         {
           "type": "DROP_SHADOW",
           "radius": 0,
           "spread": 6,
-          "color": "#09090b",
+          "color": "#d4d4d8",
           "offset": {
             "x": 0,
             "y": 0
@@ -2948,6 +3554,31 @@
           "offset": {
             "x": 0,
             "y": 1
+          }
+        }
+      ],
+      "description": ""
+    },
+    "Shadow/Regular-A/M": {
+      "value": [
+        {
+          "type": "DROP_SHADOW",
+          "radius": 4,
+          "spread": -2,
+          "color": "#00000014",
+          "offset": {
+            "x": 0,
+            "y": 2
+          }
+        },
+        {
+          "type": "DROP_SHADOW",
+          "radius": 6,
+          "spread": -1,
+          "color": "#00000014",
+          "offset": {
+            "x": 0,
+            "y": 4
           }
         }
       ],
@@ -4363,6 +4994,127 @@
         }
       ],
       "description": ""
+    },
+    "Focus-ring/Neutral/1": {
+      "value": [
+        {
+          "type": "DROP_SHADOW",
+          "radius": 0,
+          "spread": 3,
+          "color": "#09090b",
+          "offset": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "type": "DROP_SHADOW",
+          "radius": 0,
+          "spread": 1,
+          "color": "#ffffff",
+          "offset": {
+            "x": 0,
+            "y": 0
+          }
+        }
+      ],
+      "description": ""
+    },
+    "Focus-ring/Neutral/2": {
+      "value": [
+        {
+          "type": "DROP_SHADOW",
+          "radius": 0,
+          "spread": 4,
+          "color": "#09090b",
+          "offset": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "type": "DROP_SHADOW",
+          "radius": 0,
+          "spread": 2,
+          "color": "#ffffff",
+          "offset": {
+            "x": 0,
+            "y": 0
+          }
+        }
+      ],
+      "description": ""
+    },
+    "Focus-ring/Neutral/3": {
+      "value": [
+        {
+          "type": "DROP_SHADOW",
+          "radius": 0,
+          "spread": 6,
+          "color": "#09090b",
+          "offset": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "type": "DROP_SHADOW",
+          "radius": 0,
+          "spread": 3,
+          "color": "#ffffff",
+          "offset": {
+            "x": 0,
+            "y": 0
+          }
+        }
+      ],
+      "description": ""
+    },
+    "Shadow": {
+      "value": [
+        {
+          "type": "DROP_SHADOW",
+          "radius": 40,
+          "color": "#b7b7b70f",
+          "offset": {
+            "x": 0,
+            "y": 20
+          }
+        },
+        {
+          "type": "DROP_SHADOW",
+          "radius": 14,
+          "color": "#b7b7b705",
+          "offset": {
+            "x": 0,
+            "y": 4
+          }
+        }
+      ],
+      "description": ""
+    },
+    "Shadow 2": {
+      "value": [
+        {
+          "type": "DROP_SHADOW",
+          "radius": 20,
+          "color": "#b7b7b714",
+          "offset": {
+            "x": 0,
+            "y": 2
+          }
+        },
+        {
+          "type": "DROP_SHADOW",
+          "radius": 40,
+          "color": "#b7b7b714",
+          "offset": {
+            "x": 0,
+            "y": 20
+          }
+        }
+      ],
+      "description": ""
     }
   },
   "grid": {
@@ -5205,27 +5957,6 @@
       "value": {
         "Light": "#ffffff29",
         "Dark": "#ffffff29"
-      },
-      "description": ""
-    },
-    "shadow/xs": {
-      "value": {
-        "Light": "#00000014",
-        "Dark": "#00000014"
-      },
-      "description": ""
-    },
-    "shadow/sm": {
-      "value": {
-        "Light": "#00000029",
-        "Dark": "#00000029"
-      },
-      "description": ""
-    },
-    "shadow/md": {
-      "value": {
-        "Light": "#0000003d",
-        "Dark": "#0000003d"
       },
       "description": ""
     },
