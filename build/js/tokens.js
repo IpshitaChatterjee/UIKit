@@ -16,6 +16,13 @@ export const TextHeadingsH4500 = {
   lineHeightPx: 45,
   letterSpacing: -1.2000000476837158,
 };
+export const TextHeadingsH3500 = {
+  fontFamily: "Geist",
+  fontWeight: 500,
+  fontSize: 36,
+  lineHeightPx: 48,
+  letterSpacing: -1.600000023841858,
+};
 export const TextDisplayXl700 = {
   fontFamily: "Geist",
   fontWeight: 700,
@@ -103,13 +110,6 @@ export const TextHeadingsH3700 = {
 export const TextHeadingsH3600 = {
   fontFamily: "Geist",
   fontWeight: 600,
-  fontSize: 36,
-  lineHeightPx: 48,
-  letterSpacing: -1.600000023841858,
-};
-export const TextHeadingsH3500 = {
-  fontFamily: "Geist",
-  fontWeight: 500,
   fontSize: 36,
   lineHeightPx: 48,
   letterSpacing: -1.600000023841858,
@@ -513,6 +513,27 @@ export const TextCodeXs500 = {
   lineHeightPx: 18,
   letterSpacing: 0,
 };
+export const TextSubtitle = {
+  fontFamily: "Inter",
+  fontWeight: 600,
+  fontSize: 96,
+  lineHeightPx: 100,
+  letterSpacing: 0,
+};
+export const TextSpecialHeadingsDisplay2 = {
+  fontFamily: "Inter",
+  fontWeight: 700,
+  fontSize: 62,
+  lineHeightPx: 76,
+  letterSpacing: 0,
+};
+export const TextHeadingsH1 = {
+  fontFamily: "Inter",
+  fontWeight: 700,
+  fontSize: 42,
+  lineHeightPx: 54,
+  letterSpacing: 0,
+};
 export const FillPrimitivesBlueRegular900 = "#1e3a8a";
 export const FillPrimitivesOrangeRegular50 = "#fff7ed";
 export const FillPrimitivesRedRegular50 = "#fef2f2";
@@ -888,6 +909,141 @@ export const FillPrimitivesBlackAlpha48 = "#0000007a";
 export const FillPrimitivesBlackAlpha64 = "#000000a3";
 export const FillPrimitivesBlackAlpha80 = "#000000cc";
 export const FillPrimitivesBlackAlphaStatic = "#000000";
+export const FillTokensDarkShadowXs = "#00000014";
+export const FillTokensDarkShadowSm = "#00000029";
+export const FillTokensDarkShadowMd = "#0000003d";
+export const FillSecondaryColorsBlue = "#2388ff";
+export const FillNeutralColors800 = "#19213d";
+export const FillNeutralColorsWhite = "#ffffff";
+export const FillNeutralColors300 = "#ffffff";
+export const FillNeutralColors200 = "#f6f8fc";
+export const FillPaymentsVisaBlue = "#1434cb";
+export const FillNeutralColors400 = "#ffffff";
+export const FillPaymentsVisaLightMode = "#e7ebfa";
+export const FillDarkMode = "#393652";
+export const FillPaymentsMastercardYellow = "#f79e1b";
+export const FillNeutralColorsBlack = "#000008";
+export const FillPaymentsAmericanExpressBlue = "#006fcf";
+export const FillPaymentsDiscoverBlack = "#251f1f";
+export const FillPaymentsDiscoverGradient2 = { type: "GRADIENT_LINEAR" };
+export const FillPaymentsDiscoverGradient = { type: "GRADIENT_LINEAR" };
+export const FillPaymentsDinnersClubBlack = "#231f20";
+export const FillPaymentsDinnersClubBlue = "#006699";
+export const FillPaymentsMaestroVisaBlue = "#00a1df";
+export const FillPaymentsCirrusVisaBlue1 = "#00a2e5";
+export const FillPaymentsUnionPayBlue = "#082f67";
+export const FillPaymentsUnionPayRed = "#ed171f";
+export const FillPaymentsUnionPayGray = "#4c4948";
+export const FillPaymentsJcbGreen = { type: "GRADIENT_LINEAR" };
+export const FillPaymentsJcbBlue = { type: "GRADIENT_LINEAR" };
+export const FillPaymentsJcbRed = { type: "GRADIENT_LINEAR" };
+export const FillPaymentsEloBlack = "#231f20";
+export const FillPaymentsSkrillGradient = { type: "GRADIENT_LINEAR" };
+export const FillPaymentsMercadoPagoBlue = "#00bcff";
+export const FillPaymentsMercadoPagoBlue2 = "#0a0080";
+export const FillPaymentsAlipayBlue = "#00b6ff";
+export const FillPaymentsWeChatPayGreen = "#1aad1a";
+export const FillPaymentsWeChatPayGray = "#4d4d4d";
+export const FillPaymentsPaypalBlue2 = "#253b80";
+export const FillPaymentsPaypalBlue1 = "#179bd7";
+export const FillPaymentsGPayOrange = "#e94235";
+export const FillPaymentsVenmoBlue = "#008cff";
+export const FillPaymentsPayoneerOrange = "#fe4800";
+export const FillPaymentsPayoneerPink = "#e248cf";
+export const FillPaymentsPayoneerBlue = "#2490e1";
+export const FillPaymentsPayoneerGreen = "#2cd87b";
+export const FillPaymentsPayoneerYellow = "#fbd600";
+export const FillPaymentsAmazonPayOrange = "#ff9900";
+export const FillPaymentsAmazonPayBlack = "#232f3e";
+export const FillPaymentsShopPayPurple = "#5a31f4";
+export const FillPaymentsMetaPayBlue = "#0081fb";
+export const FillPaymentsMetaPayLinear2 = { type: "GRADIENT_LINEAR" };
+export const FillPaymentsMetaPayLinear1 = { type: "GRADIENT_LINEAR" };
+export const FillPaymentsMetaPayBlack = "#1c2b33";
+export const FillPaymentsPayconiqPink = "#ff4785";
+export const FillPaymentsGiropayLinear = { type: "GRADIENT_LINEAR" };
+export const FillPaymentsGiropayDarkBlue = "#1f3a6a";
+export const FillPaymentsAffirmPurple = "#4a4af4";
+export const FillPaymentsAffirmBlack = "#101820";
+export const FillPaymentsKlarnaBlack = "#0a0b09";
+export const FillPaymentsKlarnaPink = "#ffb3c7";
+export const FillPaymentsPaysafeViolet = "#7887e6";
+export const FillPaymentsPaysafeDark = "#2d2341";
+export const FillPaymentsAuthorizeNetGreen = "#005c76";
+export const FillPaymentsAdyenGreen = "#0abf53";
+export const FillPaymentsPoLiBlue = "#30469d";
+export const FillPaymentsSquareBlack = "#1a1a1a";
+export const FillPaymentsStripeViolet = "#635bff";
+export const FillPaymentsStaxViolet = "#b93be4";
+export const FillPaymentsStaxBlack = "#1d1d1b";
+export const FillPaymentsPaylineColor2 = "#7fa9b3";
+export const FillPaymentsPaylineColor1 = "#183b56";
+export const FillPaymentsRippleBlue = "#008cff";
+export const FillPaymentsTrueUsdBlue = "#1b5afe";
+export const FillPaymentsSolanaGradient = { type: "GRADIENT_LINEAR" };
+export const FillPaymentsLitecoinBlue = "#345d9d";
+export const FillPaymentsBnbBinanceOrange = "#f0b90b";
+export const FillPaymentsBitcoinOrange = "#f7931a";
+export const FillPaymentsBitcoinGray = "#4d4d4d";
+export const FillPaymentsEthereumColor6 = "#eceff0";
+export const FillPaymentsEthereumColor1 = "#131313";
+export const FillPaymentsEthereumColor4 = "#393939";
+export const FillPaymentsTetherAqua = "#009393";
+export const FillPaymentsUsdCoinBlue = "#2775ca";
+export const FillPaymentsBnbBinanceBlack = "#0b0e11";
+export const FillPaymentsCoinbaseBlue = "#0052ff";
+export const FillPaymentsBitpayBlue = "#2a3f90";
+export const FillPaymentsCryptoComBlue = "#002e73";
+export const FillPaymentsKrakenPurple = "#5741d9";
+export const FillPaymentsZellePurple = "#6d1ed4";
+export const FillPaymentsWiseGreen = "#163300";
+export const FillPaymentsCashAppGreen = { type: "GRADIENT_LINEAR" };
+export const FillPaymentsCashAppBlack = "#1c1d1f";
+export const FillPaymentsAirtmAirtm = "#050505";
+export const FillPaymentsSofortDark = "#2e3235";
+export const FillPaymentsSofortGray = "#e5e5e0";
+export const FillPaymentsRevolutBlack = "#21262e";
+export const FillPaymentsNuNubankPurple = "#820ad1";
+export const FillPaymentsMercuryBlack = "#1e1e30";
+export const FillPaymentsNorthOneColor1 = "#746640";
+export const FillPaymentsNorthOneBlack = "#1d2b34";
+export const FillPaymentsAntGroupLinear3 = { type: "GRADIENT_LINEAR" };
+export const FillPaymentsAntGroupLinear2 = { type: "GRADIENT_LINEAR" };
+export const FillPaymentsAntGroupLinear1 = { type: "GRADIENT_LINEAR" };
+export const FillPaymentsCheckoutComDarkBlue = "#131140";
+export const FillPaymentsChimeGreen = "#1ec677";
+export const FillPaymentsBankOfAmericaBlue = "#012169";
+export const FillPaymentsSynchronyYellow = "#f9c20a";
+export const FillPaymentsUSBankBlue = "#00458d";
+export const FillPaymentsWellsFargoRed = "#bd332b";
+export const FillPaymentsBbvaBlue = "#004580";
+export const FillPaymentsFifthThirdBankBlue = "#1b459c";
+export const FillPaymentsIcbcBlack = "#201e1d";
+export const FillPaymentsChinaConstructionBankBlack = "#221f20";
+export const FillPaymentsMitsubishiUfjRed = "#d62427";
+export const FillPaymentsSumitomoMitsuiGreen2 = "#b6cf48";
+export const FillPaymentsBnpParibasLinear1 = { type: "GRADIENT_LINEAR" };
+export const FillPaymentsBnpParibasLinear2 = { type: "GRADIENT_LINEAR" };
+export const FillPaymentsBnpParibasLinear3 = { type: "GRADIENT_LINEAR" };
+export const FillPaymentsSantanderRed = "#ea1d25";
+export const FillPaymentsDeutscheBankBlue = "#091698";
+export const FillPaymentsUbsRed = "#ed1c24";
+export const FillPaymentsIngOrange = "#ff6600";
+export const FillPaymentsHuntingtonBankGreen = "#66bd29";
+export const FillPaymentsPncBankBlue = "#0069aa";
+export const FillPaymentsBarclaysBlue = "#00afe9";
+export const FillPaymentsCapitalOneBlue = "#013d5b";
+export const FillPaymentsCitiRed = "#ee1c25";
+export const FillPaymentsSepaYellow = "#ffbe00";
+export const FillPaymentsSwiftGray = "#333d3e";
+export const FillPaymentsWireTransferDarkTurquese = "#006e90";
+export const FillPaymentsWireTransferLinear = { type: "GRADIENT_LINEAR" };
+export const FillPaymentsFiservOrange = "#ff6600";
+export const FillPaymentsNcrGreen = "#54b948";
+export const FillPaymentsVerifoneBlack = "#231f20";
+export const FillPaymentsVerifoneBlue = "#00aeef";
+export const FillPaymentsInteracBlack = "#231f20";
+export const FillWhite = "#ffffff";
 export const EffectUniformBlurXs = [{ type: "BACKGROUND_BLUR", radius: 4 }];
 export const EffectUniformBlurS = [{ type: "BACKGROUND_BLUR", radius: 8 }];
 export const EffectUniformBlurM = [{ type: "BACKGROUND_BLUR", radius: 12 }];
@@ -971,12 +1127,12 @@ export const EffectFocusRingNeutral0 = [
   },
   { type: "DROP_SHADOW", radius: 0, color: "#ffffff", offset: { x: 0, y: 0 } },
 ];
-export const EffectFocusRingNeutral1 = [
+export const EffectFocusRingNeutralLight1 = [
   {
     type: "DROP_SHADOW",
     radius: 0,
     spread: 3,
-    color: "#09090b",
+    color: "#d4d4d8",
     offset: { x: 0, y: 0 },
   },
   {
@@ -987,12 +1143,12 @@ export const EffectFocusRingNeutral1 = [
     offset: { x: 0, y: 0 },
   },
 ];
-export const EffectFocusRingNeutral2 = [
+export const EffectFocusRingNeutralLight2 = [
   {
     type: "DROP_SHADOW",
     radius: 0,
     spread: 4,
-    color: "#09090b",
+    color: "#d4d4d8",
     offset: { x: 0, y: 0 },
   },
   {
@@ -1003,12 +1159,12 @@ export const EffectFocusRingNeutral2 = [
     offset: { x: 0, y: 0 },
   },
 ];
-export const EffectFocusRingNeutral3 = [
+export const EffectFocusRingNeutralLight3 = [
   {
     type: "DROP_SHADOW",
     radius: 0,
     spread: 6,
-    color: "#09090b",
+    color: "#d4d4d8",
     offset: { x: 0, y: 0 },
   },
   {
@@ -1254,6 +1410,22 @@ export const EffectShadowRegularAS = [
     radius: 3,
     color: "#00000014",
     offset: { x: 0, y: 1 },
+  },
+];
+export const EffectShadowRegularAM = [
+  {
+    type: "DROP_SHADOW",
+    radius: 4,
+    spread: -2,
+    color: "#00000014",
+    offset: { x: 0, y: 2 },
+  },
+  {
+    type: "DROP_SHADOW",
+    radius: 6,
+    spread: -1,
+    color: "#00000014",
+    offset: { x: 0, y: 4 },
   },
 ];
 export const EffectShadowComponentPrimaryDefault = [
@@ -2167,6 +2339,82 @@ export const EffectRegularB6 = {
     },
   ],
 };
+export const EffectFocusRingNeutral1 = [
+  {
+    type: "DROP_SHADOW",
+    radius: 0,
+    spread: 3,
+    color: "#09090b",
+    offset: { x: 0, y: 0 },
+  },
+  {
+    type: "DROP_SHADOW",
+    radius: 0,
+    spread: 1,
+    color: "#ffffff",
+    offset: { x: 0, y: 0 },
+  },
+];
+export const EffectFocusRingNeutral2 = [
+  {
+    type: "DROP_SHADOW",
+    radius: 0,
+    spread: 4,
+    color: "#09090b",
+    offset: { x: 0, y: 0 },
+  },
+  {
+    type: "DROP_SHADOW",
+    radius: 0,
+    spread: 2,
+    color: "#ffffff",
+    offset: { x: 0, y: 0 },
+  },
+];
+export const EffectFocusRingNeutral3 = [
+  {
+    type: "DROP_SHADOW",
+    radius: 0,
+    spread: 6,
+    color: "#09090b",
+    offset: { x: 0, y: 0 },
+  },
+  {
+    type: "DROP_SHADOW",
+    radius: 0,
+    spread: 3,
+    color: "#ffffff",
+    offset: { x: 0, y: 0 },
+  },
+];
+export const EffectShadow = [
+  {
+    type: "DROP_SHADOW",
+    radius: 40,
+    color: "#b7b7b70f",
+    offset: { x: 0, y: 20 },
+  },
+  {
+    type: "DROP_SHADOW",
+    radius: 14,
+    color: "#b7b7b705",
+    offset: { x: 0, y: 4 },
+  },
+];
+export const EffectShadow2 = [
+  {
+    type: "DROP_SHADOW",
+    radius: 20,
+    color: "#b7b7b714",
+    offset: { x: 0, y: 2 },
+  },
+  {
+    type: "DROP_SHADOW",
+    radius: 40,
+    color: "#b7b7b714",
+    offset: { x: 0, y: 20 },
+  },
+];
 export const GridDesktop = [
   {
     pattern: "COLUMNS",
@@ -2463,9 +2711,6 @@ export const ColorTokensOverlayActiveInverted = {
   Light: "#ffffff29",
   Dark: "#ffffff29",
 };
-export const ColorTokensShadowXs = { Light: "#00000014", Dark: "#00000014" };
-export const ColorTokensShadowSm = { Light: "#00000029", Dark: "#00000029" };
-export const ColorTokensShadowMd = { Light: "#0000003d", Dark: "#0000003d" };
 export const ColorTokensTextOnControl = { Light: "#ffffff", Dark: "#ffffff" };
 export const ColorTokensTextStaticBlack = { Light: "#000000", Dark: "#000000" };
 export const EffectsFocusRingColorsPrimaryColorInner = {
